@@ -110,3 +110,7 @@ sympy-plots-for-*.tex/
 
 # MAC files
 .DS_Store
+thesis.glsdefs
+thesis.loq
+thesis.los
+thesis.pdf

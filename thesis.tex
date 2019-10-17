@@ -12,7 +12,7 @@
 %   Curso                 = doutorado/mestrado
 %   Situação do trabalho  = pre-defesa/pos-defesa (exceto para qualificação)
 %   Versão para impressão = impressao
-\documentclass[doutorado, pos-defesa]{packages/icmc}
+\documentclass[mestrado, pre-defesa]{packages/icmc}
 
 % ---------------------------------------------------------------------------
 % Pacotes Opcionais
@@ -32,11 +32,11 @@
 % Tanto na capa quanto nas folhas de rosto apenas a primeira letra da primeira palavra (ou nomes próprios) devem estar em letra maiúscula, todas as demais devem ser em letra minúscula.
 \tituloPT{Modelo de teses e dissertações em LaTeX do ICMC}
 \tituloEN{Model of theses and dissertations in LaTeX of the ICMC}
-\autor[Antonelli, H. L.]{Humberto Lidio Antonelli}
+\autor[Lamas Espinoza, M. A.]{Mario Alexis Lamas Espinoza}
 \genero{M} % Gênero do autor (M = Masculino / F = Feminino)
 \orientador[Orientadora]{Profa. Dra.}{Renata Pontin de Mattos Fortes}
 %\coorientador{Prof. Dr.}{Fulano de Tal}
-\curso{CCMC}
+\curso{MAT}
 \data{16}{10}{2019} % Data do depósito
 \idioma{PT} % Idioma principal do documento (PT = português / EN = inglês)
 % ---
@@ -78,19 +78,19 @@
 \incluilistadefiguras
 
 % Inclui a lista de tabelas
-\incluilistadetabelas
+%\incluilistadetabelas
 
 % Inclui a lista de quadros
-\incluilistadequadros
+%\incluilistadequadros
 
 % Inclui a lista de algoritmos
-\incluilistadealgoritmos
+%\incluilistadealgoritmos
 
 % Inclui a lista de códigos
-\incluilistadecodigos
+%\incluilistadecodigos
 
 % Inclui a lista de siglas e abreviaturas
-\incluilistadesiglas
+%\incluilistadesiglas
 
 % Inclui a lista de símbolos
 \incluilistadesimbolos
@@ -104,37 +104,39 @@
 % ----------------------------------------------------------
 \textual
 
-\chapter{Introdução}
-\label{chapter:introducao}
-\input{tex/introducao}
+\newcommand{\comando}[1]{\textbf{$\backslash$#1}}
 
-\chapter{Instalando o abnTeX2}
-\label{chapter:instalando-abntex}
-\input{tex/instalando-abntex}
+%\chapter{Introdução}
+%\label{chapter:introducao}
+%\input{tex/introducao}
+%
+\chapter{Variedades Riemannianas}
+\label{chapter:variedades-riemannianas}
+\input{tex/variedades_riemannianas}
+%
+%\chapter{Orientações gerais}
+%\label{chapter:orientacoes-gerais}
+%\input{tex/orientacoes-gerais}
+%
+%\chapter{Configuração dos elementos pré-textuais}
+%\label{chapter:config-pre-textual}
+%\input{tex/config-pre-textual}
+%
+%\chapter{Corpos flutuantes}
+%\label{chapter:corpos-flutuantes}
+%\input{tex/corpos-flutuantes}
+%
+%\chapter{Listas}
+%\label{chapter:listas}
+%\input{tex/listas}
+%
+%\chapter{Ferramentas úteis}
+%\label{chapter:ferramentas-uteis}
+%\input{tex/ferramentas-uteis}
 
-\chapter{Orientações gerais}
-\label{chapter:orientacoes-gerais}
-\input{tex/orientacoes-gerais}
-
-\chapter{Configuração dos elementos pré-textuais}
-\label{chapter:config-pre-textual}
-\input{tex/config-pre-textual}
-
-\chapter{Corpos flutuantes}
-\label{chapter:corpos-flutuantes}
-\input{tex/corpos-flutuantes}
-
-\chapter{Listas}
-\label{chapter:listas}
-\input{tex/listas}
-
-\chapter{Ferramentas úteis}
-\label{chapter:ferramentas-uteis}
-\input{tex/ferramentas-uteis}
-
-\chapter{Citações e referências}
-\label{chapter:citacoes}
-\input{tex/citacoes}
+%\chapter{Citações e referências}
+%\label{chapter:citacoes}
+%\input{tex/citacoes}
 
 
 % ---
@@ -171,17 +173,17 @@
 % ---
 % Inicia os apêndices
 % ---
-\begin{apendicesenv}
-
-    \chapter{Documento básico usando a classe \textit{icmc}}
-    \label{chapter:documento-basico}
-    \input{tex/appendix/documento-basico}
-    
-    \chapter{Configuração do programa JabRef}
-    \label{chapter:configuracao-jabref}
-    \input{tex/appendix/configuracao-jabref}
-
-\end{apendicesenv}
+%\begin{apendicesenv}
+%
+%    \chapter{Documento básico usando a classe \textit{icmc}}
+%    \label{chapter:documento-basico}
+%    \input{tex/appendix/documento-basico}
+%    
+%    \chapter{Configuração do programa JabRef}
+%    \label{chapter:configuracao-jabref}
+%    \input{tex/appendix/configuracao-jabref}
+%
+%\end{apendicesenv}
 % ---
 
 
@@ -192,13 +194,13 @@
 % ---
 % Inicia os anexos
 % ---
-\begin{anexosenv}
-
-    \chapter{Páginas interessantes na Internet} 
-    \label{chapter:paginas-interessantes}
-    \input{tex/annex/paginas-interessantes}
-
-\end{anexosenv}
+%\begin{anexosenv}
+%
+%    \chapter{Páginas interessantes na Internet} 
+%    \label{chapter:paginas-interessantes}
+%    \input{tex/annex/paginas-interessantes}
+%
+%\end{anexosenv}
 % ---
 
 \end{document}
