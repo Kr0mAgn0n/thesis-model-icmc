@@ -264,3 +264,65 @@ para todo $X,Y,Z \in \mathfrak{X}(M)$ e $f,g \in C^{\infty}(M)$.
 \begin{observacao}
 	Dado uma imersão isométrica $f:M \rightarrow \tilde{M}$, denotaremos por $f^* T \tilde{M}$ o fibrado vetorial induzido sobre $M$, cuja fibra no ponto $p \in M$ é $T_{f(p)} \tilde{M}$. O complemento ortogonal de $f_* T_p M$ em $T_{f(p)} \tilde{M}$ é chamado o \textit{espaço normal} de $f$ em $p$, e será denotado por $T_p M^\perp$. O \textit{fibrado normal} $TM^\perp$ de $f$ é o sub-fibrado vectorial de $f^* T \tilde{M}$ cuja fibra em um ponto $p \in M$ é $T_p M^\perp$.
 \end{observacao}
+
+\begin{observacao}
+	A conexão Levi-Civita $\tilde{\nabla}$ de $\tilde{M}$ induz uma única conexão $\nabla$ em $f^* T \tilde{M}$ de modo que
+	\begin{equation*}
+		\nabla_X (Z \circ f) = \tilde{\nabla}_{f_* X} Z
+	\end{equation*}
+	para quaisquer $p \in M$, $X \in \mathfrak{X}(M)$ e $Z \in \mathfrak{X}(\tilde{M})$. Identificaremos as conexões $\nabla$ e $\tilde{\nabla}$, e denotaremos a primeira também por $\tilde{\nabla}$. Dados $X,Y \in \mathfrak{X}(M)$, podemos decompor
+	\begin{equation*}
+		\tilde{\nabla}_X f_* Y = \left( \tilde{\nabla}_X f_* Y \right)^{\top} \oplus \left( \tilde{\nabla}_X f_* Y \right)^{\perp}
+	\end{equation*}
+	em relação à decomposição ortogonal
+	\begin{equation*}
+		f^* \tilde{M} = f_* TM \oplus TM^\perp
+	\end{equation*}
+\end{observacao}
+
+\begin{proposicao}
+	A aplicação
+	\begin{equation*}
+		\nabla_X Y = f_*^{-1} \left( \tilde{\nabla}_X f_* Y \right)^{\top}
+	\end{equation*}
+	define uma conexão simétrica e compatível com a métrica de $M$ e, portanto, coincide com a conexão de Levi-Civita de $M$.
+\end{proposicao}
+
+\begin{demonstracao}
+	contenidos...
+\end{demonstracao}
+
+A aplicação $\alpha_f: \mathfrak{X}(M) \times \mathfrak{X}(M) \rightarrow \Gamma(TM^\perp)$ definida por
+\begin{equation*}
+	\alpha_f(X,Y) = \left( \tilde{\nabla}_X f_* Y \right)^\perp
+\end{equation*}
+
+é chamada a \emph{segunda forma fundamental} de $f$. Assim, podemos escrever a \emph{formula de Gauss} dada por
+\begin{equation*}
+	\tilde{\nabla}_X f_* Y = f_* \nabla_X Y + \alpha_f(X,Y).
+\end{equation*}
+Observe que, como
+\begin{equation*}
+	\tilde{\nabla}_X f_* Y - \tilde{\nabla}_Y f_* X = f_* [X,Y],
+\end{equation*}
+segue que $\alpha_f$ é simétrica. Alem disso, $\alpha_f$ é $C^{\infty}(M)$-linear, logo o valor de $\alpha_f(X,Y)$ num ponto $p \in M$ depende somente dos valores de $X$ e $Y$ em $p$.
+
+O \emph{operador de forma} $A_{\xi}$ de $f$ num ponto $p \in M$ com relação a $\xi \in T_p M^\perp$ e definido pondo
+\begin{equation*}
+	\langle A_\xi X, Y \rangle = \langle \alpha_f(X,Y). \xi \rangle,
+\end{equation*}
+para quaisquer $X,Y \in \mathfrak{X}(M)$. Dados $X,Y \in \mathfrak{X}(M)$ e $\xi \in TM^\perp$, temos:
+\begin{align*}
+	\left\langle \tilde{\nabla}_\xi, f_* Y \right\rangle &= -\langle \xi, \tilde{\nabla}_X f_* Y \rangle\\
+	&= - \langle \xi, \alpha_f(X,Y) \rangle\\
+	&= - \langle A_\xi X, Y \rangle.
+\end{align*}
+
+Assim, a componente tangente de $\tilde{\nabla}_X \xi$ é $-f_* A_\xi X$. Por outro lado, a componente normal
+\begin{equation*}
+	\nabla_X^\perp = \left( \tilde{\nabla}_X \xi \right)^\perp
+\end{equation*}
+define uma conexão compatível em $TM^\perp$, chamada a \emph{conexão normal de} $f$. Isso nos dá a \emph{formula de Weingarten}:
+\begin{equation*}
+	\tilde{\nabla}_X \xi = - f_* A_\xi X + \nabla_X^\perp
+\end{equation*}
