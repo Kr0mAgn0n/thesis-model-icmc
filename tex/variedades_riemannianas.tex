@@ -105,7 +105,7 @@
 	\end{equation*}	
 	onde $a,b$ são funções diferenciáveis definidas em um intervalo aberto de $\mathbb{R}$, com $a>0$ e $\gamma(s) = (a(s),0,b(s))$ é a curva geratriz de $M^2$, com $\| \gamma'(s) \|^2 = (a'(s))^2 + (b'(s))^2 = 1$.
 	
-	Considere $M^2$ munida da métrica riemanniana $\langle , \rangle$ induzida de $\mathbb{R}^3$, i.e., cada plano tangente $T_p M$ está munido do produto interno usual de $\mathbb{R}^3$. Tais planos sao gerados pelas derivadas parciais
+	Considere $M^2$ munida da métrica riemanniana $\langle , \rangle$ induzida de $\mathbb{R}^3$, i.e., cada plano tangente $T_p M$ está munido do produto interno usual de $\mathbb{R}^3$. Tais planos são gerados pelas derivadas parciais
 	\begin{align*}
 		\frac{\partial \varphi}{\partial s} &= \varphi_s = (a'(s) \cos \theta, a'(s) \sin \theta, b'(s))\\
 		\frac{\partial \varphi}{\partial \theta} &= \varphi_{\theta} = (-a(s) \sin \theta, a(s) \cos \theta, 0)
@@ -175,7 +175,7 @@ para todo $X,Y,Z \in \mathfrak{X}(M)$ e $f,g \in C^{\infty}(M)$.
 \end{demonstracao}
 
 \begin{observacao}
-	$ \Gamma_{ij}^k $ sao os símbolos de Christoffel de $ \nabla $ em relação a $ (U,\varphi) $.
+	$ \Gamma_{ij}^k $ são os símbolos de Christoffel de $ \nabla $ em relação a $ (U,\varphi) $.
 \end{observacao}
 
 \begin{observacao}
@@ -199,7 +199,7 @@ para todo $X,Y,Z \in \mathfrak{X}(M)$ e $f,g \in C^{\infty}(M)$.
 \end{demonstracao}
 
 \begin{observacao}
-	Dado um conexao $\nabla$ em $M$, satisfazendo a segunda propriedade do teorema \ref{levi-civita} e uma carta local $(U,\varphi)$ em $M$, com $\varphi \sim (x_1, \ldots, x_n)$, temos:
+	Dado um conexão $\nabla$ em $M$, satisfazendo a segunda propriedade do teorema \ref{levi-civita} e uma carta local $(U,\varphi)$ em $M$, com $\varphi \sim (x_1, \ldots, x_n)$, temos:
 	\begin{equation*}
 		\nabla_{\frac{\partial}{\partial x_i}} \frac{\partial}{\partial x_j} - \nabla_{\frac{\partial}{\partial x_j}} \frac{\partial}{\partial x_i} = \left[ \frac{\partial}{\partial x_i}, \frac{\partial}{\partial x_j} \right] =0
 	\end{equation*}	
@@ -323,6 +323,110 @@ Assim, a componente tangente de $\tilde{\nabla}_X \xi$ é $-f_* A_\xi X$. Por ou
 	\nabla_X^\perp = \left( \tilde{\nabla}_X \xi \right)^\perp
 \end{equation*}
 define uma conexão compatível em $TM^\perp$, chamada a \emph{conexão normal de} $f$. Isso nos dá a \emph{formula de Weingarten}:
-\begin{equation*}
+\begin{equation}\label{formula_de_weingarten}
 	\tilde{\nabla}_X \xi = - f_* A_\xi X + \nabla_X^\perp
+\end{equation}
+
+\begin{observacao}
+	No caso de hipersuperfícies $f: M^n \rightarrow \tilde{M}^{n+1}$, um campo unitário $\xi$ normal a $f$ é localmente único, a menos de sinal. Disso decorre, em particular, que
+	\begin{equation*}
+		\nabla_{X}^\perp \xi = 0
+	\end{equation*}
+	para todo $X \in \mathfrak{X}(M)$. Fixado um tal campo $\xi$ e denotando simplesmente por $A$ o operador de forma $A_\xi$, as formulas de Gauss e Weingarten reduzem-se a
+	\begin{equation}\label{gauss_weingarten}
+		\tilde{\nabla}_X f_* Y = f_* \nabla_X Y + \langle AX,Y \rangle \xi
+	\end{equation}
+	e
+	\begin{equation*}
+		\tilde{\nabla}_X \xi = -f_* AX,
+	\end{equation*}
+	respectivamente.
+\end{observacao}
+
+Usando as formulas de Gauss e Weingarten, podemos obter a equação de Gauss de uma imersão isométrica, A fim de somente simplificar a notação, usaremos o fato que qualquer imersão $f: M \rightarrow \tilde{M}$ é localmente um mergulho para identificar, localmente, $M$ com $f(M)$ e $f$ com a aplicação inclusão
+Denotemos por $R$ e $\tilde{R}$ os tensores de curvatura de $M$ e $\tilde{M}$, respectivamente, e calculemos a componente tangente de $\tilde{R}(X,Y)Z$, para quaisquer $X,Y,Z \in \mathfrak{X}(M)$. Usando as formulas \eqref{formula_de_weingarten} e \eqref{gauss_weingarten}
+\begin{align}
+	\label{diff_X_weingarten} \tilde{\nabla}_X \tilde{\nabla}_Y Z = \nabla_X \nabla_Y Z + \alpha_f(X, \nabla_Y Z) - A_{\alpha_f(Y,Z)} X + \nabla_X^\perp \alpha_f(Y,Z)\\
+	\label{diff_Y_weingarten} \tilde{\nabla}_Y \tilde{\nabla}_X Z = \nabla_Y \nabla_X Z + \alpha_f(Y, \nabla_X Z) - A_{\alpha_f(X,Z)} Y + \nabla_Y^\perp \alpha_f(X,Z)
+\end{align}
+e
+\begin{equation*}\label{colchete_weingarten}
+	\tilde{\nabla}_{[X,Y]} Z = \nabla_{[X,Y]} Z + \alpha_f([X,Y],Z)
 \end{equation*}
+Subtraindo \eqref{diff_Y_weingarten} e \eqref{colchete_weingarten} de \eqref{diff_X_weingarten}, e tomando componentes tangentes, obtemos:
+\begin{equation}\label{equacao_de_gauss}
+	R(X,Y)Z = (\tilde{R}(X,Y)Z)^\top + A_{\alpha_f (Y,Z)} X - A_{\alpha_f(X,Z)Y}
+\end{equation}
+conhecida como a \emph{equação de Gauss de $f$}. Tomando o produto interno em ambos os lados de \eqref{equacao_de_gauss} com $W \in \mathfrak{X}(M)$, obtemos
+\begin{align*}
+	\langle R(X,Y)Z,W \rangle &= \langle \tilde{R}(X,Y)Z,W \rangle + \langle \alpha_f(Y,Z), \alpha_f(X,W) \rangle\\
+	& - \langle \alpha_f(X,Z), \alpha_f(Y,W) \rangle
+\end{align*}
+
+Decorre de () que as curvaturas seccionais de $M$ e $\tilde{M}$ estão relacionadas por
+\begin{equation*}
+	K(X,Y) = \tilde{K}(X,Y) + \langle \alpha_f(X,X), \alpha_f(Y,Y) \rangle - \| \alpha_f(X,Y) \|,
+\end{equation*}
+onde $K(X,Y)$ denota a curvatura seccional em $p \in M$ ao longo do plano gerado pelos vetores ortonormais $X,Y \in \mathfrak{X}(M)$ e, analogamente, para $\tilde{K}(X,Y)$.
+
+\begin{observacao}
+	Quando $\tilde{M}$ é uma variedade Riemanniana de curvatura seccional constante igual a $c$, a equação de Gauss \eqref{equacao_de_gauss} torna-se
+	\begin{equation*}
+		R(X,Y)Z = c(X \wedge Y)Z + A_{´\alpha_f(Y,Z)} X - A_{\alpha_f(X,Z)} Y
+	\end{equation*}
+\end{observacao}
+
+\begin{observacao}
+	Dado uma hipersuperfície $f: M^n \rightarrow \tilde{M}^{n+1}$, fixemos um campo unitário $\xi$ normal a $f$ e escrevemos $A = A_\xi$. A equação de Gauss \eqref{equacao_de_gauss} pode ser escrita como,
+	\begin{equation}\label{hipersuperficie_equacao_gauss}
+		R(X,Y)Z = (\tilde{R}(X,Y)Z)^\top + (AX \wedge ZY)Z.
+	\end{equation}
+	Equivalentemente,
+	\begin{equation*}
+		\langle R(X,Y)Z,W \rangle = \langle \tilde{R}(X,Y)Z,W \rangle + \langle AY,Z \rangle \langle AX,W \rangle - \langle AX,Z \rangle \langle AY,W \rangle
+	\end{equation*}
+	ou em termos das curvaturas seccionais
+	\begin{equation}\label{gauss_curvatura}
+		K(X,Y) = \tilde{K}(X,Y) + \langle AX,X \rangle \langle AY,Y \rangle - \langle AX,Y \rangle^2
+	\end{equation}
+	Se $\{ e_1, \ldots, e_n \}$ é uma base ortonormal de $T_p M$, formada por autovetores do operador de forma $A$, com $Ae_i = \lambda_i e_i$, para todo $1 \leq i \leq n$, a equação de Gauss \eqref{gauss_curvatura} torna-se
+	\begin{equation}\label{gauss_curvatura_seccional}
+		K(e_i,e_j) = \tilde{K}(e_i,e_j) + \lambda_i \lambda_j
+	\end{equation}
+\end{observacao}
+
+Embora já sabíamos, podemos usar a equação \eqref{gauss_curvatura_seccional} para mostrar que, no caso de superfície, o conceito de curvatura seccional coincide com a curvatura Gaussiana da superfície.
+
+\begin{proposicao}
+	Seja $f: M^2 \rightarrow \tilde{M}^3$ uma imersão isométrica de uma variedade Riemanniana de dimensão 2 em uma variedade Riemanniana $\tilde{M}^3$, com curvatura seccional constante igual a $c$. Então, a curvatura seccional de $M^2$ em $p$ coincide com a curvatura Gaussiana da superfície $M^2$.
+\end{proposicao}
+
+\begin{demonstracao}
+	Fixado um ponto $p \in M^2$, seja $\{ e_1,e_2 \}$ uma base ortonormal de $T_p M$, formada por autovetores do operador de forma $A$ de $M^2$, com $A e_i = \lambda_i e_i$. Segue então da equação de Gauss \eqref{gauss_curvatura_seccional} que
+	\begin{equation*}
+		K(e_1,e_2) = c + \lambda_1 \lambda_2
+	\end{equation*}
+	provando a afirmação
+\end{demonstracao}
+
+Vejamos agora alguns exemplos.
+
+\begin{exemplo}(Curvatura da esfera $\mathbb{S}^n_r$)
+	Dado um numero real $r > 0$, considere a esfera
+	\begin{equation*}
+		\mathbb{S}^n_r = \{ p \in \mathbb{R}^{n+1}: \langle p,p \rangle = r^2 \}
+	\end{equation*}
+	de raio $r$ e centro em $0 \in \mathbb{R}^{n+1}$. A esfera $\mathbb{S}^n_r$ tem a métrica natural, induzida de $\mathbb{R}^{n+1}$ pela aplicação inclusão $i: \mathbb{S}^n_r \rightarrow \mathbb{R}^{n+1}$, que é uma imersão isométrica Um campo unitário normal a $\mathbb{S}^n_r$ é dado por
+	\begin{equation*}
+		\xi(p) = \frac{1}{r} p
+	\end{equation*}
+	para todo $p \in \mathbb{S}^n_r$. Pela formula de Weingarten \eqref{formula_de_weingarten}, o operador da forma $A$ de $\mathbb{S}^n_r$, em relação de $\xi$, é dado por
+	\begin{equation*}
+		AX = -\nabla_X^\perp \xi = - \frac{1}{r} X,
+	\end{equation*}
+	para todo $X \in \mathfrak{X}(\mathbb{S}^n_r)$. Assim, em virtude da equação de Gauss \eqref{hipersuperficie_equacao_gauss}, o tensor de curvatura $R$ de $\mathbb{S}^n_r$ é dado por
+	\begin{equation*}
+		R(X,Y)Z = \frac{1}{r^2} (X \wedge Y) Z,
+	\end{equation*}
+	para quaisquer $X,Y,Z \in \mathfrak{X}(\mathbb{S}^n_r)$. Disso decorre, em virtude de Proposição 3.1.7, que $\mathbb{S}^n_r$ tem curvatura seccional constante igual a $\frac{1}{r^2}$.
+\end{exemplo}
