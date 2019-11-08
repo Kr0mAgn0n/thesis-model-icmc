@@ -1,0 +1,265 @@
+
+\cite{Lee2012}
+\cite{Lee1997}
+
+
+
+\section{Quê é uma variedade Riemanniana?}
+
+\begin{definicao}
+	Seja $M$ uma variedade diferenciável. Uma \emph{métrica Riemanniana em $M$} é um campo 2-tensorial covariante, simétrico e diferenciável que é definido positivo em cada ponto.	
+\end{definicao}
+
+\begin{definicao}
+	Uma \emph{variedade Riemanniana} é um par $(M,g)$, onde $M$ é uma variedade diferenciável e $g$ é uma métrica Riemanniana em $M$.
+\end{definicao}
+
+\begin{observacao}
+	Para qualquer carta $(x_1, \ldots, x_n)$, uma métrica Riemanniana pode ser escrita como
+	\begin{equation*}
+		g = \sum_{i,j=1}^n g_{ij} dx_i \otimes dx_j
+	\end{equation*}
+	onde $(g_{ij})$ é uma matriz definida positiva simétrica de funções diferenciáveis.
+\end{observacao}
+
+\begin{proposicao}
+Toda variedade diferenciável admite uma métrica Riemanniana.
+\end{proposicao}
+
+\begin{proposicao}
+	Supor que $(M,g)$ é uma variedade Riemanniana, e $(X_j)$ é uma estrutura local diferenciável para $M$ sobre um subconjunto aberto $U \subset M$. Então, existe uma estrutura ortonormal diferenciável $\{ (E_j)\}$ sobre $U$ tal que
+	\begin{equation*}
+		\text{span} \{ X_{1|p}, \ldots, X_{n|p} \} = \text{span} \{ E_{1|p}, \ldots, E_{n|p} \}
+	\end{equation*}
+	para cada $ j=1, \ldots, n $ e $p \in U$.
+\end{proposicao}
+
+\begin{corolario}
+	Seja $(M,g)$ uma variedade Riemanniana. Para cada $p \in M$, existe uma estrutura ortonormal diferenciável em uma vizinhança de $p$.
+\end{corolario}
+
+\section{Métrica pullback}
+
+\begin{definicao}\label{metrica_pullback}
+	Supor que $M,N$ são variedades diferenciáveis, $g$ é uma métrica Riemanniana em $N$, e $F: M \rightarrow N$ é diferenciável. O \emph{pullback} $F^* g$ é um campo 2-tensorial diferenciável em $M$. Se é definido positivo, é uma métrica Riemanniana em $M$, chamada de \emph{métrica pullback} determinada pelo $F$.
+\end{definicao}
+
+\begin{proposicao}
+	Supor que $F: M \rightarrow N$ é uma função diferenciável e $g$ é a métrica Riemanniana em $N$. Então, $F^* g$ é uma métrica Riemanniana em $M$ se e somente se $F$ é uma imersão diferenciável.
+\end{proposicao}
+
+\begin{definicao}
+	Se $(M,g)$ e $(\tilde{M}, \tilde{g})$ são variedades Riemannianas, a função diferenciável $F: M \rightarrow \tilde{M}$ é chamada de \emph{isometria} se é um difeomorfismo que satisfaz $F^* \tilde{g} = g$.
+\end{definicao}
+
+\begin{observacao}
+	Mais geralmente, $F$ é chamada de \emph{isometria local} se para cada ponto $p \in M$ existe uma vizinhança $U$ tal que $F_{|U}$ é uma isometria de $U$ com um subconjunto aberto de $\tilde{M}$.
+\end{observacao}
+
+\begin{observacao}
+	Se existe uma isometria entre $(M,g)$ e $(\tilde{M}, \tilde{g})$, dizemos que ambos são variedades Riemannianas isométricas e se existe uma isometria local entre elas, então são chamadas de variedades Riemannianas localmente isométricas.
+\end{observacao}
+
+\begin{definicao}
+	Uma $n$-variedade Riemanniana é chamada de \emph{variedade Riemanniana plana}, e $g$ é uma \emph{métrica plana}, se $(M,g)$ é localmente isométrica a $(\mathbb{R}^n,\overline{g})$.
+\end{definicao}
+
+\begin{observacao}
+	Existem métricas Riemannianas que não são planas.
+\end{observacao}
+
+\section{Sub-variedades Riemannianas}
+
+\begin{observacao}
+	Se $(M,g)$ é uma variedade Riemanniana, toda sub-variedade $S \subset M$, imersa o mergulhada, automaticamente herda a métrica pullback $i^* g$, onde $i: S \rightarrow M$ é a função inclusão.
+\end{observacao}
+
+\begin{definicao}\label{metrica_induzida}
+	A métrica pullback sobre a sub-variedade de uma variedade Riemanniana é chamada de \emph{métrica induzida}.
+\end{definicao}
+
+\begin{observacao}
+	Pela definicao \ref{metrica_pullback}, seja $v,w \in T_p S$ tal que
+	\begin{equation*}
+		(i^* g)(v,w) = g(di_p v, di_p w) = g(v,w). 
+	\end{equation*}
+	Portanto, $i^* g$ é a restrição de $g$ a um par de vetores tangentes a $S$. 
+\end{observacao}
+
+\begin{definicao}
+	Seja $(M,g)$ uma variedade Riemanniana e $S \subset M$ uma sub-variedade imersa o mergulhada. $S$, com a métrica induzida, é chamada de \emph{sub-variedade Riemanniana} de $M$.
+\end{definicao}
+
+\section{Fibrado Normal}
+
+\begin{definicao}
+	Supor que $(M,g)$ é uma $n$-variedade Riemanniana, e $S \subset M$ é uma $k$-sub-variedade Riemanniana. Para qualquer $p \in S$, dizemos que um vetor $v$ é \emph{normal a S}  se é ortogonal a todo vetor em $T_p S$ com respeito ao produto interno $\langle , \rangle_g$.
+\end{definicao}
+
+\begin{definicao}
+	O \emph{espaço normal a S em} $p$ é o sub-espaço $N_p S \subset T_p M$ que consiste de todos os vetores que são normais a $S$ em $p$.
+\end{definicao}
+
+\begin{definicao}
+	O \emph{fibrado normal de} $S$ é o sub-conjunto $NS \subset TM$ que consiste da união de todos os espaços normais aos ponto de $S$.
+\end{definicao}
+
+\begin{definicao}
+	A projeção $\pi_{NS}: NS \rightarrow S$ é a restrição a $NS$ da projeção $\pi: TM \rightarrow M$.
+\end{definicao}
+
+\section{Conexões afins}
+
+\begin{definicao}
+	Uma \emph{conexão afim} numa variedade diferenciável $M$ é uma função
+	\begin{equation*}
+		\nabla: \mathfrak{X}(M) \times \mathfrak{X}(M) \rightarrow \mathfrak{X}(M)
+	\end{equation*}
+	tal que para $X,Y \in \mathfrak{X}(M)$, satisfaz as propriedades
+	\begin{enumerate}
+		\item $\nabla_X Y$ é linear sobre $C^\infty (M)$ em $X$, i.e.,
+		\begin{equation*}
+			\nabla_{f X_1 + g X_2} Y = f \nabla_{X_1} Y + g \nabla_{X_2} Y
+		\end{equation*}
+		para $f,g \in C^{\infty} (M)$.
+		
+		\item $\nabla_X Y$ é linear sobre $\mathbb{R}$ em $Y$, i.e.,
+		\begin{equation*}
+			\nabla_X (a Y_1 + b Y_2) = a \nabla_X Y_1 + b \nabla_X Y_2
+		\end{equation*}
+		para $a,b \in \mathbb{R}$.
+		
+		\item $\nabla$ satisfaz a seguente regra:
+		\begin{equation*}
+			\nabla_X (f Y) = f \nabla_X Y + (X f) Y
+		\end{equation*}
+		para $f \in C^{\infty}(M)$.
+	\end{enumerate}
+\end{definicao}
+
+\begin{observacao}
+	$\nabla_X Y$ é também chamado de \emph{derivada covariante de} $Y$ na direção de $X$.
+\end{observacao}
+
+\begin{lema}\label{boa_definicao_conexao_1}
+	Se $\nabla$ é uma conexão afim de uma variedade diferenciável $M$, $X,Y \in \mathfrak{X}(M)$, e $p \in M$, então $\nabla_X Y_{|p}$ depende só dos valores de $X$ e $Y$ numa vizinhança pequena de $p$, i.e., se $X = \tilde{X}$ e $Y = \tilde{Y}$ numa vizinhança pequena de $p$, então $\nabla_X Y_{|p} = \nabla_{\tilde{X}} \tilde{Y}_{|p}$.
+\end{lema}
+
+\begin{lema}\label{boa_definicao_conexao_2}
+	No lema \ref{boa_definicao_conexao_1}, se pode adicionar que $\nabla_X Y_{|p}$ depende só dos valores de $Y$ numa vizinhança pequena de $p$ e do valor de $X$ em $p$.
+\end{lema}
+
+\begin{observacao}
+	Pelo lema \ref{boa_definicao_conexao_2}, podemos escrever $\nabla_{X_p} Y$ em lugar de $\nabla_X Y_{|p}$, i.e., podemos dizer que é a derivada direcional de $Y$ em $p$ com direção $X_p$.
+\end{observacao}
+
+\begin{observacao}\label{obs_simbolos_christoffel}
+	Seja $M$ uma variedade diferenciável, e $(E_i)$ uma estrutura local de $TM$ num conjunto aberto $U \subset M$. Para qualquer escolha de índices $i$ e $j$, podemos expandir $\nabla_{E_i} E_j$ em termos da mesma estrutura
+	\begin{equation*}
+		\nabla_{E_i} E_j = \sum_k \Gamma^k_{ij} E_k
+	\end{equation*}
+	Isto define $n^3$ funções $\Gamma^k_{ij}$ em $U$.
+\end{observacao}
+
+\begin{definicao} 
+	As funções definidas na observacao \ref{obs_simbolos_christoffel} , são chamadas de \emph{símbolos de Christoffel} de $\nabla$ com respeito à estrutura dada.
+\end{definicao}
+
+\begin{lema}
+	Seja $nabla$ uma conexão afim, e seja $X,Y \in \mathfrak{X}(M)$ tal que tal que são expressados em termos uma estrutura local por $X = \sum_i X^i E_i$ e $Y = \sum_j Y^j E_j$. Então
+	\begin{equation*}
+		\nabla_X Y = \sum_{i,k,k} \left( X Y^k + X^i Y^j \Gamma^k_{ij} \right) E_k
+	\end{equation*}
+\end{lema}
+
+\section{Quantas conexões afins existem?}
+
+\begin{definicao}
+	Em $\mathbb{R}^n$, definamos a \emph{conexão Euclideana} $\overline{\nabla}$ como
+	\begin{equation*}
+		\overline{\nabla}_X \left( \sum_j Y^j \partial_j \right) = \sum_j \left( X Y^j \right) \partial_j
+	\end{equation*}
+	onde $X,Y \in \mathfrak{X}(\mathbb{R}^n)$, e $Y = \sum_j Y^j \partial_j$.
+\end{definicao}
+
+\begin{lema}
+	Supor que $M$ é uma variedade diferenciável coberta por só uma carta. Existe uma bijeção entre o conjunto das conexões afins em $M$ e o conjunto das escolhas das $n^3$ funções diferenciáveis $\{ \Gamma^k_{ij} \}$ (símbolos de Christoffel) em $M$, dada por
+	\begin{equation*}
+		\nabla_X Y = \sum_{i,j,k} \left( X^i \partial_i Y^k + X^i Y^j \Gamma^k_{ij} \right) \partial_k
+	\end{equation*}
+\end{lema}
+
+\begin{proposicao}
+	Toda variedade diferenciável admite uma conexão afim.
+\end{proposicao}
+
+
+\section{A conexão Riemanniana}
+
+\begin{definicao}
+	Seja $M \subset \mathbb{R}^n$ uma subvariedade diferenciável. Uma função
+	\begin{equation*}
+		\nabla^\top: \mathfrak{X}(M) \times \mathfrak{X}(M) \rightarrow \mathfrak{X}(M)
+	\end{equation*}
+	dada por
+	\begin{equation*}
+		\nabla^\top_X Y = \pi^\top \left( \overline{\nabla}_X Y \right)
+	\end{equation*}
+	onde $X,Y \in \mathfrak{X}(M)$ podem ser estendidas como campos em $\mathbb{R}^n$, $\overline{\nabla}$ é a conexão Euclideana em $\mathbb{R}^n$, e para qualquer ponto $p \in M$, $\pi^\top: T_p \mathbb{R}^n \rightarrow T_p M$ é a projeção ortogonal.
+\end{definicao}
+
+\begin{lema}
+	O operador $\nabla^\top$ está bem definido, e é uma conexão em $M$.
+\end{lema}
+
+\begin{teorema}[John Nash]
+	Qualquer métrica Riemanniana em uma variedade pode-se considerar como a métrica induzida em algum espaço Euclideano.
+\end{teorema}
+
+\begin{definicao}
+	Seja $g$ uma métrica Riemanniana em uma variedade diferenciável $M$. Uma conexão afim $\nabla$ é chamada de \emph{compatível com} $g$ se satisfaz a regra:
+	\begin{equation*}
+		\nabla_X \langle Y,Z \rangle = \langle \nabla_X Y, Z \rangle + \langle Y, \nabla_X Z \rangle
+	\end{equation*}
+	onde $X,Y,Z \in \mathfrak{X}(M)$.
+\end{definicao}
+
+\begin{definicao}
+	O \emph{tensor de torção da conexão} é um campo $ \binom{2}{1} $-tensorial $\tau: \mathfrak{X}(M) \times \mathfrak{X}(M) \rightarrow \mathfrak{X}(M)$ definido por
+	\begin{equation*}
+		\tau(X,Y) = \nabla_X Y - \nabla_Y X - [X,Y].
+	\end{equation*}
+\end{definicao}
+
+\begin{definicao}
+	Uma conexão afim é chamada de \emph{simétrica} se a torção é identicamente nula, i.e.,
+	\begin{equation*}
+		\nabla_X Y - \nabla_Y X = [X,Y].
+	\end{equation*}
+\end{definicao}
+
+\section{Quantas conexões afins existem?}
+
+\begin{teorema}
+	Seja $(M,g)$ uma variedade Riemanniana. Existe uma única conexão afim $\nabla$ em $M$ que é compatível com $g$ e simétrica.
+	Ista conexão é chamada de \emph{conexão Riemanniana} o de \emph{conexão de Levi-Civita} de $g$.
+\end{teorema}
+
+\begin{proposicao}
+	Supor que $F: (M,g) \rightarrow (\tilde{M}, \tilde{g})$ é uma isometria, então $F$ leva a conexão Riemanniana $\nabla$ de $g$ à conexão Riemanniana de $\tilde{\nabla}$ de $\tilde{g}$ com a regra:
+	\begin{equation*}
+		F_* (\nabla_X Y) = \tilde{\nabla}_{F_* X} (F_* Y)
+	\end{equation*}
+\end{proposicao}
+
+\begin{observacao}
+	Sejam $(M,g)$ e $(\tilde{M}, \tilde{g})$ variedades Riemannianas, $\nabla$ e $\tilde{\nabla}$ as conexões Levi-Civita de $M$ e $\tilde{M}$ respetivamente, e $F: (M,g) \rightarrow (\tilde{M},\tilde{g})$ uma função diferenciável. A função
+	\begin{equation*}
+		F^* \tilde{\nabla}: \mathfrak{X}(M) \times \mathfrak{X}(M) \rightarrow \mathfrak{X}(M)
+	\end{equation*}
+	definida por
+	\begin{equation*}
+		\left( F^* \tilde{\nabla} \right)_X Y = F^{-1}_* \left( \tilde{\nabla}_{F_* X} (F_* Y) \right)
+	\end{equation*}
+	onde $X,Y \in \mathfrak{X}(M)$ descreve uma conexão em $M$ chamada de \emph{conexão pullback} que é simétrica e compatível com $g$. Portanto, pela unicidade da conexão Levi-Civita, $F^* \tilde{\nabla} = \nabla$.
+\end{observacao}
