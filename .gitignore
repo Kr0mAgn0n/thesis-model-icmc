@@ -67,7 +67,6 @@
 *.gls
 
 # hyperref
-*.brf
 
 # listings
 *.lol
@@ -114,3 +113,5 @@ thesis.glsdefs
 thesis.loq
 thesis.los
 thesis.pdf
+/references.bib.bak
+/Geometria_Riemanniana.bibtex
