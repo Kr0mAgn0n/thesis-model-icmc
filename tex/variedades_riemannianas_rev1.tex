@@ -1,6 +1,8 @@
 
 \cite{Lee2012}
 \cite{Lee1997}
+\cite{Lee1997a}
+\cite{Lee1997b}
 
 
 
@@ -68,18 +70,18 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	Existem métricas Riemannianas que não são planas.
 \end{observacao}
 
-\section{Sub-variedades Riemannianas}
+\section{Subvariedades Riemannianas}
 
 \begin{observacao}
-	Se $(M,g)$ é uma variedade Riemanniana, toda sub-variedade $S \subset M$, imersa o mergulhada, automaticamente herda a métrica pullback $i^* g$, onde $i: S \rightarrow M$ é a função inclusão.
+	Se $(M,g)$ é uma variedade Riemanniana, toda subvariedade $S \subset M$, imersa o mergulhada, automaticamente herda a métrica pullback $i^* g$, onde $i: S \rightarrow M$ é a função inclusão.
 \end{observacao}
 
 \begin{definicao}\label{metrica_induzida}
-	A métrica pullback sobre a sub-variedade de uma variedade Riemanniana é chamada de \emph{métrica induzida}.
+	A métrica pullback sobre a subvariedade de uma variedade Riemanniana é chamada de \emph{métrica induzida}.
 \end{definicao}
 
 \begin{observacao}
-	Pela definicao \ref{metrica_pullback}, seja $v,w \in T_p S$ tal que
+	Pela definição \ref{metrica_pullback}, seja $v,w \in T_p S$ tal que
 	\begin{equation*}
 		(i^* g)(v,w) = g(di_p v, di_p w) = g(v,w). 
 	\end{equation*}
@@ -87,21 +89,21 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{observacao}
 
 \begin{definicao}
-	Seja $(M,g)$ uma variedade Riemanniana e $S \subset M$ uma sub-variedade imersa o mergulhada. $S$, com a métrica induzida, é chamada de \emph{sub-variedade Riemanniana} de $M$.
+	Seja $(M,g)$ uma variedade Riemanniana e $S \subset M$ uma subvariedade imersa o mergulhada. $S$, com a métrica induzida, é chamada de \emph{subvariedade Riemanniana} de $M$.
 \end{definicao}
 
 \section{Fibrado Normal}
 
 \begin{definicao}
-	Supor que $(M,g)$ é uma $n$-variedade Riemanniana, e $S \subset M$ é uma $k$-sub-variedade Riemanniana. Para qualquer $p \in S$, dizemos que um vetor $v$ é \emph{normal a S}  se é ortogonal a todo vetor em $T_p S$ com respeito ao produto interno $\langle , \rangle_g$.
+	Supor que $(M,g)$ é uma $n$-variedade Riemanniana, e $S \subset M$ é uma $k$-subvariedade Riemanniana. Para qualquer $p \in S$, dizemos que um vetor $v$ é \emph{normal a S}  se é ortogonal a todo vetor em $T_p S$ com respeito ao produto interno $\langle , \rangle_g$.
 \end{definicao}
 
 \begin{definicao}
-	O \emph{espaço normal a S em} $p$ é o sub-espaço $N_p S \subset T_p M$ que consiste de todos os vetores que são normais a $S$ em $p$.
+	O \emph{espaço normal a S em} $p$ é o subespaço $N_p S \subset T_p M$ que consiste de todos os vetores que são normais a $S$ em $p$.
 \end{definicao}
 
 \begin{definicao}
-	O \emph{fibrado normal de} $S$ é o sub-conjunto $NS \subset TM$ que consiste da união de todos os espaços normais aos ponto de $S$.
+	O \emph{fibrado normal de} $S$ é o subconjunto $NS \subset TM$ que consiste da união de todos os espaços normais aos ponto de $S$.
 \end{definicao}
 
 \begin{definicao}
@@ -162,7 +164,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{observacao}
 
 \begin{definicao} 
-	As funções definidas na observacao \ref{obs_simbolos_christoffel} , são chamadas de \emph{símbolos de Christoffel} de $\nabla$ com respeito à estrutura dada.
+	As funções definidas na observação \ref{obs_simbolos_christoffel} , são chamadas de \emph{símbolos de Christoffel} de $\nabla$ com respeito à estrutura dada.
 \end{definicao}
 
 \begin{lema}
@@ -263,3 +265,120 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	\end{equation*}
 	onde $X,Y \in \mathfrak{X}(M)$ descreve uma conexão em $M$ chamada de \emph{conexão pullback} que é simétrica e compatível com $g$. Portanto, pela unicidade da conexão Levi-Civita, $F^* \tilde{\nabla} = \nabla$.
 \end{observacao}
+
+\section{Quê é curvatura?}
+
+\begin{definicao}
+	Se $M$ é uma variedade Riemanniana, o \emph{endomorfismo de curvatura} é a função $R: \vectorfieldsspace{M} \times \vectorfieldsspace{M} \times \vectorfieldsspace{M} \rightarrow \vectorfieldsspace{M} $ definido por
+	\begin{equation*}
+		R(X,Y)Z = \nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X,Y]}Z.
+	\end{equation*}
+\end{definicao}
+
+\begin{proposicao}
+	O endomorfismo de curvatura é um campo tensorial $\binom{3}{1}$.
+\end{proposicao}
+
+\begin{definicao}
+	O \emph{tensor de curvatura} é o campo covariante 4-tensorial $R_m = R^b$, definido por
+	\begin{equation*}
+		R_m (X,Y,Z,W) = \langle R(X,Y)Z,W \rangle
+	\end{equation*}
+\end{definicao}
+
+\begin{lema}
+	O endomorfismo de curvatura e o tensor de curvatura são invariantes isométricos
+\end{lema}
+
+\section{Quê mede o tensor de curvatura?}
+
+\begin{teorema}
+	Uma variedade Riemanniana é plana se e somente se seu tensor de curvatura é identicamente nulo.
+\end{teorema}
+
+
+\section{Propriedades do tensor de curvatura}
+
+\begin{proposicao}
+	O tensor de curvatura tem as seguentes simetrias para qualquer campo vetorial $X,Y,Z,W$:
+	\begin{enumerate}
+		\item $R_m(W,X,Y,Z) = -R_m(X,W,Y,Z)$.
+		\item $R_m(W,X,Y,Z) = -R_m(W,X,Z,Y)$.
+		\item $R_m(W,X,Y,Z) = -R_m(Y,Z,W,X)$.
+		\item $R_m(W,X,Y,Z) + R_m(X,Y,W,Z) + R_m(Y,W,X,Z) = 0$.
+	\end{enumerate}
+\end{proposicao}
+
+
+\section{A equação de Gauss}
+
+\begin{definicao}
+	A \emph{segunda forma fundamental} é a função $\alpha: \vectorfieldsspace{M} \times \vectorfieldsspace{M} \rightarrow \vectorfieldsspace{M}^\perp$ dada por
+	\begin{equation*}
+		\alpha(X,Y) = (\tilde{\nabla}_X Y)^\perp
+	\end{equation*} 
+	onde $X,Y$ são estendidos a $\tilde{M}$.
+\end{definicao}
+
+\begin{lema}
+	A segunda forma fundamental é
+	\begin{enumerate}
+		\item independente das extensões $X$ e $Y$;
+		\item bilinear sobre $\smoothfunctions{M}$; e
+		\item simétrico em $X$ e $Y$.
+	\end{enumerate}
+\end{lema}
+
+\begin{teorema}[A Formula de Gauss]
+	Se $X,Y \in \vectorfieldsspace{M}$ são estendidos arbitrariamente a campos vetoriais de $\tilde{M}$, a seguente formula cumpre-se em $M$:
+	\begin{equation*}
+		\tilde{\nabla}_X Y = \nabla_X Y + \alpha(X,Y).
+	\end{equation*}
+\end{teorema}
+
+\begin{lema}[A Equação de Weingraten]
+	Supor que $X,Y \in \vectorfieldsspace{M}$ e $N \in \vectorfieldsspace{M}^\perp$. Quando $X,Y,N$ são estendidos a $\tilde{M}$, cumpre-se a seguente equação:
+	\begin{equation*}
+		\innerproduct{\tilde{\nabla}_X N}{Y} = -\innerproduct{N}{\alpha(X,Y)}.
+	\end{equation*}
+\end{lema}
+
+\begin{teorema}[A Equação de Gauss]
+	Para qualquer $X,Y,Z,W \in \vectorfieldsspace{M}$, cumpre-se o seguente:
+	\begin{equation*}
+		\tilde{R}_m(X,Y,Z,W) = R_m(X,Y,Z,W) - \innerproduct{\alpha(X,W)}{\alpha(Y,Z)} + \innerproduct{\alpha(X,Z)}{\alpha(Y,W)}.
+	\end{equation*}
+\end{teorema}
+
+\section{Curvaturas seccionais}
+
+\begin{definicao}
+	Seja $M$ uma $n$-variedade Riemanniana e $p \in M$. Se $\Pi$ é um subespaço de $T_p M$ de dimensão 2, e $V \subset T_p M$ é uma vizinhança de zero  na qual $\exp_p$ é um difeomorfismo, então $S_{\Pi} = \exp_p(\Pi \cap V)$ é uma subvariedade de $M$ de dimensão 2 que contem a  $p$ chamada \emph{seção plana} determinada por $\Pi$.
+\end{definicao}
+
+\begin{definicao}
+	A \emph{curvatura seccional} de $M$ associada $\Pi$, denotada por $K(\Pi)$, é a curvatura Gaussiana da superfície $S_{\Pi}$ em $p$ com a métrica induzida. Se $x,y$ é uma base para $\Pi$, é denotada também por $K(x,y)$.
+\end{definicao}
+
+\begin{proposicao}
+	Se $\{ x,y \}$ é uma base para $\Pi \subset T_p M$, então
+	\begin{equation*}
+		K(x,y) = \frac{R_m(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2}.
+	\end{equation*}
+\end{proposicao}
+
+\begin{lema}
+	Supor que $\mathfrak{R}_1$ e $\mathfrak{R}_2$ são 4-tensores covariantes em um espaço vetorial $V$ com um produto interno, e ambos tem as simetrias do tensor de curvatura (ref). Se para cada par de vetores linearmente independentes $x,y \in V$,
+	\begin{equation*}
+		\frac{\mathfrak{R}_1(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2} = \frac{\mathfrak{R}_2(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2},
+	\end{equation*}
+	então $\mathfrak{R}_1 = \mathfrak{R}_2$.
+\end{lema}
+
+\begin{lema}
+	Supor que $(M,g)$ é $n$-variedade Riemanniana com curvatura seccional constante $C$. O endomorfismo de curvatura e o tensor de curvatura estão dados pelas formulas
+	\begin{align*}
+		R(X,Y)Z &= C(\innerproduct{Y}{Z}X - \innerproduct{X}{Z}Y),\\
+		R_m(X,Y,Z,W) = C(\innerproduct{X}{W} \innerproduct{X}{Z} - \innerproduct{X}{Z} \innerproduct{Y}{W}).
+	\end{align*}
+\end{lema}
