@@ -1,10 +1,71 @@
+\cite{Brendle2013}
+\cite{Brendle2013a}
+
 \begin{proposicao}
-	Um superficie minima imersa em $S^3$ de genero 1 nao tem pontos umbilicos, i.e., a segunda forma fundamental é nao nula em cada ponto da superficie.
+	Um superfície mínima imersa em $S^3$ de gênero 1 não tem pontos umbílicos, i.e., a segunda forma fundamental é não nula em cada ponto da superfície
 \end{proposicao}
 
 \begin{proposicao}
 	Supor que $F: M \rightarrow S^3$ é um toro mínimo mergulhado em $S^3$. Então a norma da segunda forma fundamental satisfaz a equação em derivadas parciais
 	\begin{equation*}
-		\nabla_M (|A|)
+		\Delta_M (|A|) - \frac{| \nabla |A| |^2}{|A|} + (|A|^2 - 2) |A| = 0.
 	\end{equation*}
+	onde $A$ é a segunda forma fundamental.
 \end{proposicao}
+
+\begin{definicao}
+	A função $\Psi: M \rightarrow \realnumbers$ está definida por
+	\begin{equation*}
+		\Psi(x) = \frac{1}{\sqrt{2}} |A(x)|.
+	\end{equation*}
+	onde $A$ é a segunda forma fundamental.
+\end{definicao}
+
+\begin{definicao}
+	Dado um numero $\alpha \geq 1$, a função $Z_{\alpha}: M \times M \rightarrow \realnumbers$ é definida por
+	\begin{equation*}
+		Z_{\alpha}(x,y) = \alpha \Psi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle.
+	\end{equation*}
+	onde $F: M \rightarrow S^3$ é uma imersão mínima de gênero 1 em $S^3$, e $\nu(x) \in T_{F(x)} S^3$ é um campo vectorial normal unitário
+\end{definicao}
+
+\begin{lema}
+	O Laplaciano de $Z_{\alpha}$ com respeito a $x$ satisfaz a desigualdade
+	\begin{equation*}
+		\begin{split}
+		\sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial x_i^2} (p,q) & \leq 2 \alpha \Psi(p) - \frac{\alpha^2 - 1}{\alpha} \frac{\Psi(p)}{1 - \langle F(p), F(q) \rangle} \sum_{i=1}^{2} \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2\\
+		& + \Lambda_1 (| F(p) - F(q) |) \left( \sum_{i=1}^{2} \left| \frac{\partial Z_{\alpha}}{\partial x_i} (p,q) \right| \right),
+		\end{split}		
+	\end{equation*}
+	onde $\Lambda_1: (0,\infty) \rightarrow (0,\infty)$ é uma função continua
+\end{lema}
+
+\begin{lema}
+	O Laplaciano de $Z_{\alpha}$ com respeito a $y$ satisfaz a desigualdade
+	\begin{equation*}
+		\sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial y_i^2} (p,q) \leq 2 \alpha \Psi(p) + 2 |Z_{\alpha}(p,q)|.
+	\end{equation*}
+\end{lema}
+
+\begin{lema}
+	\begin{equation*}
+		\begin{split}
+		\sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial x_i \partial y_i} (p,q) &\leq -2 \alpha \Psi(p) + \Lambda_4 (|F(p) - F(q)|)\\
+		& \left( |Z_{\alpha}(p,q)| + \sum_{i=1}^{2} \left| \frac{\partial Z_{\alpha}}{\partial x_i} (p,q) \right| + \sum_{i=1}^{2} \left| \frac{\partial Z_{\alpha}}{\partial y_i} (p,q) \right| \right),
+		\end{split}		
+	\end{equation*}
+	onde $\Lambda_4: (0,\infty) \rightarrow (0,\infty)$ é uma função continua.
+\end{lema}
+
+\begin{proposicao}
+	\begin{multline*}
+		\sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial x_i^2} (p,q) + 2 \sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial x_i \partial y_i} (p,q) + \sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial y_i^2} (p,q) \leq \\
+		- \frac{\alpha^2 - 1}{\alpha} \frac{\Psi(p)}{1 - \langle F(p), F(q) \rangle} \sum_{i=1}^{2} \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2 \\
+		+ \Lambda_5(|F(p) - F(q)|) \left( |Z_{\alpha}(p,q)| + \sum_{i=1}^{2} \left| \frac{\partial Z_{\alpha}}{\partial x_i} (p,q) \right| + \sum_{i=1}^{2} \left| \frac{\partial Z_{\alpha}}{\partial y_i} (p,q) \right| \right),
+	\end{multline*}
+	onde $\Lambda_5: (0,\infty) \rightarrow (0,\infty)$ é uma função continua.
+\end{proposicao}
+
+\begin{teorema}[Brendle]
+	Seja $F: M \rightarrow S^3$ uma superfície mínima mergulhada em $S^3$ de gênero 1. Então $F$ é congruente a o toro de Clifford.
+\end{teorema}
