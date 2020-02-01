@@ -29,6 +29,46 @@
 	onde $F: M \rightarrow S^3$ é uma imersão mínima de gênero 1 em $S^3$, e $\nu(x) \in T_{F(x)} S^3$ é um campo vectorial normal unitário
 \end{definicao}
 
+\begin{proposicao}
+	As primeiras derivadas da função $Z_{\alpha}$ com respeito a $x_1$ e $x_2$ estão dadas por:
+	\begin{equation*}
+	\frac{\partial Z_{\alpha}}{\partial x_i} (\overline{x}, \overline{y}) = \alpha \frac{\partial \Psi}{\partial x_i}(\overline{x}) (1 - \langle F(\overline{x}, \overline{y}) \rangle) - \alpha \Psi(\overline{x}) \left\langle \frac{\partial F}{\partial x_i}(\overline{x}), F(\overline{y}) \right\rangle + h_i^k(\overline{x}) \left\langle \frac{\partial F}{\partial x_k}(\overline{x}), F(\overline{y}) \right\rangle
+	\end{equation*}
+\end{proposicao}
+
+
+\begin{demonstracao}
+	Derivando com respeito a $x_1$ e $x_2$:
+	\begin{equation*}
+		\frac{\partial Z_{\alpha}}{\partial x_i} (\overline{x}, \overline{y}) = \alpha \frac{\partial \Psi}{\partial x_i}(\overline{x}) (1 - \langle F(\overline{x}, \overline{y}) \rangle) - \alpha \Psi(\overline{x}) \left\langle \frac{\partial F}{\partial x_i}(\overline{x}), F(\overline{y}) \right\rangle + \left\langle \frac{\partial \nu}{\partial x_i}(\overline{x}), F(\overline{y}) \right\rangle
+	\end{equation*}
+	
+	Em quanto ao termo $ \left\langle \frac{\partial \nu}{\partial x_i}(\overline{x}), F(\overline{y}) \right\rangle $, olhar que $\langle \nu(x), \nu(x) \rangle=1, \forall x \in \Sigma$. Então, quando se derivar se tem:
+	\begin{equation*}
+		\left\langle \frac{\partial \nu}{\partial x_i}(x), \nu(x) \right\rangle = 0, \forall x \in \Sigma.
+	\end{equation*}
+	
+	Isto quer dizer que $\frac{\partial \nu}{\partial x_i}(\overline{x}) \in T_{\overline{x}} \Sigma$. Olhar que estamos identificando $\overline{x}$ com $F(\overline{x})$. Nós sabemos que $\{ \frac{\partial F}{\partial x_i}(\overline{x}) \}$ gera $T_{\overline{x}} \Sigma$, então, usando a notação de Einstein, podemos expressar $\frac{\partial \nu}{\partial x_i}(\overline{x})$ como combinação linear dos vetores anteriores.
+	\begin{equation*}
+		\frac{\partial \nu}{\partial x_i} (\overline{x}) = h_i^k \frac{\partial F}{\partial x_k}
+	\end{equation*}
+	
+	Lembrar que a notação de Einstein está expressando uma suma com respeito ao índice $k$ que toma os valores 1 e 2.
+	
+	Portanto ao final temos a expressão requerida.
+\end{demonstracao}
+
+\begin{proposicao}
+	As primeiras derivadas da função $Z_{\alpha}$ com respeito a $y_1$ e $y_2$ estão dadas por:
+	\begin{equation*}
+		\frac{\partial Z_{\alpha}}{\partial y_i} (\overline{x}, \overline{y}) = -\alpha \Psi(\overline{x}) \left\langle F(\overline{x}), \frac{\partial F}{\partial y_i} (\overline{y}) \right\rangle + \left\langle \nu(\overline{x}), \frac{\partial F}{\partial y_i}(\overline{y}) \right\rangle
+	\end{equation*}
+\end{proposicao}
+
+\begin{demonstracao}
+	Calculo simples.
+\end{demonstracao}
+
 \begin{lema}
 	O Laplaciano de $Z_{\alpha}$ com respeito a $x$ satisfaz a desigualdade
 	\begin{equation*}
@@ -39,6 +79,8 @@
 	\end{equation*}
 	onde $\Lambda_1: (0,\infty) \rightarrow (0,\infty)$ é uma função continua
 \end{lema}
+
+
 
 \begin{lema}
 	O Laplaciano de $Z_{\alpha}$ com respeito a $y$ satisfaz a desigualdade
