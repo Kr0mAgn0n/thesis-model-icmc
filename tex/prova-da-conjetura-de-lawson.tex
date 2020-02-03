@@ -29,7 +29,7 @@
 	onde $F: M \rightarrow S^3$ é uma imersão mínima de gênero 1 em $S^3$, e $\nu(x) \in T_{F(x)} S^3$ é um campo vectorial normal unitário
 \end{definicao}
 
-\begin{proposicao}
+\begin{proposicao}\label{primeira_derivada_x_Z}
 	As primeiras derivadas da função $Z_{\alpha}$ com respeito a $x_1$ e $x_2$ estão dadas por:
 	\begin{equation*}
 	\frac{\partial Z_{\alpha}}{\partial x_i} (\overline{x}, \overline{y}) = \alpha \frac{\partial \Psi}{\partial x_i}(\overline{x}) (1 - \langle F(\overline{x}, \overline{y}) \rangle) - \alpha \Psi(\overline{x}) \left\langle \frac{\partial F}{\partial x_i}(\overline{x}), F(\overline{y}) \right\rangle + h_i^k(\overline{x}) \left\langle \frac{\partial F}{\partial x_k}(\overline{x}), F(\overline{y}) \right\rangle
@@ -49,9 +49,9 @@
 	\end{equation*}
 	
 	Isto quer dizer que $\frac{\partial \nu}{\partial x_i}(\overline{x}) \in T_{\overline{x}} \Sigma$. Olhar que estamos identificando $\overline{x}$ com $F(\overline{x})$. Nós sabemos que $\{ \frac{\partial F}{\partial x_i}(\overline{x}) \}$ gera $T_{\overline{x}} \Sigma$, então, usando a notação de Einstein, podemos expressar $\frac{\partial \nu}{\partial x_i}(\overline{x})$ como combinação linear dos vetores anteriores.
-	\begin{equation*}
+	\begin{equation}\label{der_nu_x}
 		\frac{\partial \nu}{\partial x_i} (\overline{x}) = h_i^k \frac{\partial F}{\partial x_k}
-	\end{equation*}
+	\end{equation}
 	
 	Lembrar que a notação de Einstein está expressando uma suma com respeito ao índice $k$ que toma os valores 1 e 2.
 	
@@ -80,7 +80,113 @@
 	onde $\Lambda_1: (0,\infty) \rightarrow (0,\infty)$ é uma função continua
 \end{lema}
 
-
+\begin{demonstracao}
+	Vamos derivar com respeito a $x_i$ à proposição \ref{primeira_derivada_x_Z} e depois vamos somar com respeito ao índice $i$.
+	\begin{multline}\label{Z_seg_dev_x}
+		\sum_i \frac{\partial^2 Z_{\alpha}}{\partial x_i^2}(x,y) = \alpha \sum_i \frac{\partial^2 \Psi}{\partial x_i^2}(x)(1 - \langle F(x), F(y) \rangle) -2 \alpha \sum_i \frac{\partial \Psi}{\partial x_i} \left\langle \frac{\partial F}{\partial x_i}(x), F(y) \right\rangle\\
+		 - \alpha \Psi(x) \left\langle \sum_i \frac{\partial^2 F}{\partial x_i^2}(x), F(y) \right\rangle + \sum_i \frac{\partial h_i^k}{\partial x_i}(x) \left\langle \frac{\partial F}{\partial x_k}, F(y) \right\rangle + \sum_i h_i^k(x) \left\langle \frac{\partial^2 F}{\partial x_i \partial x_k}, F(y) \right\rangle
+	\end{multline}
+	
+	Lembrar que o índice $k$ representa uma somatória. Vamos analisar o termo $\sum_i \frac{\partial^2 F}{\partial x_i^2}(x)$. Pelo teorema \ref{propriedades_sup_min_S3} se tem
+	\begin{equation*}
+		\sum_i \frac{\partial^2 F}{\partial x_i^2}(x) + 2 F(x) = 0.
+	\end{equation*}
+	
+	Então $\sum_i \frac{\partial^2 F}{\partial x_i^2}(x) = -2 F(x) $.
+	
+	Agora vamos analisar o termo $\sum_i \frac{\partial h_i^k}{\partial x_i}(x)$. Pela equação de Codazzi se tem
+	\begin{align*}
+		-\frac{\partial h_1^1}{\partial x_1} = \frac{\partial h_2^2}{\partial x_1} = \frac{\partial h_1^2}{\partial x_2} = \frac{\partial h_2^1}{\partial x_2}\\
+		-\frac{\partial h_2^2}{\partial x_2} = \frac{\partial h_1^1}{\partial x_2} = \frac{\partial h_2^1}{\partial x_2} = \frac{\partial h_1^2}{\partial x_2}.
+	\end{align*}
+	
+	Olhar que 
+	\begin{equation*}
+		A(x) = \left[\begin{matrix}
+		h_1^1(x) & h_1^2(x)\\
+		h_2^1(x) & h_2^2(x)
+		\end{matrix}\right],
+	\end{equation*}
+	
+	a superfície é minima e o fato as matrizes semelhantes tem a mesma traça, então temos $h_1^1(x) + h_2^2 = 0$. Portanto $\sum_i \frac{\partial h_i^k}{\partial x_i} = 0$.
+	
+	Analisando o termo $\sum_i h_i^k(x) \left\langle \frac{\partial^2 F}{\partial x_i \partial x_k}, F(y) \right\rangle$, derivamos \ref{der_nu_x} com respeito a $x_i$ e somamos com o índice $i$
+	\begin{equation*}
+		\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x) = \sum_i \frac{\partial h_i^k}{\partial x_i}(x) \frac{\partial F}{\partial x_k}(x) + \sum_i h_i^k \frac{\partial^2 F}{\partial x_i \partial x_k}(x)
+	\end{equation*}
+	
+	Como $\sum_i \frac{\partial h_i^k}{x_i}(x) = 0$, e expandindo a somatória  temos:
+	\begin{equation*}
+		\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x) =  h_1^1 \frac{\partial^2 F}{\partial x_1^2}(x) + h_1^2 \frac{\partial^2 F}{\partial x_1 \partial x_2}(x) + h_2^1 \frac{\partial^2 F}{\partial x_2 \partial x_1}(x) + h_2^2 \frac{\partial^2 F}{\partial x_2^2}(x)
+	\end{equation*}
+	
+	Fazendo produto interno com $\frac{\partial F}{\partial x_1}(x)$:
+	\begin{multline*}
+		\left\langle \sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle =\\
+		\left\langle h_1^1 \frac{\partial^2 F}{\partial x_1^2}(x) + h_1^2 \frac{\partial^2 F}{\partial x_1 \partial x_2}(x) + h_2^1 \frac{\partial^2 F}{\partial x_2 \partial x_1}(x) + h_2^2 \frac{\partial^2 F}{\partial x_2^2}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle.
+	\end{multline*}
+	
+	Temos que $\left\langle \frac{\partial F}{\partial x_1}, \frac{\partial F}{\partial x_1} = 1 \right\rangle$. Derivando com respeito a $x_1$ se tem $\left\langle \frac{\partial^2 F}{\partial x_1^2}, \frac{\partial F}{\partial x_1} \right\rangle = 0$. Igualmente derivando com respeito a $x_2$ e lembrando que as derivadas mistas comutam temos que $\left\langle \frac{\partial^2 F}{\partial x_1 \partial x_2}(x), \frac{\partial F}{\partial x_1} \right\rangle = \left\langle \frac{\partial^2 F}{\partial x_2 \partial x_1}(x), \frac{\partial F}{\partial x_1} \right\rangle = 0$. Analisando $\left\langle \frac{\partial^2 F}{\partial x_2^2}, \frac{\partial F}{\partial x_1} \right\rangle$, lembrando que $\left\langle \frac{\partial F}{\partial x_1}, \frac{\partial F}{\partial x_2} \right\rangle = 0$ derivamos com respeito a $x_2$:
+	\begin{equation*}
+		\left\langle \frac{\partial^2 F}{\partial x_2^2}, \frac{\partial F}{\partial x_1} \right\rangle + \left\langle \frac{\partial F}{\partial x_2}, \frac{\partial^2 F}{\partial x_2 \partial x_1} \right\rangle = 0
+	\end{equation*}
+	
+	Sabemos que $\left\langle \frac{\partial F}{\partial x_2}, \frac{\partial^2 F}{\partial x_2 \partial x_1} \right\rangle = 0$. Portanto, $\left\langle \frac{\partial^2 F}{\partial x_2^2}, \frac{\partial F}{\partial x_1} \right\rangle = 0$.
+	
+	Logo
+	\begin{equation*}
+		\left\langle \sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle = 0.
+	\end{equation*}
+	
+	De maneira similar:
+	\begin{equation*}
+		\left\langle \sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x), \frac{\partial F}{\partial x_2}(x) \right\rangle = 0.
+	\end{equation*}
+	
+	Isto quer dizer que $\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(p)$ não tem componentes no plano tangente $T_p \Sigma$ dentro de $T_p S^3$.
+	
+	Por outro lado, lembrado que $\left\langle \frac{\partial \nu}{\partial x_i}(x), \nu(x) \right\rangle = 0$, derivamos com respeito a $x_1$:
+	\begin{equation*}
+		\left\langle \frac{\partial^2 \nu}{\partial x_i^2}(x), \nu(x) \right\rangle + \left\langle \frac{\partial \nu}{\partial x_i}(x), \frac{\partial \nu}{\partial x_i}(x) \right\rangle = 0
+	\end{equation*}
+	
+	Como $\frac{\partial \nu}{\partial x_i}(x) = h_i^k(x) \frac{\partial F}{\partial x_k}$, então
+	\begin{equation*}
+		\left\langle \frac{\partial^2 \nu}{\partial x_i^2}(x), \nu(x) \right\rangle + \left\langle h_i^k(x) \frac{\partial F}{\partial x_k}, h_i^j(x) \frac{\partial F}{\partial x_j}  \right\rangle = 0.
+	\end{equation*}
+	
+	Como $\left\langle \frac{\partial F}{\partial x_k}, \frac{\partial F}{\partial x_j} \right\rangle = \delta_{kj}$, então
+	\begin{equation*}
+		\left\langle \frac{\partial^2 \nu}{\partial x_i^2}(x), \nu(x) \right\rangle + (h_i^k)^2 = 0.
+	\end{equation*}
+	
+	Logo, somando com respeito a $i$
+	\begin{equation*}
+		\left\langle \sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x), \nu(x) \right\rangle + \sum_i (h_i^k)^2 = 0.
+	\end{equation*}
+	
+	Olhar que $\sum_i (h_i^k(x))^2$ é $\| A(x) \|^2$ pela norma de Frobenius. Portanto, lembrando que $\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x)$ só tem componentes na direção $\nu$, temos
+	\begin{equation*}
+		\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(p) = - \| A(p) \|^2 \nu(p)
+	\end{equation*}
+	
+	Portanto, temos:
+	\begin{equation*}
+		\sum_i h_i^k \frac{\partial^2 F}{\partial x_i \partial x_k}(p) = \sum_i \frac{\partial^2 \nu}{\partial x_i^2}(p) = - \| A(p) \|^2 \nu(p)
+	\end{equation*}
+	
+	Ao final a equação \ref{Z_seg_dev_x} se escreve:
+	\begin{multline*}
+		\sum_i \frac{\partial^2 Z_{\alpha}}{\partial x_i^2}(p,q) = \alpha \sum_i \frac{\partial^2 \Psi}{\partial x_i^2}(p)(1 - \langle F(p), F(q) \rangle) -2 \alpha \sum_i \frac{\partial \Psi}{\partial x_i} \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle\\
+		+ 2 \alpha \Psi(p) \left\langle F(p), F(q) \right\rangle - \| A(p) \|^2 \left\langle \nu(p), F(q) \right\rangle
+	\end{multline*}
+	
+	Somando e restando $\|A(p)\| Z_{\alpha}(p,q)$ à ultima equação e logo associando, se tem
+	\begin{multline*}
+		\alpha \left( \Delta_{\Sigma} \Psi(p) + (\|A(p)\|^2 - 2) \Psi(p) \right) (1 - \langle F(p), F(q) \rangle) + 2 \alpha \Psi(p)\\
+		 - 2 \alpha \sum_i \frac{\partial \Psi}{\partial x_i}(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle - \|A(p)\|^2 Z_{\alpha}(p,q)
+	\end{multline*}
+\end{demonstracao}
 
 \begin{lema}
 	O Laplaciano de $Z_{\alpha}$ com respeito a $y$ satisfaz a desigualdade
