@@ -22,35 +22,39 @@
 \end{definicao}
 
 \begin{definicao}
-	Dado um numero $\alpha \geq 1$, a função $Z_{\alpha}: M \times M \rightarrow \realnumbers$ é definida por
+	A função $Z: \Sigma \times \Sigma \rightarrow \realnumbers$ é definida por
 	\begin{equation*}
-		Z_{\alpha}(x,y) = \alpha \Psi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle.
+		Z(x,y) =  \Phi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle.
 	\end{equation*}
-	onde $F: M \rightarrow S^3$ é uma imersão mínima de gênero 1 em $S^3$, e $\nu(x) \in T_{F(x)} S^3$ é um campo vectorial normal unitário
+	onde $F: \Sigma \rightarrow S^3$ é uma imersão mínima de gênero 1 em $S^3$, e $\nu(x) \in T_{F(x)} S^3$ é um campo vectorial normal unitário.
 \end{definicao}
 
+\begin{observacao}
+	 A partir de agora vamos supor que para $p \in \Sigma$ existe $q \in \Sigma$ tal que $Z(p,q) = \frac{\partial Z}{\partial x_i}(p,q) = 0$ para $i = 1,2$. Ista suposição é feita para ser usada nos cálculos posteriores.
+\end{observacao}
+
 \begin{proposicao}\label{primeira_derivada_x_Z}
-	As primeiras derivadas da função $Z_{\alpha}$ com respeito a $x_1$ e $x_2$ estão dadas por:
-	\begin{equation*}
-	\frac{\partial Z_{\alpha}}{\partial x_i} (\overline{x}, \overline{y}) = \alpha \frac{\partial \Psi}{\partial x_i}(\overline{x}) (1 - \langle F(\overline{x}, \overline{y}) \rangle) - \alpha \Psi(\overline{x}) \left\langle \frac{\partial F}{\partial x_i}(\overline{x}), F(\overline{y}) \right\rangle + h_i^k(\overline{x}) \left\langle \frac{\partial F}{\partial x_k}(\overline{x}), F(\overline{y}) \right\rangle
-	\end{equation*}
+	As primeiras derivadas da função $Z$ com respeito a $x_1$ e $x_2$ estão dadas por:
+	\begin{equation}\label{diff_Z_x}
+	\frac{\partial Z}{\partial x_i} (p, q) =  \frac{\partial \Phi}{\partial x_i}(p) (1 - \langle F(p, q) \rangle) -  \Phi(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle + h_i^k(p) \left\langle \frac{\partial F}{\partial x_k}(p), F(q) \right\rangle
+	\end{equation}
 \end{proposicao}
 
 
 \begin{demonstracao}
 	Derivando com respeito a $x_1$ e $x_2$:
 	\begin{equation*}
-		\frac{\partial Z_{\alpha}}{\partial x_i} (\overline{x}, \overline{y}) = \alpha \frac{\partial \Psi}{\partial x_i}(\overline{x}) (1 - \langle F(\overline{x}, \overline{y}) \rangle) - \alpha \Psi(\overline{x}) \left\langle \frac{\partial F}{\partial x_i}(\overline{x}), F(\overline{y}) \right\rangle + \left\langle \frac{\partial \nu}{\partial x_i}(\overline{x}), F(\overline{y}) \right\rangle
+		\frac{\partial Z}{\partial x_i} (p, q) =  \frac{\partial \Phi}{\partial x_i}(p) (1 - \langle F(p, q) \rangle) -  \Phi(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle + \left\langle \frac{\partial \nu}{\partial x_i}(p), F(q) \right\rangle
 	\end{equation*}
 	
-	Em quanto ao termo $ \left\langle \frac{\partial \nu}{\partial x_i}(\overline{x}), F(\overline{y}) \right\rangle $, olhar que $\langle \nu(x), \nu(x) \rangle=1, \forall x \in \Sigma$. Então, quando se derivar se tem:
+	Em quanto ao termo $ \left\langle \frac{\partial \nu}{\partial x_i}(p), F(q) \right\rangle $, olhar que $\langle \nu(x), \nu(x) \rangle=1, \forall x \in \Sigma$. Então, quando se derivar se tem:
 	\begin{equation*}
 		\left\langle \frac{\partial \nu}{\partial x_i}(x), \nu(x) \right\rangle = 0, \forall x \in \Sigma.
 	\end{equation*}
 	
-	Isto quer dizer que $\frac{\partial \nu}{\partial x_i}(\overline{x}) \in T_{\overline{x}} \Sigma$. Olhar que estamos identificando $\overline{x}$ com $F(\overline{x})$. Nós sabemos que $\{ \frac{\partial F}{\partial x_i}(\overline{x}) \}$ gera $T_{\overline{x}} \Sigma$, então, usando a notação de Einstein, podemos expressar $\frac{\partial \nu}{\partial x_i}(\overline{x})$ como combinação linear dos vetores anteriores.
+	Isto quer dizer que $\frac{\partial \nu}{\partial x_i}(p) \in T_{p} \Sigma$. Olhar que estamos identificando $p$ com $F(p)$. Nós sabemos que $\{ \frac{\partial F}{\partial x_i}(p) \}$ gera $T_{p} \Sigma$, então, usando a notação de Einstein, podemos expressar $\frac{\partial \nu}{\partial x_i}(p)$ como combinação linear dos vetores anteriores.
 	\begin{equation}\label{der_nu_x}
-		\frac{\partial \nu}{\partial x_i} (\overline{x}) = h_i^k \frac{\partial F}{\partial x_k}
+		\frac{\partial \nu}{\partial x_i} (p) = h_i^k \frac{\partial F}{\partial x_k}
 	\end{equation}
 	
 	Lembrar que a notação de Einstein está expressando uma suma com respeito ao índice $k$ que toma os valores 1 e 2.
@@ -59,32 +63,29 @@
 \end{demonstracao}
 
 \begin{proposicao}
-	As primeiras derivadas da função $Z_{\alpha}$ com respeito a $y_1$ e $y_2$ estão dadas por:
+	As primeiras derivadas da função $Z$ com respeito a $y_1$ e $y_2$ estão dadas por:
 	\begin{equation*}
-		\frac{\partial Z_{\alpha}}{\partial y_i} (\overline{x}, \overline{y}) = -\alpha \Psi(\overline{x}) \left\langle F(\overline{x}), \frac{\partial F}{\partial y_i} (\overline{y}) \right\rangle + \left\langle \nu(\overline{x}), \frac{\partial F}{\partial y_i}(\overline{y}) \right\rangle
+		\frac{\partial Z}{\partial y_i} (p, q) = - \Phi(p) \left\langle F(p), \frac{\partial F}{\partial y_i} (q) \right\rangle + \left\langle \nu(p), \frac{\partial F}{\partial y_i}(q) \right\rangle
 	\end{equation*}
 \end{proposicao}
 
 \begin{demonstracao}
-	Calculo simples.
+	Cálculo simples.
 \end{demonstracao}
 
-\begin{lema}
-	O Laplaciano de $Z_{\alpha}$ com respeito a $x$ satisfaz a desigualdade
-	\begin{equation*}
-		\begin{split}
-		\sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial x_i^2} (p,q) & \leq 2 \alpha \Psi(p) - \frac{\alpha^2 - 1}{\alpha} \frac{\Psi(p)}{1 - \langle F(p), F(q) \rangle} \sum_{i=1}^{2} \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2\\
-		& + \Lambda_1 (| F(p) - F(q) |) \left( \sum_{i=1}^{2} \left| \frac{\partial Z_{\alpha}}{\partial x_i} (p,q) \right| \right),
-		\end{split}		
-	\end{equation*}
-	onde $\Lambda_1: (0,\infty) \rightarrow (0,\infty)$ é uma função continua
-\end{lema}
+\begin{proposicao}
+	O Laplaciano de $Z$ com respeito a $x$ satisfaz a desigualdade
+	\begin{multline*}
+		\sum_{i=1}^{2} \frac{\partial^2 Z}{\partial x_i^2} (p,q) = \left( \Delta_{\Sigma} \Phi(p) - \frac{| \nabla \Phi(p) |^2}{\Phi(p)} + (|A(p)|^2 - 2) \Phi(p) \right) (1 - \left\langle F(p), F(q) \right\rangle) + 2 \Phi(p)\\
+		 - \frac{2 \Phi(p)^2 - |A(p)|^2}{2 \Phi(p) (1 - \langle F(p), F(q) \rangle)} \sum_i \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle^2
+	\end{multline*}
+\end{proposicao}
 
 \begin{demonstracao}
 	Vamos derivar com respeito a $x_i$ à proposição \ref{primeira_derivada_x_Z} e depois vamos somar com respeito ao índice $i$.
 	\begin{multline}\label{Z_seg_dev_x}
-		\sum_i \frac{\partial^2 Z_{\alpha}}{\partial x_i^2}(x,y) = \alpha \sum_i \frac{\partial^2 \Psi}{\partial x_i^2}(x)(1 - \langle F(x), F(y) \rangle) -2 \alpha \sum_i \frac{\partial \Psi}{\partial x_i} \left\langle \frac{\partial F}{\partial x_i}(x), F(y) \right\rangle\\
-		 - \alpha \Psi(x) \left\langle \sum_i \frac{\partial^2 F}{\partial x_i^2}(x), F(y) \right\rangle + \sum_i \frac{\partial h_i^k}{\partial x_i}(x) \left\langle \frac{\partial F}{\partial x_k}, F(y) \right\rangle + \sum_i h_i^k(x) \left\langle \frac{\partial^2 F}{\partial x_i \partial x_k}, F(y) \right\rangle
+		\sum_i \frac{\partial^2 Z}{\partial x_i^2}(x,y) = \sum_i \frac{\partial^2 \Phi}{\partial x_i^2}(x)(1 - \langle F(x), F(y) \rangle) -2  \sum_i \frac{\partial \Phi}{\partial x_i} \left\langle \frac{\partial F}{\partial x_i}(x), F(y) \right\rangle\\
+		 -  \Phi(x) \left\langle \sum_i \frac{\partial^2 F}{\partial x_i^2}(x), F(y) \right\rangle + \sum_i \frac{\partial h_i^k}{\partial x_i}(x) \left\langle \frac{\partial F}{\partial x_k}, F(y) \right\rangle + \sum_i h_i^k(x) \left\langle \frac{\partial^2 F}{\partial x_i \partial x_k}, F(y) \right\rangle
 	\end{multline}
 	
 	Lembrar que o índice $k$ representa uma somatória. Vamos analisar o termo $\sum_i \frac{\partial^2 F}{\partial x_i^2}(x)$. Pelo teorema \ref{propriedades_sup_min_S3} se tem
@@ -97,7 +98,7 @@
 	Agora vamos analisar o termo $\sum_i \frac{\partial h_i^k}{\partial x_i}(x)$. Pela equação de Codazzi se tem
 	\begin{align*}
 		-\frac{\partial h_1^1}{\partial x_1} = \frac{\partial h_2^2}{\partial x_1} = \frac{\partial h_1^2}{\partial x_2} = \frac{\partial h_2^1}{\partial x_2}\\
-		-\frac{\partial h_2^2}{\partial x_2} = \frac{\partial h_1^1}{\partial x_2} = \frac{\partial h_2^1}{\partial x_2} = \frac{\partial h_1^2}{\partial x_2}.
+		-\frac{\partial h_2^2}{\partial x_2} = \frac{\partial h_1^1}{\partial x_2} = \frac{\partial h_2^1}{\partial x_1} = \frac{\partial h_1^2}{\partial x_1}.
 	\end{align*}
 	
 	Olhar que 
@@ -115,7 +116,7 @@
 		\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x) = \sum_i \frac{\partial h_i^k}{\partial x_i}(x) \frac{\partial F}{\partial x_k}(x) + \sum_i h_i^k \frac{\partial^2 F}{\partial x_i \partial x_k}(x)
 	\end{equation*}
 	
-	Como $\sum_i \frac{\partial h_i^k}{x_i}(x) = 0$, e expandindo a somatória  temos:
+	Lembrando $\sum_i \frac{\partial h_i^k}{x_i}(x) = 0$, e expandindo a somatória  temos:
 	\begin{equation*}
 		\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x) =  h_1^1 \frac{\partial^2 F}{\partial x_1^2}(x) + h_1^2 \frac{\partial^2 F}{\partial x_1 \partial x_2}(x) + h_2^1 \frac{\partial^2 F}{\partial x_2 \partial x_1}(x) + h_2^2 \frac{\partial^2 F}{\partial x_2^2}(x)
 	\end{equation*}
@@ -165,40 +166,85 @@
 		\left\langle \sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x), \nu(x) \right\rangle + \sum_i (h_i^k)^2 = 0.
 	\end{equation*}
 	
-	Olhar que $\sum_i (h_i^k(x))^2$ é $\| A(x) \|^2$ pela norma de Frobenius. Portanto, lembrando que $\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x)$ só tem componentes na direção $\nu$, temos
+	Olhar que $\sum_i (h_i^k(x))^2$ é $| A(x) |^2$ pela norma de Frobenius. Portanto, lembrando que $\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x)$ só tem componentes na direção $\nu$, temos
 	\begin{equation*}
-		\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(p) = - \| A(p) \|^2 \nu(p)
+		\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(p) = - | A(p) |^2 \nu(p)
 	\end{equation*}
 	
 	Portanto, temos:
 	\begin{equation*}
-		\sum_i h_i^k \frac{\partial^2 F}{\partial x_i \partial x_k}(p) = \sum_i \frac{\partial^2 \nu}{\partial x_i^2}(p) = - \| A(p) \|^2 \nu(p)
+		\sum_i h_i^k \frac{\partial^2 F}{\partial x_i \partial x_k}(p) = \sum_i \frac{\partial^2 \nu}{\partial x_i^2}(p) = - | A(p) |^2 \nu(p)
 	\end{equation*}
 	
 	Ao final a equação \ref{Z_seg_dev_x} se escreve:
+	\begin{multline}\label{lap_Z_x}
+		\sum_i \frac{\partial^2 Z}{\partial x_i^2}(p,q) =  \sum_i \frac{\partial^2 \Phi}{\partial x_i^2}(p)(1 - \langle F(p), F(q) \rangle) -2  \sum_i \frac{\partial \Phi}{\partial x_i} \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle\\
+		+ 2  \Phi(p) \left\langle F(p), F(q) \right\rangle - | A(p) |^2 \left\langle \nu(p), F(q) \right\rangle
+	\end{multline}
+	
+	Multiplicando por $|A(p)|^2$ a $Z(p,q)$
+	\begin{equation*}
+		0 = |A(p)|^2 Z(p,q) = |A(p)|^2 \Phi(p) (1 - \langle F(p), F(q) \rangle) + |A(p)|^2 \langle \nu(p), F(q) \rangle
+	\end{equation*}
+	
+	temos $-|A(p)|^2 \langle \nu(p), F(q) \rangle = |A(p)|^2 \Phi(p) (1 - \langle F(p), F(q) \rangle)$. Usando isto em \ref{lap_Z_x}:
 	\begin{multline*}
-		\sum_i \frac{\partial^2 Z_{\alpha}}{\partial x_i^2}(p,q) = \alpha \sum_i \frac{\partial^2 \Psi}{\partial x_i^2}(p)(1 - \langle F(p), F(q) \rangle) -2 \alpha \sum_i \frac{\partial \Psi}{\partial x_i} \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle\\
-		+ 2 \alpha \Psi(p) \left\langle F(p), F(q) \right\rangle - \| A(p) \|^2 \left\langle \nu(p), F(q) \right\rangle
+	\sum_i \frac{\partial^2 Z}{\partial x_i^2}(p,q) =  \sum_i \frac{\partial^2 \Phi}{\partial x_i^2}(p)(1 - \langle F(p), F(q) \rangle) -2  \sum_i \frac{\partial \Phi}{\partial x_i} \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle\\
+	+ 2  \Phi(p) \left\langle F(p), F(q) \right\rangle + |A(p)|^2 \Phi(p) (1 - \langle F(p), F(q) \rangle)
 	\end{multline*}
 	
-	Somando e restando $\|A(p)\| Z_{\alpha}(p,q)$ à ultima equação e logo associando, se tem
+	Reordenando, se tem
 	\begin{multline*}
-		\alpha \left( \Delta_{\Sigma} \Psi(p) + (\|A(p)\|^2 - 2) \Psi(p) \right) (1 - \langle F(p), F(q) \rangle) + 2 \alpha \Psi(p)\\
-		 - 2 \alpha \sum_i \frac{\partial \Psi}{\partial x_i}(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle - \|A(p)\|^2 Z_{\alpha}(p,q)
+		\sum_i \frac{\partial^2 Z}{\partial x_i^2}(p,q) = (\Delta_{\Sigma} \Phi(p) + (|A(p)|^2 - 2)\Phi(p))(1 - \langle F(p), F(q) \rangle) + 2 \Phi(p)\\
+		- 2 \sum_i \frac{\partial \Phi}{\partial x_i}(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle
 	\end{multline*}
+	
+	Somando e restando $\frac{|\nabla \Phi(p)|^2}{\Phi(p)} (1 - \langle F(p), F(q) \rangle) + \frac{\Phi(p)}{1 - \langle F(p),F(q) \rangle} \sum_i \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2$ temos:
+	\begin{multline*}
+		\sum_i \frac{\partial^2 Z}{\partial x_i^2}(p,q) = \left(\Delta_{\Sigma} \Phi(p) - \frac{|\nabla \Phi(p)|^2}{\Phi(p)} + (|A(p)|^2 - 2)\Phi(p)\right)(1 - \langle F(p), F(q) \rangle)\\
+		+ 2 \Phi(p) + \frac{|\nabla \Phi(p)|^2}{\Phi(p)} (1 - \langle F(p), F(q) \rangle) - 2 \sum_i \frac{\partial \Phi}{\partial x_i}(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle\\
+		+ \frac{\Phi(p)}{1 - \langle F(p),F(q) \rangle} \sum_i \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2 - \frac{\Phi(p)}{1 - \langle F(p),F(q) \rangle} \sum_i \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2
+	\end{multline*}
+	
+	Fatorizando adequadamente
+	\begin{multline*}
+		\sum_i \frac{\partial^2 Z}{\partial x_i^2}(p,q) = \left(\Delta_{\Sigma} \Phi(p) - \frac{|\nabla \Phi(p)|^2}{\Phi(p)} + (|A(p)|^2 - 2)\Phi(p)\right)(1 - \langle F(p), F(q) \rangle)+ 2 \Phi(p)	\\
+		+ \frac{1}{\Phi(p)(1 - \langle F(p), F(q) \rangle)}	m(p,q) - \frac{\Phi(p)}{1 - \langle F(p),F(q) \rangle} \sum_i \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2
+	\end{multline*}
+	
+	onde
+	\begin{multline*}
+		m(p,q) = |\nabla \Phi(p)|^2 (1 - \langle F(p), F(q) \rangle)^2 \\
+		- 2 \sum_i \frac{\partial \Phi}{\partial x_i}(p) (1 - \langle F(p), F(q) \rangle) \Phi(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle + \Phi(p)^2 \sum_i \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2
+	\end{multline*}
+	
+	Podemos olhar que
+	\begin{equation*}
+		m(p,q) = \sum_i \left(  \frac{\partial \Phi}{\partial x_i}(p)(1 - \langle F(p),F(q) \rangle) - \Phi(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle \right)^2
+	\end{equation*}
+	
+	Pela equação \ref{diff_Z_x} e lembrando que $\frac{\partial Z}{\partial x_i}(p,q)=0$ temos
+	\begin{equation*}
+		m(p,q) = \sum_i \left( h_i^k(p) \left\langle \frac{\partial F}{x_k}(p), F(q) \right\rangle \right)^2
+	\end{equation*}
+	
+	Expandindo o termo quadrático
+	\begin{equation*}
+		l
+	\end{equation*}
 \end{demonstracao}
 
 \begin{lema}
-	O Laplaciano de $Z_{\alpha}$ com respeito a $y$ satisfaz a desigualdade
+	O Laplaciano de $Z$ com respeito a $y$ satisfaz a desigualdade
 	\begin{equation*}
-		\sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial y_i^2} (p,q) \leq 2 \alpha \Psi(p) + 2 |Z_{\alpha}(p,q)|.
+		\sum_{i=1}^{2} \frac{\partial^2 Z}{\partial y_i^2} (p,q) \leq 2  \Phi(p) + 2 |Z(p,q)|.
 	\end{equation*}
 \end{lema}
 
 \begin{lema}
 	\begin{equation*}
 		\begin{split}
-		\sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial x_i \partial y_i} (p,q) &\leq -2 \alpha \Psi(p) + \Lambda_4 (|F(p) - F(q)|)\\
+		\sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial x_i \partial y_i} (p,q) &\leq -2 \alpha \Phi(p) + \Lambda_4 (|F(p) - F(q)|)\\
 		& \left( |Z_{\alpha}(p,q)| + \sum_{i=1}^{2} \left| \frac{\partial Z_{\alpha}}{\partial x_i} (p,q) \right| + \sum_{i=1}^{2} \left| \frac{\partial Z_{\alpha}}{\partial y_i} (p,q) \right| \right),
 		\end{split}		
 	\end{equation*}
@@ -208,7 +254,7 @@
 \begin{proposicao}
 	\begin{multline*}
 		\sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial x_i^2} (p,q) + 2 \sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial x_i \partial y_i} (p,q) + \sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial y_i^2} (p,q) \leq \\
-		- \frac{\alpha^2 - 1}{\alpha} \frac{\Psi(p)}{1 - \langle F(p), F(q) \rangle} \sum_{i=1}^{2} \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2 \\
+		- \frac{\alpha^2 - 1}{\alpha} \frac{\Phi(p)}{1 - \langle F(p), F(q) \rangle} \sum_{i=1}^{2} \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2 \\
 		+ \Lambda_5(|F(p) - F(q)|) \left( |Z_{\alpha}(p,q)| + \sum_{i=1}^{2} \left| \frac{\partial Z_{\alpha}}{\partial x_i} (p,q) \right| + \sum_{i=1}^{2} \left| \frac{\partial Z_{\alpha}}{\partial y_i} (p,q) \right| \right),
 	\end{multline*}
 	onde $\Lambda_5: (0,\infty) \rightarrow (0,\infty)$ é uma função continua.
