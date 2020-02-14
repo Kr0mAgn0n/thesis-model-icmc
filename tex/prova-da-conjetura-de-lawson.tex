@@ -64,9 +64,9 @@
 
 \begin{proposicao}
 	As primeiras derivadas da função $Z$ com respeito a $y_1$ e $y_2$ estão dadas por:
-	\begin{equation*}
+	\begin{equation}\label{diff_Z_y}
 		\frac{\partial Z}{\partial y_i} (p, q) = - \Phi(p) \left\langle F(p), \frac{\partial F}{\partial y_i} (q) \right\rangle + \left\langle \nu(p), \frac{\partial F}{\partial y_i}(q) \right\rangle
-	\end{equation*}
+	\end{equation}
 \end{proposicao}
 
 \begin{demonstracao}
@@ -228,18 +228,91 @@
 		m(p,q) = \sum_i \left( h_i^k(p) \left\langle \frac{\partial F}{x_k}(p), F(q) \right\rangle \right)^2
 	\end{equation*}
 	
-	Expandindo o termo quadrático
+	Expandindo o termo quadrático temos
+	\begin{multline*}
+		(h_i^1(p))^2 \left\langle \frac{\partial F}{x_1}(p), F(q) \right\rangle^2 + (h_i^2(p))^2 \left\langle \frac{\partial F}{x_2}(p), F(q) \right\rangle^2\\
+		+ 2 h_i^1(p) h_i^2(p) \left\langle \frac{\partial F}{x_1}(p), F(q) \right\rangle \left\langle \frac{\partial F}{x_2}(p), F(q) \right\rangle
+	\end{multline*}
+	
+	Lembremos que o determinante de $A$ é $-\lambda^2$. Então:
 	\begin{equation*}
-		l
+		h_1^1(p) h_2^2(p) - h_1^2(p) h_2^1(p) = h_1^1(p) h_2^2(p) - (h_1^2(p))^2 = -\lambda^2
 	\end{equation*}
+	
+	porque $h_1^2(p) = h_2^1(p)$. Como $h_1^1(p) + h_2^2(p) = 0$:
+	\begin{align*}
+		\sum_i (h_i^1(p))^2 &= \lambda^2,\\
+		\sum_i (h_i^2(p))^2 &= \lambda^2
+	\end{align*}
+	
+	Em quanto ao termo $\sum_i h_i^1(p) h_i^2(p)$, se tem
+	\begin{equation*}
+		h_1^1(p) h_1^2(p) + h_2^1(p) h_2^2(p) = h_1^2(p) (h_1^1(p) + h_2^2(p)) = 0.
+	\end{equation*}
+	
+	Portanto,
+	\begin{equation*}
+		m(p,q) = \sum_i \lambda^2 \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle^2
+	\end{equation*}
+	
+	Lembrando que $\lambda^2 = \frac{1}{2} |A(p)|$, ao final se tem a equação desejada.
 \end{demonstracao}
 
-\begin{lema}
-	O Laplaciano de $Z$ com respeito a $y$ satisfaz a desigualdade
+%\begin{lema}
+%	O Laplaciano de $Z$ com respeito a $y$ satisfaz a desigualdade
+%	\begin{equation*}
+%		\sum_{i=1}^{2} \frac{\partial^2 Z}{\partial y_i^2} (p,q) \leq 2  \Phi(p) + 2 |Z(p,q)|.
+%	\end{equation*}
+%\end{lema}
+
+\begin{proposicao}
+	Temos
 	\begin{equation*}
-		\sum_{i=1}^{2} \frac{\partial^2 Z}{\partial y_i^2} (p,q) \leq 2  \Phi(p) + 2 |Z(p,q)|.
+		\frac{\partial^2 Z}{\partial x_i \partial y_i}(p,q) = \lambda_i - \Phi(p)
 	\end{equation*}
-\end{lema}
+\end{proposicao}
+
+\begin{demonstracao}
+	Derivando con respeito a $x_i$ a equação \ref{diff_Z_y}:
+	\begin{equation*}
+		\frac{\partial^2 Z}{\partial x_i \partial y_i}(p,q) = -\frac{\partial \Phi}{\partial x_i}(p) \left\langle F(p), \frac{\partial F}{\partial y_i}(q) \right\rangle - \Phi(p) \left\langle \frac{\partial F}{\partial x_i}(p), \frac{\partial F}{\partial y_i}(q) \right\rangle + \left\langle \frac{\partial \nu}{\partial x_i}(p), \frac{\partial F}{\partial y_i}(q) \right\rangle
+	\end{equation*}
+	
+	Lembrando que $\frac{\partial \nu}{\partial x_i}(p) = \lambda_i(p) \frac{\partial F}{\partial x_i}(p)$, temos
+	\begin{equation*}
+		\frac{\partial^2 Z}{\partial x_i \partial y_i}(p,q) = -\frac{\partial \Phi}{\partial x_i}(p) \left\langle F(p), \frac{\partial F}{\partial y_i}(q) \right\rangle + (\lambda_i(p) - \Phi(p)) \left\langle \frac{\partial F}{\partial x_i}(p), \frac{\partial F}{\partial y_i}(q) \right\rangle
+	\end{equation*}
+	
+	De \ref{diff_Z_x}, temos
+	\begin{equation*}
+		-\frac{\partial \Phi}{\partial x_i}(p) = \frac{1}{1 - \langle F(p),F(q) \rangle} (\lambda_i(p) - \Phi(p)) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle
+	\end{equation*}
+	
+	Substituindo na equação anterior:
+	\begin{multline*}
+		\frac{\partial^2 Z}{\partial x_i \partial y_i}(p,q) =  \frac{1}{1 - \langle F(p),F(q) \rangle} (\lambda_i(p) - \Phi(p)) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle  \left\langle F(p), \frac{\partial F}{\partial y_i}(q) \right\rangle +\\
+		(\lambda_i(p) - \Phi(p)) \left\langle \frac{\partial F}{\partial x_i}(p), \frac{\partial F}{\partial y_i}(q) \right\rangle
+	\end{multline*}
+	
+	Nós sabemos que $|F(p) - F(q)|^2 = \langle F(p) - F(q), F(p) - F(q) \rangle = 2 - 2 \langle F(p), F(q) \rangle$, então
+	\begin{multline*}
+		\frac{\partial^2 Z}{\partial x_i \partial y_i}(p,q) = -2 (\lambda_i(p) - \Phi(p)) \left\langle \frac{\partial F}{\partial x_i}(p), \frac{-F(q)}{|F(p) - F(q)|} \right\rangle \left\langle \frac{F(p)}{|F(p) - F(q)|}, \frac{\partial F}{\partial y_i}(q) \right\rangle\\
+		+ (\lambda_i - \Phi(p)) \left\langle \frac{\partial F}{\partial x_i}(p), \frac{\partial F}{\partial y_i}(q) \right\rangle
+	\end{multline*}
+	
+	Lembrar que $\left\langle \frac{\partial F}{\partial x_i}(p), F(p) \right\rangle = \left\langle \frac{\partial F}{\partial y_i}(q), F(q) \right\rangle = 0$. Com isso a equação anterior se escreve
+	\begin{multline*}
+	\frac{\partial^2 Z}{\partial x_i \partial y_i}(p,q) = -2 (\lambda_i(p) - \Phi(p)) \left\langle \frac{\partial F}{\partial x_i}(p), \frac{F(p) -F(q)}{|F(p) - F(q)|} \right\rangle \left\langle \frac{F(p) - F(q)}{|F(p) - F(q)|}, \frac{\partial F}{\partial y_i}(q) \right\rangle\\
+	+ (\lambda_i - \Phi(p)) \left\langle \frac{\partial F}{\partial x_i}(p), \frac{\partial F}{\partial y_i}(q) \right\rangle
+	\end{multline*}
+	
+	Associando
+	\begin{equation*}
+	\frac{\partial^2 Z}{\partial x_i \partial y_i}(p,q) = (\lambda_i(p) - \Phi(p))  \left\langle w_i , \frac{\partial F}{\partial y_i}(q) \right\rangle
+	\end{equation*}
+	
+	onde $w_i = \frac{\partial F}{\partial x_i}(p)  -2 \left\langle \frac{\partial F}{\partial x_i}(p), \frac{F(p) -F(q)}{|F(p) - F(q)|} \right\rangle \frac{F(p) - F(q)}{|F(p) - F(q)|}$.
+\end{demonstracao}
 
 \begin{lema}
 	\begin{equation*}
