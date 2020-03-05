@@ -98,10 +98,12 @@
 	Então $\sum_i \frac{\partial^2 F}{\partial x_i^2}(x) = -2 F(x) $.
 	
 	Agora vamos analisar o termo $\sum_i \frac{\partial h_i^k}{\partial x_i}(x)$. Pela equação de Codazzi se tem
-	\begin{align*}
+	\begin{equation}\label{codazzi_eq}
+		\begin{split}
 		-\frac{\partial h_1^1}{\partial x_1} = \frac{\partial h_2^2}{\partial x_1} = \frac{\partial h_1^2}{\partial x_2} = \frac{\partial h_2^1}{\partial x_2}\\
 		-\frac{\partial h_2^2}{\partial x_2} = \frac{\partial h_1^1}{\partial x_2} = \frac{\partial h_2^1}{\partial x_1} = \frac{\partial h_1^2}{\partial x_1}.
-	\end{align*}
+		\end{split}		
+	\end{equation}
 	
 	Olhar que 
 	\begin{equation*}
@@ -380,7 +382,7 @@
 \begin{proposicao}
 	Supor que $F: \Sigma \rightarrow S^3$ é um toro mínimo mergulhado em $S^3$. Então a função $\Psi = \frac{|A|}{\sqrt{2}}$ é estritamente positiva e satisfaz a E.D.P
 	\begin{equation*}
-		\Delta_\Sigma \Psi - \frac{|\nabla \Psi|^2}{\Psi} + (|A|^2 - 2) = 0
+		\Delta_\Sigma \Psi - \frac{|\nabla \Psi|^2}{\Psi} + (|A|^2 - 2) \Psi = 0
 	\end{equation*}
 \end{proposicao}
 
@@ -409,8 +411,124 @@
 	\begin{equation*}
 	\Delta_{\Sigma} (|A|^2) - 2 | \nabla A |^2 + 2 (|A|^2 - 2) |A|^2 = 0
 	\end{equation*}
+	
+	Olhar que $ \Delta_{\Sigma} (|A|^2) = \sum_j \frac{\partial^2 |A|^2}{\partial x_j^2} = \sum_j \frac{\partial}{\partial x_j} \left( \frac{\partial |A|^2}{\partial x_j} \right) = 2 \sum_j \frac{\partial^2 |A|}{\partial x_j} + 2 \sum_j \left( \frac{\partial |A|}{\partial x_j} \right)^2 $. Portanto
+	\begin{equation}\label{edp_sff}
+		\Delta_{\Sigma} (|A|) + \frac{|\nabla |A||^2}{|A|} - \frac{|\nabla A|^2}{|A|} + (|A|^2 - 2) |A| = 0
+	\end{equation}
+	
+	Temos que $ | \nabla A |^2 = \sum_j \left( \frac{\partial h_{ik}}{\partial x_j} \right)^2 $ onde se está somando sobre os índices $i$ e $k$. Pela equação \ref{codazzi_eq} temos
+	\begin{align*}
+		\frac{\partial h_{11}}{\partial x_1} + \frac{\partial h_{21}}{\partial x_2} &= 0\\
+		\frac{\partial h_{12}}{\partial x_1} + \frac{\partial h_{22}}{\partial x_2} &= 0
+	\end{align*}
+	
+	Elevando ao quadrado temos
+	\begin{align*}
+		\left( \frac{\partial h_{11}}{\partial x_1} \right)^2 + \left( \frac{\partial h_{21}}{\partial x_2} \right)^2  &= - 2 \frac{\partial h_{11}}{\partial x_1} \frac{\partial h_{21}}{\partial x_2}  \\
+		\left( \frac{\partial h_{12}}{\partial x_1} \right)^2 + \left( \frac{\partial h_{22}}{\partial x_2} \right)^2 &= - 2 \frac{\partial h_{12}}{\partial x_1} \frac{\partial h_{22}}{\partial x_2}
+	\end{align*}
+	
+	Usando a equação \ref{codazzi_eq} outra vez temos
+	\begin{align*}
+		\left( \frac{\partial h_{11}}{\partial x_1} \right)^2 + \left( \frac{\partial h_{21}}{\partial x_2} \right)^2  &=  2  \left( \frac{\partial h_{21}}{\partial x_2} \right)^2  \\
+		\left( \frac{\partial h_{12}}{\partial x_1} \right)^2 + \left( \frac{\partial h_{22}}{\partial x_2} \right)^2 &=  2 \left( \frac{\partial h_{12}}{\partial x_1} \right)^2\\
+		\left( \frac{\partial h_{11}}{\partial x_2} \right)^2 + \left( \frac{\partial h_{21}}{\partial x_1} \right)^2  &= 2 \left( \frac{\partial h_{21}}{\partial x_1} \right)^2\\
+		\left( \frac{\partial h_{12}}{\partial x_2} \right)^2 + \left( \frac{\partial h_{22}}{\partial x_1} \right)^2 &=  2 \left( \frac{\partial h_{12}}{\partial x_2} \right)^2  
+	\end{align*}
+	
+	Somando e lembrando que $h_{12} = h_{21}$ temos
+	\begin{equation*}
+		| \nabla A |^2 = 4 \left( \frac{\partial h_{12}}{\partial x_1} \right) + 4 \left( \frac{\partial h_{12}}{\partial x_2} \right)
+	\end{equation*}
+	
+	Observar que $ |A| = \sqrt{2 h_{11}^2 + 2 h_{12}^2} $ e que $ | \nabla |A| |^2 = \left( \frac{\partial |A|}{\partial x_1} \right)^2 + \left( \frac{\partial |A|}{\partial x_2} \right)^2 $. Derivando $ |A| $ com respeito a $x_1$ temos
+	\begin{equation*}
+		\frac{\partial |A|}{\partial x_1} = \frac{2 h_{11} \frac{\partial h_{11}}{\partial x_1} + 2 h_{12} \frac{\partial h_{12}}{\partial x_1}}{|A|}
+	\end{equation*}
+	
+	De forma similar, derivando $ |A| $ com respeito a $ x_2 $ temos
+	\begin{equation*}
+		\frac{\partial |A|}{\partial x_2} = \frac{2 h_{11} \frac{\partial h_{11}}{\partial x_2} + 2 h_{12} \frac{\partial h_{12}}{\partial x_2}}{|A|}
+	\end{equation*}
+	
+	Obtendo o quadrado de ambas expressões se tem
+	\begin{align*}
+		\left( \frac{\partial |A|}{\partial x_1} \right)^2 &= \frac{4 h_{11}^2 \left( \frac{\partial h_{11}}{\partial x_1} \right)^2 + 4 h_{12}^2 \left( \frac{\partial h_{12}}{\partial x_1} \right)^2 + 8 h_{11} h_{12} \frac{\partial h_{11}}{\partial x_1} \frac{\partial h_{12}}{\partial x_1}}{|A|^2}\\
+		\left( \frac{\partial |A|}{\partial x_2} \right)^2 &= \frac{4 h_{11}^2 \left( \frac{\partial h_{11}}{\partial x_2} \right)^2 + 4 h_{12}^2 \left( \frac{\partial h_{12}}{\partial x_2} \right)^2 + 8 h_{11} h_{12} \frac{\partial h_{11}}{\partial x_2} \frac{\partial h_{12}}{\partial x_2}}{|A|^2}
+	\end{align*}
+	
+	Usando \ref{codazzi_eq} e somando os termos correspondentes se tem
+	\begin{equation*}
+		| \nabla |A| |^2 = 2 \left( \frac{\partial h_{12}}{\partial x_1} \right)^2 + 2 \left( \frac{\partial h_{12}}{\partial x_2} \right)
+	\end{equation*}
+	
+	Portanto, $ | \nabla A |^2 = 2 | \nabla |A| |^2 $. Usando o resultado em \ref{edp_sff} se tem
+	\begin{equation*}
+		\Delta_\Sigma \Psi - \frac{|\nabla \Psi|^2}{\Psi} + (|A|^2 - 2) \Psi = 0
+	\end{equation*}
 \end{demonstracao}
 
 \begin{teorema}[Brendle]
 	Seja $F: M \rightarrow S^3$ uma superfície mínima mergulhada em $S^3$ de gênero 1. Então $F$ é congruente a o toro de Clifford.
 \end{teorema}
+
+\begin{demonstracao}
+	Definamos
+	\begin{equation*}
+		\aleph = \sup_{\substack{x,y \in \Sigma\\ x \neq y}} \frac{| \langle  \nu(x), F(y) \rangle |}{\Psi(x) (1 - \langle F(x), F(y) \rangle)}
+	\end{equation*}
+	
+	Supor que $\aleph \leq 1$. Então
+	\begin{equation*}
+		\Psi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle \geq 0
+	\end{equation*}
+	
+	para todo $ x,y \in \Sigma $. Identifiquemos ao ponto $F(x)$ com o ponto $x$, i.e., $F(x) = x$, para todo $x \in \Sigma$. Seja $p \in \Sigma$ arbitrário e $\{ e_1, e_2 \}$ a base de autovetores ortonormais de $A$ que gera $T_{p} \Sigma$ tais que
+	\begin{equation*}
+		h(e_1,e_1) = \Psi(p), \quad h(e_1,e_2)=0 \quad \text{and} \quad h(e_2,e_2) = -\Psi(p)
+	\end{equation*}
+	
+	Observar que $\Psi(p) = |\lambda|$, onde os autovalores de $A$ são $\lambda$ e $-\lambda$.
+	
+	Seja $\gamma(t)$ uma geodésica em $\Sigma$ tal que $\gamma(0)=p$ e $\gamma'(0)=e_1$. Definamos a função $f: \mathbb{R} \rightarrow \mathbb{R}$ por
+	\begin{equation*}
+		f(t) = \Psi(p) (1 - \langle p, \gamma(t) \rangle) + \langle \nu(p), \gamma(t) \rangle \geq 0
+	\end{equation*}
+	
+	Calculando a derivada de primeiro ordem temos
+	\begin{equation*}
+		f'(t) = -\langle \Psi(p) p - \nu(p), \gamma'(t) \rangle + \langle \nu(p), \gamma'(t) \rangle
+	\end{equation*}
+	
+	Observar que $ \gamma $ é uma geodésica, então $ \gamma'(t) $ é  o transporte paralelo de $ \gamma'(0) $. Logo se tem que $ \langle \nu(p), \gamma'(t) \rangle = \langle \nu(p), \gamma'(0) \rangle = 0 $
+	\begin{equation*}
+		f'(t) = -\langle \Psi(p) p - \nu(p), \gamma'(t) \rangle
+	\end{equation*}
+	
+	Calculando a segunda derivada temos
+	\begin{equation*}
+		f''(t) = -\langle \Psi(p) p - \nu(p), \gamma''(t) \rangle
+	\end{equation*}
+	
+	Observar que $ \langle \nu(\gamma(t)), \gamma'(t) \rangle = 0 $. Derivando se tem
+	\begin{equation*}
+		\langle D \nu(\gamma(t)) \gamma'(t), \gamma'(t) \rangle + \langle \nu(\gamma(t)), \gamma''(t) \rangle = 0
+	\end{equation*}
+	
+	Como $\gamma''(t)$ não tem componentes em $T_{\gamma(t)} \Sigma$ porque é geodésica, então
+	\begin{equation*}
+		-\gamma''(t) = \gamma(t) + h(\gamma'(t), \gamma'(t)) \nu(p)
+	\end{equation*}
+	
+	Portanto
+	\begin{equation*}
+		f''(t) = \langle \Psi(p) p - \nu(p), \gamma(t) + h(\gamma'(t), \gamma'(t)) \nu(p) \rangle
+	\end{equation*}
+	
+	Derivando outra vez se tem
+	\begin{multline*}
+		f'''(t) = \langle \Psi(p)p - \nu(p), \gamma'(t) \rangle + h(\gamma'(t), \gamma'(t)) \langle \Psi(p)p - \nu(p), D_{\gamma'(t)} \nu(\gamma(t)) \rangle\\
+		+ \left( D_{\gamma'(t)}^{\Sigma} h \right) (\gamma'(t), \gamma'(t)) \langle \Psi(p)p - \nu(p), \nu(\gamma(t)) \rangle
+	\end{multline*}
+\end{demonstracao}
