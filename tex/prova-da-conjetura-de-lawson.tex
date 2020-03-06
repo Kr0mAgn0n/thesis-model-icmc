@@ -1,5 +1,5 @@
-\cite{Brendle2013}
-\cite{Brendle2013a}
+%\cite{Brendle2013}
+%\cite{Brendle2013a}
 
 %\begin{proposicao}\label{nao_tem_pontos_umbilicos}
 %	Um superfície mínima imersa em $S^3$ de gênero 1 não tem pontos umbílicos, i.e., a segunda forma fundamental é não nula em cada ponto da superfície
@@ -13,29 +13,100 @@
 %	onde $A$ é a segunda forma fundamental.
 %\end{proposicao}
 
+Neste capítulo apresentaremos a demonstração da conjetura de Lawson obtida por Simon Brendle \cite{Brendle2013a}.
 
+\section{Introdução}
 
-\begin{definicao}
-	A função $Z: \Sigma \times \Sigma \rightarrow \realnumbers$ é definida por
-	\begin{equation*}
-		Z(x,y) =  \Phi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle.
-	\end{equation*}
-	onde $F: \Sigma \rightarrow S^3$ é uma imersão mínima de gênero 1 em $S^3$, e $\nu(x) \in T_{F(x)} S^3$ é um campo vectorial normal unitário.
-\end{definicao}
+Em 1970, Blaine Lawson \cite{Lawson1970a} conjeturou que o toro de Clifford é a única superfície mínima, compacta e mergulhada em $S^3$, com genus 1, e foi provada somente quatro décadas depois por Simon Brendle \cite{Brendle2013a} em 2013. A hipótese de ser mergulhada é fundamental. De fato, em \cite{Lawson1970} Lawson construiu uma família (infinita) de imersões mínimas de toros em $S^3$.
 
-\begin{observacao}
-	 A partir de agora vamos supor que para $p \in \Sigma$ existe $q \in \Sigma$ tal que $Z(p,q) = \frac{\partial Z}{\partial x_i}(p,q) = 0$ para $i = 1,2$. Ista suposição é feita para ser usada nos cálculos posteriores.
-\end{observacao}
+A prova da conjetura de Lawson em \cite{Brendle2013a} envolve uma aplicação do princípio do máximo a uma função que depende de uma par de pontos. Esta técnica foi inicialmente desenvolvida por Huisken \cite{Huisken1998} no estudo de fluxo de comprimento de curvas para curvas mergulhadas no plano e, posteriormente, por Andrews \cite{Andrews2012}.
 
-\begin{proposicao}\label{primeira_derivada_x_Z}
-	As primeiras derivadas da função $Z$ com respeito a $x_1$ e $x_2$ estão dadas por:
-	\begin{equation}\label{diff_Z_x}
-	\frac{\partial Z}{\partial x_i} (p, q) =  \frac{\partial \Phi}{\partial x_i}(p) (1 - \langle F(p, q) \rangle) -  \Phi(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle + h_i^k(p) \left\langle \frac{\partial F}{\partial x_k}(p), F(q) \right\rangle
-	\end{equation}
+Descreveremos a seguir os argumentos usados em \cite{Brendle2013a}. Seguindo as ideias e notações de \cite{Andrews2012}, considere uma superfície mínima e mergulhada $ F: \Sigma \rightarrow S^3 $ e $ \Phi: \Sigma \rightarrow \realnumbers $  uma função positiva. Definia uma função $ Z: \Sigma \times \Sigma \rightarrow \realnumbers $ pondo
+\begin{equation}\label{def_de_Z}
+	Z(x,y) = \Phi(x) (1 - \langle F(x),F(y) \rangle ) + \langle \nu(x), F(y) \rangle,
+\end{equation}
+onde $ \nu $ é um campo unitário , normal a $ \Sigma $.
+
+A função $Z$ tem a seguinte interpretação geométrica:
+
+\begin{proposicao}
+	A função $ Z(x,y) $, definida em \ref{def_de_Z}, é não-negativa se, e somente se, para todo ponto $ x \in \Sigma $, existe uma bola geodésica $B$ contida em $\Omega$, com curvatura média do bordo igual a $ \Phi(x) $ e $ F(x) \in \partial B $.
 \end{proposicao}
 
-
 \begin{demonstracao}
+	Observe, inicialmente, que uma bola geodésica em $S^3$ é simplesmente a interseção de uma bola de $\realnumbers^4$ com $S^3$. Em particular, a bola em $S^3$ contida em $\Omega$, com curvatura média do bordo igual a $\Phi$ e que é tangente a $ F(\Sigma) $ no ponto $F(x)$ é $B=B(p)$, onde 
+	\begin{equation*}
+		p = F(x) - \Phi^{-1}(x) \nu(x),
+	\end{equation*}
+	e $\nu$ é o campo unitário, normal a $F(\Sigma)$ no ponto $F(x) \in S^3$, e que aponta para fora de $\Omega$.
+	
+	Afirmar que uma bola geodésica de $S^3$ está inteiramente contida em $\Omega$ é equivalente a afirmar que, para cada ponto $y \in \Sigma$, tem-se
+	\begin{equation*}
+		| F(y) - p | \geq \Phi^{-2}(x),
+	\end{equation*}
+	ou seja,
+	\begin{equation*}
+		| F(y) - ( F(x) - \Phi^{-1}(x) \nu(x) ) |^2 - \Phi^2(x) \geq 0.
+	\end{equation*}
+	
+	Desenvolvendo o lado esquerdo da desigualdade acima e multiplicando por $ \Phi(x)/2 $, obtemos:
+	\begin{equation*}
+		\frac{\Phi(x)}{2} | F(y) - F(x) |^2 + \langle F(y) - F(x), \nu(x) \rangle \geq 0.
+	\end{equation*}
+	
+	Como $F(x), F(y) \in S^3$, tem-se
+	\begin{equation*}
+		|F(x)|^2 = |F(y)|^2 = 1 \quad \text{e} \quad \langle F(x), \nu(x) \rangle = 0.
+	\end{equation*}
+	
+	Asim,
+	\begin{equation*}
+		\Phi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle \geq 0,
+	\end{equation*} 
+	como queríamos.
+\end{demonstracao}
+
+
+\section{Alguns resultados técnicos}
+
+Como na seção anterior, sejam $F: \Sigma \rightarrow S^3$ uma superfície mínima e mergulhada, $\Phi: \Sigma \rightarrow \realnumbers$ uma função positiva e considere a função
+\begin{equation*}
+	Z(x,y) = \Phi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle.
+\end{equation*}
+
+Considere dois pontos $\xbarra, \ybarra \in \Sigma$, com $\xbarra \neq \ybarra$, tais que $Z(\xbarra, \ybarra) = 0$ e $dZ(\xbarra, \ybarra) = 0$. Sejam $(x_1,x_2), (y_1,y_2)$ sistemas de coordenadas geodésicas em torno dos pontos $\xbarra, \ybarra$, respectivamente. No ponto $(\xbarra,\ybarra)$, temos:
+\begin{multline}\label{diff_Z_x}
+0 = \frac{\partial Z}{\partial x_i} (\xbarra, \ybarra) =  \frac{\partial \Phi}{\partial x_i}(\xbarra) (1 - \langle F(\xbarra, \ybarra) \rangle) -  \Phi(\xbarra) \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle\\
++ \sum_{k=1}^{2} h_{ik}(\xbarra) \left\langle \frac{\partial F}{\partial x_k}(\xbarra), F(\ybarra) \right\rangle
+\end{multline}
+e
+\begin{equation}\label{diff_Z_y}
+0 = \frac{\partial Z}{\partial y_i} (\xbarra, \ybarra) = - \Phi(\xbarra) \left\langle F(\xbarra), \frac{\partial F}{\partial y_i} (\ybarra) \right\rangle + \left\langle \nu(\xbarra), \frac{\partial F}{\partial y_i}(\ybarra) \right\rangle
+\end{equation}
+onde $h_{ik}(\xbarra)$ denota a $(ik)$-ésima coordenada da matriz da segunda forma fundamental de $F$ no ponto $\xbarra$.
+
+
+%\begin{definicao}
+%	A função $Z: \Sigma \times \Sigma \rightarrow \realnumbers$ é definida por
+%	\begin{equation*}
+%		Z(x,y) =  \Phi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle.
+%	\end{equation*}
+%	onde $F: \Sigma \rightarrow S^3$ é uma imersão mínima de gênero 1 em $S^3$, e $\nu(x) \in T_{F(x)} S^3$ é um campo vectorial normal unitário.
+%\end{definicao}
+
+%\begin{observacao}
+%	 A partir de agora vamos supor que para $p \in \Sigma$ existe $q \in \Sigma$ tal que $Z(p,q) = \frac{\partial Z}{\partial x_i}(p,q) = 0$ para $i = 1,2$. Ista suposição é feita para ser usada nos cálculos posteriores.
+%\end{observacao}
+
+%\begin{proposicao}\label{primeira_derivada_x_Z}
+%	As primeiras derivadas da função $Z$ com respeito a $x_1$ e $x_2$ estão dadas por:
+%	\begin{equation}\label{diff_Z_x}
+%	\frac{\partial Z}{\partial x_i} (p, q) =  \frac{\partial \Phi}{\partial x_i}(p) (1 - \langle F(p, q) \rangle) -  \Phi(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle + h_i^k(p) \left\langle \frac{\partial F}{\partial x_k}(p), F(q) \right\rangle
+%	\end{equation}
+%\end{proposicao}
+
+
+\begin{observacao}
 	Derivando com respeito a $x_1$ e $x_2$:
 	\begin{equation*}
 		\frac{\partial Z}{\partial x_i} (p, q) =  \frac{\partial \Phi}{\partial x_i}(p) (1 - \langle F(p, q) \rangle) -  \Phi(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle + \left\langle \frac{\partial \nu}{\partial x_i}(p), F(q) \right\rangle
@@ -54,18 +125,18 @@
 	Lembrar que a notação de Einstein está expressando uma suma com respeito ao índice $k$ que toma os valores 1 e 2.
 	
 	Portanto ao final temos a expressão requerida.
-\end{demonstracao}
+\end{observacao}
 
-\begin{proposicao}
-	As primeiras derivadas da função $Z$ com respeito a $y_1$ e $y_2$ estão dadas por:
-	\begin{equation}\label{diff_Z_y}
-		\frac{\partial Z}{\partial y_i} (p, q) = - \Phi(p) \left\langle F(p), \frac{\partial F}{\partial y_i} (q) \right\rangle + \left\langle \nu(p), \frac{\partial F}{\partial y_i}(q) \right\rangle
-	\end{equation}
-\end{proposicao}
+%\begin{proposicao}
+%	As primeiras derivadas da função $Z$ com respeito a $y_1$ e $y_2$ estão dadas por:
+%	\begin{equation}\label{diff_Z_y}
+%		\frac{\partial Z}{\partial y_i} (p, q) = - \Phi(p) \left\langle F(p), \frac{\partial F}{\partial y_i} (q) \right\rangle + \left\langle \nu(p), \frac{\partial F}{\partial y_i}(q) \right\rangle
+%	\end{equation}
+%\end{proposicao}
 
-\begin{demonstracao}
-	Cálculo simples.
-\end{demonstracao}
+%\begin{demonstracao}
+%	Cálculo simples.
+%\end{demonstracao}
 
 
 
@@ -78,7 +149,7 @@
 \end{proposicao}
 
 \begin{demonstracao}
-	Vamos derivar com respeito a $x_i$ à proposição \ref{primeira_derivada_x_Z} e depois vamos somar com respeito ao índice $i$.
+	Vamos derivar com respeito a $x_i$ à equação \ref{diff_Z_x} e depois vamos somar com respeito ao índice $i$.
 	\begin{multline}\label{Z_seg_dev_x}
 		\sum_i \frac{\partial^2 Z}{\partial x_i^2}(x,y) = \sum_i \frac{\partial^2 \Phi}{\partial x_i^2}(x)(1 - \langle F(x), F(y) \rangle) -2  \sum_i \frac{\partial \Phi}{\partial x_i} \left\langle \frac{\partial F}{\partial x_i}(x), F(y) \right\rangle\\
 		 -  \Phi(x) \left\langle \sum_i \frac{\partial^2 F}{\partial x_i^2}(x), F(y) \right\rangle + \sum_i \frac{\partial h_i^k}{\partial x_i}(x) \left\langle \frac{\partial F}{\partial x_k}, F(y) \right\rangle + \sum_i h_i^k(x) \left\langle \frac{\partial^2 F}{\partial x_i \partial x_k}, F(y) \right\rangle
