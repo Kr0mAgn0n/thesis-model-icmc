@@ -233,10 +233,10 @@ Escolhendo um sistema de coordenadas $(y_1,y_2)$ apropriado pode-se ter
 
 \begin{proposicao}
 	O Laplaciano de $Z$ com respeito a $x$ satisfaz a desigualdade
-	\begin{multline*}
+	\begin{multline}\label{2_diff_Z_x}
 		\sum_{i=1}^{2} \frac{\partial^2 Z}{\partial x_i^2} (p,q) = \left( \Delta_{\Sigma} \Phi(p) - \frac{| \nabla \Phi(p) |^2}{\Phi(p)} + (|A(p)|^2 - 2) \Phi(p) \right) (1 - \left\langle F(p), F(q) \right\rangle) + 2 \Phi(p)\\
 		 - \frac{2 \Phi(p)^2 - |A(p)|^2}{2 \Phi(p) (1 - \langle F(p), F(q) \rangle)} \sum_i \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle^2
-	\end{multline*}
+	\end{multline}
 \end{proposicao}
 
 \begin{demonstracao}
@@ -427,13 +427,13 @@ Escolhendo um sistema de coordenadas $(y_1,y_2)$ apropriado pode-se ter
 
 \begin{proposicao}
 	Temos
-	\begin{equation*}
+	\begin{equation}\label{diff_Z_x_y}
 		\frac{\partial^2 Z}{\partial x_i \partial y_i}(p,q) = \lambda_i - \Phi(p)
-	\end{equation*}
+	\end{equation}
 \end{proposicao}
 
 \begin{demonstracao}
-	Derivando con respeito a $x_i$ a equação \ref{diff_Z_y}:
+	Derivando com respeito a $x_i$ a equação \ref{diff_Z_y}:
 	\begin{equation*}
 		\frac{\partial^2 Z}{\partial x_i \partial y_i}(p,q) = -\frac{\partial \Phi}{\partial x_i}(p) \left\langle F(p), \frac{\partial F}{\partial y_i}(q) \right\rangle - \Phi(p) \left\langle \frac{\partial F}{\partial x_i}(p), \frac{\partial F}{\partial y_i}(q) \right\rangle + \left\langle \frac{\partial \nu}{\partial x_i}(p), \frac{\partial F}{\partial y_i}(q) \right\rangle
 	\end{equation*}
@@ -494,9 +494,9 @@ Escolhendo um sistema de coordenadas $(y_1,y_2)$ apropriado pode-se ter
 %\end{proposicao}
 
 \begin{proposicao}
-	\begin{equation*}
+	\begin{equation}\label{2_diff_Z_y}
 	\sum_i \frac{\partial^2 Z}{\partial y_i^2}(p,q) = 2 \Phi(p).
-	\end{equation*}
+	\end{equation}
 \end{proposicao}
 
 \begin{demonstracao}
@@ -514,6 +514,19 @@ Escolhendo um sistema de coordenadas $(y_1,y_2)$ apropriado pode-se ter
 	\begin{equation*}
 		\sum_i \frac{\partial^2 Z}{\partial y_i^2}(p,q) = 2 \Phi(p).
 	\end{equation*}
+\end{demonstracao}
+
+
+\begin{proposicao}
+	\begin{multline}\label{suma_2das_derivadas}
+		\sum_i \frac{\partial^2 Z}{\partial x_i^2}(\xbarra,\ybarra) + 2 \sum_i \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xbarra,\ybarra) + \sum_i \frac{\partial^2 Z}{\partial y_i^2}(\xbarra,\ybarra) =\\
+		\left( \Delta_{\Sigma} \Phi(\xbarra) - \frac{| \nabla \Phi(\xbarra) |^2}{\Phi(\xbarra)} + ( | A(\xbarra) |^2 - 2 ) \Phi(\xbarra) \right) (1 - \langle F(\xbarra,\ybarra) \rangle)\\
+		- \frac{2 \Phi(\xbarra)^2- |A(\xbarra)|^2}{2 \Phi(\xbarra)(1 - \langle F(\xbarra),F(\ybarra) \rangle)} \sum_i \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle
+	\end{multline}
+\end{proposicao}
+
+\begin{demonstracao}
+	Somando adequadamente \eqref{2_diff_Z_x}, \eqref{2_diff_Z_y} e \eqref{diff_Z_x_y} tem-se a igualdade.
 \end{demonstracao}
 
 \begin{teorema}\label{Simon's_identity}
@@ -543,7 +556,7 @@ Escolhendo um sistema de coordenadas $(y_1,y_2)$ apropriado pode-se ter
 	onde $A$ é a segunda forma fundamental.
 \end{definicao}
 
-\begin{proposicao}
+\begin{proposicao}\label{edp_principal}
 	Supor que $F: \Sigma \rightarrow S^3$ é um toro mínimo mergulhado em $S^3$. Então a função $\Psi = \frac{|A|}{\sqrt{2}}$ é estritamente positiva e satisfaz a E.D.P
 	\begin{equation*}
 		\Delta_\Sigma \Psi - \frac{|\nabla \Psi|^2}{\Psi} + (|A|^2 - 2) \Psi = 0
@@ -646,87 +659,165 @@ Escolhendo um sistema de coordenadas $(y_1,y_2)$ apropriado pode-se ter
 	Seja $F: M \rightarrow S^3$ uma superfície mínima mergulhada em $S^3$ de gênero 1. Então $F$ é congruente a o toro de Clifford.
 \end{teorema}
 
+%\begin{demonstracao}
+Definamos
+\begin{equation*}
+	\aleph = \sup_{\substack{x,y \in \Sigma\\ x \neq y}} \frac{| \langle  \nu(x), F(y) \rangle |}{\Psi(x) (1 - \langle F(x), F(y) \rangle)}
+\end{equation*}
+
+Supor que $\aleph \leq 1$. Então
+\begin{equation*}
+	\Psi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle \geq 0
+\end{equation*}
+
+para todo $ x,y \in \Sigma $. Identifiquemos ao ponto $F(x)$ com o ponto $x$, i.e., $F(x) = x$, para todo $x \in \Sigma$. Seja $p \in \Sigma$ arbitrário e $\{ e_1, e_2 \}$ a base de autovetores ortonormais de $A$ que gera $T_{p} \Sigma$ tais que
+\begin{equation*}
+	h(e_1,e_1) = \Psi(p), \quad h(e_1,e_2)=0 \quad \text{and} \quad h(e_2,e_2) = -\Psi(p)
+\end{equation*}
+
+Observar que $\Psi(p) = |\lambda|$, onde os autovalores de $A$ são $\lambda$ e $-\lambda$.
+
+Seja $\gamma(t)$ uma geodésica em $\Sigma$ tal que $\gamma(0)=p$ e $\gamma'(0)=e_1$. Definamos a função $f: \mathbb{R} \rightarrow \mathbb{R}$ por
+\begin{equation*}
+	f(t) = \Psi(p) (1 - \langle p, \gamma(t) \rangle) + \langle \nu(p), \gamma(t) \rangle \geq 0
+\end{equation*}
+
+Calculando a derivada de primeiro ordem temos
+\begin{equation*}
+	f'(t) = -\langle \Psi(p) p - \nu(p), \gamma'(t) \rangle + \langle \nu(p), \gamma'(t) \rangle
+\end{equation*}
+
+Observar que $ \gamma $ é uma geodésica, então $ \gamma'(t) $ é  o transporte paralelo de $ \gamma'(0) $. Logo se tem que $ \langle \nu(p), \gamma'(t) \rangle = \langle \nu(p), \gamma'(0) \rangle = 0 $
+\begin{equation*}
+	f'(t) = -\langle \Psi(p) p - \nu(p), \gamma'(t) \rangle
+\end{equation*}
+
+Calculando a segunda derivada temos
+\begin{equation*}
+	f''(t) = -\langle \Psi(p) p - \nu(p), \gamma''(t) \rangle
+\end{equation*}
+
+Observar que $ \langle \nu(\gamma(t)), \gamma'(t) \rangle = 0 $. Derivando se tem
+\begin{equation*}
+	\langle D \nu(\gamma(t)) \gamma'(t), \gamma'(t) \rangle + \langle \nu(\gamma(t)), \gamma''(t) \rangle = 0
+\end{equation*}
+
+Como $\gamma''(t)$ não tem componentes em $T_{\gamma(t)} \Sigma$ porque é geodésica, então
+\begin{equation*}
+	-\gamma''(t) = \gamma(t) + h(\gamma'(t), \gamma'(t)) \nu(p)
+\end{equation*}
+
+Portanto
+\begin{equation*}
+	f''(t) = \langle \Psi(p) p - \nu(p), \gamma(t) + h(\gamma'(t), \gamma'(t)) \nu(p) \rangle
+\end{equation*}
+
+Derivando outra vez se tem
+\begin{multline}\label{3ra_der_f}
+	f'''(t) = \langle \Psi(p)p - \nu(p), \gamma'(t) \rangle + h(\gamma'(t), \gamma'(t)) \langle \Psi(p)p - \nu(p), D_{\gamma'(t)} \nu(\gamma(t)) \rangle\\
+	+ \left( D_{\gamma'(t)}^{\Sigma} h \right) (\gamma'(t), \gamma'(t)) \langle \Psi(p)p - \nu(p), \nu(\gamma(t)) \rangle
+\end{multline}
+
+Observar que $f(0)=0$. Também $f'(0)=0$ porque $\Psi(p)p - \nu(p)$ é perpendicular a $T_p \Sigma$. E finalmente, $f''(0)=0$ porque $f''(0) = \Psi(p) - h(e_1,e_1)=0$.
+
+Vamos demonstrar que $f'''(0)=0$. Usando a expansão de Taylor em $f$ se tem
+\begin{equation*}
+	f(t) = f(0) + f'(0)t + f''(0)t^2 + f'''(0)t^3 + r_3(t)
+\end{equation*}  
+onde $\lim_{t \rightarrow 0} \frac{r_3(t)}{t_3}=0$. Como $f(t) \geq 0$ e $f(0)=f'(0)=f''(0)=0$ se tem
+\begin{equation*}
+	0 \leq f'''(0) t^3 + r_3(t)
+\end{equation*}
+
+Dividendo por $t^3$ e fazendo o limite quando $t \rightarrow 0$ temos que $0 \leq f'''(0)$. Por outro lado, usando a mesma ideia usando $-t$ em lugar de  $t$ temos que $f'''(0) \leq 0$. Portanto, $f'''(0)=0$.
+
+Voltando  a \ref{3ra_der_f}, avaliando em $t=0$, se tem que $(D_{e_1}^{\Sigma} h) (e_1,e_1) = 0$ porque $e_1, D_{e_1} \nu(p) \in T_p \Sigma$ e $\Psi(p)p - \nu(p)$ e $\nu(p)$ são paralelos.
+
+Para continuar a demonstração deste primeiro caso, podemos considerar a base $\{ e_2, e_1, -\nu \}$ em lugar de $\{ e_1, e_2, \nu \}$ para mudar a orientação definida da superfície e, fazendo o mesmo procedimento, se tem que $(D_{e_2}^{\Sigma} h) (e_2,e_2)=0$.
+
+Pela equação de Codazzi se tem
+\begin{align*}
+	(D_{e_2}^{\Sigma} h) (e_1,e_1) &= (D_{e_1}^{\Sigma} h) (e_2,e_1) = 0\\
+	(D_{e_1}^{\Sigma} h) (e_2,e_2) &= (D_{e_2}^{\Sigma} h) (e_1,e_2) = 0
+\end{align*}
+
+Portanto $\nabla h = 0$ e com isso se tem que $h$ é constante. Seja $K$ a curvatura intrínseca de $\Sigma$. Como $h$ é constante, então $K$ também é constante. Logo, pelo teorema de Lawson (\ref{teo_lawson}) ou $K=0$, ou $K=1$. Mas $\Sigma$ não tem ponto umbílicos por \ref{nao_existem_pontos_umbilicos}, portanto $K=0$ e $\Sigma$ é um pedaço aberto do toro de Clifford. Mas $\Sigma$ é compacto, portanto $\Sigma$ é todo o toro de Clifford.
+
+Supor agora que $\aleph > 1$. Escolhendo adequadamente entre $\nu$ e $-\nu$ temos
+\begin{equation*}
+	\aleph = \sup_{\substack{x,y \in \Sigma\\ x \neq y}} \frac{- \langle \nu(x), F(y) \rangle}{\Psi(x)(1 - \langle F(x), F(y) \rangle)}.
+\end{equation*}
+
+Seja $\Phi(x) = \aleph \Psi(x)$ em a definição de $Z(x,y)$, então
+\begin{equation*}
+	Z(x,y) = \aleph \Psi(x)(1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle.
+\end{equation*}
+
+Pela equação anterior observa-se que $Z(x,y) \geq 0$.
+
+Definamos o conjunto
+\begin{equation*}
+	\Omega = \{ \xbarra \in \Sigma: \exists \ybarra \in \Sigma \setminus \{\xbarra\} \text{ tal que } Z(\xbarra,\ybarra) = 0 \}
+\end{equation*}
+
+O conjunto $\Omega$ é não vazio.
+
+Usando a proposição \ref{edp_principal}, e a definição de $\Phi(\xbarra)$, a equação \eqref{suma_2das_derivadas} fica
+\begin{multline}\label{suma_2da_der_aleph}
+\sum_i \frac{\partial^2 Z}{\partial x_i^2}(\xbarra,\ybarra) + 2 \sum_i \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xbarra,\ybarra) + \sum_i \frac{\partial^2 Z}{\partial y_i^2}(\xbarra,\ybarra) =\\
+- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xbarra)}{1 - \langle F(\xbarra), F(\ybarra) \rangle} \sum_i \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle
+\end{multline}
+para qualquer par de pontos $\xbarra \neq \ybarra$. Como no ponto $(\xbarra,\ybarra)$ atinge-se um mínimo, então
+\begin{equation*}
+	0 = Z(\xbarra,\ybarra) = \frac{\partial Z}{\partial x_i}(\xbarra,\ybarra) = \frac{\partial Z}{\partial y_i}(\xbarra,\ybarra)
+\end{equation*}
+
+\begin{proposicao}
+	Tem-se que $\nabla \Psi(\xbarra) = 0$ para todo $\xbarra \in \Omega.$
+\end{proposicao}
+
 \begin{demonstracao}
-	Definamos
+	Seja $\xbarra \in \Omega$, então existe $\ybarra \in \Omega \setminus \{x\}$ tal que $Z(\xbarra,\ybarra) = 0$. Tem-se que em $(\xbarra,\ybarra)$ atinge-se um mínimo local, portanto o Hessiano é definido não negativo. O Hessiano está definido por
 	\begin{equation*}
-		\aleph = \sup_{\substack{x,y \in \Sigma\\ x \neq y}} \frac{| \langle  \nu(x), F(y) \rangle |}{\Psi(x) (1 - \langle F(x), F(y) \rangle)}
+		H(\xbarra,\ybarra) = \left[ \begin{matrix}
+		\frac{\partial^2 Z}{\partial x_1^2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial x_2 \partial x_1}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_1 \partial x_1}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_2 \partial x_1}(\xbarra,\ybarra)\\ 
+		\frac{\partial^2 Z}{\partial x_1 \partial x_2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial x_2^2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_1 \partial x_2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_2 \partial x_2}(\xbarra,\ybarra)\\
+		 \frac{\partial^2 Z}{\partial x_1 \partial y_1}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial x_2 \partial y_1}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_1^2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_2 \partial y_1}(\xbarra,\ybarra)\\
+		  \frac{\partial^2 Z}{\partial x_1 \partial y_2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial x_2 \partial y_2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_1 \partial y_2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_2^2}(\xbarra,\ybarra)
+		\end{matrix} \right]
 	\end{equation*}
 	
-	Supor que $\aleph \leq 1$. Então
+	Como o Hessiano é definido não negativo. então para todo $v \in \realnumbers^4$ tem-se
 	\begin{equation*}
-		\Psi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle \geq 0
+		v^t H(\xbarra,\ybarra) v \geq 0
 	\end{equation*}
 	
-	para todo $ x,y \in \Sigma $. Identifiquemos ao ponto $F(x)$ com o ponto $x$, i.e., $F(x) = x$, para todo $x \in \Sigma$. Seja $p \in \Sigma$ arbitrário e $\{ e_1, e_2 \}$ a base de autovetores ortonormais de $A$ que gera $T_{p} \Sigma$ tais que
+	Em particular, para $v_1 = [1,0,1,0]^t$ e para $v_2 = [0,1,0,1]^t$ tem-se
 	\begin{equation*}
-		h(e_1,e_1) = \Psi(p), \quad h(e_1,e_2)=0 \quad \text{and} \quad h(e_2,e_2) = -\Psi(p)
+		0 \leq v_1^t H(\xbarra,\ybarra) v_1 + v_2^t H(\xbarra,\ybarra) v_ 2 = \sum_i \frac{\partial^2 Z}{\partial x_i^2}(\xbarra,\ybarra) + 2 \sum_i \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xbarra,\ybarra) + \sum_i \frac{\partial^2 Z}{\partial y_i^2}(\xbarra,\ybarra)
 	\end{equation*}
 	
-	Observar que $\Psi(p) = |\lambda|$, onde os autovalores de $A$ são $\lambda$ e $-\lambda$.
-	
-	Seja $\gamma(t)$ uma geodésica em $\Sigma$ tal que $\gamma(0)=p$ e $\gamma'(0)=e_1$. Definamos a função $f: \mathbb{R} \rightarrow \mathbb{R}$ por
+	Por outro lado, como $\aleph > 1$, então
 	\begin{equation*}
-		f(t) = \Psi(p) (1 - \langle p, \gamma(t) \rangle) + \langle \nu(p), \gamma(t) \rangle \geq 0
+		- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xbarra)}{1 - \langle F(\xbarra), F(\ybarra) \rangle} \sum_i \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle \leq 0
 	\end{equation*}
 	
-	Calculando a derivada de primeiro ordem temos
+	Pela equação \eqref{suma_2da_der_aleph} tem-se
 	\begin{equation*}
-		f'(t) = -\langle \Psi(p) p - \nu(p), \gamma'(t) \rangle + \langle \nu(p), \gamma'(t) \rangle
+		\left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle = 0
 	\end{equation*}
 	
-	Observar que $ \gamma $ é uma geodésica, então $ \gamma'(t) $ é  o transporte paralelo de $ \gamma'(0) $. Logo se tem que $ \langle \nu(p), \gamma'(t) \rangle = \langle \nu(p), \gamma'(0) \rangle = 0 $
+	A equação \eqref{diff_Z_x} utilizando coordenadas geodésicas pode-se expressar como
+	\begin{multline*}
+		0 = \frac{\partial Z}{\partial x_i}(\xbarra,\ybarra) = \aleph \frac{\partial \Psi}{\partial x_i}(\xbarra)(1 - \langle F(\xbarra),F(\ybarra) \rangle)  - \aleph \Psi(\xbarra) \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle\\
+		+ \sum_i \lambda_i \left\langle \frac{\partial F}{\partial x_i}(\xbarra),F(\ybarra) \right\rangle
+	\end{multline*}
+	
+	Como $\left\langle \frac{\partial F}{\partial x_i}(\xbarra),F(\ybarra) \right\rangle = 0$, então a equação anterior expressa-se
 	\begin{equation*}
-		f'(t) = -\langle \Psi(p) p - \nu(p), \gamma'(t) \rangle
+		0 = \frac{\partial Z}{\partial x_i}(\xbarra,\ybarra) = \aleph \frac{\partial \Psi}{\partial x_i}(\xbarra)(1 - \langle F(\xbarra),F(\ybarra) \rangle)
 	\end{equation*}
 	
-	Calculando a segunda derivada temos
-	\begin{equation*}
-		f''(t) = -\langle \Psi(p) p - \nu(p), \gamma''(t) \rangle
-	\end{equation*}
-	
-	Observar que $ \langle \nu(\gamma(t)), \gamma'(t) \rangle = 0 $. Derivando se tem
-	\begin{equation*}
-		\langle D \nu(\gamma(t)) \gamma'(t), \gamma'(t) \rangle + \langle \nu(\gamma(t)), \gamma''(t) \rangle = 0
-	\end{equation*}
-	
-	Como $\gamma''(t)$ não tem componentes em $T_{\gamma(t)} \Sigma$ porque é geodésica, então
-	\begin{equation*}
-		-\gamma''(t) = \gamma(t) + h(\gamma'(t), \gamma'(t)) \nu(p)
-	\end{equation*}
-	
-	Portanto
-	\begin{equation*}
-		f''(t) = \langle \Psi(p) p - \nu(p), \gamma(t) + h(\gamma'(t), \gamma'(t)) \nu(p) \rangle
-	\end{equation*}
-	
-	Derivando outra vez se tem
-	\begin{multline}\label{3ra_der_f}
-		f'''(t) = \langle \Psi(p)p - \nu(p), \gamma'(t) \rangle + h(\gamma'(t), \gamma'(t)) \langle \Psi(p)p - \nu(p), D_{\gamma'(t)} \nu(\gamma(t)) \rangle\\
-		+ \left( D_{\gamma'(t)}^{\Sigma} h \right) (\gamma'(t), \gamma'(t)) \langle \Psi(p)p - \nu(p), \nu(\gamma(t)) \rangle
-	\end{multline}
-	
-	Observar que $f(0)=0$. Também $f'(0)=0$ porque $\Psi(p)p - \nu(p)$ é perpendicular a $T_p \Sigma$. E finalmente, $f''(0)=0$ porque $f''(0) = \Psi(p) - h(e_1,e_1)=0$.
-	
-	Vamos demonstrar que $f'''(0)=0$. Usando a expansão de Taylor em $f$ se tem
-	\begin{equation*}
-		f(t) = f(0) + f'(0)t + f''(0)t^2 + f'''(0)t^3 + r_3(t)
-	\end{equation*}  
-	onde $\lim_{t \rightarrow 0} \frac{r_3(t)}{t_3}=0$. Como $f(t) \geq 0$ e $f(0)=f'(0)=f''(0)=0$ se tem
-	\begin{equation*}
-		0 \leq f'''(0) t^3 + r_3(t)
-	\end{equation*}
-	
-	Dividendo por $t^3$ e fazendo o limite quando $t \rightarrow 0$ temos que $0 \leq f'''(0)$. Por outro lado, usando a mesma ideia usando $-t$ em lugar de  $t$ temos que $f'''(0) \leq 0$. Portanto, $f'''(0)=0$.
-	
-	Voltando  a \ref{3ra_der_f}, avaliando em $t=0$, se tem que $(D_{e_1}^{\Sigma} h) (e_1,e_1) = 0$ porque $e_1, D_{e_1} \nu(p) \in T_p \Sigma$ e $\Psi(p)p - \nu(p)$ e $\nu(p)$ são paralelos.
-	
-	Para continuar a demonstração deste primeiro caso, podemos considerar a base $\{ e_2, e_1, -\nu \}$ em lugar de $\{ e_1, e_2, \nu \}$ para mudar a orientação definida da superfície e, fazendo o mesmo procedimento, se tem que $(D_{e_2}^{\Sigma} h) (e_2,e_2)=0$.
-	
-	Pela equação de Codazzi se tem
-	\begin{align*}
-		(D_{e_2}^{\Sigma} h) (e_1,e_1) &= (D_{e_1}^{\Sigma} h) (e_2,e_1) = 0\\
-		(D_{e_1}^{\Sigma} h) (e_2,e_2) &= (D_{e_2}^{\Sigma} h) (e_1,e_2) = 0
-	\end{align*}
-	
-	Portanto $\nabla h = 0$ e com isso se tem que $h$ é constante. Seja $K$ a curvatura intrínseca de $\Sigma$. Como $h$ é constante, então $K$ também é constante. Logo, pelo teorema de Lawson (\ref{teo_lawson}) ou $K=0$, ou $K=1$. Mas $\Sigma$ não tem ponto umbílicos por \ref{nao_existem_pontos_umbilicos}, portanto $K=0$ e $\Sigma$ é um pedaço aberto do toro de Clifford. Mas $\Sigma$ é compacto, portanto $\Sigma$ é todo o toro de Clifford.
+	Portanto, $\nabla \Psi(\xbarra) = 0$ para todo $\xbarra \in \Omega$.
 \end{demonstracao}
+%\end{demonstracao}
