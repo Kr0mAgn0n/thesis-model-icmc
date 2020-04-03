@@ -820,4 +820,30 @@ para qualquer par de pontos $\xbarra \neq \ybarra$. Como no ponto $(\xbarra,\yba
 	
 	Portanto, $\nabla \Psi(\xbarra) = 0$ para todo $\xbarra \in \Omega$.
 \end{demonstracao}
-%\end{demonstracao}
+
+\begin{lema}\label{bony}
+	Seja $U$ um subconjunto aberto de uma variedade Riemanniana $M$, e seja $X_1, \ldots, X_m$ campos vetoriais diferenciáveis em $U$. Assumir que $\varphi: U \rightarrow \realnumbers$ é uma função não negativa diferenciável tal que
+	\begin{equation*}
+		\sum_{j=1}^{m} (D^2 \varphi)(X_j,X_j) \leq -L \inf_{|\xi| \leq 1} (D^2 \varphi)(\xi,\xi) + L |d \varphi| + L \varphi,
+	\end{equation*}
+	onde $L$ é uma constante positiva. Seja $\Omega = \{ x \in U: \varphi(x) = 0 \}$ o conjunto de zeros da função $\varphi$. Alem disso, supor que $\gamma: [0,1] \rightarrow U$ é um caminho diferenciável tal que $\gamma(0) \in \Omega$ e $\gamma'(s) = \sum_{j=1}^{m} f_j(s) X_j(\gamma(s))$ para funções diferenciáveis $f_1, \ldots, f_m: [0,1] \rightarrow \realnumbers$ adequadas. Então $\gamma(s) \in \Omega$ para todo $s \in [0,1]$.
+\end{lema}
+
+\begin{demonstracao}
+	\cite{Brendle2010}, Corolário 9.7.
+\end{demonstracao}
+
+\begin{proposicao}
+	$\Omega$ é aberto.
+\end{proposicao}
+
+\begin{demonstracao}
+	Nas proposições \ref{2_diff_Z_x}, \ref{diff_Z_x_y} e \ref{2_diff_Z_y} estamos assumindo que $Z(\xbarra,\ybarra) = 0$. Vamos agora repetir o cálculos sem considerar essa hipóteses. Ao final tem-se
+	\begin{multline*}
+	\sum_i \frac{\partial^2 Z}{\partial x_i^2}(\xbarra,\ybarra) + 2 \sum_i \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xbarra,\ybarra) + \sum_i \frac{\partial^2 Z}{\partial y_i^2}(\xbarra,\ybarra) =\\
+	- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xbarra)}{1 - \langle F(\xbarra), F(\ybarra) \rangle} \sum_i \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle + \overline{\Lambda}(\xbarra,\ybarra) \left( Z(\xbarra,\ybarra) + \sum_i \left| \frac{\partial Z}{\partial x_i}(\xbarra,\ybarra) \right| + \sum_i \left| \frac{\partial Z}{\partial y_i}(\xbarra,\ybarra) \right| \right)
+	\end{multline*}
+	onde $\overline{\Lambda}(\xbarra,\ybarra)$ é uma função continua no conjunto $\{ (x,y) \in \Sigma \times \Sigma: x \neq y \}$, a qual pode ser não limitada perto da diagonal.
+	
+
+\end{demonstracao}
