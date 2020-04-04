@@ -13,58 +13,140 @@
 %	onde $A$ é a segunda forma fundamental.
 %\end{proposicao}
 
-Neste capítulo apresentaremos a demonstração da conjetura de Lawson obtida por Simon Brendle \cite{Brendle2013a}.
+%Neste capítulo apresentaremos a demonstração da conjetura de Lawson obtida por Simon Brendle \cite{Brendle2013a}.
+%
+%\section{Introdução}
+%
+%Em 1970, Blaine Lawson \cite{Lawson1970a} conjeturou que o toro de Clifford é a única superfície mínima, compacta e mergulhada em $S^3$, com genus 1, e foi provada somente quatro décadas depois por Simon Brendle \cite{Brendle2013a} em 2013. A hipótese de ser mergulhada é fundamental. De fato, em \cite{Lawson1970} Lawson construiu uma família (infinita) de imersões mínimas de toros em $S^3$.
+%
+%A prova da conjetura de Lawson em \cite{Brendle2013a} envolve uma aplicação do princípio do máximo a uma função que depende de uma par de pontos. Esta técnica foi inicialmente desenvolvida por Huisken \cite{Huisken1998} no estudo de fluxo de comprimento de curvas para curvas mergulhadas no plano e, posteriormente, por Andrews \cite{Andrews2012}.
+%
+%Descreveremos a seguir os argumentos usados em \cite{Brendle2013a}. Seguindo as ideias e notações de \cite{Andrews2012}, considere uma superfície mínima e mergulhada $ F: \Sigma \rightarrow S^3 $ e $ \Phi: \Sigma \rightarrow \realnumbers $  uma função positiva. Definia uma função $ Z: \Sigma \times \Sigma \rightarrow \realnumbers $ pondo
+%\begin{equation}\label{def_de_Z}
+%	Z(x,y) = \Phi(x) (1 - \langle F(x),F(y) \rangle ) + \langle \nu(x), F(y) \rangle,
+%\end{equation}
+%onde $ \nu $ é um campo unitário , normal a $ \Sigma $.
+%
+%A função $Z$ tem a seguinte interpretação geométrica:
+%
+%\begin{proposicao}
+%	A função $ Z(x,y) $, definida em \ref{def_de_Z}, é não-negativa se, e somente se, para todo ponto $ x \in \Sigma $, existe uma bola geodésica $B$ contida em $\Omega$, com curvatura média do bordo igual a $ \Phi(x) $ e $ F(x) \in \partial B $.
+%\end{proposicao}
+%
+%\begin{demonstracao}
+%	Observe, inicialmente, que uma bola geodésica em $S^3$ é simplesmente a interseção de uma bola de $\realnumbers^4$ com $S^3$. Em particular, a bola em $S^3$ contida em $\Omega$, com curvatura média do bordo igual a $\Phi$ e que é tangente a $ F(\Sigma) $ no ponto $F(x)$ é $B=B(p)$, onde 
+%	\begin{equation*}
+%		p = F(x) - \Phi^{-1}(x) \nu(x),
+%	\end{equation*}
+%	e $\nu$ é o campo unitário, normal a $F(\Sigma)$ no ponto $F(x) \in S^3$, e que aponta para fora de $\Omega$.
+%	
+%	Afirmar que uma bola geodésica de $S^3$ está inteiramente contida em $\Omega$ é equivalente a afirmar que, para cada ponto $y \in \Sigma$, tem-se
+%	\begin{equation*}
+%		| F(y) - p | \geq \Phi^{-2}(x),
+%	\end{equation*}
+%	ou seja,
+%	\begin{equation*}
+%		| F(y) - ( F(x) - \Phi^{-1}(x) \nu(x) ) |^2 - \Phi^2(x) \geq 0.
+%	\end{equation*}
+%	
+%	Desenvolvendo o lado esquerdo da desigualdade acima e multiplicando por $ \Phi(x)/2 $, obtemos:
+%	\begin{equation*}
+%		\frac{\Phi(x)}{2} | F(y) - F(x) |^2 + \langle F(y) - F(x), \nu(x) \rangle \geq 0.
+%	\end{equation*}
+%	
+%	Como $F(x), F(y) \in S^3$, tem-se
+%	\begin{equation*}
+%		|F(x)|^2 = |F(y)|^2 = 1 \quad \text{e} \quad \langle F(x), \nu(x) \rangle = 0.
+%	\end{equation*}
+%	
+%	Asim,
+%	\begin{equation*}
+%		\Phi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle \geq 0,
+%	\end{equation*} 
+%	como queríamos.
+%\end{demonstracao}
 
-\section{Introdução}
 
-Em 1970, Blaine Lawson \cite{Lawson1970a} conjeturou que o toro de Clifford é a única superfície mínima, compacta e mergulhada em $S^3$, com genus 1, e foi provada somente quatro décadas depois por Simon Brendle \cite{Brendle2013a} em 2013. A hipótese de ser mergulhada é fundamental. De fato, em \cite{Lawson1970} Lawson construiu uma família (infinita) de imersões mínimas de toros em $S^3$.
+Neste capítulo apresentaremos a demonstração da conjetura de
+Lawson obtida por Simon Brendle \cite{Brendle2013a}.
 
-A prova da conjetura de Lawson em \cite{Brendle2013a} envolve uma aplicação do princípio do máximo a uma função que depende de uma par de pontos. Esta técnica foi inicialmente desenvolvida por Huisken \cite{Huisken1998} no estudo de fluxo de comprimento de curvas para curvas mergulhadas no plano e, posteriormente, por Andrews \cite{Andrews2012}.
 
-Descreveremos a seguir os argumentos usados em \cite{Brendle2013a}. Seguindo as ideias e notações de \cite{Andrews2012}, considere uma superfície mínima e mergulhada $ F: \Sigma \rightarrow S^3 $ e $ \Phi: \Sigma \rightarrow \realnumbers $  uma função positiva. Definia uma função $ Z: \Sigma \times \Sigma \rightarrow \realnumbers $ pondo
-\begin{equation}\label{def_de_Z}
-	Z(x,y) = \Phi(x) (1 - \langle F(x),F(y) \rangle ) + \langle \nu(x), F(y) \rangle,
-\end{equation}
-onde $ \nu $ é um campo unitário , normal a $ \Sigma $.
+\section{Introdu\c c\~ao}
 
-A função $Z$ tem a seguinte interpretação geométrica:
+Em 1970, Blaine Lawson \cite{Lawson1970a} conjeturou que o toro de 
+Clifford é a única superfície mínima, compacta e mergulhada em $\Sp^3$,
+com genus $1$, e foi provada somente quatro décadas depois por Simon
+Brendle \cite{Brendle2013a} em 2013. A hipótese de ser mergulhada é
+fundamental. De fato, em \cite{Lawson1970} Lawson construiu uma 
+família (infinita) de imersões mínimas de toros em $\Sp^3$.
 
-\begin{proposicao}
-	A função $ Z(x,y) $, definida em \ref{def_de_Z}, é não-negativa se, e somente se, para todo ponto $ x \in \Sigma $, existe uma bola geodésica $B$ contida em $\Omega$, com curvatura média do bordo igual a $ \Phi(x) $ e $ F(x) \in \partial B $.
+A prova da conjetura de Lawson em \cite{Brendle2013a} envolve uma 
+aplicação do princípio do máximo para uma função que depende de 
+duas vari\'aveis. Esta técnica foi inicialmente desenvolvida por Huisken
+\cite{Huisken1998} no estudo do fluxo de comprimento de curvas para 
+curvas mergulhadas no plano e, posteriormente, por Andrews 
+\cite{Andrews2012}.
+
+Antes de apresentarmos os argumentos usados em \cite{Brendle2013a},
+na prova da conjectura de Lawson, faremos algumas consira\c c\~oes
+iniciais. Seguiremos aqui o artigo \cite{Andrews2012}, onde o autor
+apresenta a no\c c\~ao de n\~ao-colapsante para hipersuperf\'icies
+Euclidianas mergulhadas.
+
+Considere uma superf\'icie $\Sigma$ em $\R^3$, cuja curvatura
+m\'edia $H$ \'e positiva em todos os pontos, e limitando uma 
+regi\~ao aberta $\Omega$ em $\R^3$.
+
+\begin{definicao}
+	A superf\'icie $\Sigma$ \'e dita ser {\em $\delta$-n\~ao-colapsante}
+	se, para todo ponto $x\in\Sigma$, existe uma bola aberta $B$ de
+	raio $\delta/H(x)$, contida em $\Omega$, com $x\in\partial B$. 
+\end{definicao}
+
+Dado uma superf\'icie $F:\Sigma\to\R^3$, defina uma fun\c c\~ao
+$Z:\Sigma\times\Sigma\to\R$ pondo
+\[
+Z(x,y) = \frac{H(x)}{2}\|F(y)-F(x)\|^2 + \delta\langle F(y)-F(x), \nu(x)\rangle,
+\]
+onde $\nu$ \'e um campo unit\'ario, normal a $\Sigma$.
+
+\begin{proposicao}[\cite{Andrews2012}]\label{prop:Int}
+	A superf\'icie $\Sigma$ \'e $\delta$-n\~ao-colapsante se, e somente
+	se, $Z(x,y)\geq0$, para quaisquer $x,y\in\Sigma$.
 \end{proposicao}
+\begin{proof}
+	Sem perda de generalidade, escolha o campo normal $\nu$ que
+	aponta para fora de $\Sigma$. Assim, uma bola em $\Omega$ de
+	raio $\delta/H(x)$, com $F(x)$ sendo um ponto da fronteira, deve
+	ter centro no ponto
+	\[
+	p(x) = F(x) - (\delta/H(x))\nu(x).
+	\]
+	A afirma\c c\~ao de que esta bola est\'a contida em $\Omega$
+	\'e equivalente ao fato de que nenhum ponto de $\Sigma$ tem
+	dist\^ancia menor do que $\delta/H(x)$ ao ponto $p$. Ou seja,
+	\[
+	0\leq\|F(y)-p(x)\|^2-\left(\frac{\delta}{H(x)}\right)^2 = 
+	2\cdot\frac{Z(x,y)}{H(x)},
+	\]
+	para quaisquer $x,y\in\Sigma$. Como $H>0$ em todos os pontos
+	de $\Sigma$, isso \'e equivalente ao fato de que $Z$ seja
+	n\~ao-negativa em todos os pontos. A rec\'iprova \'e imediata.
+\end{proof}
 
-\begin{demonstracao}
-	Observe, inicialmente, que uma bola geodésica em $S^3$ é simplesmente a interseção de uma bola de $\realnumbers^4$ com $S^3$. Em particular, a bola em $S^3$ contida em $\Omega$, com curvatura média do bordo igual a $\Phi$ e que é tangente a $ F(\Sigma) $ no ponto $F(x)$ é $B=B(p)$, onde 
-	\begin{equation*}
-		p = F(x) - \Phi^{-1}(x) \nu(x),
-	\end{equation*}
-	e $\nu$ é o campo unitário, normal a $F(\Sigma)$ no ponto $F(x) \in S^3$, e que aponta para fora de $\Omega$.
-	
-	Afirmar que uma bola geodésica de $S^3$ está inteiramente contida em $\Omega$ é equivalente a afirmar que, para cada ponto $y \in \Sigma$, tem-se
-	\begin{equation*}
-		| F(y) - p | \geq \Phi^{-2}(x),
-	\end{equation*}
-	ou seja,
-	\begin{equation*}
-		| F(y) - ( F(x) - \Phi^{-1}(x) \nu(x) ) |^2 - \Phi^2(x) \geq 0.
-	\end{equation*}
-	
-	Desenvolvendo o lado esquerdo da desigualdade acima e multiplicando por $ \Phi(x)/2 $, obtemos:
-	\begin{equation*}
-		\frac{\Phi(x)}{2} | F(y) - F(x) |^2 + \langle F(y) - F(x), \nu(x) \rangle \geq 0.
-	\end{equation*}
-	
-	Como $F(x), F(y) \in S^3$, tem-se
-	\begin{equation*}
-		|F(x)|^2 = |F(y)|^2 = 1 \quad \text{e} \quad \langle F(x), \nu(x) \rangle = 0.
-	\end{equation*}
-	
-	Asim,
-	\begin{equation*}
-		\Phi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle \geq 0,
-	\end{equation*} 
-	como queríamos.
-\end{demonstracao}
+Considere agora uma superf\'icie m\'inima e mergulhada 
+$F:\Sigma\to\Sp^3$ e $ \Phi: \Sigma\to\R$ uma função positiva. Defina
+uma função $Z:\Sigma\times\Sigma\to\R$ pondo
+\begin{equation}\label{def_de_Z}
+Z(x,y) = \Phi(x) (1 - \langle F(x),F(y) \rangle ) + \langle \nu(x), F(y) \rangle,
+\end{equation}
+onde $\nu$ \'e um campo unitário, normal a $\Sigma$. Observando que
+uma bola geod\'esica na esfera $\Sp^3$ \'e simplesmente a interseção
+de uma bola de $\R^4$ com $\Sp^3$ podemos provar, de forma
+an\'aloga \`a Proposi\c c\~ao \ref{prop:Int}, que a fun\c c\~ao $Z(x,y)$,
+definida em \eqref{def_de_Z}, \'e n\~ao-negativa se, e somente se,
+a superf\'icie $\Sigma$ \'e n\~ao-colapsante.
+
 
 
 \section{Alguns resultados técnicos}
