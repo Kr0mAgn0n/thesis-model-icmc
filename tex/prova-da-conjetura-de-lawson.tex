@@ -854,7 +854,7 @@ para qualquer par de pontos $\xbarra \neq \ybarra$. Como no ponto $(\xbarra,\yba
 	0 = Z(\xbarra,\ybarra) = \frac{\partial Z}{\partial x_i}(\xbarra,\ybarra) = \frac{\partial Z}{\partial y_i}(\xbarra,\ybarra)
 \end{equation*}
 
-\begin{proposicao}
+\begin{proposicao}\label{gradiente_nulo}
 	Tem-se que $\nabla \Psi(\xbarra) = 0$ para todo $\xbarra \in \Omega.$
 \end{proposicao}
 
@@ -903,7 +903,7 @@ para qualquer par de pontos $\xbarra \neq \ybarra$. Como no ponto $(\xbarra,\yba
 	Portanto, $\nabla \Psi(\xbarra) = 0$ para todo $\xbarra \in \Omega$.
 \end{demonstracao}
 
-\begin{lema}\label{bony}
+\begin{lema}[Principio do máximo estrito de Bony]\label{bony}
 	Seja $U$ um subconjunto aberto de uma variedade Riemanniana $M$, e seja $X_1, \ldots, X_m$ campos vetoriais diferenciáveis em $U$. Assumir que $\varphi: U \rightarrow \realnumbers$ é uma função não negativa diferenciável tal que
 	\begin{equation*}
 		\sum_{j=1}^{m} (D^2 \varphi)(X_j,X_j) \leq -L \inf_{|\xi| \leq 1} (D^2 \varphi)(\xi,\xi) + L |d \varphi| + L \varphi,
@@ -927,5 +927,13 @@ para qualquer par de pontos $\xbarra \neq \ybarra$. Como no ponto $(\xbarra,\yba
 	\end{multline*}
 	onde $\overline{\Lambda}(\xbarra,\ybarra)$ é uma função continua no conjunto $\{ (x,y) \in \Sigma \times \Sigma: x \neq y \}$, a qual pode ser não limitada perto da diagonal.
 	
-
+	Pelo principio do máximo estrito de Bony \ref{bony} tem-se que $\Omega$ é aberto.
 \end{demonstracao}
+
+Voltando à proposição \ref{gradiente_nulo} e usando o fato que $\Omega$ é aberto, então $\Psi(\xbarra)= |\lambda_i|$ é constante. Pelo teorema de Lawson \ref{teo_lawson}, da fórmula da curvatura de Gauss
+\begin{equation*}
+	K = 1 + \lambda_1 \lambda_2
+\end{equation*}
+tem-se $\lambda_1 = \lambda_2 = 0$ ou, $\lambda_1 = 1$ e $\lambda_2=-1$. Mas a superfície não tem ponto umbílicos, então cumpre-se o segundo caso. Portanto, $\Psi(\xbarra)=1$ para todo $\xbarra \in \Omega$.
+	
+Pelo Teorema de continuação única estândar de equações diferencias parciais \cite{Aronszajn1957} tem-se que $\Psi(\xbarra) = 1$ para todo $\xbarra \in \Sigma$. Portanto a curvatura Gaussiana de $\Sigma$ anula-se. Então $\Sigma$ é congruente com o toro de Clifford.
