@@ -151,81 +151,6 @@ a superf\'icie $\Sigma$ \'e n\~ao-colapsante.
 
 \section{Alguns resultados técnicos}
 
-%Como na seção anterior, sejam $F: \Sigma \rightarrow S^3$ uma superfície mínima e mergulhada, $\Phi: \Sigma \rightarrow \realnumbers$ uma função positiva e considere a função
-%\begin{equation*}
-%	Z(x,y) = \Phi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle.
-%\end{equation*}
-%
-%Considere dois pontos $\xbarra, \ybarra \in \Sigma$, com $\xbarra \neq \ybarra$, tais que $Z(\xbarra, \ybarra) = 0$ e $dZ(\xbarra, \ybarra) = 0$. Sejam $(x_1,x_2), (y_1,y_2)$ sistemas de coordenadas geodésicas em torno dos pontos $\xbarra, \ybarra$, respectivamente. No ponto $(\xbarra,\ybarra)$, temos:
-%\begin{multline}\label{diff_Z_x}
-%0 = \frac{\partial Z}{\partial x_i} (\xbarra, \ybarra) =  \frac{\partial \Phi}{\partial x_i}(\xbarra) (1 - \langle F(\xbarra, \ybarra) \rangle) -  \Phi(\xbarra) \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle\\
-%+ \sum_{k=1}^{2} h_{ik}(\xbarra) \left\langle \frac{\partial F}{\partial x_k}(\xbarra), F(\ybarra) \right\rangle
-%\end{multline}
-%e
-%\begin{equation}\label{diff_Z_y}
-%0 = \frac{\partial Z}{\partial y_i} (\xbarra, \ybarra) = - \Phi(\xbarra) \left\langle F(\xbarra), \frac{\partial F}{\partial y_i} (\ybarra) \right\rangle + \left\langle \nu(\xbarra), \frac{\partial F}{\partial y_i}(\ybarra) \right\rangle
-%\end{equation}
-%onde $h_{ik}(\xbarra)$ denota a $(ik)$-ésima coordenada da matriz da segunda forma fundamental de $F$ no ponto $\xbarra$.
-%
-%
-%%\begin{definicao}
-%%	A função $Z: \Sigma \times \Sigma \rightarrow \realnumbers$ é definida por
-%%	\begin{equation*}
-%%		Z(x,y) =  \Phi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle.
-%%	\end{equation*}
-%%	onde $F: \Sigma \rightarrow S^3$ é uma imersão mínima de gênero 1 em $S^3$, e $\nu(x) \in T_{F(x)} S^3$ é um campo vectorial normal unitário.
-%%\end{definicao}
-%
-%%\begin{observacao}
-%%	 A partir de agora vamos supor que para $p \in \Sigma$ existe $q \in \Sigma$ tal que $Z(p,q) = \frac{\partial Z}{\partial x_i}(p,q) = 0$ para $i = 1,2$. Ista suposição é feita para ser usada nos cálculos posteriores.
-%%\end{observacao}
-%
-%%\begin{proposicao}\label{primeira_derivada_x_Z}
-%%	As primeiras derivadas da função $Z$ com respeito a $x_1$ e $x_2$ estão dadas por:
-%%	\begin{equation}\label{diff_Z_x}
-%%	\frac{\partial Z}{\partial x_i} (p, q) =  \frac{\partial \Phi}{\partial x_i}(p) (1 - \langle F(p, q) \rangle) -  \Phi(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle + h_i^k(p) \left\langle \frac{\partial F}{\partial x_k}(p), F(q) \right\rangle
-%%	\end{equation}
-%%\end{proposicao}
-%
-%
-%\begin{observacao}
-%	Derivando com respeito a $x_1$ e $x_2$:
-%	\begin{equation*}
-%		\frac{\partial Z}{\partial x_i} (p, q) =  \frac{\partial \Phi}{\partial x_i}(p) (1 - \langle F(p, q) \rangle) -  \Phi(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle + \left\langle \frac{\partial \nu}{\partial x_i}(p), F(q) \right\rangle
-%	\end{equation*}
-%	
-%	Em quanto ao termo $ \left\langle \frac{\partial \nu}{\partial x_i}(p), F(q) \right\rangle $, olhar que $\langle \nu(x), \nu(x) \rangle=1, \forall x \in \Sigma$. Então, quando se derivar se tem:
-%	\begin{equation*}
-%		\left\langle \frac{\partial \nu}{\partial x_i}(x), \nu(x) \right\rangle = 0, \forall x \in \Sigma.
-%	\end{equation*}
-%	
-%	Isto quer dizer que $\frac{\partial \nu}{\partial x_i}(p) \in T_{p} \Sigma$. Olhar que estamos identificando $p$ com $F(p)$. Nós sabemos que $\{ \frac{\partial F}{\partial x_i}(p) \}$ gera $T_{p} \Sigma$, então, usando a notação de Einstein, podemos expressar $\frac{\partial \nu}{\partial x_i}(p)$ como combinação linear dos vetores anteriores.
-%	\begin{equation}\label{der_nu_x}
-%		\frac{\partial \nu}{\partial x_i} (p) = h_i^k \frac{\partial F}{\partial x_k}
-%	\end{equation}
-%	
-%	Lembrar que a notação de Einstein está expressando uma suma com respeito ao índice $k$ que toma os valores 1 e 2.
-%	
-%	Portanto ao final temos a expressão requerida.
-%\end{observacao}
-%
-%
-%\begin{definicao}
-%	Denote-se por $w_i$ a reflexão do vetor
-%	\begin{equation*}
-%		\frac{\partial F}{\partial x_i}(\xbarra)
-%	\end{equation*}
-%	com respeito ao plano ortogonal a $F(\xbarra) - F(\ybarra)$, i.e.
-%	\begin{equation*}
-%		w_i = \frac{\partial F}{\partial x_i}(\xbarra) - 2 \left\langle \frac{\partial F}{\partial x_i}(\xbarra), \frac{F(\xbarra) - F(\ybarra)}{|F(\xbarra) - F(\ybarra)|} \right\rangle \frac{F(\xbarra) - F(\ybarra)}{|F(\xbarra) - F(\ybarra)|}.
-%	\end{equation*}	
-%\end{definicao}
-%
-%Escolhendo um sistema de coordenadas $(y_1,y_2)$ apropriado pode-se ter
-%\begin{equation*}
-%\left\langle w_1, \frac{\partial F}{\partial y_1}(\ybarra) \right\rangle \geq 0, \quad \left\langle w_1, \frac{\partial F}{\partial y_2}(\ybarra) \right\rangle = 0 \quad \text{e} \quad \left\langle w_2, \frac{\partial F}{\partial y_2}(\ybarra) \right\rangle \geq 0.
-%\end{equation*}
-
 Nesta se\c c\~ao apresentaremos alguns resultados preliminares
 que ser\~ao usados na demonstra\c c\~ao da conjectura de
 Lawson. 
@@ -251,7 +176,11 @@ e
 \begin{equation}\label{diff_Z_y}
 0 = \frac{\partial Z}{\partial y_i} (\xbarra, \ybarra) = - \Phi(\xbarra) \left\langle F(\xbarra), \frac{\partial F}{\partial y_i} (\ybarra) \right\rangle + \left\langle \nu(\xbarra), \frac{\partial F}{\partial y_i}(\ybarra) \right\rangle
 \end{equation}
-onde $h_{ij}(\xbarra)$ denota a $(ij)$-ésima coordenada da matriz da segunda forma fundamental de $F$ no ponto $\xbarra$.
+onde $h_{ij}(\xbarra)$ denota a $(ij)$-ésima coordenada da matriz da segunda forma fundamental de $F$ no ponto $\xbarra$, i.e.,
+\begin{eqnarray}\label{eq:partialNu}
+\frac{\partial\nu}{\partial x_i}(\xb) = 
+\sum_{k=1}^2h_{ik}\frac{\partial F}{\partial x_k}(\xb).
+\end{eqnarray}
 
 \vspace{.2cm}
 
@@ -282,22 +211,9 @@ podemos supor que
 \left\langle w_2, \frac{\partial F}{\partial y_2}(\ybarra) \right\rangle \geq 0.
 \end{equation*}
 
-
 \begin{lema}
 	Os vetores $F(\ybarra)$ e $ \Phi(\xbarra) F(\xbarra) - \nu(\xbarra) $ são linearmente independentes.
 \end{lema}
-
-%\begin{demonstracao}
-%	Pela definição de $Z$ tem-se
-%	\begin{equation*}
-%		\langle \Phi(\xbarra) F(\xbarra) - \nu(\xbarra), F(\ybarra) \rangle = \Phi(\xbarra) - Z(\xbarra,\ybarra) = \Phi(\xbarra).
-%	\end{equation*}
-%	
-%	Portanto
-%	\begin{equation*}
-%		| \Phi(\xbarra) F(\xbarra) - \nu(\xbarra) |^2 | F(\ybarra) |^2 - \langle \Phi(\xbarra) F(\xbarra) - \nu(\xbarra), F(\ybarra) \rangle^2 = | \Phi(\xbarra) F(\xbarra) - \nu(\xbarra) |^2 - \Phi(\xbarra)^2 = 1 \neq 0
-%	\end{equation*}
-%\end{demonstracao}
 \begin{demonstracao}
 	Usando a identidade
 	\[
@@ -314,14 +230,10 @@ podemos supor que
 	logo os vetores $F(\ybarra)$ e $\Phi(\xbarra)F(\xbarra)-\nu(\xbarra)$
 	s\~ao linearmente independentes.
 \end{demonstracao}
+
 Em rela\c c\~ao \`a reflex\~ao dada em \eqref{eq:reflexao}, obtemos o
 seguinte:
 
-%\begin{lema}
-%	Temos\begin{equation*}
-%		w_1 = \frac{\partial F}{\partial y_1}(\ybarra) \quad \text{e} \quad w_2 = \frac{\partial F}{\partial y_2}(\ybarra)
-%	\end{equation*}
-%\end{lema}
 \begin{lema}
 	Valem as seguintes igualdades:
 	\begin{equation*}
@@ -330,57 +242,6 @@ seguinte:
 	w_2 = \frac{\partial F}{\partial y_2}(\ybarra).
 	\end{equation*}
 \end{lema}
-%\begin{demonstracao}
-%	Tem-se
-%	\begin{align*}
-%		\langle w_i, F(\ybarra) \rangle &= \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle + 2 \left\langle \frac{\partial F}{\partial x_i}, F(\ybarra) \right\rangle \frac{\langle F(\xbarra) - F(\ybarra),F(\ybarra) \rangle}{| F(\xbarra) - F(\ybarra) |^2}\\
-%		&= \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle + 2 \left\langle \frac{\partial F}{\partial x_i}, F(\ybarra) \right\rangle \frac{\langle F(\xbarra),F(\ybarra) \rangle - 1}{2 - 2 \langle F(\xbarra), F(\ybarra) \rangle}\\
-%		&= 0
-%	\end{align*}
-%	e
-%	\begin{align*}
-%		\langle w_i, \Phi(\xbarra) F(\xbarra) - \nu(\xbarra) \rangle &= 2 \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle \frac{\langle F(\xbarra) - F(\ybarra), \Phi(\xbarra) F(\xbarra) - \nu(\xbarra) \rangle}{| F(\xbarra) - F(\ybarra) |^2}\\
-%		&= 2 \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle \frac{Z(\xbarra,\ybarra)}{| F(\xbarra) - F(\ybarra) |^2} = 0
-%	\end{align*}
-%	
-%	Por outro lado, os vetores
-%	\begin{equation*}
-%		\frac{\partial F}{\partial y_1}(\ybarra) \quad \text{e} \quad \frac{\partial F}{\partial y_2}(\ybarra)
-%	\end{equation*}
-%	satisfazem
-%	\begin{equation*}
-%		\left\langle \frac{\partial F}{\partial y_i}(\ybarra), F(\ybarra) \right\rangle = 0
-%	\end{equation*}
-%	e
-%	\begin{equation*}
-%		\left\langle \frac{\partial F}{\partial y_i}(\ybarra), \Phi(\xbarra) F(\xbarra) - \nu(\xbarra) \right\rangle = -\frac{\partial Z}{\partial y_i}(\xbarra,\ybarra) = 0
-%	\end{equation*}
-%	
-%	Com estos resultados se conclui que o plano gerado por
-%	\begin{equation*}
-%		\frac{\partial F}{\partial y_1}(\ybarra) \quad \text{e} \quad \frac{\partial F}{\partial y_2}(\ybarra)
-%	\end{equation*}
-%	é o mesmo plano gerado por $w_1$ e $w_2$.
-%	
-%	Pela definição de $w_i$ tem-se que $w_1$ e $w_2$ são ortonormais como $\frac{\partial F}{\partial y_1}(\ybarra)$ e $\frac{\partial F}{\partial y_2}(\ybarra)$. Adicionalmente tem-se a condição
-%	\begin{equation*}
-%		\left\langle w_1, \frac{\partial F}{\partial y_2}(\ybarra) \right\rangle = 0,
-%	\end{equation*}
-%	portanto
-%	\begin{equation*}
-%		w_1 = \pm \frac{\partial F}{\partial y_1}(\ybarra) \quad \text{e} \quad w_2 = \pm \frac{\partial F}{\partial y_2}(\ybarra)
-%	\end{equation*}
-%	
-%	Finalmente, tem-se a condição 
-%	\begin{equation*}
-%		\left\langle w_1, \frac{\partial F}{\partial y_1}(\ybarra) \right\rangle \geq 0 \quad \text{e} \quad \left\langle w_2, \frac{\partial F}{\partial y_2}(\ybarra) \right\rangle \geq 0
-%	\end{equation*}	
-%	com o que se conclui
-%	\begin{equation*}
-%	w_1 = \frac{\partial F}{\partial y_1}(\ybarra) \quad \text{e} \quad w_2 = \frac{\partial F}{\partial y_2}(\ybarra)
-%	\end{equation*}
-%\end{demonstracao}
-
 \begin{demonstracao}
 	Usando a express\~ao de $w_i$, dada em \eqref{eq:reflexao}, obtemos:
 	\begin{eqnarray*}
@@ -442,32 +303,10 @@ seguinte:
 	como quer\'iamos.
 \end{demonstracao}
 
-%\begin{proposicao}
-%	As primeiras derivadas da função $Z$ com respeito a $y_1$ e $y_2$ estão dadas por:
-%	\begin{equation}\label{diff_Z_y}
-%		\frac{\partial Z}{\partial y_i} (p, q) = - \Phi(p) \left\langle F(p), \frac{\partial F}{\partial y_i} (q) \right\rangle + \left\langle \nu(p), \frac{\partial F}{\partial y_i}(q) \right\rangle
-%	\end{equation}
-%\end{proposicao}
-
-%\begin{demonstracao}
-%	Cálculo simples.
-%\end{demonstracao}
-
-
-
-%\begin{proposicao}
-%	O Laplaciano de $Z$ com respeito a $x$ satisfaz a desigualdade
-%	\begin{multline}\label{2_diff_Z_x}
-%		\sum_{i=1}^{2} \frac{\partial^2 Z}{\partial x_i^2} (p,q) = \left( \Delta_{\Sigma} \Phi(p) - \frac{| \nabla \Phi(p) |^2}{\Phi(p)} + (|A(p)|^2 - 2) \Phi(p) \right) (1 - \left\langle F(p), F(q) \right\rangle) + 2 \Phi(p)\\
-%		 - \frac{2 \Phi(p)^2 - |A(p)|^2}{2 \Phi(p) (1 - \langle F(p), F(q) \rangle)} \sum_i \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle^2
-%	\end{multline}
-%\end{proposicao}
-
 No resultado seguinte iremos considerar as derivadas de segunda
-ordem da função $Z$ no ponto $(\xb,\yb)$.
+ordem da fun\c c\~ao $Z$ no ponto $(\xb,\yb)$.
 
 \begin{proposicao}
-	Vale a seguinte igualdade:
 	A derivada segunda da fun\c c\~ao $Z$, dada em \eqref{eq:funcaoZ},
 	satisfaz:
 	\begin{eqnarray*}\label{2_diff_Z_x}
@@ -479,188 +318,9 @@ ordem da função $Z$ no ponto $(\xb,\yb)$.
 		\frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle^2.
 	\end{eqnarray*}
 \end{proposicao}
-
-%\begin{demonstracao}
-%	Vamos derivar com respeito a $x_i$ à equação \ref{diff_Z_x} e depois vamos somar com respeito ao índice $i$.
-%	\begin{multline}\label{Z_seg_dev_x}
-%		\sum_i \frac{\partial^2 Z}{\partial x_i^2}(x,y) = \sum_i \frac{\partial^2 \Phi}{\partial x_i^2}(x)(1 - \langle F(x), F(y) \rangle) -2  \sum_i \frac{\partial \Phi}{\partial x_i} \left\langle \frac{\partial F}{\partial x_i}(x), F(y) \right\rangle\\
-%		 -  \Phi(x) \left\langle \sum_i \frac{\partial^2 F}{\partial x_i^2}(x), F(y) \right\rangle + \sum_i \frac{\partial h_i^k}{\partial x_i}(x) \left\langle \frac{\partial F}{\partial x_k}, F(y) \right\rangle + \sum_i h_i^k(x) \left\langle \frac{\partial^2 F}{\partial x_i \partial x_k}, F(y) \right\rangle
-%	\end{multline}
-%	
-%	Lembrar que o índice $k$ representa uma somatória. Vamos analisar o termo $\sum_i \frac{\partial^2 F}{\partial x_i^2}(x)$. Pelo teorema \ref{propriedades_sup_min_S3} se tem
-%	\begin{equation*}
-%		\sum_i \frac{\partial^2 F}{\partial x_i^2}(x) + 2 F(x) = 0.
-%	\end{equation*}
-%	
-%	Então $\sum_i \frac{\partial^2 F}{\partial x_i^2}(x) = -2 F(x) $.
-%	
-%	Agora vamos analisar o termo $\sum_i \frac{\partial h_i^k}{\partial x_i}(x)$. Pela equação de Codazzi se tem
-%	\begin{equation}\label{codazzi_eq}
-%		\begin{split}
-%		-\frac{\partial h_1^1}{\partial x_1} = \frac{\partial h_2^2}{\partial x_1} = \frac{\partial h_1^2}{\partial x_2} = \frac{\partial h_2^1}{\partial x_2}\\
-%		-\frac{\partial h_2^2}{\partial x_2} = \frac{\partial h_1^1}{\partial x_2} = \frac{\partial h_2^1}{\partial x_1} = \frac{\partial h_1^2}{\partial x_1}.
-%		\end{split}		
-%	\end{equation}
-%	
-%	Olhar que 
-%	\begin{equation*}
-%		A(x) = \left[\begin{matrix}
-%		h_1^1(x) & h_1^2(x)\\
-%		h_2^1(x) & h_2^2(x)
-%		\end{matrix}\right],
-%	\end{equation*}
-%	
-%	a superfície é minima e o fato as matrizes semelhantes tem a mesma traça, então temos $h_1^1(x) + h_2^2 = 0$. Portanto $\sum_i \frac{\partial h_i^k}{\partial x_i} = 0$.
-%	
-%	Analisando o termo $\sum_i h_i^k(x) \left\langle \frac{\partial^2 F}{\partial x_i \partial x_k}, F(y) \right\rangle$, derivamos \ref{der_nu_x} com respeito a $x_i$ e somamos com o índice $i$
-%	\begin{equation*}
-%		\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x) = \sum_i \frac{\partial h_i^k}{\partial x_i}(x) \frac{\partial F}{\partial x_k}(x) + \sum_i h_i^k \frac{\partial^2 F}{\partial x_i \partial x_k}(x)
-%	\end{equation*}
-%	
-%	Lembrando $\sum_i \frac{\partial h_i^k}{x_i}(x) = 0$, e expandindo a somatória  temos:
-%	\begin{equation*}
-%		\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x) =  h_1^1 \frac{\partial^2 F}{\partial x_1^2}(x) + h_1^2 \frac{\partial^2 F}{\partial x_1 \partial x_2}(x) + h_2^1 \frac{\partial^2 F}{\partial x_2 \partial x_1}(x) + h_2^2 \frac{\partial^2 F}{\partial x_2^2}(x)
-%	\end{equation*}
-%	
-%	Fazendo produto interno com $\frac{\partial F}{\partial x_1}(x)$:
-%	\begin{multline*}
-%		\left\langle \sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle =\\
-%		\left\langle h_1^1 \frac{\partial^2 F}{\partial x_1^2}(x) + h_1^2 \frac{\partial^2 F}{\partial x_1 \partial x_2}(x) + h_2^1 \frac{\partial^2 F}{\partial x_2 \partial x_1}(x) + h_2^2 \frac{\partial^2 F}{\partial x_2^2}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle.
-%	\end{multline*}
-%	
-%	Temos que $\left\langle \frac{\partial F}{\partial x_1}, \frac{\partial F}{\partial x_1} = 1 \right\rangle$. Derivando com respeito a $x_1$ se tem $\left\langle \frac{\partial^2 F}{\partial x_1^2}, \frac{\partial F}{\partial x_1} \right\rangle = 0$. Igualmente derivando com respeito a $x_2$ e lembrando que as derivadas mistas comutam temos que $\left\langle \frac{\partial^2 F}{\partial x_1 \partial x_2}(x), \frac{\partial F}{\partial x_1} \right\rangle = \left\langle \frac{\partial^2 F}{\partial x_2 \partial x_1}(x), \frac{\partial F}{\partial x_1} \right\rangle = 0$. Analisando $\left\langle \frac{\partial^2 F}{\partial x_2^2}, \frac{\partial F}{\partial x_1} \right\rangle$, lembrando que $\left\langle \frac{\partial F}{\partial x_1}, \frac{\partial F}{\partial x_2} \right\rangle = 0$ derivamos com respeito a $x_2$:
-%	\begin{equation*}
-%		\left\langle \frac{\partial^2 F}{\partial x_2^2}, \frac{\partial F}{\partial x_1} \right\rangle + \left\langle \frac{\partial F}{\partial x_2}, \frac{\partial^2 F}{\partial x_2 \partial x_1} \right\rangle = 0
-%	\end{equation*}
-%	
-%	Sabemos que $\left\langle \frac{\partial F}{\partial x_2}, \frac{\partial^2 F}{\partial x_2 \partial x_1} \right\rangle = 0$. Portanto, $\left\langle \frac{\partial^2 F}{\partial x_2^2}, \frac{\partial F}{\partial x_1} \right\rangle = 0$.
-%	
-%	Logo
-%	\begin{equation*}
-%		\left\langle \sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle = 0.
-%	\end{equation*}
-%	
-%	De maneira similar:
-%	\begin{equation*}
-%		\left\langle \sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x), \frac{\partial F}{\partial x_2}(x) \right\rangle = 0.
-%	\end{equation*}
-%	
-%	Isto quer dizer que $\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(\xb)$ não tem componentes no plano tangente $T_p \Sigma$ dentro de $T_p S^3$.
-%	
-%	Por outro lado, lembrado que $\left\langle \frac{\partial \nu}{\partial x_i}(x), \nu(x) \right\rangle = 0$, derivamos com respeito a $x_1$:
-%	\begin{equation*}
-%		\left\langle \frac{\partial^2 \nu}{\partial x_i^2}(x), \nu(x) \right\rangle + \left\langle \frac{\partial \nu}{\partial x_i}(x), \frac{\partial \nu}{\partial x_i}(x) \right\rangle = 0
-%	\end{equation*}
-%	
-%	Como $\frac{\partial \nu}{\partial x_i}(x) = h_i^k(x) \frac{\partial F}{\partial x_k}$, então
-%	\begin{equation*}
-%		\left\langle \frac{\partial^2 \nu}{\partial x_i^2}(x), \nu(x) \right\rangle + \left\langle h_i^k(x) \frac{\partial F}{\partial x_k}, h_i^j(x) \frac{\partial F}{\partial x_j}  \right\rangle = 0.
-%	\end{equation*}
-%	
-%	Como $\left\langle \frac{\partial F}{\partial x_k}, \frac{\partial F}{\partial x_j} \right\rangle = \delta_{kj}$, então
-%	\begin{equation*}
-%		\left\langle \frac{\partial^2 \nu}{\partial x_i^2}(x), \nu(x) \right\rangle + (h_i^k)^2 = 0.
-%	\end{equation*}
-%	
-%	Logo, somando com respeito a $i$
-%	\begin{equation*}
-%		\left\langle \sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x), \nu(x) \right\rangle + \sum_i (h_i^k)^2 = 0.
-%	\end{equation*}
-%	
-%	Olhar que $\sum_i (h_i^k(x))^2$ é $| A(x) |^2$ pela norma de Frobenius. Portanto, lembrando que $\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(x)$ só tem componentes na direção $\nu$, temos
-%	\begin{equation*}
-%		\sum_i \frac{\partial^2 \nu}{\partial x_i^2}(p) = - | A(p) |^2 \nu(p)
-%	\end{equation*}
-%	
-%	Portanto, temos:
-%	\begin{equation*}
-%		\sum_i h_i^k \frac{\partial^2 F}{\partial x_i \partial x_k}(p) = \sum_i \frac{\partial^2 \nu}{\partial x_i^2}(p) = - | A(p) |^2 \nu(p)
-%	\end{equation*}
-%	
-%	Ao final a equação \ref{Z_seg_dev_x} se escreve:
-%	\begin{multline}\label{lap_Z_x}
-%		\sum_i \frac{\partial^2 Z}{\partial x_i^2}(p,q) =  \sum_i \frac{\partial^2 \Phi}{\partial x_i^2}(p)(1 - \langle F(p), F(q) \rangle) -2  \sum_i \frac{\partial \Phi}{\partial x_i} \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle\\
-%		+ 2  \Phi(p) \left\langle F(p), F(q) \right\rangle - | A(p) |^2 \left\langle \nu(p), F(q) \right\rangle
-%	\end{multline}
-%	
-%	Multiplicando por $|A(p)|^2$ a $Z(p,q)$
-%	\begin{equation*}
-%		0 = |A(p)|^2 Z(p,q) = |A(p)|^2 \Phi(p) (1 - \langle F(p), F(q) \rangle) + |A(p)|^2 \langle \nu(p), F(q) \rangle
-%	\end{equation*}
-%	
-%	temos $-|A(p)|^2 \langle \nu(p), F(q) \rangle = |A(p)|^2 \Phi(p) (1 - \langle F(p), F(q) \rangle)$. Usando isto em \ref{lap_Z_x}:
-%	\begin{multline*}
-%	\sum_i \frac{\partial^2 Z}{\partial x_i^2}(p,q) =  \sum_i \frac{\partial^2 \Phi}{\partial x_i^2}(p)(1 - \langle F(p), F(q) \rangle) -2  \sum_i \frac{\partial \Phi}{\partial x_i} \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle\\
-%	+ 2  \Phi(p) \left\langle F(p), F(q) \right\rangle + |A(p)|^2 \Phi(p) (1 - \langle F(p), F(q) \rangle)
-%	\end{multline*}
-%	
-%	Reordenando, se tem
-%	\begin{multline*}
-%		\sum_i \frac{\partial^2 Z}{\partial x_i^2}(p,q) = (\Delta_{\Sigma} \Phi(p) + (|A(p)|^2 - 2)\Phi(p))(1 - \langle F(p), F(q) \rangle) + 2 \Phi(p)\\
-%		- 2 \sum_i \frac{\partial \Phi}{\partial x_i}(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle
-%	\end{multline*}
-%	
-%	Somando e restando $\frac{|\nabla \Phi(p)|^2}{\Phi(p)} (1 - \langle F(p), F(q) \rangle) + \frac{\Phi(p)}{1 - \langle F(p),F(q) \rangle} \sum_i \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2$ temos:
-%	\begin{multline*}
-%		\sum_i \frac{\partial^2 Z}{\partial x_i^2}(p,q) = \left(\Delta_{\Sigma} \Phi(p) - \frac{|\nabla \Phi(p)|^2}{\Phi(p)} + (|A(p)|^2 - 2)\Phi(p)\right)(1 - \langle F(p), F(q) \rangle)\\
-%		+ 2 \Phi(p) + \frac{|\nabla \Phi(p)|^2}{\Phi(p)} (1 - \langle F(p), F(q) \rangle) - 2 \sum_i \frac{\partial \Phi}{\partial x_i}(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle\\
-%		+ \frac{\Phi(p)}{1 - \langle F(p),F(q) \rangle} \sum_i \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2 - \frac{\Phi(p)}{1 - \langle F(p),F(q) \rangle} \sum_i \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2
-%	\end{multline*}
-%	
-%	Fatorizando adequadamente
-%	\begin{multline*}
-%		\sum_i \frac{\partial^2 Z}{\partial x_i^2}(p,q) = \left(\Delta_{\Sigma} \Phi(p) - \frac{|\nabla \Phi(p)|^2}{\Phi(p)} + (|A(p)|^2 - 2)\Phi(p)\right)(1 - \langle F(p), F(q) \rangle)+ 2 \Phi(p)	\\
-%		+ \frac{1}{\Phi(p)(1 - \langle F(p), F(q) \rangle)}	m(p,q) - \frac{\Phi(p)}{1 - \langle F(p),F(q) \rangle} \sum_i \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2
-%	\end{multline*}
-%	
-%	onde
-%	\begin{multline*}
-%		m(p,q) = |\nabla \Phi(p)|^2 (1 - \langle F(p), F(q) \rangle)^2 \\
-%		- 2 \sum_i \frac{\partial \Phi}{\partial x_i}(p) (1 - \langle F(p), F(q) \rangle) \Phi(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle + \Phi(p)^2 \sum_i \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2
-%	\end{multline*}
-%	
-%	Podemos olhar que
-%	\begin{equation*}
-%		m(p,q) = \sum_i \left(  \frac{\partial \Phi}{\partial x_i}(p)(1 - \langle F(p),F(q) \rangle) - \Phi(p) \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle \right)^2
-%	\end{equation*}
-%	
-%	Pela equação \ref{diff_Z_x} e lembrando que $\frac{\partial Z}{\partial x_i}(p,q)=0$ temos
-%	\begin{equation*}
-%		m(p,q) = \sum_i \left( h_i^k(p) \left\langle \frac{\partial F}{x_k}(p), F(q) \right\rangle \right)^2
-%	\end{equation*}
-%	
-%	Expandindo o termo quadrático temos
-%	\begin{multline*}
-%		(h_i^1(p))^2 \left\langle \frac{\partial F}{x_1}(p), F(q) \right\rangle^2 + (h_i^2(p))^2 \left\langle \frac{\partial F}{x_2}(p), F(q) \right\rangle^2\\
-%		+ 2 h_i^1(p) h_i^2(p) \left\langle \frac{\partial F}{x_1}(p), F(q) \right\rangle \left\langle \frac{\partial F}{x_2}(p), F(q) \right\rangle
-%	\end{multline*}
-%	
-%	Lembremos que o determinante de $A$ é $-\lambda^2$. Então:
-%	\begin{equation*}
-%		h_1^1(p) h_2^2(p) - h_1^2(p) h_2^1(p) = h_1^1(p) h_2^2(p) - (h_1^2(p))^2 = -\lambda^2
-%	\end{equation*}
-%	
-%	porque $h_1^2(p) = h_2^1(p)$. Como $h_1^1(p) + h_2^2(p) = 0$:
-%	\begin{align*}
-%		\sum_i (h_i^1(p))^2 &= \lambda^2,\\
-%		\sum_i (h_i^2(p))^2 &= \lambda^2
-%	\end{align*}
-%	
-%	Em quanto ao termo $\sum_i h_i^1(p) h_i^2(p)$, se tem
-%	\begin{equation*}
-%		h_1^1(p) h_1^2(p) + h_2^1(p) h_2^2(p) = h_1^2(p) (h_1^1(p) + h_2^2(p)) = 0.
-%	\end{equation*}
-%	
-%	Portanto,
-%	\begin{equation*}
-%		m(p,q) = \sum_i \lambda^2 \left\langle \frac{\partial F}{\partial x_i}(p), F(q) \right\rangle^2
-%	\end{equation*}
-%	
-%	Lembrando que $\lambda^2 = \frac{1}{2} |A(p)|$, ao final se tem a equação desejada.
-%\end{demonstracao}
-
 \begin{demonstracao}
-	Derivando em rela\c c\~ao a $x_i$ a equação \eqref{diff_Z_x}, obtemos:
+	Derivando a equação \eqref{diff_Z_x} em rela\c c\~ao a $x_i$,
+	e somando, obtemos:
 	\begin{eqnarray}\label{Z_seg_dev_x}
 	\begin{aligned}
 	\sum_{i=1}^2\frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) = &
@@ -675,259 +335,331 @@ ordem da função $Z$ no ponto $(\xb,\yb)$.
 	\frac{\partial^2 F}{\partial x_i \partial x_k}(\xb), F(\yb)\right\rangle.
 	\end{aligned}
 	\end{eqnarray}
-	Pela equação de Codazzi, tem-se:
-	\begin{equation}\label{codazzi_eq}
-	\begin{split}
-	-\frac{\partial h_{11}}{\partial x_1} = \frac{\partial h_{22}}{\partial x_1} = 
-	\frac{\partial h_{12}}{\partial x_2} = \frac{\partial h_{21}}{\partial x_2} \\
-	-\frac{\partial h_{22}}{\partial x_2} = \frac{\partial h_{11}}{\partial x_2} = 
-	\frac{\partial h_{21}}{\partial x_1} = \frac{\partial h_{12}}{\partial x_1}.
-	\end{split}		
-	\end{equation}
-	Lembre que a matriz da segunda forma fundamental de $F$ \'e dada
-	por
-	\begin{equation*}
-	A(x) = \left[\begin{matrix}
-	h_{11}(\xb) & h_{12}(\xb) \\
-	h_{21}(\xb) & h_{22}(\xb)
-	\end{matrix}\right].
-	\end{equation*}
-	Como a superfície é m\'inima e o fato de matrizes semelhantes tem 
-	o mesmo tra\c co, então temos $h_{11}(\xb) + h_{22}(\xb) = 0$, logo
-	\begin{eqnarray}\label{eq:codazzi}
-	\sum_{i=1}^2 \frac{\partial h_{ik}}{\partial x_i}(\xb) = 0.
+	Iremos, inicialmente, reescrever a equa\c c\~ao \eqref{Z_seg_dev_x}.
+	Note que, da equa\c c\~ao de Codazzi \eqref{eq:Codazzi}, tem-se
+	\begin{eqnarray}\label{eq:Prop4.5-1}
+	\frac{\partial h_{11}}{\partial x_2}(\xb) = \frac{\partial h_{21}}{\partial x_1}(\xb)
+	\quad\mbox{e}\quad
+	\frac{\partial h_{12}}{\partial x_2}(\xb) = \frac{\partial h_{22}}{\partial x_1}(\xb),
 	\end{eqnarray}
-	Analisemos o termo $\sum_{i=1}^2 \frac{\partial^2 F}{\partial x_i^2}(x)$. 
+	e do fato de $\Sigma$ ser m\'inima, obtemos
+	\begin{eqnarray}\label{eq:Prop4.5-2}
+	\sum_{i=1}^2\frac{\partial h_{ii}}{\partial x_k}(\xb) = 0.
+	\end{eqnarray}
+	De \eqref{eq:Prop4.5-1} e \eqref{eq:Prop4.5-2}, obtemos
+	\begin{eqnarray}\label{eq:Prop4.5-3}
+	\sum_{i=1}^2\frac{\partial h_{ik}}{\partial x_i}(\xb) = 0.
+	\end{eqnarray}
+	Analisemos o termo 
+	$\displaystyle\sum_{i=1}^2 \frac{\partial^2 F}{\partial x_i^2}(\xb)$. 
 	Pelo teorema \ref{propriedades_sup_min_S3}, tem-se
 	\begin{equation*}
-	\sum_{i=1}^2 \frac{\partial^2 F}{\partial x_i^2}(x) + 2 F(x) = 0,
+	\sum_{i=1}^2 \frac{\partial^2 F_j}{\partial x_i^2}(\xb) + 2F_j(\xb) = 0,
 	\end{equation*}
-	logo,
+	para $j=1,\ldots,4$, logo,
 	\[
-	\sum_{i=1}^2 \frac{\partial^2 F}{\partial x_i^2}(x) = -2 F(x).
+	\sum_{i=1}^2 \frac{\partial^2 F}{\partial x_i^2}(\xb) = -2 F(\xb).
 	\]
-	Analisando o termo $\sum_{i=1}^2 h_{ik}(x) \left\langle \frac{\partial^2 F}{\partial x_i \partial x_k}(x), F(y) \right\rangle$, derivamos $\nu$ com respeito a $x_i$ e somamos com o índice $i$
+	Analisemos agora o termo 
+	\[
+	\sum_{i=1}^2 h_{ik}(\xb) \left\langle \frac{\partial^2 F}
+	{\partial x_i \partial x_k}(\xb), F(\yb) \right\rangle.
+	\]
+	Derivamos \eqref{eq:partialNu} em rela\c c\~ao a $x_i$, somando
+	e usando \eqref{eq:Prop4.5-3}, obtemos:
+	\begin{eqnarray}\label{eq:Prop4.5-4}
+	\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb) = 
+	\sum_{i,k=1}^2 h_{ik}(\xb)\frac{\partial^2 F}{\partial x_i \partial x_k}(\xb).
+	\end{eqnarray}
+	Note que, como
+	\[
+	\left\langle \sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb), 
+	\frac{\partial F}{\partial x_j}(\xb) \right\rangle = 0,
+	\]
+	para $j=1,2$, segue que o vetor
+	$\displaystyle\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb)$ 
+	não tem componentes no plano tangente 
+	$T_{\xb}\Sigma\subset T_{\xb}\Sp^3$. 
+	Por outro lado, derivando
+	\[
+	\left\langle \frac{\partial \nu}{\partial x_i}(\xb), \nu(\xb) \right\rangle = 0,
+	\]
+	em rela\c c\~ao a $x_i$, obtemos:
+	\begin{equation}\label{eq:Prop4.5-5}
+	\left\langle \frac{\partial^2 \nu}{\partial x_i^2}(\xb), \nu(\xb)\right\rangle 
+	+ \left\langle \frac{\partial \nu}{\partial x_i}(\xb), 
+	\frac{\partial \nu}{\partial x_i}(\xb) \right\rangle = 0.
+	\end{equation}	
+	Substituindo \eqref{eq:partialNu} em \eqref{eq:Prop4.5-5}, notando que
+	$\left\langle \frac{\partial F}{\partial x_k}(\xb), 
+	\frac{\partial F}{\partial x_j}(\xb) \right\rangle = \delta_{kj}$ e somando,
+	a equa\c c\~ao \eqref{eq:Prop4.5-5} torna-se
 	\begin{equation*}
-	\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(x) = 
-	\sum_{i=1}^2 \frac{\partial h_{ik}}{\partial x_i}(x) 
-	\frac{\partial F}{\partial x_k}(x) + \sum_{i=1}^2 h_{ik} 
-	\frac{\partial^2 F}{\partial x_i \partial x_k}(x)
-	\end{equation*}
-	Lembrando $\sum_{i=1}^2 \frac{\partial h_{ik}}{\partial x_i}(x) = 0$, e expandindo a somatória  temos:
-	\begin{equation*}
-	\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(x) =  h_{11} \frac{\partial^2 F}{\partial x_1^2}(x) + h_{12} \frac{\partial^2 F}{\partial x_1 \partial x_2}(x) + h_{21} \frac{\partial^2 F}{\partial x_2 \partial x_1}(x) + h_{22} \frac{\partial^2 F}{\partial x_2^2}(x)
-	\end{equation*}
-	Fazendo produto interno com $\frac{\partial F}{\partial x_1}(x)$:
-	\begin{multline*}
-	\left\langle \sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle =\\
-	\left\langle h_{11} \frac{\partial^2 F}{\partial x_1^2}(x) + h_{12} \frac{\partial^2 F}{\partial x_1 \partial x_2}(x) + h_{21} \frac{\partial^2 F}{\partial x_2 \partial x_1}(x) + h_{22} \frac{\partial^2 F}{\partial x_2^2}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle = 0
-	\end{multline*}
-%	Temos que $\left\langle \frac{\partial F}{\partial x_1}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle = 1$. Derivando com respeito a $x_1$ se tem $\left\langle \frac{\partial^2 F}{\partial x_1^2}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle = 0$. Igualmente derivando com respeito a $x_2$ e lembrando que as derivadas mistas comutam temos que $\left\langle \frac{\partial^2 F}{\partial x_1 \partial x_2}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle = \left\langle \frac{\partial^2 F}{\partial x_2 \partial x_1}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle = 0$. Analisando $\left\langle \frac{\partial^2 F}{\partial x_2^2}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle$, lembrando que $\left\langle \frac{\partial F}{\partial x_1}(x), \frac{\partial F}{\partial x_2}(x) \right\rangle = 0$ derivamos com respeito a $x_2$:
-%	\begin{equation*}
-%	\left\langle \frac{\partial^2 F}{\partial x_2^2}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle + \left\langle \frac{\partial F}{\partial x_2}(x), \frac{\partial^2 F}{\partial x_2 \partial x_1}(x) \right\rangle = 0
-%	\end{equation*}
-%	Sabemos que $\left\langle \frac{\partial F}{\partial x_2}(x), \frac{\partial^2 F}{\partial x_2 \partial x_1}(x) \right\rangle = 0$. Portanto, $\left\langle \frac{\partial^2 F}{\partial x_2^2}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle = 0$.
-%	Logo
-%	\begin{equation*}
-%	\left\langle \sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(x), \frac{\partial F}{\partial x_1}(x) \right\rangle = 0.
-%	\end{equation*}
-	De maneira similar:
-	\begin{equation*}
-	\left\langle \sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(x), \frac{\partial F}{\partial x_2}(x) \right\rangle = 0.
-	\end{equation*}
-	Isto quer dizer que $\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb)$ não tem componentes no plano tangente $T_{\xb} \Sigma$ dentro de $T_{\xb} S^3$.
-	Por outro lado, lembrado que $\left\langle \frac{\partial \nu}{\partial x_i}(x), \nu(x) \right\rangle = 0$, derivamos com respeito a $x_1$:
-	\begin{equation*}
-	\left\langle \frac{\partial^2 \nu}{\partial x_i^2}(x), \nu(x) \right\rangle + \left\langle \frac{\partial \nu}{\partial x_i}(x), \frac{\partial \nu}{\partial x_i}(x) \right\rangle = 0
+	\left\langle \sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb), \nu(\xb)
+	\right\rangle + \sum_{i=1}^2 (h_{ik}(\xb))^2 = 0.
 	\end{equation*}	
-	Como $\frac{\partial \nu}{\partial x_i}(x) = h_{ik}(x) \frac{\partial F}{\partial x_k}(x)$, então
-	\begin{equation*}
-	\left\langle \frac{\partial^2 \nu}{\partial x_i^2}(x), \nu(x) \right\rangle + \left\langle h_{ik}(x) \frac{\partial F}{\partial x_k}(x), h_{ij}(x) \frac{\partial F}{\partial x_j}(x)  \right\rangle = 0.
-	\end{equation*}	
-	Como $\left\langle \frac{\partial F}{\partial x_k}(x), \frac{\partial F}{\partial x_j}(x) \right\rangle = \delta_{kj}$, então
-	\begin{equation*}
-	\left\langle \frac{\partial^2 \nu}{\partial x_i^2}(x), \nu(x) \right\rangle + (h_{ik})^2 = 0.
-	\end{equation*}	
-	Logo, somando com respeito a $i$
-	\begin{equation*}
-	\left\langle \sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(x), \nu(x) \right\rangle + \sum_{i=1}^2 (h_{ik})^2 = 0.
-	\end{equation*}	
-	Olhar que $\sum_{i=1}^2 (h_{ik}(x))^2 = | A(x) |^2$. Portanto, lembrando que $\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(x)$ só tem componentes na direção $\nu$, temos
-	\begin{equation*}
+	Como $\displaystyle\sum_{i=1}^2 (h_{ik}(\xb))^2 = |A(\xb)|^2$ e
+	lembrando que 
+	$\displaystyle\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb)$ 
+	só tem componente na direção $\nu$, obtemos
+	\begin{eqnarray} \label{eq:Prop4.5-6}	
 	\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb) = - | A(\xb) |^2 \nu(\xb)
-	\end{equation*}	
-	Portanto, temos:
-	\begin{equation*}
-	\sum_{i=1}^2 h_{ik} \frac{\partial^2 F}{\partial x_i \partial x_k}(\xb) = \sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb) = - | A(\xb) |^2 \nu(\xb)
-	\end{equation*}	
-	Ao final a equação \eqref{Z_seg_dev_x} se escreve:
-	\begin{multline}\label{lap_Z_x}
-	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) =  \sum_{i=1}^2 \frac{\partial^2 \Phi}{\partial x_i^2}(\xb)(1 - \langle F(\xb), F(\yb) \rangle) -2  \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i} \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle\\
-	+ 2  \Phi(\xb) \left\langle F(\xb), F(\yb) \right\rangle - | A(\xb) |^2 \left\langle \nu(\xb), F(\yb) \right\rangle
-	\end{multline}	
-	Multiplicando por $|A(\xb)|^2$ a $Z(\xb,\yb)$
-	\begin{equation*}
-	0 = |A(\xb)|^2 Z(\xb,\yb) = |A(\xb)|^2 \Phi(\xb) (1 - \langle F(\xb), F(\xb) \rangle) + |A(\xb)|^2 \langle \nu(\xb), F(\yb) \rangle
-	\end{equation*}	
-	temos $-|A(\xb)|^2 \langle \nu(\xb), F(\yb) \rangle = |A(\xb)|^2 \Phi(\xb) (1 - \langle F(\xb), F(\yb) \rangle)$. Usando isto em \eqref{lap_Z_x}:
-	\begin{multline*}
-	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) =  \sum_{i=1}^2 \frac{\partial^2 \Phi}{\partial x_i^2}(\xb)(1 - \langle F(\xb), F(\yb) \rangle) -2  \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i} \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle\\
-	+ 2  \Phi(\xb) \left\langle F(\xb), F(\yb) \right\rangle + |A(\xb)|^2 \Phi(\xb) (1 - \langle F(\xb), F(\yb) \rangle)
-	\end{multline*}	
-	Reordenando, se tem
-	\begin{multline*}
-	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) = (\Delta_{\Sigma} \Phi(\xb) + (|A(\xb)|^2 - 2)\Phi(\xb))(1 - \langle F(\xb), F(\yb) \rangle) + 2 \Phi(\xb)\\
-	- 2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle
-	\end{multline*}	
-	Somando e restando $\frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} (1 - \langle F(\xb), F(\yb) \rangle) + \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2$ temos:
-	\begin{multline*}
-	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) = \left(\Delta_{\Sigma} \Phi(\xb) - \frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} + (|A(\xb)|^2 - 2)\Phi(\xb)\right)(1 - \langle F(\xb), F(\yb) \rangle)\\
-	+ 2 \Phi(\xb) + \frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} (1 - \langle F(\xb), F(\yb) \rangle) - 2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle\\
-	+ \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2 - \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2
-	\end{multline*}	
-	Fatorizando adequadamente
-	\begin{multline*}
-	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) = \left(\Delta_{\Sigma} \Phi(\xb) - \frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} + (|A(\xb)|^2 - 2)\Phi(\xb)\right)(1 - \langle F(\xb), F(\yb) \rangle)+ 2 \Phi(\xb)	\\
-	+ \frac{1}{\Phi(\xb)(1 - \langle F(\xb), F(\yb) \rangle)}	m(\xb,\yb) - \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2
-	\end{multline*}	
+	\end{eqnarray}
+	Usando \eqref{eq:Prop4.5-4} e \eqref{eq:Prop4.5-6}, temos que
+	\begin{eqnarray} \label{eq:Prop4.5-7}
+	\sum_{i=1}^2 h_{ik}(\xb) \frac{\partial^2 F}{\partial x_i \partial x_k}(\xb) 
+	= - | A(\xb) |^2 \nu(\xb).
+	\end{eqnarray}	
+	Assim, usando \eqref{eq:Prop4.5-3} e \eqref{eq:Prop4.5-7}, podemos
+	escrever a equa\c c\~ao \eqref{Z_seg_dev_x} como:
+	\begin{eqnarray}
+	\begin{aligned} \label{lap_Z_x}
+	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) & =   
+	\sum_{i=1}^2 \frac{\partial^2 \Phi}{\partial x_i^2}(\xb)
+	(1 - \langle F(\xb), F(\yb) \rangle)    
+	+ 2  \Phi(\xb) \left\langle F(\xb), F(\yb) \right\rangle \\
+	& -2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) 
+	\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle
+	- | A(\xb) |^2 \left\langle \nu(\xb), F(\yb) \right\rangle.
+	\end{aligned}
+	\end{eqnarray}
+	Como
+	\[
+	\left\langle \nu(\xb), F(\yb) \right\rangle = Z(\xb,\yb)
+	-\phi(\xb)(1-\langle F(\xb),F(\yb)\rangle)
+	\]
+	podemos reescrever \eqref{lap_Z_x} como sendo
+	\begin{eqnarray*}
+		\begin{aligned}
+			\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) = &
+			\left(\Delta_{\Sigma} \Phi(\xb) + 
+			(|A(\xb)|^2 - 2)\Phi(\xb)\right)(1 - \langle F(\xb), F(\yb) \rangle) \\
+			&+ 2 \Phi(\xb) \left\langle F(\xb), F(\yb) \right\rangle
+			- 2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) 
+			\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \\
+			&- |A(\xb)|^2Z(\xb,\yb).
+		\end{aligned}
+	\end{eqnarray*}	
+	Somando e subtraindo
+	\[
+	\frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} (1 - \langle F(\xb), F(\yb) \rangle) + \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2,
+	\]
+	obtemos:
+	\begin{eqnarray*}
+		\begin{aligned}
+			\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) &=
+			\left(\Delta_{\Sigma} \Phi(\xb) - \frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} + (|A(\xb)|^2 - 2)\Phi(\xb)\right)(1 - \langle F(\xb), F(\yb) \rangle) \\
+			&+ 2 \Phi(\xb) + \frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} (1 - \langle F(\xb), F(\yb) \rangle) - 2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \\
+			&+ \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2 \\
+			& - \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2
+			\left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2
+		\end{aligned}
+	\end{eqnarray*}
+	Fatorando a express\~ao acima adequadamente, podemos escrever
+	\begin{eqnarray*}
+		\begin{aligned}
+			\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) &= \left(\Delta_{\Sigma} \Phi(\xb) - \frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} + (|A(\xb)|^2 - 2)\Phi(\xb)\right)(1 - \langle F(\xb), F(\yb) \rangle)+ 2 \Phi(\xb)	\\
+			& - \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2 \\
+			& + \frac{1}{\Phi(\xb)(1 - \langle F(\xb), F(\yb) \rangle)}m(\xb,\yb),
+		\end{aligned}
+	\end{eqnarray*}	
 	onde
-	\begin{multline*}
-	m(\xb,\yb) = |\nabla \Phi(\xb)|^2 (1 - \langle F(\xb), F(\yb) \rangle)^2 \\
-	- 2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) (1 - \langle F(\xb), F(\yb) \rangle) \Phi(\xb) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle + \Phi(\xb)^2 \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2
-	\end{multline*}	
-	Podemos olhar que
+	\begin{eqnarray*}
+		\begin{aligned}
+			m(\xb,\yb) &= - 2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) 
+			(1 - \langle F(\xb), F(\yb) \rangle) \Phi(\xb) \left\langle \frac{\partial F}
+			{\partial x_i}(\xb), F(\yb) \right\rangle \\
+			&+ |\nabla \Phi(\xb)|^2 (1 - \langle F(\xb), F(\yb) \rangle)^2 
+			+ \Phi(\xb)^2 \sum_{i=1}^2 \left\langle \frac{\partial F}
+			{\partial x_i} (\xb), F(\yb) \right\rangle^2
+		\end{aligned}
+	\end{eqnarray*}	
+	Observe que
+	\[
+	m(\xb,\yb) = \sum_{i=1}^2 \left(  \frac{\partial \Phi}{\partial x_i}(\xb)
+	(1 - \langle F(\xb),F(\yb) \rangle) - \Phi(\xb) \left\langle 
+	\frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \right)^2.
+	\]
+	Pela equação \eqref{diff_Z_x}, e lembrando que 
+	$\frac{\partial Z}{\partial x_i}(\xb,\yb)=0$, podemos escrever
+	\begin{eqnarray} \label{eq:Prop4.5-8}
+	m(\xb,\yb) = \sum_{i=1}^2 \left( h_{ik}(\xb) 
+	\left\langle \frac{\partial F}{\partial x_k}(\xb), F(\yb) \right\rangle \right)^2
+	\end{eqnarray}	
+	Expandindo o termo quadr\'atico em \eqref{eq:Prop4.5-8}, obtemos:
+	\begin{eqnarray*}
+		\begin{aligned}
+			(h_{i1}(\xb))^2 \left\langle \frac{\partial F}{\partial x_1}(\xb), F(\yb)\right\rangle^2 
+			&+ 
+			(h_{i2}(\xb))^2 \left\langle \frac{\partial F}{\partial x_2}(\xb),F(\yb)\right\rangle^2 \\
+			&+ 
+			2 h_{i1}(\xb) h_{i2}(\xb) \left\langle \frac{\partial F}
+			{\partial x_1}(\xb), F(\yb) \right\rangle \left\langle 
+			\frac{\partial F}{\partial x_2}(\xb), F(\yb) \right\rangle
+		\end{aligned}
+	\end{eqnarray*}	
+	Como o determinante de $A$ \'e $-\lambda^2$, tem-se:
 	\begin{equation*}
-	m(\xb,\yb) = \sum_{i=1}^2 \left(  \frac{\partial \Phi}{\partial x_i}(\xb)(1 - \langle F(\xb),F(\yb) \rangle) - \Phi(\xb) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \right)^2
+	h_{11}(\xb) h_{22}(\xb) - h_{12}(\xb) h_{21}(\xb) = h_{11}(\xb) h_{22}(\xb) - (h_{12}(\xb))^2 = -\lambda^2,
 	\end{equation*}	
-	Pela equação \eqref{diff_Z_x} e lembrando que $\frac{\partial Z}{\partial x_i}(\xb,\yb)=0$ temos
-	\begin{equation*}
-	m(\xb,\yb) = \sum_{i=1}^2 \left( h_{ik}(\xb) \left\langle \frac{\partial F}{\partial x_k}(\xb), F(\yb) \right\rangle \right)^2
-	\end{equation*}	
-	Expandindo o termo quadrático temos
-	\begin{multline*}
-	(h_{i1}(\xb))^2 \left\langle \frac{\partial F}{\partial x_1}(\xb), F(\yb) \right\rangle^2 + (h_{i2}(\xb))^2 \left\langle \frac{\partial F}{\partial x_2}(\xb), F(\yb) \right\rangle^2\\
-	+ 2 h_{i1}(\xb) h_{i2}(\xb) \left\langle \frac{\partial F}{\partial x_1}(\xb), F(\yb) \right\rangle \left\langle \frac{\partial F}{\partial x_2}(\xb), F(\yb) \right\rangle
-	\end{multline*}	
-	Lembremos que o determinante de $A$ é $-\lambda^2$. Então:
-	\begin{equation*}
-	h_{11}(\xb) h_{22}(\xb) - h_{12}(\xb) h_{21}(\xb) = h_{11}(\xb) h_{22}(\xb) - (h_{12}(\xb))^2 = -\lambda^2
-	\end{equation*}	
-	porque $h_{12}(\xb) = h_{21}(\xb)$. Como $h_{11}(\xb) + h_{22}(\xb) = 0$:
-	\begin{align*}
-	\sum_{i=1}^2 (h_{i1}(\xb))^2 &= \lambda^2,\\
-	\sum_{i=1}^2 (h_{i2}(\xb))^2 &= \lambda^2
-	\end{align*}	
-	Em quanto ao termo $\sum_{i=1}^2 h_{i1}(\xb) h_{i2}(\xb)$, se tem
+	pois $h_{12}(\xb) = h_{21}(\xb)$. Al\'em disso, como 
+	$h_{11}(\xb) + h_{22}(\xb) = 0$, tem-se
+	\[
+	\sum_{i=1}^2 (h_{i1}(\xb))^2 = \lambda^2 \quad\mbox{e}\quad
+	\sum_{i=1}^2 (h_{i2}(\xb))^2 = \lambda^2.
+	\]
+	Em rela\c c\~ao ao termo $\displaystyle\sum_{i=1}^2 h_{i1}(\xb) h_{i2}(\xb)$,
+	tem-se
 	\begin{equation*}
 	h_{11}(\xb) h_{12}(\xb) + h_{21}(\xb) h_{22}(\xb) = h_{12}(\xb) (h_{11}(\xb) + h_{22}(\xb)) = 0.
 	\end{equation*}	
-	Portanto,
+	Portanto, podemos reescrever \eqref{eq:Prop4.5-8} como sendo
 	\begin{equation*}
-	m(\xb,\yb) = \sum_{i=1}^2 \lambda^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle^2
+	m(\xb,\yb) = \sum_{i=1}^2 \lambda^2 \left\langle 
+	\frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle^2.
 	\end{equation*}	
-	Lembrando que $\lambda^2 = \frac{1}{2} |A(\xb)|$, ao final se tem a equação desejada.	
+	Lembrando agora que $\lambda^2 = \frac{1}{2} |A(\xb)|$, obtemos
+	a equação desejada.
 \end{demonstracao}
 
-%\begin{lema}
-%	O Laplaciano de $Z$ com respeito a $y$ satisfaz a desigualdade
-%	\begin{equation*}
-%		\sum_{i=1}^{2} \frac{\partial^2 Z}{\partial y_i^2} (p,q) \leq 2  \Phi(p) + 2 |Z(p,q)|.
-%	\end{equation*}
-%\end{lema}
 
 \begin{proposicao}
-	Temos
+	Em rela\c c\~ao \`as derivadas mistas, vale a seguinte rela\c c\~ao:
 	\begin{equation}\label{diff_Z_x_y}
-		\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = \lambda_i - \Phi(\xb)
+	\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = \lambda_i - \Phi(\xb)
 	\end{equation}
 \end{proposicao}
-
 \begin{demonstracao}
-	Derivando com respeito a $x_i$ a equação \eqref{diff_Z_y}:
-	\begin{equation*}
-		\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = -\frac{\partial \Phi}{\partial x_i}(\xb) \left\langle F(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle - \Phi(\xb) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle + \left\langle \frac{\partial \nu}{\partial x_i}(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle
-	\end{equation*}	
-	Lembrando que $\frac{\partial \nu}{\partial x_i}(\xb) = \lambda_i(\xb) \frac{\partial F}{\partial x_i}(\xb)$, temos
-	\begin{equation*}
-		\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = -\frac{\partial \Phi}{\partial x_i}(\xb) \left\langle F(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle + (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle
-	\end{equation*}	
-	De \eqref{diff_Z_x}, temos
-	\begin{equation*}
-		-\frac{\partial \Phi}{\partial x_i}(\xb) = \frac{1}{1 - \langle F(\xb),F(\yb) \rangle} (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle
-	\end{equation*}	
-	Substituindo na equação anterior:
-	\begin{multline*}
-		\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) =  \frac{1}{1 - \langle F(\xb),F(\yb) \rangle} (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle  \left\langle F(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle +\\
-		(\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle
-	\end{multline*}	
-	Nós sabemos que $|F(\xb) - F(\yb)|^2 = \langle F(\xb) - F(\yb), F(\xb) - F(\yb) \rangle = 2 - 2 \langle F(\xb), F(\yb) \rangle$, então
-	\begin{multline*}
-		\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = -2 (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{-F(\yb)}{|F(\xb) - F(\yb)|} \right\rangle \left\langle \frac{F(\xb)}{|F(\xb) - F(\yb)|}, \frac{\partial F}{\partial y_i}(\yb) \right\rangle\\
-		+ (\lambda_i - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle
-	\end{multline*}	
-	Lembrar que $\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\xb) \right\rangle = \left\langle \frac{\partial F}{\partial y_i}(\yb), F(\yb) \right\rangle = 0$. Com isso a equação anterior se escreve
-	\begin{multline*}
-	\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = -2 (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{F(\xb) -F(\yb)}{|F(\xb) - F(\yb)|} \right\rangle \left\langle \frac{F(\xb) - F(\yb)}{|F(\xb) - F(\yb)|}, \frac{\partial F}{\partial y_i}(\yb) \right\rangle\\
-	+ (\lambda_i - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle
-	\end{multline*}	
-	Associando
-	\begin{equation*}
-	\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = (\lambda_i(\xb) - \Phi(\xb))  \left\langle w_i , \frac{\partial F}{\partial y_i}(\yb) \right\rangle
-	\end{equation*}	
-	onde $w_i = \frac{\partial F}{\partial x_i}(\xb)  -2 \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{F(\xb) -F(\yb)}{|F(\xb) - F(\yb)|} \right\rangle \frac{F(\xb) - F(\yb)}{|F(\xb) - F(\yb)|}$.
+	Derivando em rela\c c\~ao  a $x_i$ a equação \eqref{diff_Z_y}, obtemos:
+	\begin{eqnarray*}
+		\begin{aligned}
+			\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) =  & 
+			-\frac{\partial \Phi}{\partial x_i}(\xb) \left\langle F(\xb), 
+			\frac{\partial F}{\partial y_i}(\yb) \right\rangle - \Phi(\xb)
+			\left\langle \frac{\partial F}{\partial x_i}(\xb), 
+			\frac{\partial F}{\partial y_i}(\yb) \right\rangle \\
+			& + \left\langle \frac{\partial \nu}{\partial x_i}(\xb), 
+			\frac{\partial F}{\partial y_i}(\yb) \right\rangle.
+		\end{aligned}
+	\end{eqnarray*}	
+	Lembrando que 
+	\[
+	\frac{\partial \nu}{\partial x_i}(\xb) = 
+	\lambda_i(\xb) \frac{\partial F}{\partial x_i}(\xb),
+	\]
+	temos
+	\begin{eqnarray} \label{eq:Prop2.3_1}
+	\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = -\frac{\partial \Phi}{\partial x_i}(\xb) \left\langle F(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle + (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle.
+	\end{eqnarray}	
+	Da equa\c c\~ao \eqref{diff_Z_x}, tem-se:
+	\begin{eqnarray} \label{eq:Prop2.3_2}
+	-\frac{\partial \Phi}{\partial x_i}(\xb) = \frac{1}
+	{1 - \langle F(\xb),F(\yb) \rangle} (\lambda_i(\xb) - \Phi(\xb)) 
+	\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle.
+	\end{eqnarray}
+	Substituindo \eqref{eq:Prop2.3_2} em \eqref{eq:Prop2.3_1}, 
+	obtemos:
+	\begin{eqnarray*}
+		\begin{aligned}
+			\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) =&  \frac{1}{1 - \langle F(\xb),F(\yb) \rangle} (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle  \left\langle F(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle \\
+			&+ 
+			(\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle
+		\end{aligned}
+	\end{eqnarray*}	
+	Como 
+	\[
+	|F(\xb) - F(\yb)|^2 = \langle F(\xb) - F(\yb), F(\xb) - F(\yb) \rangle = 
+	2 - 2 \langle F(\xb), F(\yb) \rangle,
+	\]
+	a equa\c c\~ao anterior torna-se
+	\begin{eqnarray} \label{eq:Prop2.3_3}
+	\begin{aligned}
+	\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = & 
+	-2 (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), 
+	\frac{-F(\yb)}{|F(\xb) - F(\yb)|} \right\rangle \left\langle \frac{F(\xb)}{|F(\xb) - 
+		F(\yb)|}, \frac{\partial F}{\partial y_i}(\yb) \right\rangle \\
+	& + 
+	(\lambda_i - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), 
+	\frac{\partial F}{\partial y_i}(\yb) \right\rangle.
+	\end{aligned}
+	\end{eqnarray}	
+	Al\'em disso, como
+	\[
+	\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\xb) \right\rangle = 
+	\left\langle \frac{\partial F}{\partial y_i}(\yb), F(\yb) \right\rangle = 0,
+	\]
+	a equação \eqref{eq:Prop2.3_3} se escreve como sendo
+	\begin{eqnarray*}
+		%\begin{aligned}
+		\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) & = &
+		-2 (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{F(\xb) -F(\yb)}{|F(\xb) - F(\yb)|} \right\rangle \left\langle 
+		\frac{F(\xb) - F(\yb)}{|F(\xb) - F(\yb)|}, \frac{\partial F}{\partial y_i}(\yb) 
+		\right\rangle \\
+		&& + 
+		(\lambda_i - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), 
+		\frac{\partial F}{\partial y_i}(\yb) \right\rangle \\
+		&= &
+		(\lambda_i - \Phi(\xb)) \left\langle w_i,\frac{\partial F}{\partial y_i}(\yb)
+		\right\rangle \\
+		&= & \lambda_i - \Phi(\xb),
+		%\end{aligned}
+	\end{eqnarray*}	
+	como quer\'iamos.
 \end{demonstracao}
 
-%\begin{lema}
-%	\begin{equation*}
-%		\begin{split}
-%		\sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial x_i \partial y_i} (p,q) &\leq -2 \alpha \Phi(p) + \Lambda_4 (|F(p) - F(q)|)\\
-%		& \left( |Z_{\alpha}(p,q)| + \sum_{i=1}^{2} \left| \frac{\partial Z_{\alpha}}{\partial x_i} (p,q) \right| + \sum_{i=1}^{2} \left| \frac{\partial Z_{\alpha}}{\partial y_i} (p,q) \right| \right),
-%		\end{split}		
-%	\end{equation*}
-%	onde $\Lambda_4: (0,\infty) \rightarrow (0,\infty)$ é uma função continua.
-%\end{lema}
-
-%\begin{proposicao}
-%	\begin{multline*}
-%		\sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial x_i^2} (p,q) + 2 \sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial x_i \partial y_i} (p,q) + \sum_{i=1}^{2} \frac{\partial^2 Z_{\alpha}}{\partial y_i^2} (p,q) \leq \\
-%		- \frac{\alpha^2 - 1}{\alpha} \frac{\Phi(p)}{1 - \langle F(p), F(q) \rangle} \sum_{i=1}^{2} \left\langle \frac{\partial F}{\partial x_i} (p), F(q) \right\rangle^2 \\
-%		+ \Lambda_5(|F(p) - F(q)|) \left( |Z_{\alpha}(p,q)| + \sum_{i=1}^{2} \left| \frac{\partial Z_{\alpha}}{\partial x_i} (p,q) \right| + \sum_{i=1}^{2} \left| \frac{\partial Z_{\alpha}}{\partial y_i} (p,q) \right| \right),
-%	\end{multline*}
-%	onde $\Lambda_5: (0,\infty) \rightarrow (0,\infty)$ é uma função continua.
-%\end{proposicao}
 
 \begin{proposicao}
 	\begin{equation}\label{2_diff_Z_y}
 	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) = 2 \Phi(\xb).
 	\end{equation}
 \end{proposicao}
-
 \begin{demonstracao}
-	Derivando \eqref{diff_Z_y} em $\xb$ e $\yb$ e somando  temos
-	\begin{equation*}
-		\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) = - \Phi(\xb) \left\langle F(\xb), \sum_{i=1}^2 \frac{\partial^2 F}{\partial y_i^2}(\yb) \right\rangle + \left\langle \nu(\xb), \sum_{i=1}^2 \frac{\partial^2 F}{\partial y_i^2}(\yb) \right\rangle
-	\end{equation*}	
-	Como $\sum_{i=1}^2 \frac{\partial^2 F}{\partial y_i}(\yb) = -2 F(\yb)$, então
-	\begin{equation*}
-		\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) = 2 \Phi(\xb) \langle F(\xb), F(\yb) \rangle - 2 \langle \nu(\xb), F(\yb) \rangle
-	\end{equation*}	
-	Como $0 = Z(\xb,\yb) = \Phi(\xb)(1 - \langle F(\xb), F(\yb) \rangle) + \langle \nu(\xb), F(\yb) \rangle$, então
-	\begin{equation*}
-		\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) = 2 \Phi(\xb).
-	\end{equation*}
+	Derivando a equa\c c\~ao \eqref{diff_Z_y} em rela\c c\~ao a $y_i$,
+	e somando, obtemos:
+	\begin{eqnarray} \label{eq:Prop4.7-1}
+	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) = - \Phi(\xb) \left\langle F(\xb), \sum_{i=1}^2 \frac{\partial^2 F}{\partial y_i^2}(\yb) \right\rangle + \left\langle \nu(\xb), \sum_{i=1}^2 \frac{\partial^2 F}{\partial y_i^2}(\yb) \right\rangle.
+	\end{eqnarray}	
+	Como
+	\[
+	\sum_{i=1}^2 \frac{\partial^2 F}{\partial y_i}(\yb) = -2 F(\yb)
+	\]
+	e
+	\[
+	0 = Z(\xb,\yb) = \Phi(\xb)(1 - \langle F(\xb), F(\yb) \rangle) + 
+	\langle \nu(\xb), F(\yb) \rangle
+	\] 
+	a express\~ao em \eqref{eq:Prop4.7-1} torna-se
+	\begin{eqnarray*}
+		\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) &=&
+		2 \Phi(\xb) \langle F(\xb), F(\yb) \rangle - 2 \langle \nu(\xb), F(\yb) 
+		\rangle \\
+		&=&
+		2 \Phi(\xb),
+	\end{eqnarray*}
+	como quer\'iamos.
 \end{demonstracao}
 
 
 \begin{proposicao}
-	\begin{multline}\label{suma_2das_derivadas}
-		\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xbarra,\ybarra) + 2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xbarra,\ybarra) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xbarra,\ybarra) =\\
-		\left( \Delta_{\Sigma} \Phi(\xbarra) - \frac{| \nabla \Phi(\xbarra) |^2}{\Phi(\xbarra)} + ( | A(\xbarra) |^2 - 2 ) \Phi(\xbarra) \right) (1 - \langle F(\xbarra,\ybarra) \rangle)\\
-		- \frac{2 \Phi(\xbarra)^2- |A(\xbarra)|^2}{2 \Phi(\xbarra)(1 - \langle F(\xbarra),F(\ybarra) \rangle)} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle
-	\end{multline}
+	Vale a seguinte igualdade:
+	\begin{eqnarray} \label{suma_2das_derivadas}
+	\begin{aligned}
+	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xbarra,\ybarra) + & 
+	2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xbarra,\ybarra) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xbarra,\ybarra) \\
+	&= 
+	- \frac{2 \Phi(\xbarra)^2- |A(\xbarra)|^2}{2 \Phi(\xbarra)
+		(1 - \langle F(\xbarra),F(\ybarra) \rangle)} \sum_{i=1}^2
+	\left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle \\
+	&+
+	\left( \Delta_{\Sigma} \Phi(\xbarra) - \frac{| \nabla \Phi(\xbarra) |^2}
+	{\Phi(\xbarra)} + ( | A(\xbarra) |^2 - 2 ) \Phi(\xbarra) \right)
+	\left(1 - \langle F(\xbarra,\ybarra) \rangle\right)
+	\end{aligned}
+	\end{eqnarray}
 \end{proposicao}
-
 \begin{demonstracao}
-	Somando adequadamente \eqref{2_diff_Z_x}, \eqref{2_diff_Z_y} e \eqref{diff_Z_x_y} tem-se a igualdade.
+	A equa\c c\~ao \eqref{suma_2das_derivadas} segue por somando-se
+	as equa\c c\~oes \eqref{2_diff_Z_x}, \eqref{diff_Z_x_y} e \eqref{2_diff_Z_y}.
 \end{demonstracao}
 
 \begin{teorema}\label{Simon's_identity}
@@ -1046,7 +778,7 @@ ordem da função $Z$ no ponto $(\xb,\yb)$.
 	Seja $F: M \rightarrow S^3$ uma superfície mínima mergulhada em $S^3$ de gênero 1. Então $F$ é congruente a o toro de Clifford.
 \end{teorema}
 
-%\begin{demonstracao}
+
 Definamos
 \begin{equation*}
 	\aleph = \sup_{\substack{x,y \in \Sigma\\ x \neq y}} \frac{| \langle  \nu(x), F(y) \rangle |}{\Psi(x) (1 - \langle F(x), F(y) \rangle)}

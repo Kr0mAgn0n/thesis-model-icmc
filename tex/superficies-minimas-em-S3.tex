@@ -12,21 +12,21 @@
 \end{definicao}
 
 \begin{teorema}\label{propriedades_sup_min_S3}
-	Seja $M$ uma superfície em $S^3$. As seguentes afirmações são equivalentes:
+	Seja $\Sigma$ uma superfície em $S^3$. As seguentes afirmações são equivalentes:
 	\begin{enumerate}
-		\item $M$ é uma superfície mínimas
-		\item $M$ é um ponto critico do funcional de área
-		\item Se $M$ for descrito pelas funções coordenadas $x_i: \realnumbers \rightarrow \realnumbers$ onde $i=1,2,3,4$, então tem-se:
+		\item $\Sigma$ é uma superfície mínima
+		\item $\Sigma$ é um ponto critico do funcional de área
+		\item Se $\Sigma$ for descrito pelas funções coordenadas $x_i: \realnumbers \rightarrow \realnumbers$ onde $i=1,2,3,4$, então tem-se:
 		\begin{equation*}
-			\Delta_{M} x_i + 2 x_i = 0
+			\Delta_{\Sigma} x_i + 2 x_i = 0
 		\end{equation*}
 		para $i=1,2,3,4$.
 	\end{enumerate}
 \end{teorema}
 
-\begin{observacao}
-	No existem superfície mínimas compactas em $\realnumbers^3$.
-\end{observacao}
+%\begin{observacao}
+%	No existem superfície mínimas compactas em $\realnumbers^3$.
+%\end{observacao}
 
 \begin{definicao}
 	O \emph{equador} é um subconjunto de $S^3$ definido por:
@@ -39,9 +39,17 @@
 	As curvaturas principais do equador são nulas.
 \end{proposicao}
 
+\begin{demonstracao}
+	É claro que o campo de vetores normais unitário é dado por $(0,0,0,1)$. Portanto a diferencial do campo é nulo e as curvaturas são nulas.
+\end{demonstracao}
+
 \begin{corolario}
 	O equador é uma superfície mínima em $S^3$.
 \end{corolario}
+
+\begin{demonstracao}
+	Como a equação da curvatura media em $S^3$ está dada pela soma das curvaturas principais, então, pela proposição anterior, a curvatura media é nula. Portanto é uma superfície mínima.
+\end{demonstracao}
 
 \begin{definicao}
 	O \emph{toro de Clifford} é o subconjunto de $S^3$ definido por:
