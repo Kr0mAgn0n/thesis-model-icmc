@@ -28,6 +28,34 @@
 Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{proposicao}
 
+
+\begin{demonstracao}
+	Seja $M$ uma variedade diferenciável e $\{ (U_{\alpha}, \varphi_{\alpha}) \}_{\alpha \in A}$ um atlas diferenciável, onde $A$ e um conjunto de índices. Em cada $U_{\alpha}$ tem-se a métrica
+	\begin{equation*}
+		g_{\alpha} = \varphi_{\alpha}^* \overline{g}
+	\end{equation*}
+	onde $\overline{g}$ é a métrica euclideana e $\varphi_{\alpha}^*$ é um pullback tensorial. Seja $(\psi_{\alpha})_{\alpha \in A}$ a partição da unidade subordinada à cobertura $(U_{\alpha})_{\alpha \in A}$. Definimos $g: M \rightarrow T^2(M)$, tal que
+	\begin{equation*}
+		g = \sum_{\alpha \in A} \psi_{\alpha} g_{\alpha}.
+	\end{equation*}
+	Seja $p \in M$, $U_{\alpha_0}$ aberto da cobertura tal que $p \in U_{\alpha_0}$ e $v,w \in T_pM$. Então
+	\begin{align*}
+		g_p(v,w) &= \sum_{\alpha \in A} \psi_{\alpha}(p) g_{\alpha | p}(v,w)\\
+		&= \sum_{\alpha \in A} \psi_{\alpha}(p) \varphi_{\alpha}^* \overline{g}(v,w)\\
+		&= \sum_{\alpha \in A} \psi_{\alpha}(p) \varphi_{\alpha}^* \overline{g}(w,v)\\
+		&= g_p(w,v)
+	\end{align*}
+	Tem-se que $g_p$ é simétrica. Olhar que a convergência da soma está garantida porque $(\psi_{\alpha})_{\alpha \in A}$ é uma partição da unidade. Por outro lado, para $v \in T_pM$ não nulo tem-se
+	\begin{equation*}
+		g_p(v,v) = \sum_{\alpha \in A} \psi_{\alpha}(p) \varphi_{\alpha}^* \overline{g}(v,v).
+	\end{equation*}
+	Olhar que $\varphi_{\alpha}^* \overline{g}(v,v) > 0$ porque $\overline{g}$ é a métrica euclideana. Seja $W$ um aberto da cobertura tal que $p \in W$. Então existem $\{ \alpha_1, \ldots, \alpha_n \} \subset A$ tal que $\text{supp} \psi_{\alpha_i} \cap W \neq \emptyset$ para $i=1, \ldots, n$, e para os índices restantes a interseção é vazia. Logo, a equação anterior escreve-se
+	\begin{equation*}
+	g_p(v,v) = \sum_{i=1}^n \psi_{\alpha_i}(p) \varphi_{\alpha_i}^* \overline{g}(v,v).
+	\end{equation*}
+	Como $0 \leq \psi_{\alpha_i}(p) \leq 1$ e $\sum_{i=1}^n \psi_{\alpha_i}(p) = 1$ para qualquer $p \in M$ onde $i=1,\ldots,n$, então $g_p(v,v) > 0$. Logo, $g_p$ é positiva. Portanto, $g$ é uma métrica Riemanniana.
+\end{demonstracao}
+
 \begin{proposicao}
 	Supor que $(M,g)$ é uma variedade Riemanniana, e $(X_j)$ é uma estrutura local diferenciável para $M$ sobre um subconjunto aberto $U \subset M$. Então, existe uma estrutura ortonormal diferenciável $\{ (E_j)\}$ sobre $U$ tal que
 	\begin{equation*}
@@ -36,9 +64,17 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	para cada $ j=1, \ldots, n $ e $p \in U$.
 \end{proposicao}
 
+\begin{demonstracao}
+	Supor que $M$ é uma variedade Riemanniana de dimensão $n$ e seja $p \in U$, onde $U$ é um aberto de $M$. O conjunto $\{ X_{1|p},\ldots,X_{n|p} \}$ é uma base de $T_pM$. Pelo algoritmo de Gram-Schmidt pudemos obter uma base ortonormal $\{ E_{1|p},\ldots,E_{n|p} \}$ de $T_pM$ para todo $p \in U$. Portanto, $\{ E_1,\ldots,E_n \}$ é uma estrutura local diferenciável.
+\end{demonstracao}
+
 \begin{corolario}
 	Seja $(M,g)$ uma variedade Riemanniana. Para cada $p \in M$, existe uma estrutura ortonormal diferenciável em uma vizinhança de $p$.
 \end{corolario}
+
+\begin{demonstracao}
+	Só definir qualquer estrutura local diferenciável para obter uma estrutura local diferenciável ortonormal.
+\end{demonstracao}
 
 \section{Métrica pullback}
 
