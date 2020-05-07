@@ -86,6 +86,19 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	Supor que $F: M \rightarrow N$ é uma função diferenciável e $g$ é a métrica Riemanniana em $N$. Então, $F^* g$ é uma métrica Riemanniana em $M$ se e somente se $F$ é uma imersão diferenciável.
 \end{proposicao}
 
+\begin{demonstracao}
+	Supor que $F^*g$ é uma métrica Riemanniana. Seja $p \in M$ e $v \in T_pM$ não nulo, então
+	\begin{equation*}
+		0 < F^*g(v,v) = g(dF_p v, dF_p v).
+	\end{equation*}
+	Como $g$ é métrica Riemanniana, tem-se que $dF_p v \neq 0$. Logo $dF_p$ é injetora concluindo que $F$ é uma imersão diferenciável.
+	Agora supor que $F$ é uma imersão diferenciável, $p \in M$ e $v \in T_pM$ não nulo. Como $dF_p$ injetora, tem-se que $dF_p v \neq 0$. Como $g$ é uma métrica Riemanniana, tem-se
+	\begin{equation*}
+		0 < g(dF_p v, dF_p v) = F^*g(v,v).
+	\end{equation*}
+	Portanto, $F* g$ é uma métrica Riemanniana.
+\end{demonstracao}
+
 \begin{definicao}
 	Se $(M,g)$ e $(\tilde{M}, \tilde{g})$ são variedades Riemannianas, a função diferenciável $F: M \rightarrow \tilde{M}$ é chamada de \emph{isometria} se é um difeomorfismo que satisfaz $F^* \tilde{g} = g$.
 \end{definicao}
