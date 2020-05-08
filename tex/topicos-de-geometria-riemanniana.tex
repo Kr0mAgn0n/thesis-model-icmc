@@ -196,9 +196,55 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	Se $\nabla$ é uma conexão afim de uma variedade diferenciável $M$, $X,Y \in \mathfrak{X}(M)$, e $p \in M$, então $\nabla_X Y_{|p}$ depende só dos valores de $X$ e $Y$ numa vizinhança pequena de $p$, i.e., se $X = \tilde{X}$ e $Y = \tilde{Y}$ numa vizinhança pequena de $p$, então $\nabla_X Y_{|p} = \nabla_{\tilde{X}} \tilde{Y}_{|p}$.
 \end{lema}
 
+\begin{demonstracao}
+	Seja $p \in M$ e $U$ um aberto de $M$ tal que $p \in U$. Tem-se que $X = \tilde{X}$ e $Y = \tilde{Y}$ em $U$. Definamos $Z = Y - \tilde{Y}$ e $\varphi: M \rightarrow \realnumbers$ tal que $\varphi(p)=1$ e $\supp \varphi \subset U$. Pode-se ver que $\varphi Z \equiv 0$ e
+	\begin{equation*}
+		\nabla_X (\varphi Z) = (X \varphi) Z + \varphi \nabla_X Z.
+	\end{equation*}
+	Também pode-ser ver que
+	\begin{equation*}
+		\nabla_X (\varphi Z)  = \nabla_X (0 . \varphi Z) = 0 . \nabla_X (\varphi Z) = 0.
+	\end{equation*}
+	Avaliando a primeira equação em $p$ tem-se
+	\begin{equation*}
+		0 = (\varphi \nabla_X Z)_p = \varphi(p) (\nabla_X Z)_p = (\nabla_X Z)_p.
+	\end{equation*}
+	Então $(\nabla_X Y)_p = (\nabla_X \tilde{Y})_p$ para qualquer $p \in M$.
+	Por outro lado, definamos $W = X - \tilde{X}$. Tem-se que $W(p) = 0$ para $p \in U$. Usando a mesma função $\varphi$ definida anteriormente, tem-se que $\varphi W \equiv 0$ em $M$, Logo
+	\begin{align*}
+		\nabla_{\varphi W} Y &= \nabla_{0 . \varphi W} Y\\
+		&= 0 . \nabla_{\varphi W} Y\\
+		&= 0,
+	\end{align*}
+	onde $0$ é a função nula. Mas
+	\begin{equation*}
+		\nabla_{\varphi W} Y = \varphi \nabla_W Y.
+	\end{equation*}
+	Avaliando em $p$ tem-se
+	\begin{align*}
+		0 = (\nabla_{\varphi W} Y)_p &= \varphi(p) (\nabla_W Y)_p\\
+		&= (\nabla_W Y)_p.
+	\end{align*}
+	Então
+	\begin{equation*}
+		(\nabla_X Y)_p = (\nabla_{\tilde{X}} Y)_p.
+	\end{equation*}
+	Portanto $(\nabla_X Y)_p = (\nabla_{\tilde{X}} \tilde{Y})_p$.
+\end{demonstracao}
+
 \begin{lema}\label{boa_definicao_conexao_2}
 	No lema \ref{boa_definicao_conexao_1}, se pode adicionar que $\nabla_X Y_{|p}$ depende só dos valores de $Y$ numa vizinhança pequena de $p$ e do valor de $X$ em $p$.
 \end{lema}
+
+\begin{demonstracao}
+	Seja $U$ aberto de $M$ e $X, \tilde{X} \in \vectorfieldsspace{U}$ tal que $X_p = \tilde{X}_p$ para $p \in U$. Definamos $W \in \vectorfieldsspace{U}$ tal que $W = X - \tilde{X}$. Pode-se ver que $W_p = 0$. Usando o sistema de coordenadas canônicas tem-se que $W = W^i \partial_i$. Logo
+	\begin{align*}
+		(\nabla_W Y)_p &= (\nabla_{W^i \partial_i} Y)_p\\
+		&=   W^i(p) (\nabla_{\partial_i} Y)_p\\
+		&= 0
+	\end{align*}
+	Portanto $(\nabla_X Y)_p = (\nabla_{\tilde{X}} Y)_p$, i.e., depende só do valor de $X$ em $p$.
+\end{demonstracao}
 
 \begin{observacao}
 	Pelo lema \ref{boa_definicao_conexao_2}, podemos escrever $\nabla_{X_p} Y$ em lugar de $\nabla_X Y_{|p}$, i.e., podemos dizer que é a derivada direcional de $Y$ em $p$ com direção $X_p$.
@@ -207,7 +253,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \begin{observacao}\label{obs_simbolos_christoffel}
 	Seja $M$ uma variedade diferenciável, e $(E_i)$ uma estrutura local de $TM$ num conjunto aberto $U \subset M$. Para qualquer escolha de índices $i$ e $j$, podemos expandir $\nabla_{E_i} E_j$ em termos da mesma estrutura
 	\begin{equation*}
-		\nabla_{E_i} E_j = \sum_k \Gamma^k_{ij} E_k
+		\nabla_{E_i} E_j = \Gamma^k_{ij} E_k
 	\end{equation*}
 	Isto define $n^3$ funções $\Gamma^k_{ij}$ em $U$.
 \end{observacao}
@@ -217,11 +263,26 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{definicao}
 
 \begin{lema}
-	Seja $nabla$ uma conexão afim, e seja $X,Y \in \mathfrak{X}(M)$ tal que tal que são expressados em termos uma estrutura local por $X = \sum_i X^i E_i$ e $Y = \sum_j Y^j E_j$. Então
+	Seja $\nabla$ uma conexão afim, e seja $X,Y \in \mathfrak{X}(M)$ tal que tal que são expressados em termos uma estrutura local por $X = X^i E_i$ e $Y = Y^j E_j$. Então
 	\begin{equation*}
-		\nabla_X Y = \sum_{i,k,k} \left( X Y^k + X^i Y^j \Gamma^k_{ij} \right) E_k
+		\nabla_X Y = \left( X Y^k + X^i Y^j \Gamma^k_{ij} \right) E_k
 	\end{equation*}
 \end{lema}
+
+\begin{demonstracao}
+	Tem-se
+	\begin{align*}
+		\nabla_X Y &= \nabla_X (Y^j E_j)\\
+		&= X Y^j E^j + Y^j \nabla_X E_j\\
+		&= X Y^j E^j + Y^j X^i \nabla_{E_i} E_j\\
+		&= X Y^j E^j + Y^j X^i \Gamma^k_{ij} E_k.
+	\end{align*}
+	Mudando o índice do primeiro somando tem-se
+	\begin{align*}
+		\nabla_X Y &= X Y^k E^k + Y^j X^i \Gamma^k_{ij} E_k\\
+		&= (X Y^k + Y^j X^i \Gamma^k_{ij}) E_k.
+	\end{align*}
+\end{demonstracao}
 
 \section{Quantas conexões afins existem?}
 
