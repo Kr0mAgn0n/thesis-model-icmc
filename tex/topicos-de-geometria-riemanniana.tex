@@ -262,7 +262,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	As funções definidas na observação \ref{obs_simbolos_christoffel} , são chamadas de \emph{símbolos de Christoffel} de $\nabla$ com respeito à estrutura dada.
 \end{definicao}
 
-\begin{lema}
+\begin{lema}\label{conexiones lineales en función de símbolos de Chritoffel}
 	Seja $\nabla$ uma conexão afim, e seja $X,Y \in \mathfrak{X}(M)$ tal que tal que são expressados em termos uma estrutura local por $X = X^i E_i$ e $Y = Y^j E_j$. Então
 	\begin{equation*}
 		\nabla_X Y = \left( X Y^k + X^i Y^j \Gamma^k_{ij} \right) E_k
@@ -289,21 +289,53 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \begin{definicao}
 	Em $\mathbb{R}^n$, definamos a \emph{conexão Euclideana} $\overline{\nabla}$ como
 	\begin{equation*}
-		\overline{\nabla}_X \left( \sum_j Y^j \partial_j \right) = \sum_j \left( X Y^j \right) \partial_j
+		\overline{\nabla}_X \left( Y^j \partial_j \right) = (X Y^j) \partial_j
 	\end{equation*}
-	onde $X,Y \in \mathfrak{X}(\mathbb{R}^n)$, e $Y = \sum_j Y^j \partial_j$.
+	onde $X,Y \in \mathfrak{X}(\mathbb{R}^n)$, e $Y = Y^j \partial_j$.
 \end{definicao}
 
 \begin{lema}
 	Supor que $M$ é uma variedade diferenciável coberta por só uma carta. Existe uma bijeção entre o conjunto das conexões afins em $M$ e o conjunto das escolhas das $n^3$ funções diferenciáveis $\{ \Gamma^k_{ij} \}$ (símbolos de Christoffel) em $M$, dada por
 	\begin{equation*}
-		\nabla_X Y = \sum_{i,j,k} \left( X^i \partial_i Y^k + X^i Y^j \Gamma^k_{ij} \right) \partial_k
+		\nabla_X Y = \left( X^i \partial_i Y^k + X^i Y^j \Gamma^k_{ij} \right) \partial_k
 	\end{equation*}
 \end{lema}
+
+\begin{demonstracao}
+	Sejam $X,Y \in \vectorfieldsspace{M}$ e $\{ \partial_i \}$ a estrutura canônica. Pelo lema \ref{conexiones lineales en función de símbolos de Chritoffel}, tem-se que a conexão linear $\nabla_X Y$ gera um conjunto $\{ \Gamma_{ij}^k \}$ de $n^3$ elementos que são os símbolos de Christoffel. Agora supor que escolhemos un conjunto $\{ \Gamma_{ij}^k \} $ de $n^3$ elementos e definimos o campo vetorial $\nabla_X Y$ como
+	\begin{equation*}
+		\nabla_X Y = (X Y^k + X^i Y^j \Gamma_{ij}^k) \partial_k.
+	\end{equation*}
+	Verifica-se que $Y$ é linear em $\realnumbers$ e $X$ é linear em $\smoothfunctions{M}$. Falta provar a regra do produto. Considerar $fY \in \vectorfieldsspace{M}$ em lugar de $Y$ onde $f \in \smoothfunctions{M}$. Então
+	\begin{align*}
+		\nabla_X (fY) &= (X(f Y^k) + X^i (f Y^j) \Gamma_{ij}^k) \partial_k\\
+		&= ( (Xf) Y^k + f X Y^k + f X^i Y^j \Gamma_{ij}^k ) \partial_k\\
+		&= (Xf) Y^k \partial_k + f (X Y^k + X^i Y^j \Gamma_{ij}^k) \partial_k\\
+		&= (Xf) Y + f \nabla_X Y.
+	\end{align*}
+\end{demonstracao}
 
 \begin{proposicao}
 	Toda variedade diferenciável admite uma conexão afim.
 \end{proposicao}
+
+\begin{demonstracao}
+	Seja $(U_{\alpha})$ uma cobertura de $M$ e $\nabla^{\alpha}$ a conexão linear em $U_{\alpha}$. Sejam também $(\varphi_{\alpha})$ a partição da unidade subordinada a $(U_{\alpha})$ e $W$ um aberto de $M$ tal que $X,Y \in \vectorfieldsspace{W}$. Definamos
+	\begin{equation*}
+		\nabla_X Y := \sum_{\alpha} \varphi_{\alpha} \nabla_X^{\alpha} Y.
+	\end{equation*}
+	$\nabla_X Y$ é uma conexão linear em $M$. Verifica-se que é $\realnumbers$-linear em $Y$ e $\smoothfunctions{M}$-linear em $X$. Tem-se que provar a regra do produto. Considerar $fY \in \vectorfieldsspace{W}$ onde $f \in \smoothfunctions{M}$. Então
+	\begin{align*}
+		\nabla_X (fY) &= \sum_{\alpha} \varphi_{\alpha} \nabla_X^{\alpha} (fY)\\
+		&= \sum_{\alpha} \varphi_{\alpha} (Xf Y + f \nabla_X^{\alpha} Y)\\
+		&= \sum_{\alpha} \varphi_{\alpha} X f Y + \sum_{\alpha} \varphi_{\alpha} f \nabla_X^{\alpha} Y. 
+	\end{align*}
+	Como $(\varphi_{\alpha})$ é partição da unidade, então $\sum_{\alpha} \varphi_{\alpha} = 1$. Portanto, conclui-se que
+	\begin{equation*}
+		\nabla_X (fY) = X f Y + f \nabla_X Y
+	\end{equation*}
+	e que $\nabla_X Y$ é uma conexão linear em $M$.
+\end{demonstracao}
 
 
 \section{A conexão Riemanniana}
@@ -356,6 +388,8 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	Seja $(M,g)$ uma variedade Riemanniana. Existe uma única conexão afim $\nabla$ em $M$ que é compatível com $g$ e simétrica.
 	Ista conexão é chamada de \emph{conexão Riemanniana} o de \emph{conexão de Levi-Civita} de $g$.
 \end{teorema}
+
+
 
 \begin{proposicao}
 	Supor que $F: (M,g) \rightarrow (\tilde{M}, \tilde{g})$ é uma isometria, então $F$ leva a conexão Riemanniana $\nabla$ de $g$ à conexão Riemanniana de $\tilde{\nabla}$ de $\tilde{g}$ com a regra:
