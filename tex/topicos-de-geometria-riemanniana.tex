@@ -250,6 +250,10 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	Pelo lema \ref{boa_definicao_conexao_2}, podemos escrever $\nabla_{X_p} Y$ em lugar de $\nabla_X Y_{|p}$, i.e., podemos dizer que é a derivada direcional de $Y$ em $p$ com direção $X_p$.
 \end{observacao}
 
+\begin{lema}
+	Sejam $M$ uma variedade diferenciável e $p \in M$. Sejam também $X, Y, \tilde{Y} \in \vectorfieldsspace{M}$, $\nabla$ uma conexão linear em $TM$, $\gamma: (-\epsilon, \epsilon) \rightarrow M$ uma curva tal que $\gamma(0)=p$ e  $\gamma'(0) = X_p$ e supor que $Y \equiv \tilde{Y}$ na imagem de $\gamma$. Então $\nabla_{X_p} Y = \nabla_{X_p} \tilde{Y}$.
+\end{lema}
+
 \begin{observacao}\label{obs_simbolos_christoffel}
 	Seja $M$ uma variedade diferenciável, e $(E_i)$ uma estrutura local de $TM$ num conjunto aberto $U \subset M$. Para qualquer escolha de índices $i$ e $j$, podemos expandir $\nabla_{E_i} E_j$ em termos da mesma estrutura
 	\begin{equation*}
@@ -336,6 +340,8 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	\end{equation*}
 	e que $\nabla_X Y$ é uma conexão linear em $M$.
 \end{demonstracao}
+
+
 
 
 \section{A conexão Riemanniana}
