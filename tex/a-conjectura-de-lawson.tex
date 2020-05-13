@@ -164,19 +164,19 @@ $Z:\Sigma\times\Sigma\to\R$ dada por
 Z(x,y) = \Phi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle,
 \end{eqnarray}
 onde $\nu$ \'e um campo unitário, normal a $\Sigma$. Considere dois 
-pontos $\xbarra, \ybarra \in \Sigma$, com $\xbarra \neq \ybarra$, tais que $Z(\xbarra, \ybarra) = 0$ e $dZ(\xbarra, \ybarra) = 0$. Sejam $(x_1,x_2), (y_1,y_2)$ sistemas de coordenadas geodésicas em torno dos pontos $\xbarra, \ybarra$, respectivamente. No ponto $(\xbarra,\ybarra)$, temos:
+pontos $\xb, \yb \in \Sigma$, com $\xb \neq \yb$, tais que $Z(\xb, \yb) = 0$ e $dZ(\xb, \yb) = 0$. Sejam $(x_1,x_2), (y_1,y_2)$ sistemas de coordenadas geodésicas em torno dos pontos $\xb, \yb$, respectivamente. No ponto $(\xb,\yb)$, temos:
 \begin{eqnarray}\label{diff_Z_x}
 \begin{aligned}
-0 = \frac{\partial Z}{\partial x_i} (\xbarra, \ybarra) = &
-\frac{\partial \Phi}{\partial x_i}(\xbarra) (1 - \langle F(\xbarra, F(\ybarra) \rangle) -  
-\Phi(\xbarra) \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle \\ & + \sum_{k=1}^{2} h_{ik}(\xbarra) \left\langle \frac{\partial F}{\partial x_k}(\xbarra), F(\ybarra) \right\rangle
+0 = \frac{\partial Z}{\partial x_i} (\xb, \yb) = &
+\frac{\partial \Phi}{\partial x_i}(\xb) (1 - \langle F(\xb, F(\yb) \rangle) -  
+\Phi(\xb) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \\ & + \sum_{k=1}^{2} h_{ik}(\xb) \left\langle \frac{\partial F}{\partial x_k}(\xb), F(\yb) \right\rangle
 \end{aligned}
 \end{eqnarray}
 e
 \begin{equation}\label{diff_Z_y}
-0 = \frac{\partial Z}{\partial y_i} (\xbarra, \ybarra) = - \Phi(\xbarra) \left\langle F(\xbarra), \frac{\partial F}{\partial y_i} (\ybarra) \right\rangle + \left\langle \nu(\xbarra), \frac{\partial F}{\partial y_i}(\ybarra) \right\rangle
+0 = \frac{\partial Z}{\partial y_i} (\xb, \yb) = - \Phi(\xb) \left\langle F(\xb), \frac{\partial F}{\partial y_i} (\yb) \right\rangle + \left\langle \nu(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle
 \end{equation}
-onde $h_{ij}(\xbarra)$ denota a $(ij)$-ésima coordenada da matriz da segunda forma fundamental de $F$ no ponto $\xbarra$, i.e.,
+onde $h_{ij}(\xb)$ denota a $(ij)$-ésima coordenada da matriz da segunda forma fundamental de $F$ no ponto $\xb$, i.e.,
 \begin{eqnarray}\label{eq:partialNu}
 \frac{\partial\nu}{\partial x_i}(\xb) = 
 \sum_{k=1}^2h_{ik}\frac{\partial F}{\partial x_k}(\xb).
@@ -185,49 +185,49 @@ onde $h_{ij}(\xbarra)$ denota a $(ij)$-ésima coordenada da matriz da segunda fo
 \vspace{.2cm}
 
 Sem perda de generalidade, podemos supor que a segunda forma
-fundamental de $F$ est\'a diagonalizada no ponto $\xbarra$, i.e.,
+fundamental de $F$ est\'a diagonalizada no ponto $\xb$, i.e.,
 \[
-h_{11}(\xbarra)=\lambda_1, \quad h_{12}(\xbarra) = 0 \quad\mbox{e}\quad
-h_{22}(\xbarra) = \lambda_2.
+h_{11}(\xb)=\lambda_1, \quad h_{12}(\xb) = 0 \quad\mbox{e}\quad
+h_{22}(\xb) = \lambda_2.
 \]
 Denotemos por $w_i$ a reflex\~ao do vetor
 \[
-\frac{\partial F}{\partial x_i}(\xbarra)
+\frac{\partial F}{\partial x_i}(\xb)
 \]
-em rela\c c\~ao ao plano ortogonal ao vetor $F(\xbarra) - F(\ybarra)$, i.e.,
+em rela\c c\~ao ao plano ortogonal ao vetor $F(\xb) - F(\yb)$, i.e.,
 \begin{eqnarray}\label{eq:reflexao}
-w_i = \frac{\partial F}{\partial x_i}(\xbarra) - 
-2 \left\langle \frac{\partial F}{\partial x_i}(\xbarra), \frac{F(\xbarra) - 
-	F(\ybarra)}{|F(\xbarra) - F(\ybarra)|} \right\rangle \frac{F(\xbarra) - 
-	F(\ybarra)}{|F(\xbarra) - F(\ybarra)|}.
+w_i = \frac{\partial F}{\partial x_i}(\xb) - 
+2 \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{F(\xb) - 
+	F(\yb)}{|F(\xb) - F(\yb)|} \right\rangle \frac{F(\xb) - 
+	F(\yb)}{|F(\xb) - F(\yb)|}.
 \end{eqnarray}
 Escolhendo um sistema de coordenadas apropriado $(y_1,y_2)$,
 podemos supor que
 \begin{equation*}
-\left\langle w_1, \frac{\partial F}{\partial y_1}(\ybarra) \right\rangle \geq 0, 
+\left\langle w_1, \frac{\partial F}{\partial y_1}(\yb) \right\rangle \geq 0, 
 \quad 
-\left\langle w_1, \frac{\partial F}{\partial y_2}(\ybarra) \right\rangle = 0 
+\left\langle w_1, \frac{\partial F}{\partial y_2}(\yb) \right\rangle = 0 
 \quad \text{e} \quad 
-\left\langle w_2, \frac{\partial F}{\partial y_2}(\ybarra) \right\rangle \geq 0.
+\left\langle w_2, \frac{\partial F}{\partial y_2}(\yb) \right\rangle \geq 0.
 \end{equation*}
 
 \begin{lema}
-	Os vetores $F(\ybarra)$ e $ \Phi(\xbarra) F(\xbarra) - \nu(\xbarra) $ são linearmente independentes.
+	Os vetores $F(\yb)$ e $ \Phi(\xb) F(\xb) - \nu(\xb) $ são linearmente independentes.
 \end{lema}
 \begin{demonstracao}
 	Usando a identidade
 	\[
-	\langle \Phi(\xbarra) F(\xbarra) - \nu(\xbarra), F(\ybarra) \rangle = 
-	\Phi(\xbarra) - Z(\xbarra,\ybarra) = \Phi(\xbarra),
+	\langle \Phi(\xb) F(\xb) - \nu(\xb), F(\yb) \rangle = 
+	\Phi(\xb) - Z(\xb,\yb) = \Phi(\xb),
 	\]
 	obtemos
 	\begin{eqnarray*}
-		| \Phi(\xbarra) F(\xbarra) - \nu(\xbarra) |^2 | F(\ybarra) |^2 &-& 
-		\langle \Phi(\xbarra) F(\xbarra) - \nu(\xbarra), F(\ybarra) \rangle^2 \\
-		&=& | \Phi(\xbarra) F(\xbarra) - \nu(\xbarra) |^2 - \Phi(\xbarra)^2 = 1 \neq 0.
+		| \Phi(\xb) F(\xb) - \nu(\xb) |^2 | F(\yb) |^2 &-& 
+		\langle \Phi(\xb) F(\xb) - \nu(\xb), F(\yb) \rangle^2 \\
+		&=& | \Phi(\xb) F(\xb) - \nu(\xb) |^2 - \Phi(\xb)^2 = 1 \neq 0.
 	\end{eqnarray*}
 	Disso decorre que a desigualdade de Cauchy-Schwarz \'e estrita,
-	logo os vetores $F(\ybarra)$ e $\Phi(\xbarra)F(\xbarra)-\nu(\xbarra)$
+	logo os vetores $F(\yb)$ e $\Phi(\xb)F(\xb)-\nu(\xb)$
 	s\~ao linearmente independentes.
 \end{demonstracao}
 
@@ -237,68 +237,68 @@ seguinte:
 \begin{lema}
 	Valem as seguintes igualdades:
 	\begin{equation*}
-	w_1 = \frac{\partial F}{\partial y_1}(\ybarra) 
+	w_1 = \frac{\partial F}{\partial y_1}(\yb) 
 	\quad \text{e} \quad 
-	w_2 = \frac{\partial F}{\partial y_2}(\ybarra).
+	w_2 = \frac{\partial F}{\partial y_2}(\yb).
 	\end{equation*}
 \end{lema}
 \begin{demonstracao}
 	Usando a express\~ao de $w_i$, dada em \eqref{eq:reflexao}, obtemos:
 	\begin{eqnarray*}
-		\langle w_i, F(\ybarra) \rangle &=& \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle + 2 \left\langle \frac{\partial F}{\partial x_i}, F(\ybarra) \right\rangle \frac{\langle F(\xbarra) - F(\ybarra),F(\ybarra) \rangle}{| F(\xbarra) - F(\ybarra) |^2} \\
-		&=& \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle 
-		+ 2 \left\langle \frac{\partial F}{\partial x_i}, F(\ybarra) \right\rangle \frac{\langle F(\xbarra),F(\ybarra) \rangle - 1}{2 - 2 \langle F(\xbarra), F(\ybarra) \rangle} \\
+		\langle w_i, F(\yb) \rangle &=& \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle + 2 \left\langle \frac{\partial F}{\partial x_i}, F(\yb) \right\rangle \frac{\langle F(\xb) - F(\yb),F(\yb) \rangle}{| F(\xb) - F(\yb) |^2} \\
+		&=& \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle 
+		+ 2 \left\langle \frac{\partial F}{\partial x_i}, F(\yb) \right\rangle \frac{\langle F(\xb),F(\yb) \rangle - 1}{2 - 2 \langle F(\xb), F(\yb) \rangle} \\
 		&=& 0
 	\end{eqnarray*}
 	e
 	\begin{eqnarray*}
-		\langle w_i, \Phi(\xbarra) F(\xbarra) - \nu(\xbarra) \rangle &=&
-		2 \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle \frac{\langle F(\xbarra) - F(\ybarra), \Phi(\xbarra) F(\xbarra) - \nu(\xbarra) \rangle}{| F(\xbarra) - F(\ybarra) |^2} \\
-		& = & 2 \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle \frac{Z(\xbarra,\ybarra)}{| F(\xbarra) - F(\ybarra) |^2} \\
+		\langle w_i, \Phi(\xb) F(\xb) - \nu(\xb) \rangle &=&
+		2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \frac{\langle F(\xb) - F(\yb), \Phi(\xb) F(\xb) - \nu(\xb) \rangle}{| F(\xb) - F(\yb) |^2} \\
+		& = & 2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \frac{Z(\xb,\yb)}{| F(\xb) - F(\yb) |^2} \\
 		& = & 0.
 	\end{eqnarray*}
 	Por outro lado, os vetores
 	\begin{equation*}
-	\frac{\partial F}{\partial y_1}(\ybarra) \quad \text{e} \quad \frac{\partial F}
-	{\partial y_2}(\ybarra)
+	\frac{\partial F}{\partial y_1}(\yb) \quad \text{e} \quad \frac{\partial F}
+	{\partial y_2}(\yb)
 	\end{equation*}
 	satisfazem
 	\begin{equation*}
-	\left\langle \frac{\partial F}{\partial y_i}(\ybarra), F(\ybarra)\right\rangle = 0
+	\left\langle \frac{\partial F}{\partial y_i}(\yb), F(\yb)\right\rangle = 0
 	\end{equation*}
 	e
 	\begin{equation*}
-	\left\langle \frac{\partial F}{\partial y_i}(\ybarra), \Phi(\xbarra) F(\xbarra) - 
-	\nu(\xbarra) \right\rangle = -\frac{\partial Z}{\partial y_i}(\xbarra,\ybarra) 
+	\left\langle \frac{\partial F}{\partial y_i}(\yb), \Phi(\xb) F(\xb) - 
+	\nu(\xb) \right\rangle = -\frac{\partial Z}{\partial y_i}(\xb,\yb) 
 	= 0
 	\end{equation*}
-	Como os vetores $F(\ybarra)$ e $ \Phi(\xbarra) F(\xbarra) - \nu(\xbarra)$
+	Como os vetores $F(\yb)$ e $ \Phi(\xb) F(\xb) - \nu(\xb)$
 	são linearmente independentes, conclu\'imos que o plano gerado por
 	\begin{equation*}
-	\frac{\partial F}{\partial y_1}(\ybarra) \quad \text{e} \quad 
-	\frac{\partial F}{\partial y_2}(\ybarra)
+	\frac{\partial F}{\partial y_1}(\yb) \quad \text{e} \quad 
+	\frac{\partial F}{\partial y_2}(\yb)
 	\end{equation*}
 	é o mesmo plano gerado por $w_1$ e $w_2$. Al\'em disso, os vetores
 	$w_1$ e $w_2$ s\~ao ortonormais. Como
 	\begin{equation*}
-	\left\langle w_1, \frac{\partial F}{\partial y_2}(\ybarra) \right\rangle = 0,
+	\left\langle w_1, \frac{\partial F}{\partial y_2}(\yb) \right\rangle = 0,
 	\end{equation*}
 	conclu\'imos que
 	\begin{equation*}
-	w_1 = \pm \frac{\partial F}{\partial y_1}(\ybarra) 
+	w_1 = \pm \frac{\partial F}{\partial y_1}(\yb) 
 	\quad \text{e} \quad 
-	w_2 = \pm \frac{\partial F}{\partial y_2}(\ybarra)
+	w_2 = \pm \frac{\partial F}{\partial y_2}(\yb)
 	\end{equation*}
 	Finalmente, como
 	\begin{equation*}
-	\left\langle w_1, \frac{\partial F}{\partial y_1}(\ybarra) \right\rangle \geq 0 
+	\left\langle w_1, \frac{\partial F}{\partial y_1}(\yb) \right\rangle \geq 0 
 	\quad \text{e} \quad 
-	\left\langle w_2, \frac{\partial F}{\partial y_2}(\ybarra) \right\rangle \geq 0
+	\left\langle w_2, \frac{\partial F}{\partial y_2}(\yb) \right\rangle \geq 0
 	\end{equation*}	
 	obtemos que
 	\begin{equation*}
-	w_1 = \frac{\partial F}{\partial y_1}(\ybarra) \quad \text{e} \quad 
-	w_2 = \frac{\partial F}{\partial y_2}(\ybarra),
+	w_1 = \frac{\partial F}{\partial y_1}(\yb) \quad \text{e} \quad 
+	w_2 = \frac{\partial F}{\partial y_2}(\yb),
 	\end{equation*}
 	como quer\'iamos.
 \end{demonstracao}
@@ -644,16 +644,16 @@ ordem da fun\c c\~ao $Z$ no ponto $(\xb,\yb)$.
 	Vale a seguinte igualdade:
 	\begin{eqnarray} \label{suma_2das_derivadas}
 	\begin{aligned}
-	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xbarra,\ybarra) + & 
-	2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xbarra,\ybarra) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xbarra,\ybarra) \\
+	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) + & 
+	2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) \\
 	&= 
-	- \frac{2 \Phi(\xbarra)^2- |A(\xbarra)|^2}{2 \Phi(\xbarra)
-		(1 - \langle F(\xbarra),F(\ybarra) \rangle)} \sum_{i=1}^2
-	\left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle \\
+	- \frac{2 \Phi(\xb)^2- |A(\xb)|^2}{2 \Phi(\xb)
+		(1 - \langle F(\xb),F(\yb) \rangle)} \sum_{i=1}^2
+	\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \\
 	&+
-	\left( \Delta_{\Sigma} \Phi(\xbarra) - \frac{| \nabla \Phi(\xbarra) |^2}
-	{\Phi(\xbarra)} + ( | A(\xbarra) |^2 - 2 ) \Phi(\xbarra) \right)
-	\left(1 - \langle F(\xbarra,\ybarra) \rangle\right)
+	\left( \Delta_{\Sigma} \Phi(\xb) - \frac{| \nabla \Phi(\xb) |^2}
+	{\Phi(\xb)} + ( | A(\xb) |^2 - 2 ) \Phi(\xb) \right)
+	\left(1 - \langle F(\xb,\yb) \rangle\right)
 	\end{aligned}
 	\end{eqnarray}
 \end{proposicao}
@@ -854,59 +854,59 @@ Seja $\Phi(x) = \aleph \Psi(x)$ em a definição de $Z(x,y)$, então
 Pela equação anterior observa-se que $Z(x,y) \geq 0$.
 Definamos o conjunto
 \begin{equation*}
-	\Omega = \{ \xbarra \in \Sigma: \exists \ybarra \in \Sigma \setminus \{\xbarra\} \text{ tal que } Z(\xbarra,\ybarra) = 0 \}
+	\Omega = \{ \xb \in \Sigma: \exists \yb \in \Sigma \setminus \{\xb\} \text{ tal que } Z(\xb,\yb) = 0 \}
 \end{equation*}
 O conjunto $\Omega$ é não vazio.
-Usando a proposição \eqref{edp_principal}, e a definição de $\Phi(\xbarra)$, a equação \eqref{suma_2das_derivadas} fica
+Usando a proposição \eqref{edp_principal}, e a definição de $\Phi(\xb)$, a equação \eqref{suma_2das_derivadas} fica
 \begin{multline}\label{suma_2da_der_aleph}
-\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xbarra,\ybarra) + 2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xbarra,\ybarra) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xbarra,\ybarra) =\\
-- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xbarra)}{1 - \langle F(\xbarra), F(\ybarra) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) + 2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) =\\
+- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle
 \end{multline}
-para qualquer par de pontos $\xbarra \neq \ybarra$. Como no ponto $(\xbarra,\ybarra)$ atinge-se um mínimo, então
+para qualquer par de pontos $\xb \neq \yb$. Como no ponto $(\xb,\yb)$ atinge-se um mínimo, então
 \begin{equation*}
-	0 = Z(\xbarra,\ybarra) = \frac{\partial Z}{\partial x_i}(\xbarra,\ybarra) = \frac{\partial Z}{\partial y_i}(\xbarra,\ybarra)
+	0 = Z(\xb,\yb) = \frac{\partial Z}{\partial x_i}(\xb,\yb) = \frac{\partial Z}{\partial y_i}(\xb,\yb)
 \end{equation*}
 
 \begin{proposicao}\label{gradiente_nulo}
-	Tem-se que $\nabla \Psi(\xbarra) = 0$ para todo $\xbarra \in \Omega.$
+	Tem-se que $\nabla \Psi(\xb) = 0$ para todo $\xb \in \Omega.$
 \end{proposicao}
 
 \begin{demonstracao}
-	Seja $\xbarra \in \Omega$, então existe $\ybarra \in \Omega \setminus \{x\}$ tal que $Z(\xbarra,\ybarra) = 0$. Tem-se que em $(\xbarra,\ybarra)$ atinge-se um mínimo local, portanto o Hessiano é definido não negativo. O Hessiano está definido por
+	Seja $\xb \in \Omega$, então existe $\yb \in \Omega \setminus \{x\}$ tal que $Z(\xb,\yb) = 0$. Tem-se que em $(\xb,\yb)$ atinge-se um mínimo local, portanto o Hessiano é definido não negativo. O Hessiano está definido por
 	\begin{equation*}
-		H(\xbarra,\ybarra) = \left[ \begin{matrix}
-		\frac{\partial^2 Z}{\partial x_1^2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial x_2 \partial x_1}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_1 \partial x_1}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_2 \partial x_1}(\xbarra,\ybarra)\\ 
-		\frac{\partial^2 Z}{\partial x_1 \partial x_2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial x_2^2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_1 \partial x_2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_2 \partial x_2}(\xbarra,\ybarra)\\
-		 \frac{\partial^2 Z}{\partial x_1 \partial y_1}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial x_2 \partial y_1}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_1^2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_2 \partial y_1}(\xbarra,\ybarra)\\
-		  \frac{\partial^2 Z}{\partial x_1 \partial y_2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial x_2 \partial y_2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_1 \partial y_2}(\xbarra,\ybarra) & \frac{\partial^2 Z}{\partial y_2^2}(\xbarra,\ybarra)
+		H(\xb,\yb) = \left[ \begin{matrix}
+		\frac{\partial^2 Z}{\partial x_1^2}(\xb,\yb) & \frac{\partial^2 Z}{\partial x_2 \partial x_1}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_1 \partial x_1}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_2 \partial x_1}(\xb,\yb)\\ 
+		\frac{\partial^2 Z}{\partial x_1 \partial x_2}(\xb,\yb) & \frac{\partial^2 Z}{\partial x_2^2}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_1 \partial x_2}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_2 \partial x_2}(\xb,\yb)\\
+		 \frac{\partial^2 Z}{\partial x_1 \partial y_1}(\xb,\yb) & \frac{\partial^2 Z}{\partial x_2 \partial y_1}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_1^2}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_2 \partial y_1}(\xb,\yb)\\
+		  \frac{\partial^2 Z}{\partial x_1 \partial y_2}(\xb,\yb) & \frac{\partial^2 Z}{\partial x_2 \partial y_2}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_1 \partial y_2}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_2^2}(\xb,\yb)
 		\end{matrix} \right]
 	\end{equation*}	
 	Como o Hessiano é definido não negativo. então para todo $v \in \realnumbers^4$ tem-se
 	\begin{equation*}
-		v^t H(\xbarra,\ybarra) v \geq 0
+		v^t H(\xb,\yb) v \geq 0
 	\end{equation*}	
 	Em particular, para $v_1 = [1,0,1,0]^t$ e para $v_2 = [0,1,0,1]^t$ tem-se
 	\begin{equation*}
-		0 \leq v_1^t H(\xbarra,\ybarra) v_1 + v_2^t H(\xbarra,\ybarra) v_ 2 = \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xbarra,\ybarra) + 2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xbarra,\ybarra) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xbarra,\ybarra)
+		0 \leq v_1^t H(\xb,\yb) v_1 + v_2^t H(\xb,\yb) v_ 2 = \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) + 2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb)
 	\end{equation*}	
 	Por outro lado, como $\aleph > 1$, então
 	\begin{equation*}
-		- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xbarra)}{1 - \langle F(\xbarra), F(\ybarra) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle \leq 0
+		- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \leq 0
 	\end{equation*}	
 	Pela equação \eqref{suma_2da_der_aleph} tem-se
 	\begin{equation*}
-		\left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle = 0
+		\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle = 0
 	\end{equation*}	
 	A equação \eqref{diff_Z_x} utilizando coordenadas geodésicas pode-se expressar como
 	\begin{multline*}
-		0 = \frac{\partial Z}{\partial x_i}(\xbarra,\ybarra) = \aleph \frac{\partial \Psi}{\partial x_i}(\xbarra)(1 - \langle F(\xbarra),F(\ybarra) \rangle)  - \aleph \Psi(\xbarra) \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle\\
-		+ \sum_{i=1}^2 \lambda_i \left\langle \frac{\partial F}{\partial x_i}(\xbarra),F(\ybarra) \right\rangle
+		0 = \frac{\partial Z}{\partial x_i}(\xb,\yb) = \aleph \frac{\partial \Psi}{\partial x_i}(\xb)(1 - \langle F(\xb),F(\yb) \rangle)  - \aleph \Psi(\xb) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle\\
+		+ \sum_{i=1}^2 \lambda_i \left\langle \frac{\partial F}{\partial x_i}(\xb),F(\yb) \right\rangle
 	\end{multline*}	
-	Como $\left\langle \frac{\partial F}{\partial x_i}(\xbarra),F(\ybarra) \right\rangle = 0$, então a equação anterior expressa-se
+	Como $\left\langle \frac{\partial F}{\partial x_i}(\xb),F(\yb) \right\rangle = 0$, então a equação anterior expressa-se
 	\begin{equation*}
-		0 = \frac{\partial Z}{\partial x_i}(\xbarra,\ybarra) = \aleph \frac{\partial \Psi}{\partial x_i}(\xbarra)(1 - \langle F(\xbarra),F(\ybarra) \rangle)
+		0 = \frac{\partial Z}{\partial x_i}(\xb,\yb) = \aleph \frac{\partial \Psi}{\partial x_i}(\xb)(1 - \langle F(\xb),F(\yb) \rangle)
 	\end{equation*}	
-	Portanto, $\nabla \Psi(\xbarra) = 0$ para todo $\xbarra \in \Omega$.
+	Portanto, $\nabla \Psi(\xb) = 0$ para todo $\xb \in \Omega$.
 \end{demonstracao}
 
 \begin{lema}[Principio do máximo estrito de Bony]\label{bony}
@@ -926,18 +926,18 @@ para qualquer par de pontos $\xbarra \neq \ybarra$. Como no ponto $(\xbarra,\yba
 \end{proposicao}
 
 \begin{demonstracao}
-	Nas proposições \eqref{2_diff_Z_x}, \eqref{diff_Z_x_y} e \eqref{2_diff_Z_y} estamos assumindo que $Z(\xbarra,\ybarra) = 0$. Vamos agora repetir o cálculos sem considerar essa hipóteses. Ao final tem-se
+	Nas proposições \eqref{2_diff_Z_x}, \eqref{diff_Z_x_y} e \eqref{2_diff_Z_y} estamos assumindo que $Z(\xb,\yb) = 0$. Vamos agora repetir o cálculos sem considerar essa hipóteses. Ao final tem-se
 	\begin{multline*}
-	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xbarra,\ybarra) + 2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xbarra,\ybarra) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xbarra,\ybarra) =\\
-	- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xbarra)}{1 - \langle F(\xbarra), F(\ybarra) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xbarra), F(\ybarra) \right\rangle + \overline{\Lambda}(\xbarra,\ybarra) \left( Z(\xbarra,\ybarra) + \sum_{i=1}^2 \left| \frac{\partial Z}{\partial x_i}(\xbarra,\ybarra) \right| + \sum_{i=1}^2 \left| \frac{\partial Z}{\partial y_i}(\xbarra,\ybarra) \right| \right)
+	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) + 2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) =\\
+	- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle + \overline{\Lambda}(\xb,\yb) \left( Z(\xb,\yb) + \sum_{i=1}^2 \left| \frac{\partial Z}{\partial x_i}(\xb,\yb) \right| + \sum_{i=1}^2 \left| \frac{\partial Z}{\partial y_i}(\xb,\yb) \right| \right)
 	\end{multline*}
-	onde $\overline{\Lambda}(\xbarra,\ybarra)$ é uma função continua no conjunto $\{ (x,y) \in \Sigma \times \Sigma: x \neq y \}$, a qual pode ser não limitada perto da diagonal.	
+	onde $\overline{\Lambda}(\xb,\yb)$ é uma função continua no conjunto $\{ (x,y) \in \Sigma \times \Sigma: x \neq y \}$, a qual pode ser não limitada perto da diagonal.	
 	Pelo principio do máximo estrito de Bony \ref{bony} tem-se que $\Omega$ é aberto.
 \end{demonstracao}
 
-Voltando à proposição \ref{gradiente_nulo} e usando o fato que $\Omega$ é aberto, então $\Psi(\xbarra)= |\lambda_i|$ é constante. Pelo teorema de Lawson \ref{teo_lawson}, da fórmula da curvatura de Gauss
+Voltando à proposição \ref{gradiente_nulo} e usando o fato que $\Omega$ é aberto, então $\Psi(\xb)= |\lambda_i|$ é constante. Pelo teorema de Lawson \ref{teo_lawson}, da fórmula da curvatura de Gauss
 \begin{equation*}
 	K = 1 + \lambda_1 \lambda_2
 \end{equation*}
-tem-se $\lambda_1 = \lambda_2 = 0$ ou, $\lambda_1 = 1$ e $\lambda_2=-1$. Mas a superfície não tem ponto umbílicos, então cumpre-se o segundo caso. Portanto, $\Psi(\xbarra)=1$ para todo $\xbarra \in \Omega$.	
-Pelo Teorema de continuação única estândar de equações diferencias parciais \cite{Aronszajn1957} tem-se que $\Psi(\xbarra) = 1$ para todo $\xbarra \in \Sigma$. Portanto a curvatura Gaussiana de $\Sigma$ anula-se. Então $\Sigma$ é congruente com o toro de Clifford.
+tem-se $\lambda_1 = \lambda_2 = 0$ ou, $\lambda_1 = 1$ e $\lambda_2=-1$. Mas a superfície não tem ponto umbílicos, então cumpre-se o segundo caso. Portanto, $\Psi(\xb)=1$ para todo $\xb \in \Omega$.	
+Pelo Teorema de continuação única estândar de equações diferencias parciais \cite{Aronszajn1957} tem-se que $\Psi(\xb) = 1$ para todo $\xb \in \Sigma$. Portanto a curvatura Gaussiana de $\Sigma$ anula-se. Então $\Sigma$ é congruente com o toro de Clifford.
