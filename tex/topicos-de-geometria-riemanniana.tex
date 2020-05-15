@@ -250,7 +250,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	Pelo lema \ref{boa_definicao_conexao_2}, podemos escrever $\nabla_{X_p} Y$ em lugar de $\nabla_X Y_{|p}$, i.e., podemos dizer que é a derivada direcional de $Y$ em $p$ com direção $X_p$.
 \end{observacao}
 
-\begin{lema}
+\begin{lema}\label{conexao-linear-numa-curva}
 	Sejam $M$ uma variedade diferenciável e $p \in M$. Sejam também $X, Y, \tilde{Y} \in \vectorfieldsspace{M}$, $\nabla$ uma conexão linear em $TM$, $\gamma: (-\epsilon, \epsilon) \rightarrow M$ uma curva tal que $\gamma(0)=p$ e  $\gamma'(0) = X_p$ e supor que $Y \equiv \tilde{Y}$ na imagem de $\gamma$. Então $\nabla_{X_p} Y = \nabla_{X_p} \tilde{Y}$.
 \end{lema}
 
@@ -298,7 +298,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	onde $X,Y \in \mathfrak{X}(\mathbb{R}^n)$, e $Y = Y^j \partial_j$.
 \end{definicao}
 
-\begin{lema}
+\begin{lema}\label{bijecao-entre-a-escolha-dos-simbolos-de-christoffel-e-as-conexoes-lineares}
 	Supor que $M$ é uma variedade diferenciável coberta por só uma carta. Existe uma bijeção entre o conjunto das conexões afins em $M$ e o conjunto das escolhas das $n^3$ funções diferenciáveis $\{ \Gamma^k_{ij} \}$ (símbolos de Christoffel) em $M$, dada por
 	\begin{equation*}
 		\nabla_X Y = \left( X^i \partial_i Y^k + X^i Y^j \Gamma^k_{ij} \right) \partial_k
@@ -310,7 +310,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	\begin{equation*}
 		\nabla_X Y = (X Y^k + X^i Y^j \Gamma_{ij}^k) \partial_k.
 	\end{equation*}
-	Verifica-se que $Y$ é linear em $\realnumbers$ e $X$ é linear em $\smoothfunctions{M}$. Falta provar a regra do produto. Considerar $fY \in \vectorfieldsspace{M}$ em lugar de $Y$ onde $f \in \smoothfunctions{M}$. Então
+	Verifica-se que $Y$ é linear em $\realnumbers$ e $X$ é linear em $\smoothfunctionsspace{M}$. Falta provar a regra do produto. Considerar $fY \in \vectorfieldsspace{M}$ em lugar de $Y$ onde $f \in \smoothfunctionsspace{M}$. Então
 	\begin{align*}
 		\nabla_X (fY) &= (X(f Y^k) + X^i (f Y^j) \Gamma_{ij}^k) \partial_k\\
 		&= ( (Xf) Y^k + f X Y^k + f X^i Y^j \Gamma_{ij}^k ) \partial_k\\
@@ -328,7 +328,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	\begin{equation*}
 		\nabla_X Y := \sum_{\alpha} \varphi_{\alpha} \nabla_X^{\alpha} Y.
 	\end{equation*}
-	$\nabla_X Y$ é uma conexão linear em $M$. Verifica-se que é $\realnumbers$-linear em $Y$ e $\smoothfunctions{M}$-linear em $X$. Tem-se que provar a regra do produto. Considerar $fY \in \vectorfieldsspace{W}$ onde $f \in \smoothfunctions{M}$. Então
+	$\nabla_X Y$ é uma conexão linear em $M$. Verifica-se que é $\realnumbers$-linear em $Y$ e $\smoothfunctionsspace{M}$-linear em $X$. Tem-se que provar a regra do produto. Considerar $fY \in \vectorfieldsspace{W}$ onde $f \in \smoothfunctionsspace{M}$. Então
 	\begin{align*}
 		\nabla_X (fY) &= \sum_{\alpha} \varphi_{\alpha} \nabla_X^{\alpha} (fY)\\
 		&= \sum_{\alpha} \varphi_{\alpha} (Xf Y + f \nabla_X^{\alpha} Y)\\
@@ -363,7 +363,34 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{lema}
 
 \begin{demonstracao}
-	contenidos...
+	Para demonstrar a boa definição mostrará-se que independe das extensões dos campos vetoriais em $\realnumbers^n$.
+	Sejam $M$ uma subvariedade diferenciável de $\realnumbers^n$, $p \in M$, $\{X,Y\} \subset \vectorfieldsspace{M}$, $\{ \tilde{X}, \hat{X} \}$ extensões de $X$ e $\{ \tilde{Y}, \hat{Y} \}$ extensões de $Y$ em $\realnumbers^n$, e $\gamma: (-\epsilon, \epsilon) \rightarrow M$ uma curva tal que $\gamma(0)=p$, $\gamma'(0)=X_p$ e $\hat{Y} \equiv \tilde{Y}$ em $\gamma$. Tem-se que
+	\begin{align*}
+		(\pi^\top (\overline{\nabla}_{\hat{X}} \hat{Y}))_p &= \pi^\top ((\overline{\nabla}_{\hat{X}} \hat{Y})_p)\\
+		&= \pi^\top (\overline{\nabla}_{\hat{X}_p} \hat{Y})\\
+		&= \pi^\top (\overline{\nabla}_{X_p} \hat{Y}).
+	\end{align*}
+	Pelo lema \ref{conexao-linear-numa-curva}, como $\tilde{Y} \equiv \hat{Y}$ em $\gamma$, então
+	\begin{align*}
+		(\pi^\top (\overline{\nabla}_{\hat{X}} \hat{Y}))_p &= \pi^\top (\overline{\nabla}_{X_p} \tilde{Y})\\
+		&= \pi^\top (\overline{\nabla}_{\tilde{X}_p} \tilde{Y})\\
+		&= (\pi^\top (\overline{\nabla}_{\tilde{X}} \tilde{Y}))_p.
+	\end{align*}
+	Agora, sejam $X,Y,W,Z \in \vectorfieldsspace{M}$, $a \in \realnumbers$ e $f \in \smoothfunctionsspace{M}$. Tem-se que $\tangentialconnection$ cumpre
+	\begin{align*}
+		\nabla^\top_X (aY + Z) &= \pi^\top (\overline{\nabla}_X (aY+Z))\\
+		&= \pi^\top (a \overline{\nabla}_X Y + \overline{\nabla}_X Z)\\
+		&= a \pi^\top (\overline{\nabla}_X Y) + \pi^\top (\overline{\nabla}_X Z)\\
+		&= a \nabla^\top_X Y + \nabla^\top_X Z
+	\end{align*}
+	e
+	\begin{align*}
+		\nabla^\top_{fX + W} Y &= \pi^\top (\euclideanconnection_{fX + W} Y)\\
+		&= \pi^\top (f \euclideanconnection_X Y + \euclideanconnection_W Y)\\
+		&= f \pi^\top (\euclideanconnection_X Y) + \pi^\top (\euclideanconnection_W Y)\\
+		&= f \tangentialconnection_X Y + \tangentialconnection_W Y.
+	\end{align*}
+	Portanto, $\tangentialconnection$ é uma conexão linear.
 \end{demonstracao}
 
 \begin{teorema}[John Nash]
@@ -396,12 +423,134 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	A conexão tangencial numa variedade mergulhada $M \subset \realnumbers^n$ é simétrica.
 \end{lema}
 
-\begin{teorema}
-	Seja $(M,g)$ uma variedade Riemanniana. Existe uma única conexão afim $\nabla$ em $M$ que é compatível com $g$ e simétrica.
-	Ista conexão é chamada de \emph{conexão Riemanniana} o de \emph{conexão de Levi-Civita} de $g$.
+\begin{demonstracao}
+	Sejam $X$ e $Y$ elementos de $\vectorfieldsspace{M}$, $\tilde{X}$ e $\tilde{Y}$ elementos de $\vectorfieldsspace{\realnumbers^n}$ tal que são extensões de $X$ e $Y$, e $\{ \partial_i \}$ a estrutura canônica em $\realnumbers^n$. Tem-se que $\tilde{X} = \tilde{X}^i \partial_i$ e $\tilde{Y} = \tilde{Y}^j \partial_j$, onde os $\tilde{X}^i$, $\tilde{Y}^j$ estão em $\smoothfunctionsspace{\realnumbers^n}$. Então,
+	\begin{align*}
+		\tangentialconnection_X Y &= \pi^\top (\euclideanconnection_{\tilde{X}} \tilde{Y})\\
+		&= \pi^\top (\euclideanconnection_{\tilde{X}^i \partial_i} (\tilde{Y}^j \partial_j))\\
+		&= \pi^\top (\tilde{X}^i \euclideanconnection_{\partial_i} (\tilde{Y}^j \partial_j))\\
+		&= \pi^\top (\tilde{X}^i \partial_i \tilde{Y}^j \partial_j)\\
+		&= \pi^\top (\tilde{X} \tilde{Y})\\
+		&= XY.
+	\end{align*}
+	De maneira similar,
+	\begin{equation*}
+		\tangentialconnection_Y X = YX.
+	\end{equation*}
+	Por tanto $ \tangentialconnection_X Y - \tangentialconnection_Y X \equiv [X,Y] $ e conclui-se que $\tangentialconnection$ é simétrica.
+\end{demonstracao}
+
+\begin{definicao}
+	\begin{equation*}
+	(\nabla g)(X,Y,Z) := (\nabla_Z g)(X,Y)
+	\end{equation*}
+\end{definicao}
+
+\begin{lema}\label{compatibilidade-duma-conexao-riemanniana-com-uma-metrica-usando-a-derivada-covariante}
+	$\nabla$ é compatível com $g$, se e somente se, $\nabla g \equiv 0$.
+\end{lema}
+
+\begin{lema}\label{deriva-covariante-de-uma-metrica}
+	\begin{equation*}
+	(\nabla g)(X,Y,Z) = Z(g(X,Y)) - g(\nabla_Z X, Y) - g(X, \nabla_Z Y)
+	\end{equation*}
+\end{lema}
+
+\begin{teorema}\label{conexao-riemanniana}
+	Seja $(M,g)$ uma variedade Riemanniana. Existe uma única conexão linear $\nabla$ em $M$ que é compatível com $g$ e é simétrica.
+	Esta conexão é chamada de \emph{conexão Riemanniana} o de \emph{conexão de Levi-Civita} de $g$.
 \end{teorema}
 
+\begin{lema}\label{conexao-riemanniana-lema-1}
+	Assumindo que existe conexão linear do Teorema \ref{conexao-riemanniana}, esta é única.
+\end{lema}
 
+\begin{demonstracao}
+	Sejam $\nabla$ a conexão linear do Teorema \ref{conexao-riemanniana}, e $X,Y,Z$ campos vetoriais em $M$. Então,
+	\begin{align*}
+		X \innerproduct{Y}{Z} &= \innerproduct{\nabla_X Y}{Z} + \innerproduct{Y}{\nabla_X Z}\\
+		Y \innerproduct{Z}{X} &= \innerproduct{\nabla_Y Z}{X} + \innerproduct{Z}{\nabla_Y X}\\
+		Z \innerproduct{X}{Y} &= \innerproduct{\nabla_Z X}{Y} + \innerproduct{X}{\nabla_Z Y}.
+	\end{align*}
+	Usando o fato que $\nabla$ é simétrica tem-se que
+	\begin{align*}
+	X \innerproduct{Y}{Z} &= \innerproduct{\nabla_X Y}{Z} + \innerproduct{Y}{\nabla_Z X} + \innerproduct{Y}{\liebrackets{X}{Z}}\\
+	Y \innerproduct{Z}{X} &= \innerproduct{\nabla_Y Z}{X} + \innerproduct{Z}{\nabla_X Y} + \innerproduct{Z}{\liebrackets{Y}{X}}\\
+	Z \innerproduct{X}{Y} &= \innerproduct{\nabla_Z X}{Y} + \innerproduct{X}{\nabla_Y Z} + \innerproduct{X}{\liebrackets{Z}{Y}}.
+	\end{align*}
+	Somando a dois primeiras equações e restando a terceira obtê-se que
+	\begin{equation*}
+		X \innerproduct{Y}{Z} + Y \innerproduct{Z}{X} - Z \innerproduct{X}{Y} = 2 \innerproduct{\nabla_X Y}{Z} + \innerproduct{Y}{\liebrackets{X}{Z}} + \innerproduct{Z}{\liebrackets{Y}{X}} - \innerproduct{X}{\liebrackets{Z}{Y}}.
+	\end{equation*}
+	Afinal, $\innerproduct{\nabla_X Y}{Z}$ fica definido por
+	\begin{equation}\label{eq:conexao-riemanniana-lema-1-eq-a}
+		\innerproduct{\nabla_X Y}{Z} = \frac{1}{2} ( X \innerproduct{Y}{Z} + Y \innerproduct{Z}{X} - Z \innerproduct{X}{Y} - \innerproduct{Y}{\liebrackets{X}{Z}} - \innerproduct{Z}{\liebrackets{Y}{X}} + \innerproduct{X}{\liebrackets{Z}{Y}} ).
+	\end{equation}
+	Seja $\tilde{\nabla}$ outra conexão linear. Fazendo o mesmo procedimento, $\innerproduct{\tilde{\nabla}_X Y}{Z}$ fica definido também por
+	\begin{equation*}
+	\innerproduct{\tilde{\nabla}_X Y}{Z} = \frac{1}{2} ( X \innerproduct{Y}{Z} + Y \innerproduct{Z}{X} - Z \innerproduct{X}{Y} - \innerproduct{Y}{\liebrackets{X}{Z}} - \innerproduct{Z}{\liebrackets{Y}{X}} + \innerproduct{X}{\liebrackets{Z}{Y}} ).
+	\end{equation*}
+	Como $X,Y,Z \in \vectorfieldsspace{M}$ são arbitrários e $ \innerproduct{\nabla_X Y - \tilde{\nabla}_X Y}{Z} = 0 $, conclui-se que $ \nabla = \tilde{\nabla} $.
+\end{demonstracao}
+
+\begin{lema}\label{conexao-riemanniana-lema-2}
+	A conexão linear do Teorema \ref{conexao-riemanniana} existe.
+\end{lema}
+
+\begin{demonstracao}
+	Sejam
+	$\{ (U_{\alpha}, \varphi_{\alpha}) \}$ um atlas de $M$ e
+	$\{ \partial_m \}$ a estrutura local coordenada em $U_{\alpha}$ para algum $\alpha$.
+	Pela equação \eqref{eq:conexao-riemanniana-lema-1-eq-a} tem-se
+	\begin{equation}\label{eq:conexao-riemanniana-lema-2-eq-b}
+		\begin{split}
+			\innerproduct{\nabla_{\partial_i} \partial_j}{\partial_k} &= \frac{1}{2} (\partial_i \innerproduct{\partial_j}{\partial_k} + \partial_j \innerproduct{\partial_k}{\partial_i} - \partial_k \innerproduct{\partial_i}{\partial_j})\\
+			\innerproduct{\Gamma_{ij}^l \partial_l}{\partial_k} &= \frac{1}{2} (\partial_i \innerproduct{\partial_j}{\partial_k} + \partial_j \innerproduct{\partial_k}{\partial_i} - \partial_k \innerproduct{\partial_i}{\partial_j}).		
+		\end{split}		
+	\end{equation}
+	Como $g_{ij} = \innerproduct{\partial_i}{\partial_j}$, então a equação \eqref{eq:conexao-riemanniana-lema-2-eq-b} fica
+	\begin{equation}\label{eq:conexao-riemanniana-lema-2-eq-a}
+		\Gamma_{ij}^l g_{lk} = \frac{1}{2} (\partial_i g_{jk} + \partial_j g_{ki} - \partial_k g_{ij}).
+	\end{equation}
+	Multiplicando por $g^{kl}$, onde $g^{kl}$ é elemento da matriz $[g^{kl}]$ que é a matriz inversa de $[g_{lk}]$, obtê-se
+	\begin{equation*}
+		\Gamma_{ij}^l = \frac{1}{2} (\partial_i g_{jk} + \partial_j g_{ki} - \partial_k g_{ij}) g^{kl}.
+	\end{equation*}
+	Então, tendo uma escolha de símbolos de Christoffel $\{ \Gamma_{ij}^l \}$, pelo Lema \ref{bijecao-entre-a-escolha-dos-simbolos-de-christoffel-e-as-conexoes-lineares}, existe uma conexão linear $\nabla^{\alpha}$.
+	A partir dos $\nabla^{\alpha}$ podemos obter uma conexão linear $\nabla$ para $M$ usando a partição da unidade.
+\end{demonstracao}
+
+\begin{lema}\label{conexao-riemanniana-lema-3}
+	A conexão linear do Teorema \ref{conexao-riemanniana} é compatível com $g$.
+\end{lema}
+
+\begin{demonstracao}
+	Pelo Lema \ref{compatibilidade-duma-conexao-riemanniana-com-uma-metrica-usando-a-derivada-covariante} basta com provar que $\nabla g \equiv 0$.
+	Sejam 
+	$(U_{\alpha})$ uma cobertura de $M$ e 
+	$\{ \partial_m \}$ a estrutura coordenada local em $U_{\alpha}$ para algum $\alpha$.
+	Pelo Lema \ref{deriva-covariante-de-uma-metrica} tem-se
+	\begin{equation}\label{eq:conexao-riemanniana-lema-3-eq-a}
+		\begin{split}
+			(\nabla g) (\partial_i, \partial_j, \partial_k) &= \partial_k g(\partial_i, \partial_j) - g(\nabla_{\partial_k} \partial_i, \partial_j) - g(\partial_i, \nabla_{\partial_k} \partial_j)\\
+			&= \partial_k g_{ij} - \Gamma_{ki}^l g_{lj} - \Gamma_{kj}^l g_{il}.
+		\end{split}	
+	\end{equation}
+	Usando a equação \eqref{eq:conexao-riemanniana-lema-2-eq-a} na equação \eqref{eq:conexao-riemanniana-lema-3-eq-a} tem-se
+	\begin{align*}
+	\Gamma_{ki}^l g_{lj} + \Gamma_{kj}^l g_{li} &= \frac{1}{2} (\partial_k g_{ij} + \partial_i g_{jk} - \partial_j g_{ki}) + \frac{1}{2} (\partial_k g_{ji} + \partial_j g_{ik} - \partial_i g_{kj})\\
+	&= \partial_k g_{ij}.
+	\end{align*}
+	Então,
+	\begin{equation*}
+	(\nabla g) (\partial_i, \partial_j, \partial_k) = 0.
+	\end{equation*}
+	Portanto, a conexão linear é compatível com $g$.
+\end{demonstracao}
+
+\begin{demonstracao}[Teorema \ref{conexao-riemanniana}]
+	Usando \ref{conexao-riemanniana-lema-1}, \ref{conexao-riemanniana-lema-2} e \ref{conexao-riemanniana-lema-3}, chega-se à conclusão.
+\end{demonstracao}
 
 \begin{proposicao}
 	Supor que $F: (M,g) \rightarrow (\tilde{M}, \tilde{g})$ é uma isometria, então $F$ leva a conexão Riemanniana $\nabla$ de $g$ à conexão Riemanniana de $\tilde{\nabla}$ de $\tilde{g}$ com a regra:
@@ -480,7 +629,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	A segunda forma fundamental é
 	\begin{enumerate}
 		\item independente das extensões $X$ e $Y$;
-		\item bilinear sobre $\smoothfunctions{M}$; e
+		\item bilinear sobre $\smoothfunctionsspace{M}$; e
 		\item simétrico em $X$ e $Y$.
 	\end{enumerate}
 \end{lema}
