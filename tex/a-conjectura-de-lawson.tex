@@ -856,7 +856,27 @@ Definamos o conjunto
 \begin{equation*}
 	\Omega = \{ \xb \in \Sigma: \exists \yb \in \Sigma \setminus \{\xb\} \text{ tal que } Z(\xb,\yb) = 0 \}
 \end{equation*}
-O conjunto $\Omega$ é não vazio.
+%O conjunto $\Omega$ é não vazio.
+
+\begin{proposicao}
+	$\Omega$ não vazio.
+\end{proposicao}
+
+\begin{demonstracao}
+	Supor que $\Omega$ é vazio. 
+	Isto quer dizer que para $x,y \in \Sigma$ quaisquer tal que $x \neq y$ tem-se que $Z(x,y)>0$.
+	Pela definição de $\aleph$, para $\aleph/2 > 0$ existem $x_0, y_0 \in \Sigma$ onde $x_0 \neq y_0$, tais que
+	\begin{equation*}
+		-\frac{\innerproduct{\nu(x_0)}{F(y_0)}}{\Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)})} > \frac{\aleph}{2}.
+	\end{equation*}
+	Então,
+	\begin{equation*}
+		0 > \aleph \Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)}) + \innerproduct{\nu(x_0)}{F(y_0)} = Z(x_0,y_0).
+	\end{equation*}
+	Mas isto é uma contradição porque $Z(x,y) > 0$ para quaisquer $x,y \in \Sigma$ tal que $x \neq y$.
+	Portanto $\Omega$ é não vazio.
+\end{demonstracao}
+
 Usando a proposição \eqref{edp_principal}, e a definição de $\Phi(\xb)$, a equação \eqref{suma_2das_derivadas} fica
 \begin{multline}\label{suma_2da_der_aleph}
 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) + 2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) =\\
