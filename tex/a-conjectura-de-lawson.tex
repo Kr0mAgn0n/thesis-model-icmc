@@ -1,79 +1,10 @@
-%\cite{Brendle2013}
-%\cite{Brendle2013a}
-
-%\begin{proposicao}\label{nao_tem_pontos_umbilicos}
-%	Um superfície mínima imersa em $S^3$ de gênero 1 não tem pontos umbílicos, i.e., a segunda forma fundamental é não nula em cada ponto da superfície
-%\end{proposicao}
-
-%\begin{proposicao}
-%	Supor que $F: M \rightarrow S^3$ é um toro mínimo mergulhado em $S^3$. Então a norma da segunda forma fundamental satisfaz a equação em derivadas parciais
-%	\begin{equation*}
-%		\Delta_M (|A|) - \frac{| \nabla |A| |^2}{|A|} + (|A|^2 - 2) |A| = 0.
-%	\end{equation*}
-%	onde $A$ é a segunda forma fundamental.
-%\end{proposicao}
-
-%Neste capítulo apresentaremos a demonstração da conjetura de Lawson obtida por Simon Brendle \cite{Brendle2013a}.
-%
-%\section{Introdução}
-%
-%Em 1970, Blaine Lawson \cite{Lawson1970a} conjeturou que o toro de Clifford é a única superfície mínima, compacta e mergulhada em $S^3$, com genus 1, e foi provada somente quatro décadas depois por Simon Brendle \cite{Brendle2013a} em 2013. A hipótese de ser mergulhada é fundamental. De fato, em \cite{Lawson1970} Lawson construiu uma família (infinita) de imersões mínimas de toros em $S^3$.
-%
-%A prova da conjetura de Lawson em \cite{Brendle2013a} envolve uma aplicação do princípio do máximo a uma função que depende de uma par de pontos. Esta técnica foi inicialmente desenvolvida por Huisken \cite{Huisken1998} no estudo de fluxo de comprimento de curvas para curvas mergulhadas no plano e, posteriormente, por Andrews \cite{Andrews2012}.
-%
-%Descreveremos a seguir os argumentos usados em \cite{Brendle2013a}. Seguindo as ideias e notações de \cite{Andrews2012}, considere uma superfície mínima e mergulhada $ F: \Sigma \rightarrow S^3 $ e $ \Phi: \Sigma \rightarrow \realnumbers $  uma função positiva. Definia uma função $ Z: \Sigma \times \Sigma \rightarrow \realnumbers $ pondo
-%\begin{equation}\label{def_de_Z}
-%	Z(x,y) = \Phi(x) (1 - \langle F(x),F(y) \rangle ) + \langle \nu(x), F(y) \rangle,
-%\end{equation}
-%onde $ \nu $ é um campo unitário , normal a $ \Sigma $.
-%
-%A função $Z$ tem a seguinte interpretação geométrica:
-%
-%\begin{proposicao}
-%	A função $ Z(x,y) $, definida em \ref{def_de_Z}, é não-negativa se, e somente se, para todo ponto $ x \in \Sigma $, existe uma bola geodésica $B$ contida em $\Omega$, com curvatura média do bordo igual a $ \Phi(x) $ e $ F(x) \in \partial B $.
-%\end{proposicao}
-%
-%\begin{demonstracao}
-%	Observe, inicialmente, que uma bola geodésica em $S^3$ é simplesmente a interseção de uma bola de $\realnumbers^4$ com $S^3$. Em particular, a bola em $S^3$ contida em $\Omega$, com curvatura média do bordo igual a $\Phi$ e que é tangente a $ F(\Sigma) $ no ponto $F(x)$ é $B=B(p)$, onde 
-%	\begin{equation*}
-%		p = F(x) - \Phi^{-1}(x) \nu(x),
-%	\end{equation*}
-%	e $\nu$ é o campo unitário, normal a $F(\Sigma)$ no ponto $F(x) \in S^3$, e que aponta para fora de $\Omega$.
-%	
-%	Afirmar que uma bola geodésica de $S^3$ está inteiramente contida em $\Omega$ é equivalente a afirmar que, para cada ponto $y \in \Sigma$, tem-se
-%	\begin{equation*}
-%		| F(y) - p | \geq \Phi^{-2}(x),
-%	\end{equation*}
-%	ou seja,
-%	\begin{equation*}
-%		| F(y) - ( F(x) - \Phi^{-1}(x) \nu(x) ) |^2 - \Phi^2(x) \geq 0.
-%	\end{equation*}
-%	
-%	Desenvolvendo o lado esquerdo da desigualdade acima e multiplicando por $ \Phi(x)/2 $, obtemos:
-%	\begin{equation*}
-%		\frac{\Phi(x)}{2} | F(y) - F(x) |^2 + \langle F(y) - F(x), \nu(x) \rangle \geq 0.
-%	\end{equation*}
-%	
-%	Como $F(x), F(y) \in S^3$, tem-se
-%	\begin{equation*}
-%		|F(x)|^2 = |F(y)|^2 = 1 \quad \text{e} \quad \langle F(x), \nu(x) \rangle = 0.
-%	\end{equation*}
-%	
-%	Asim,
-%	\begin{equation*}
-%		\Phi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle \geq 0,
-%	\end{equation*} 
-%	como queríamos.
-%\end{demonstracao}
-
-
 Neste capítulo apresentaremos a demonstração da conjetura de
 Lawson obtida por Simon Brendle \cite{Brendle2013a}.
 
 
 \section{Introdu\c c\~ao}
 
-Em 1970, Blaine Lawson \cite{Lawson1970a} conjeturou que o toro de 
+Em 1970, Blaine Lawson \cite{Lawson1970a} conjecturou que o toro de 
 Clifford é a única superfície mínima, compacta e mergulhada em $\Sp^3$,
 com genus $1$, e foi provada somente quatro décadas depois por Simon
 Brendle \cite{Brendle2013a} em 2013. A hipótese de ser mergulhada é
@@ -98,9 +29,9 @@ m\'edia $H$ \'e positiva em todos os pontos, e limitando uma
 regi\~ao aberta $\Omega$ em $\R^3$.
 
 \begin{definicao}
-	A superf\'icie $\Sigma$ \'e dita ser {\em $\delta$-n\~ao-colapsante}
-	se, para todo ponto $x\in\Sigma$, existe uma bola aberta $B$ de
-	raio $\delta/H(x)$, contida em $\Omega$, com $x\in\partial B$. 
+A superf\'icie $\Sigma$ \'e dita ser {\em $\delta$-n\~ao-colapsante}
+se, para todo ponto $x\in\Sigma$, existe uma bola aberta $B$ de
+raio $\delta/H(x)$, contida em $\Omega$, com $x\in\partial B$. 
 \end{definicao}
 
 Dado uma superf\'icie $F:\Sigma\to\R^3$, defina uma fun\c c\~ao
@@ -111,28 +42,28 @@ Z(x,y) = \frac{H(x)}{2}\|F(y)-F(x)\|^2 + \delta\langle F(y)-F(x), \nu(x)\rangle,
 onde $\nu$ \'e um campo unit\'ario, normal a $\Sigma$.
 
 \begin{proposicao}[\cite{Andrews2012}]\label{prop:Int}
-	A superf\'icie $\Sigma$ \'e $\delta$-n\~ao-colapsante se, e somente
-	se, $Z(x,y)\geq0$, para quaisquer $x,y\in\Sigma$.
+A superf\'icie $\Sigma$ \'e $\delta$-n\~ao-colapsante se, e somente
+se, $Z(x,y)\geq0$, para quaisquer $x,y\in\Sigma$.
 \end{proposicao}
-\begin{proof}
-	Sem perda de generalidade, escolha o campo normal $\nu$ que
-	aponta para fora de $\Sigma$. Assim, uma bola em $\Omega$ de
-	raio $\delta/H(x)$, com $F(x)$ sendo um ponto da fronteira, deve
-	ter centro no ponto
-	\[
-	p(x) = F(x) - (\delta/H(x))\nu(x).
-	\]
-	A afirma\c c\~ao de que esta bola est\'a contida em $\Omega$
-	\'e equivalente ao fato de que nenhum ponto de $\Sigma$ tem
-	dist\^ancia menor do que $\delta/H(x)$ ao ponto $p$. Ou seja,
-	\[
-	0\leq\|F(y)-p(x)\|^2-\left(\frac{\delta}{H(x)}\right)^2 = 
-	2\cdot\frac{Z(x,y)}{H(x)},
-	\]
-	para quaisquer $x,y\in\Sigma$. Como $H>0$ em todos os pontos
-	de $\Sigma$, isso \'e equivalente ao fato de que $Z$ seja
-	n\~ao-negativa em todos os pontos. A rec\'iprova \'e imediata.
-\end{proof}
+\begin{demonstracao}
+Sem perda de generalidade, escolha o campo normal $\nu$ que
+aponta para fora de $\Sigma$. Assim, uma bola em $\Omega$ de
+raio $\delta/H(x)$, com $F(x)$ sendo um ponto da fronteira, deve
+ter centro no ponto
+\[
+p(x) = F(x) - (\delta/H(x))\nu(x).
+\]
+A afirma\c c\~ao de que esta bola est\'a contida em $\Omega$
+\'e equivalente ao fato de que nenhum ponto de $\Sigma$ tem
+dist\^ancia menor do que $\delta/H(x)$ ao ponto $p$. Ou seja,
+\[
+0\leq\|F(y)-p(x)\|^2-\left(\frac{\delta}{H(x)}\right)^2 = 
+2\cdot\frac{Z(x,y)}{H(x)},
+\]
+para quaisquer $x,y\in\Sigma$. Como $H>0$ em todos os pontos
+de $\Sigma$, isso \'e equivalente ao fato de que $Z$ seja
+n\~ao-negativa em todos os pontos. A rec\'iprova \'e imediata.
+\end{demonstracao}
 
 Considere agora uma superf\'icie m\'inima e mergulhada 
 $F:\Sigma\to\Sp^3$ e $ \Phi: \Sigma\to\R$ uma função positiva. Defina
@@ -149,7 +80,8 @@ a superf\'icie $\Sigma$ \'e n\~ao-colapsante.
 
 
 
-\section{Alguns resultados técnicos}
+
+\section{Alguns resultados t\'ecnicos}
 
 Nesta se\c c\~ao apresentaremos alguns resultados preliminares
 que ser\~ao usados na demonstra\c c\~ao da conjectura de
@@ -198,8 +130,8 @@ em rela\c c\~ao ao plano ortogonal ao vetor $F(\xb) - F(\yb)$, i.e.,
 \begin{eqnarray}\label{eq:reflexao}
 w_i = \frac{\partial F}{\partial x_i}(\xb) - 
 2 \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{F(\xb) - 
-	F(\yb)}{|F(\xb) - F(\yb)|} \right\rangle \frac{F(\xb) - 
-	F(\yb)}{|F(\xb) - F(\yb)|}.
+F(\yb)}{|F(\xb) - F(\yb)|} \right\rangle \frac{F(\xb) - 
+F(\yb)}{|F(\xb) - F(\yb)|}.
 \end{eqnarray}
 Escolhendo um sistema de coordenadas apropriado $(y_1,y_2)$,
 podemos supor que
@@ -212,752 +144,1157 @@ podemos supor que
 \end{equation*}
 
 \begin{lema}
-	Os vetores $F(\yb)$ e $ \Phi(\xb) F(\xb) - \nu(\xb) $ são linearmente independentes.
+Os vetores $F(\yb)$ e $ \Phi(\xb) F(\xb) - \nu(\xb) $ são linearmente independentes.
 \end{lema}
 \begin{demonstracao}
-	Usando a identidade
-	\[
-	\langle \Phi(\xb) F(\xb) - \nu(\xb), F(\yb) \rangle = 
-	\Phi(\xb) - Z(\xb,\yb) = \Phi(\xb),
-	\]
-	obtemos
-	\begin{eqnarray*}
-		| \Phi(\xb) F(\xb) - \nu(\xb) |^2 | F(\yb) |^2 &-& 
-		\langle \Phi(\xb) F(\xb) - \nu(\xb), F(\yb) \rangle^2 \\
-		&=& | \Phi(\xb) F(\xb) - \nu(\xb) |^2 - \Phi(\xb)^2 = 1 \neq 0.
-	\end{eqnarray*}
-	Disso decorre que a desigualdade de Cauchy-Schwarz \'e estrita,
-	logo os vetores $F(\yb)$ e $\Phi(\xb)F(\xb)-\nu(\xb)$
-	s\~ao linearmente independentes.
+Usando a identidade
+\[
+\langle \Phi(\xb) F(\xb) - \nu(\xb), F(\yb) \rangle = 
+\Phi(\xb) - Z(\xb,\yb) = \Phi(\xb),
+\]
+obtemos
+\begin{eqnarray*}
+| \Phi(\xb) F(\xb) - \nu(\xb) |^2 | F(\yb) |^2 &-& 
+\langle \Phi(\xb) F(\xb) - \nu(\xb), F(\yb) \rangle^2 \\
+&=& | \Phi(\xb) F(\xb) - \nu(\xb) |^2 - \Phi(\xb)^2 = 1 \neq 0.
+\end{eqnarray*}
+Disso decorre que a desigualdade de Cauchy-Schwarz \'e estrita,
+logo os vetores $F(\yb)$ e $\Phi(\xb)F(\xb)-\nu(\xb)$
+s\~ao linearmente independentes.
 \end{demonstracao}
 
 Em rela\c c\~ao \`a reflex\~ao dada em \eqref{eq:reflexao}, obtemos o
 seguinte:
 
-\begin{lema}
-	Valem as seguintes igualdades:
-	\begin{equation*}
-	w_1 = \frac{\partial F}{\partial y_1}(\yb) 
-	\quad \text{e} \quad 
-	w_2 = \frac{\partial F}{\partial y_2}(\yb).
-	\end{equation*}
+\begin{lema} \label{lem:w_1 w_2}
+Valem as seguintes igualdades:
+\begin{equation*}
+w_1 = \frac{\partial F}{\partial y_1}(\yb) 
+\quad \text{e} \quad 
+w_2 = \frac{\partial F}{\partial y_2}(\yb).
+\end{equation*}
 \end{lema}
 \begin{demonstracao}
-	Usando a express\~ao de $w_i$, dada em \eqref{eq:reflexao}, obtemos:
-	\begin{eqnarray*}
-		\langle w_i, F(\yb) \rangle &=& \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle + 2 \left\langle \frac{\partial F}{\partial x_i}, F(\yb) \right\rangle \frac{\langle F(\xb) - F(\yb),F(\yb) \rangle}{| F(\xb) - F(\yb) |^2} \\
-		&=& \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle 
-		+ 2 \left\langle \frac{\partial F}{\partial x_i}, F(\yb) \right\rangle \frac{\langle F(\xb),F(\yb) \rangle - 1}{2 - 2 \langle F(\xb), F(\yb) \rangle} \\
-		&=& 0
-	\end{eqnarray*}
-	e
-	\begin{eqnarray*}
-		\langle w_i, \Phi(\xb) F(\xb) - \nu(\xb) \rangle &=&
-		2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \frac{\langle F(\xb) - F(\yb), \Phi(\xb) F(\xb) - \nu(\xb) \rangle}{| F(\xb) - F(\yb) |^2} \\
-		& = & 2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \frac{Z(\xb,\yb)}{| F(\xb) - F(\yb) |^2} \\
-		& = & 0.
-	\end{eqnarray*}
-	Por outro lado, os vetores
-	\begin{equation*}
-	\frac{\partial F}{\partial y_1}(\yb) \quad \text{e} \quad \frac{\partial F}
-	{\partial y_2}(\yb)
-	\end{equation*}
-	satisfazem
-	\begin{equation*}
-	\left\langle \frac{\partial F}{\partial y_i}(\yb), F(\yb)\right\rangle = 0
-	\end{equation*}
-	e
-	\begin{equation*}
-	\left\langle \frac{\partial F}{\partial y_i}(\yb), \Phi(\xb) F(\xb) - 
-	\nu(\xb) \right\rangle = -\frac{\partial Z}{\partial y_i}(\xb,\yb) 
-	= 0
-	\end{equation*}
-	Como os vetores $F(\yb)$ e $ \Phi(\xb) F(\xb) - \nu(\xb)$
-	são linearmente independentes, conclu\'imos que o plano gerado por
-	\begin{equation*}
-	\frac{\partial F}{\partial y_1}(\yb) \quad \text{e} \quad 
-	\frac{\partial F}{\partial y_2}(\yb)
-	\end{equation*}
-	é o mesmo plano gerado por $w_1$ e $w_2$. Al\'em disso, os vetores
-	$w_1$ e $w_2$ s\~ao ortonormais. Como
-	\begin{equation*}
-	\left\langle w_1, \frac{\partial F}{\partial y_2}(\yb) \right\rangle = 0,
-	\end{equation*}
-	conclu\'imos que
-	\begin{equation*}
-	w_1 = \pm \frac{\partial F}{\partial y_1}(\yb) 
-	\quad \text{e} \quad 
-	w_2 = \pm \frac{\partial F}{\partial y_2}(\yb)
-	\end{equation*}
-	Finalmente, como
-	\begin{equation*}
-	\left\langle w_1, \frac{\partial F}{\partial y_1}(\yb) \right\rangle \geq 0 
-	\quad \text{e} \quad 
-	\left\langle w_2, \frac{\partial F}{\partial y_2}(\yb) \right\rangle \geq 0
-	\end{equation*}	
-	obtemos que
-	\begin{equation*}
-	w_1 = \frac{\partial F}{\partial y_1}(\yb) \quad \text{e} \quad 
-	w_2 = \frac{\partial F}{\partial y_2}(\yb),
-	\end{equation*}
-	como quer\'iamos.
+Usando a express\~ao de $w_i$, dada em \eqref{eq:reflexao}, obtemos:
+\begin{eqnarray*}
+\langle w_i, F(\yb) \rangle &=& \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle + 2 \left\langle \frac{\partial F}{\partial x_i}, F(\yb) \right\rangle \frac{\langle F(\xb) - F(\yb),F(\yb) \rangle}{| F(\xb) - F(\yb) |^2} \\
+&=& \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle 
++ 2 \left\langle \frac{\partial F}{\partial x_i}, F(\yb) \right\rangle \frac{\langle F(\xb),F(\yb) \rangle - 1}{2 - 2 \langle F(\xb), F(\yb) \rangle} \\
+&=& 0
+\end{eqnarray*}
+e
+\begin{eqnarray*}
+\langle w_i, \Phi(\xb) F(\xb) - \nu(\xb) \rangle &=&
+2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \frac{\langle F(\xb) - F(\yb), \Phi(\xb) F(\xb) - \nu(\xb) \rangle}{| F(\xb) - F(\yb) |^2} \\
+& = & 2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \frac{Z(\xb,\yb)}{| F(\xb) - F(\yb) |^2} \\
+& = & 0.
+\end{eqnarray*}
+Por outro lado, os vetores
+\begin{equation*}
+\frac{\partial F}{\partial y_1}(\yb) \quad \text{e} \quad \frac{\partial F}
+{\partial y_2}(\yb)
+\end{equation*}
+satisfazem
+\begin{equation*}
+\left\langle \frac{\partial F}{\partial y_i}(\yb), F(\yb)\right\rangle = 0
+\end{equation*}
+e
+\begin{equation*}
+\left\langle \frac{\partial F}{\partial y_i}(\yb), \Phi(\xb) F(\xb) - 
+\nu(\xb) \right\rangle = -\frac{\partial Z}{\partial y_i}(\xb,\yb) 
+= 0
+\end{equation*}
+Como os vetores $F(\yb)$ e $ \Phi(\xb) F(\xb) - \nu(\xb)$
+são linearmente independentes, conclu\'imos que o plano gerado por
+\begin{equation*}
+\frac{\partial F}{\partial y_1}(\yb) \quad \text{e} \quad 
+\frac{\partial F}{\partial y_2}(\yb)
+\end{equation*}
+é o mesmo plano gerado por $w_1$ e $w_2$. Al\'em disso, os vetores
+$w_1$ e $w_2$ s\~ao ortonormais. Como
+\begin{equation*}
+\left\langle w_1, \frac{\partial F}{\partial y_2}(\yb) \right\rangle = 0,
+\end{equation*}
+conclu\'imos que
+\begin{equation*}
+w_1 = \pm \frac{\partial F}{\partial y_1}(\yb) 
+\quad \text{e} \quad 
+w_2 = \pm \frac{\partial F}{\partial y_2}(\yb)
+\end{equation*}
+Finalmente, como
+\begin{equation*}
+\left\langle w_1, \frac{\partial F}{\partial y_1}(\yb) \right\rangle \geq 0 
+\quad \text{e} \quad 
+\left\langle w_2, \frac{\partial F}{\partial y_2}(\yb) \right\rangle \geq 0
+\end{equation*}	
+obtemos que
+\begin{equation*}
+w_1 = \frac{\partial F}{\partial y_1}(\yb) \quad \text{e} \quad 
+w_2 = \frac{\partial F}{\partial y_2}(\yb),
+\end{equation*}
+como quer\'iamos.
 \end{demonstracao}
 
 No resultado seguinte iremos considerar as derivadas de segunda
 ordem da fun\c c\~ao $Z$ no ponto $(\xb,\yb)$.
 
 \begin{proposicao}
-	A derivada segunda da fun\c c\~ao $Z$, dada em \eqref{eq:funcaoZ},
-	satisfaz:
-	\begin{eqnarray*}\label{2_diff_Z_x}
-		\sum_{i=1}^{2} \frac{\partial^2 Z}{\partial x_i^2} (\xb,\yb) &=& 
-		\left( \Delta_{\Sigma} \Phi(\xb) - \frac{| \nabla \Phi(\xb) |^2}{\Phi(\xb)} 
-		+ (|A(\xb)|^2 - 2) \Phi(\xb) \right) (1 - \left\langle F(\xb), F(\yb) \right\rangle) \\ 
-		&&+ 2 \Phi(\xb) - \frac{2 \Phi(\xb)^2 - |A(\xb)|^2}{2 \Phi(\xb)
-			(1 - \langle F(\xb), F(\yb) \rangle)} \sum_{i=1}^2 \left\langle 
-		\frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle^2.
-	\end{eqnarray*}
+A derivada segunda da fun\c c\~ao $Z$, dada em \eqref{eq:funcaoZ},
+satisfaz:
+\begin{eqnarray*}\label{2_diff_Z_x}
+\sum_{i=1}^{2} \frac{\partial^2 Z}{\partial x_i^2} (\xb,\yb) &=& 
+\left( \Delta_{\Sigma} \Phi(\xb) - \frac{| \nabla \Phi(\xb) |^2}{\Phi(\xb)} 
++ (|A(\xb)|^2 - 2) \Phi(\xb) \right) (1 - \left\langle F(\xb), F(\yb) \right\rangle) \\ 
+&&+ 2 \Phi(\xb) - \frac{2 \Phi(\xb)^2 - |A(\xb)|^2}{2 \Phi(\xb)
+ (1 - \langle F(\xb), F(\yb) \rangle)} \sum_{i=1}^2 \left\langle 
+ \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle^2.
+\end{eqnarray*}
 \end{proposicao}
 \begin{demonstracao}
-	Derivando a equação \eqref{diff_Z_x} em rela\c c\~ao a $x_i$,
-	e somando, obtemos:
-	\begin{eqnarray}\label{Z_seg_dev_x}
-	\begin{aligned}
-	\sum_{i=1}^2\frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) = &
-	\sum_{i=1}^2\frac{\partial^2 \Phi}{\partial x_i^2}(\xb)
-	(1 - \langle F(\xb), F(\yb) \rangle) -
-	2\sum_{i=1}^2\frac{\partial \Phi}{\partial x_i}(\xb) 
-	\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \\
-	& - \sum_{i=1}^2\Phi(\xb) \left\langle\frac{\partial^2 F}{\partial x_i^2}(\xb),F(\yb)
-	\right\rangle + \sum_{i,k=1}^2\frac{\partial h_{ik}}{\partial x_i}(\xb)
-	\left\langle \frac{\partial F}{\partial x_k}(\xb), F(\yb)\right\rangle \\ 
-	&+ \sum_{i,k=1}^2h_{ik}(\xb)\left\langle
-	\frac{\partial^2 F}{\partial x_i \partial x_k}(\xb), F(\yb)\right\rangle.
-	\end{aligned}
-	\end{eqnarray}
-	Iremos, inicialmente, reescrever a equa\c c\~ao \eqref{Z_seg_dev_x}.
-	Note que, da equa\c c\~ao de Codazzi \eqref{eq:Codazzi}, tem-se
-	\begin{eqnarray}\label{eq:Prop4.5-1}
-	\frac{\partial h_{11}}{\partial x_2}(\xb) = \frac{\partial h_{21}}{\partial x_1}(\xb)
-	\quad\mbox{e}\quad
-	\frac{\partial h_{12}}{\partial x_2}(\xb) = \frac{\partial h_{22}}{\partial x_1}(\xb),
-	\end{eqnarray}
-	e do fato de $\Sigma$ ser m\'inima, obtemos
-	\begin{eqnarray}\label{eq:Prop4.5-2}
-	\sum_{i=1}^2\frac{\partial h_{ii}}{\partial x_k}(\xb) = 0.
-	\end{eqnarray}
-	De \eqref{eq:Prop4.5-1} e \eqref{eq:Prop4.5-2}, obtemos
-	\begin{eqnarray}\label{eq:Prop4.5-3}
-	\sum_{i=1}^2\frac{\partial h_{ik}}{\partial x_i}(\xb) = 0.
-	\end{eqnarray}
-	Analisemos o termo 
-	$\displaystyle\sum_{i=1}^2 \frac{\partial^2 F}{\partial x_i^2}(\xb)$. 
-	Pelo teorema \ref{propriedades_sup_min_S3}, tem-se
-	\begin{equation*}
-	\sum_{i=1}^2 \frac{\partial^2 F_j}{\partial x_i^2}(\xb) + 2F_j(\xb) = 0,
-	\end{equation*}
-	para $j=1,\ldots,4$, logo,
-	\[
-	\sum_{i=1}^2 \frac{\partial^2 F}{\partial x_i^2}(\xb) = -2 F(\xb).
-	\]
-	Analisemos agora o termo 
-	\[
-	\sum_{i=1}^2 h_{ik}(\xb) \left\langle \frac{\partial^2 F}
-	{\partial x_i \partial x_k}(\xb), F(\yb) \right\rangle.
-	\]
-	Derivamos \eqref{eq:partialNu} em rela\c c\~ao a $x_i$, somando
-	e usando \eqref{eq:Prop4.5-3}, obtemos:
-	\begin{eqnarray}\label{eq:Prop4.5-4}
-	\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb) = 
-	\sum_{i,k=1}^2 h_{ik}(\xb)\frac{\partial^2 F}{\partial x_i \partial x_k}(\xb).
-	\end{eqnarray}
-	Note que, como
-	\[
-	\left\langle \sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb), 
-	\frac{\partial F}{\partial x_j}(\xb) \right\rangle = 0,
-	\]
-	para $j=1,2$, segue que o vetor
-	$\displaystyle\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb)$ 
-	não tem componentes no plano tangente 
-	$T_{\xb}\Sigma\subset T_{\xb}\Sp^3$. 
-	Por outro lado, derivando
-	\[
-	\left\langle \frac{\partial \nu}{\partial x_i}(\xb), \nu(\xb) \right\rangle = 0,
-	\]
-	em rela\c c\~ao a $x_i$, obtemos:
-	\begin{equation}\label{eq:Prop4.5-5}
-	\left\langle \frac{\partial^2 \nu}{\partial x_i^2}(\xb), \nu(\xb)\right\rangle 
-	+ \left\langle \frac{\partial \nu}{\partial x_i}(\xb), 
-	\frac{\partial \nu}{\partial x_i}(\xb) \right\rangle = 0.
-	\end{equation}	
-	Substituindo \eqref{eq:partialNu} em \eqref{eq:Prop4.5-5}, notando que
-	$\left\langle \frac{\partial F}{\partial x_k}(\xb), 
-	\frac{\partial F}{\partial x_j}(\xb) \right\rangle = \delta_{kj}$ e somando,
-	a equa\c c\~ao \eqref{eq:Prop4.5-5} torna-se
-	\begin{equation*}
-	\left\langle \sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb), \nu(\xb)
-	\right\rangle + \sum_{i=1}^2 (h_{ik}(\xb))^2 = 0.
-	\end{equation*}	
-	Como $\displaystyle\sum_{i=1}^2 (h_{ik}(\xb))^2 = |A(\xb)|^2$ e
-	lembrando que 
-	$\displaystyle\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb)$ 
-	só tem componente na direção $\nu$, obtemos
-	\begin{eqnarray} \label{eq:Prop4.5-6}	
-	\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb) = - | A(\xb) |^2 \nu(\xb)
-	\end{eqnarray}
-	Usando \eqref{eq:Prop4.5-4} e \eqref{eq:Prop4.5-6}, temos que
-	\begin{eqnarray} \label{eq:Prop4.5-7}
-	\sum_{i=1}^2 h_{ik}(\xb) \frac{\partial^2 F}{\partial x_i \partial x_k}(\xb) 
-	= - | A(\xb) |^2 \nu(\xb).
-	\end{eqnarray}	
-	Assim, usando \eqref{eq:Prop4.5-3} e \eqref{eq:Prop4.5-7}, podemos
-	escrever a equa\c c\~ao \eqref{Z_seg_dev_x} como:
-	\begin{eqnarray}
-	\begin{aligned} \label{lap_Z_x}
-	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) & =   
-	\sum_{i=1}^2 \frac{\partial^2 \Phi}{\partial x_i^2}(\xb)
-	(1 - \langle F(\xb), F(\yb) \rangle)    
-	+ 2  \Phi(\xb) \left\langle F(\xb), F(\yb) \right\rangle \\
-	& -2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) 
-	\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle
-	- | A(\xb) |^2 \left\langle \nu(\xb), F(\yb) \right\rangle.
-	\end{aligned}
-	\end{eqnarray}
-	Como
-	\[
-	\left\langle \nu(\xb), F(\yb) \right\rangle = Z(\xb,\yb)
-	-\phi(\xb)(1-\langle F(\xb),F(\yb)\rangle)
-	\]
-	podemos reescrever \eqref{lap_Z_x} como sendo
-	\begin{eqnarray*}
-		\begin{aligned}
-			\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) = &
-			\left(\Delta_{\Sigma} \Phi(\xb) + 
-			(|A(\xb)|^2 - 2)\Phi(\xb)\right)(1 - \langle F(\xb), F(\yb) \rangle) \\
-			&+ 2 \Phi(\xb) \left\langle F(\xb), F(\yb) \right\rangle
-			- 2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) 
-			\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \\
-			&- |A(\xb)|^2Z(\xb,\yb).
-		\end{aligned}
-	\end{eqnarray*}	
-	Somando e subtraindo
-	\[
-	\frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} (1 - \langle F(\xb), F(\yb) \rangle) + \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2,
-	\]
-	obtemos:
-	\begin{eqnarray*}
-		\begin{aligned}
-			\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) &=
-			\left(\Delta_{\Sigma} \Phi(\xb) - \frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} + (|A(\xb)|^2 - 2)\Phi(\xb)\right)(1 - \langle F(\xb), F(\yb) \rangle) \\
-			&+ 2 \Phi(\xb) + \frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} (1 - \langle F(\xb), F(\yb) \rangle) - 2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \\
-			&+ \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2 \\
-			& - \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2
-			\left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2
-		\end{aligned}
-	\end{eqnarray*}
-	Fatorando a express\~ao acima adequadamente, podemos escrever
-	\begin{eqnarray*}
-		\begin{aligned}
-			\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) &= \left(\Delta_{\Sigma} \Phi(\xb) - \frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} + (|A(\xb)|^2 - 2)\Phi(\xb)\right)(1 - \langle F(\xb), F(\yb) \rangle)+ 2 \Phi(\xb)	\\
-			& - \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2 \\
-			& + \frac{1}{\Phi(\xb)(1 - \langle F(\xb), F(\yb) \rangle)}m(\xb,\yb),
-		\end{aligned}
-	\end{eqnarray*}	
-	onde
-	\begin{eqnarray*}
-		\begin{aligned}
-			m(\xb,\yb) &= - 2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) 
-			(1 - \langle F(\xb), F(\yb) \rangle) \Phi(\xb) \left\langle \frac{\partial F}
-			{\partial x_i}(\xb), F(\yb) \right\rangle \\
-			&+ |\nabla \Phi(\xb)|^2 (1 - \langle F(\xb), F(\yb) \rangle)^2 
-			+ \Phi(\xb)^2 \sum_{i=1}^2 \left\langle \frac{\partial F}
-			{\partial x_i} (\xb), F(\yb) \right\rangle^2
-		\end{aligned}
-	\end{eqnarray*}	
-	Observe que
-	\[
-	m(\xb,\yb) = \sum_{i=1}^2 \left(  \frac{\partial \Phi}{\partial x_i}(\xb)
-	(1 - \langle F(\xb),F(\yb) \rangle) - \Phi(\xb) \left\langle 
-	\frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \right)^2.
-	\]
-	Pela equação \eqref{diff_Z_x}, e lembrando que 
-	$\frac{\partial Z}{\partial x_i}(\xb,\yb)=0$, podemos escrever
-	\begin{eqnarray} \label{eq:Prop4.5-8}
-	m(\xb,\yb) = \sum_{i=1}^2 \left( h_{ik}(\xb) 
-	\left\langle \frac{\partial F}{\partial x_k}(\xb), F(\yb) \right\rangle \right)^2
-	\end{eqnarray}	
-	Expandindo o termo quadr\'atico em \eqref{eq:Prop4.5-8}, obtemos:
-	\begin{eqnarray*}
-		\begin{aligned}
-			(h_{i1}(\xb))^2 \left\langle \frac{\partial F}{\partial x_1}(\xb), F(\yb)\right\rangle^2 
-			&+ 
-			(h_{i2}(\xb))^2 \left\langle \frac{\partial F}{\partial x_2}(\xb),F(\yb)\right\rangle^2 \\
-			&+ 
-			2 h_{i1}(\xb) h_{i2}(\xb) \left\langle \frac{\partial F}
-			{\partial x_1}(\xb), F(\yb) \right\rangle \left\langle 
-			\frac{\partial F}{\partial x_2}(\xb), F(\yb) \right\rangle
-		\end{aligned}
-	\end{eqnarray*}	
-	Como o determinante de $A$ \'e $-\lambda^2$, tem-se:
-	\begin{equation*}
-	h_{11}(\xb) h_{22}(\xb) - h_{12}(\xb) h_{21}(\xb) = h_{11}(\xb) h_{22}(\xb) - (h_{12}(\xb))^2 = -\lambda^2,
-	\end{equation*}	
-	pois $h_{12}(\xb) = h_{21}(\xb)$. Al\'em disso, como 
-	$h_{11}(\xb) + h_{22}(\xb) = 0$, tem-se
-	\[
-	\sum_{i=1}^2 (h_{i1}(\xb))^2 = \lambda^2 \quad\mbox{e}\quad
-	\sum_{i=1}^2 (h_{i2}(\xb))^2 = \lambda^2.
-	\]
-	Em rela\c c\~ao ao termo $\displaystyle\sum_{i=1}^2 h_{i1}(\xb) h_{i2}(\xb)$,
-	tem-se
-	\begin{equation*}
-	h_{11}(\xb) h_{12}(\xb) + h_{21}(\xb) h_{22}(\xb) = h_{12}(\xb) (h_{11}(\xb) + h_{22}(\xb)) = 0.
-	\end{equation*}	
-	Portanto, podemos reescrever \eqref{eq:Prop4.5-8} como sendo
-	\begin{equation*}
-	m(\xb,\yb) = \sum_{i=1}^2 \lambda^2 \left\langle 
-	\frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle^2.
-	\end{equation*}	
-	Lembrando agora que $\lambda^2 = \frac{1}{2} |A(\xb)|$, obtemos
-	a equação desejada.
+Derivando a equação \eqref{diff_Z_x} em rela\c c\~ao a $x_i$,
+e somando, obtemos:
+\begin{eqnarray}\label{Z_seg_dev_x}
+\begin{aligned}
+\sum_{i=1}^2\frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) = &
+\sum_{i=1}^2\frac{\partial^2 \Phi}{\partial x_i^2}(\xb)
+(1 - \langle F(\xb), F(\yb) \rangle) -
+2\sum_{i=1}^2\frac{\partial \Phi}{\partial x_i}(\xb) 
+\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \\
+& - \sum_{i=1}^2\Phi(\xb) \left\langle\frac{\partial^2 F}{\partial x_i^2}(\xb),F(\yb)
+\right\rangle + \sum_{i,k=1}^2\frac{\partial h_{ik}}{\partial x_i}(\xb)
+\left\langle \frac{\partial F}{\partial x_k}(\xb), F(\yb)\right\rangle \\ 
+&+ \sum_{i,k=1}^2h_{ik}(\xb)\left\langle
+\frac{\partial^2 F}{\partial x_i \partial x_k}(\xb), F(\yb)\right\rangle.
+\end{aligned}
+\end{eqnarray}
+Iremos, inicialmente, reescrever a equa\c c\~ao \eqref{Z_seg_dev_x}.
+Note que, da equa\c c\~ao de Codazzi \eqref{eq:Codazzi}, tem-se
+\begin{eqnarray}\label{eq:Prop4.5-1}
+\frac{\partial h_{11}}{\partial x_2}(\xb) = \frac{\partial h_{21}}{\partial x_1}(\xb)
+\quad\mbox{e}\quad
+\frac{\partial h_{12}}{\partial x_2}(\xb) = \frac{\partial h_{22}}{\partial x_1}(\xb),
+\end{eqnarray}
+e do fato de $\Sigma$ ser m\'inima, obtemos
+\begin{eqnarray}\label{eq:Prop4.5-2}
+\sum_{i=1}^2\frac{\partial h_{ii}}{\partial x_k}(\xb) = 0.
+\end{eqnarray}
+De \eqref{eq:Prop4.5-1} e \eqref{eq:Prop4.5-2}, obtemos
+\begin{eqnarray}\label{eq:Prop4.5-3}
+\sum_{i=1}^2\frac{\partial h_{ik}}{\partial x_i}(\xb) = 0.
+\end{eqnarray}
+Analisemos o termo 
+$\displaystyle\sum_{i=1}^2 \frac{\partial^2 F}{\partial x_i^2}(\xb)$. 
+Pelo teorema \ref{propriedades_sup_min_S3}, tem-se
+\begin{equation*}
+\sum_{i=1}^2 \frac{\partial^2 F_j}{\partial x_i^2}(\xb) + 2F_j(\xb) = 0,
+\end{equation*}
+para $j=1,\ldots,4$, logo,
+\[
+\sum_{i=1}^2 \frac{\partial^2 F}{\partial x_i^2}(\xb) = -2 F(\xb).
+\]
+Analisemos agora o termo 
+\[
+\sum_{i=1}^2 h_{ik}(\xb) \left\langle \frac{\partial^2 F}
+{\partial x_i \partial x_k}(\xb), F(\yb) \right\rangle.
+\]
+Derivamos \eqref{eq:partialNu} em rela\c c\~ao a $x_i$, somando
+e usando \eqref{eq:Prop4.5-3}, obtemos:
+\begin{eqnarray}\label{eq:Prop4.5-4}
+\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb) = 
+\sum_{i,k=1}^2 h_{ik}(\xb)\frac{\partial^2 F}{\partial x_i \partial x_k}(\xb).
+\end{eqnarray}
+Note que, como
+\[
+\left\langle \sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb), 
+\frac{\partial F}{\partial x_j}(\xb) \right\rangle = 0,
+\]
+para $j=1,2$, segue que o vetor
+$\displaystyle\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb)$ 
+não tem componentes no plano tangente 
+$T_{\xb}\Sigma\subset T_{\xb}\Sp^3$. 
+Por outro lado, derivando
+\[
+\left\langle \frac{\partial \nu}{\partial x_i}(\xb), \nu(\xb) \right\rangle = 0,
+\]
+em rela\c c\~ao a $x_i$, obtemos:
+\begin{equation}\label{eq:Prop4.5-5}
+\left\langle \frac{\partial^2 \nu}{\partial x_i^2}(\xb), \nu(\xb)\right\rangle 
++ \left\langle \frac{\partial \nu}{\partial x_i}(\xb), 
+\frac{\partial \nu}{\partial x_i}(\xb) \right\rangle = 0.
+\end{equation}	
+Substituindo \eqref{eq:partialNu} em \eqref{eq:Prop4.5-5}, notando que
+$\left\langle \frac{\partial F}{\partial x_k}(\xb), 
+\frac{\partial F}{\partial x_j}(\xb) \right\rangle = \delta_{kj}$ e somando,
+a equa\c c\~ao \eqref{eq:Prop4.5-5} torna-se
+\begin{equation*}
+\left\langle \sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb), \nu(\xb)
+\right\rangle + \sum_{i=1}^2 (h_{ik}(\xb))^2 = 0.
+\end{equation*}	
+Como $\displaystyle\sum_{i=1}^2 (h_{ik}(\xb))^2 = |A(\xb)|^2$ e
+lembrando que 
+$\displaystyle\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb)$ 
+só tem componente na direção $\nu$, obtemos
+\begin{eqnarray} \label{eq:Prop4.5-6}	
+\sum_{i=1}^2 \frac{\partial^2 \nu}{\partial x_i^2}(\xb) = - | A(\xb) |^2 \nu(\xb)
+\end{eqnarray}
+Usando \eqref{eq:Prop4.5-4} e \eqref{eq:Prop4.5-6}, temos que
+\begin{eqnarray} \label{eq:Prop4.5-7}
+\sum_{i=1}^2 h_{ik}(\xb) \frac{\partial^2 F}{\partial x_i \partial x_k}(\xb) 
+= - | A(\xb) |^2 \nu(\xb).
+\end{eqnarray}	
+Assim, usando \eqref{eq:Prop4.5-3} e \eqref{eq:Prop4.5-7}, podemos
+escrever a equa\c c\~ao \eqref{Z_seg_dev_x} como:
+\begin{eqnarray}
+\begin{aligned} \label{lap_Z_x}
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) & =   
+\sum_{i=1}^2 \frac{\partial^2 \Phi}{\partial x_i^2}(\xb)
+(1 - \langle F(\xb), F(\yb) \rangle)    
++ 2  \Phi(\xb) \left\langle F(\xb), F(\yb) \right\rangle \\
+& -2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) 
+\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle
+- | A(\xb) |^2 \left\langle \nu(\xb), F(\yb) \right\rangle.
+\end{aligned}
+\end{eqnarray}
+Como
+\[
+\left\langle \nu(\xb), F(\yb) \right\rangle = Z(\xb,\yb)
+-\phi(\xb)(1-\langle F(\xb),F(\yb)\rangle)
+\]
+podemos reescrever \eqref{lap_Z_x} como sendo
+\begin{eqnarray*}
+\begin{aligned}
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) = &
+\left(\Delta_{\Sigma} \Phi(\xb) + 
+(|A(\xb)|^2 - 2)\Phi(\xb)\right)(1 - \langle F(\xb), F(\yb) \rangle) \\
+&+ 2 \Phi(\xb) \left\langle F(\xb), F(\yb) \right\rangle
+- 2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) 
+\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \\
+&- |A(\xb)|^2Z(\xb,\yb).
+\end{aligned}
+\end{eqnarray*}	
+Somando e subtraindo
+\[
+\frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} (1 - \langle F(\xb), F(\yb) \rangle) + \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2,
+\]
+obtemos:
+\begin{eqnarray*}
+\begin{aligned}
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) &=
+\left(\Delta_{\Sigma} \Phi(\xb) - \frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} + (|A(\xb)|^2 - 2)\Phi(\xb)\right)(1 - \langle F(\xb), F(\yb) \rangle) \\
+&+ 2 \Phi(\xb) + \frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} (1 - \langle F(\xb), F(\yb) \rangle) - 2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \\
+&+ \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2 \\
+& - \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2
+\left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2
+\end{aligned}
+\end{eqnarray*}
+Fatorando a express\~ao acima adequadamente, podemos escrever
+\begin{eqnarray*}
+\begin{aligned}
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) &= \left(\Delta_{\Sigma} \Phi(\xb) - \frac{|\nabla \Phi(\xb)|^2}{\Phi(\xb)} + (|A(\xb)|^2 - 2)\Phi(\xb)\right)(1 - \langle F(\xb), F(\yb) \rangle)+ 2 \Phi(\xb)	\\
+& - \frac{\Phi(\xb)}{1 - \langle F(\xb),F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i} (\xb), F(\yb) \right\rangle^2 \\
+& + \frac{1}{\Phi(\xb)(1 - \langle F(\xb), F(\yb) \rangle)}m(\xb,\yb),
+\end{aligned}
+\end{eqnarray*}	
+onde
+\begin{eqnarray*}
+\begin{aligned}
+m(\xb,\yb) &= - 2 \sum_{i=1}^2 \frac{\partial \Phi}{\partial x_i}(\xb) 
+(1 - \langle F(\xb), F(\yb) \rangle) \Phi(\xb) \left\langle \frac{\partial F}
+{\partial x_i}(\xb), F(\yb) \right\rangle \\
+&+ |\nabla \Phi(\xb)|^2 (1 - \langle F(\xb), F(\yb) \rangle)^2 
+ + \Phi(\xb)^2 \sum_{i=1}^2 \left\langle \frac{\partial F}
+ {\partial x_i} (\xb), F(\yb) \right\rangle^2
+\end{aligned}
+\end{eqnarray*}	
+Observe que
+\[
+m(\xb,\yb) = \sum_{i=1}^2 \left(  \frac{\partial \Phi}{\partial x_i}(\xb)
+(1 - \langle F(\xb),F(\yb) \rangle) - \Phi(\xb) \left\langle 
+\frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \right)^2.
+\]
+Pela equação \eqref{diff_Z_x}, e lembrando que 
+$\frac{\partial Z}{\partial x_i}(\xb,\yb)=0$, podemos escrever
+\begin{eqnarray} \label{eq:Prop4.5-8}
+m(\xb,\yb) = \sum_{i=1}^2 \left( h_{ik}(\xb) 
+\left\langle \frac{\partial F}{\partial x_k}(\xb), F(\yb) \right\rangle \right)^2
+\end{eqnarray}	
+Expandindo o termo quadr\'atico em \eqref{eq:Prop4.5-8}, obtemos:
+\begin{eqnarray*}
+\begin{aligned}
+(h_{i1}(\xb))^2 \left\langle \frac{\partial F}{\partial x_1}(\xb), F(\yb)\right\rangle^2 
+&+ 
+(h_{i2}(\xb))^2 \left\langle \frac{\partial F}{\partial x_2}(\xb),F(\yb)\right\rangle^2 \\
+&+ 
+2 h_{i1}(\xb) h_{i2}(\xb) \left\langle \frac{\partial F}
+{\partial x_1}(\xb), F(\yb) \right\rangle \left\langle 
+\frac{\partial F}{\partial x_2}(\xb), F(\yb) \right\rangle
+\end{aligned}
+\end{eqnarray*}	
+Como o determinante de $A$ \'e $-\lambda^2$, tem-se:
+\begin{equation*}
+h_{11}(\xb) h_{22}(\xb) - h_{12}(\xb) h_{21}(\xb) = h_{11}(\xb) h_{22}(\xb) - (h_{12}(\xb))^2 = -\lambda^2,
+\end{equation*}	
+pois $h_{12}(\xb) = h_{21}(\xb)$. Al\'em disso, como 
+$h_{11}(\xb) + h_{22}(\xb) = 0$, tem-se
+\[
+\sum_{i=1}^2 (h_{i1}(\xb))^2 = \lambda^2 \quad\mbox{e}\quad
+\sum_{i=1}^2 (h_{i2}(\xb))^2 = \lambda^2.
+\]
+Em rela\c c\~ao ao termo $\displaystyle\sum_{i=1}^2 h_{i1}(\xb) h_{i2}(\xb)$,
+tem-se
+\begin{equation*}
+h_{11}(\xb) h_{12}(\xb) + h_{21}(\xb) h_{22}(\xb) = h_{12}(\xb) (h_{11}(\xb) + h_{22}(\xb)) = 0.
+\end{equation*}	
+Portanto, podemos reescrever \eqref{eq:Prop4.5-8} como sendo
+\begin{equation*}
+m(\xb,\yb) = \sum_{i=1}^2 \lambda^2 \left\langle 
+\frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle^2.
+\end{equation*}	
+Lembrando agora que $\lambda^2 = \frac{1}{2} |A(\xb)|$, obtemos
+a equação desejada.
 \end{demonstracao}
 
 
 \begin{proposicao}
-	Em rela\c c\~ao \`as derivadas mistas, vale a seguinte rela\c c\~ao:
-	\begin{equation}\label{diff_Z_x_y}
-	\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = \lambda_i - \Phi(\xb)
-	\end{equation}
+Em rela\c c\~ao \`as derivadas mistas, vale a seguinte rela\c c\~ao:
+\begin{equation}\label{diff_Z_x_y}
+\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = \lambda_i - \Phi(\xb)
+\end{equation}
 \end{proposicao}
 \begin{demonstracao}
-	Derivando em rela\c c\~ao  a $x_i$ a equação \eqref{diff_Z_y}, obtemos:
-	\begin{eqnarray*}
-		\begin{aligned}
-			\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) =  & 
-			-\frac{\partial \Phi}{\partial x_i}(\xb) \left\langle F(\xb), 
-			\frac{\partial F}{\partial y_i}(\yb) \right\rangle - \Phi(\xb)
-			\left\langle \frac{\partial F}{\partial x_i}(\xb), 
-			\frac{\partial F}{\partial y_i}(\yb) \right\rangle \\
-			& + \left\langle \frac{\partial \nu}{\partial x_i}(\xb), 
-			\frac{\partial F}{\partial y_i}(\yb) \right\rangle.
-		\end{aligned}
-	\end{eqnarray*}	
-	Lembrando que 
-	\[
-	\frac{\partial \nu}{\partial x_i}(\xb) = 
-	\lambda_i(\xb) \frac{\partial F}{\partial x_i}(\xb),
-	\]
-	temos
-	\begin{eqnarray} \label{eq:Prop2.3_1}
-	\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = -\frac{\partial \Phi}{\partial x_i}(\xb) \left\langle F(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle + (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle.
-	\end{eqnarray}	
-	Da equa\c c\~ao \eqref{diff_Z_x}, tem-se:
-	\begin{eqnarray} \label{eq:Prop2.3_2}
-	-\frac{\partial \Phi}{\partial x_i}(\xb) = \frac{1}
-	{1 - \langle F(\xb),F(\yb) \rangle} (\lambda_i(\xb) - \Phi(\xb)) 
-	\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle.
-	\end{eqnarray}
-	Substituindo \eqref{eq:Prop2.3_2} em \eqref{eq:Prop2.3_1}, 
-	obtemos:
-	\begin{eqnarray*}
-		\begin{aligned}
-			\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) =&  \frac{1}{1 - \langle F(\xb),F(\yb) \rangle} (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle  \left\langle F(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle \\
-			&+ 
-			(\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle
-		\end{aligned}
-	\end{eqnarray*}	
-	Como 
-	\[
-	|F(\xb) - F(\yb)|^2 = \langle F(\xb) - F(\yb), F(\xb) - F(\yb) \rangle = 
-	2 - 2 \langle F(\xb), F(\yb) \rangle,
-	\]
-	a equa\c c\~ao anterior torna-se
-	\begin{eqnarray} \label{eq:Prop2.3_3}
-	\begin{aligned}
-	\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = & 
-	-2 (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), 
-	\frac{-F(\yb)}{|F(\xb) - F(\yb)|} \right\rangle \left\langle \frac{F(\xb)}{|F(\xb) - 
-		F(\yb)|}, \frac{\partial F}{\partial y_i}(\yb) \right\rangle \\
-	& + 
-	(\lambda_i - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), 
-	\frac{\partial F}{\partial y_i}(\yb) \right\rangle.
-	\end{aligned}
-	\end{eqnarray}	
-	Al\'em disso, como
-	\[
-	\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\xb) \right\rangle = 
-	\left\langle \frac{\partial F}{\partial y_i}(\yb), F(\yb) \right\rangle = 0,
-	\]
-	a equação \eqref{eq:Prop2.3_3} se escreve como sendo
-	\begin{eqnarray*}
-		%\begin{aligned}
-		\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) & = &
-		-2 (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{F(\xb) -F(\yb)}{|F(\xb) - F(\yb)|} \right\rangle \left\langle 
-		\frac{F(\xb) - F(\yb)}{|F(\xb) - F(\yb)|}, \frac{\partial F}{\partial y_i}(\yb) 
-		\right\rangle \\
-		&& + 
-		(\lambda_i - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), 
-		\frac{\partial F}{\partial y_i}(\yb) \right\rangle \\
-		&= &
-		(\lambda_i - \Phi(\xb)) \left\langle w_i,\frac{\partial F}{\partial y_i}(\yb)
-		\right\rangle \\
-		&= & \lambda_i - \Phi(\xb),
-		%\end{aligned}
-	\end{eqnarray*}	
-	como quer\'iamos.
+Derivando em rela\c c\~ao  a $x_i$ a equação \eqref{diff_Z_y}, obtemos:
+\begin{eqnarray*}
+\begin{aligned}
+\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) =  & 
+-\frac{\partial \Phi}{\partial x_i}(\xb) \left\langle F(\xb), 
+\frac{\partial F}{\partial y_i}(\yb) \right\rangle - \Phi(\xb)
+\left\langle \frac{\partial F}{\partial x_i}(\xb), 
+\frac{\partial F}{\partial y_i}(\yb) \right\rangle \\
+& + \left\langle \frac{\partial \nu}{\partial x_i}(\xb), 
+\frac{\partial F}{\partial y_i}(\yb) \right\rangle.
+\end{aligned}
+\end{eqnarray*}	
+Lembrando que 
+\[
+\frac{\partial \nu}{\partial x_i}(\xb) = 
+\lambda_i(\xb) \frac{\partial F}{\partial x_i}(\xb),
+\]
+temos
+\begin{eqnarray} \label{eq:Prop2.3_1}
+\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = -\frac{\partial \Phi}{\partial x_i}(\xb) \left\langle F(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle + (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle.
+\end{eqnarray}	
+Da equa\c c\~ao \eqref{diff_Z_x}, tem-se:
+\begin{eqnarray} \label{eq:Prop2.3_2}
+-\frac{\partial \Phi}{\partial x_i}(\xb) = \frac{1}
+{1 - \langle F(\xb),F(\yb) \rangle} (\lambda_i(\xb) - \Phi(\xb)) 
+\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle.
+\end{eqnarray}
+Substituindo \eqref{eq:Prop2.3_2} em \eqref{eq:Prop2.3_1}, 
+obtemos:
+\begin{eqnarray*}
+\begin{aligned}
+\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) =&  \frac{1}{1 - \langle F(\xb),F(\yb) \rangle} (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle  \left\langle F(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle \\
+&+ 
+(\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{\partial F}{\partial y_i}(\yb) \right\rangle
+\end{aligned}
+\end{eqnarray*}	
+Como 
+\[
+|F(\xb) - F(\yb)|^2 = \langle F(\xb) - F(\yb), F(\xb) - F(\yb) \rangle = 
+2 - 2 \langle F(\xb), F(\yb) \rangle,
+\]
+a equa\c c\~ao anterior torna-se
+\begin{eqnarray} \label{eq:Prop2.3_3}
+\begin{aligned}
+\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) = & 
+-2 (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), 
+\frac{-F(\yb)}{|F(\xb) - F(\yb)|} \right\rangle \left\langle \frac{F(\xb)}{|F(\xb) - 
+F(\yb)|}, \frac{\partial F}{\partial y_i}(\yb) \right\rangle \\
+& + 
+(\lambda_i - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), 
+\frac{\partial F}{\partial y_i}(\yb) \right\rangle.
+\end{aligned}
+\end{eqnarray}	
+Al\'em disso, como
+\[
+\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\xb) \right\rangle = 
+\left\langle \frac{\partial F}{\partial y_i}(\yb), F(\yb) \right\rangle = 0,
+\]
+a equação \eqref{eq:Prop2.3_3} se escreve como sendo
+\begin{eqnarray*}
+%\begin{aligned}
+\frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) & = &
+-2 (\lambda_i(\xb) - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), \frac{F(\xb) -F(\yb)}{|F(\xb) - F(\yb)|} \right\rangle \left\langle 
+\frac{F(\xb) - F(\yb)}{|F(\xb) - F(\yb)|}, \frac{\partial F}{\partial y_i}(\yb) 
+\right\rangle \\
+&& + 
+(\lambda_i - \Phi(\xb)) \left\langle \frac{\partial F}{\partial x_i}(\xb), 
+\frac{\partial F}{\partial y_i}(\yb) \right\rangle \\
+&= &
+(\lambda_i - \Phi(\xb)) \left\langle w_i,\frac{\partial F}{\partial y_i}(\yb)
+\right\rangle \\
+&= & \lambda_i - \Phi(\xb),
+%\end{aligned}
+\end{eqnarray*}	
+como quer\'iamos.
 \end{demonstracao}
 
 
 \begin{proposicao}
-	\begin{equation}\label{2_diff_Z_y}
-	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) = 2 \Phi(\xb).
-	\end{equation}
+\begin{equation}\label{2_diff_Z_y}
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) = 2 \Phi(\xb).
+\end{equation}
 \end{proposicao}
 \begin{demonstracao}
-	Derivando a equa\c c\~ao \eqref{diff_Z_y} em rela\c c\~ao a $y_i$,
-	e somando, obtemos:
-	\begin{eqnarray} \label{eq:Prop4.7-1}
-	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) = - \Phi(\xb) \left\langle F(\xb), \sum_{i=1}^2 \frac{\partial^2 F}{\partial y_i^2}(\yb) \right\rangle + \left\langle \nu(\xb), \sum_{i=1}^2 \frac{\partial^2 F}{\partial y_i^2}(\yb) \right\rangle.
-	\end{eqnarray}	
-	Como
-	\[
-	\sum_{i=1}^2 \frac{\partial^2 F}{\partial y_i}(\yb) = -2 F(\yb)
-	\]
-	e
-	\[
-	0 = Z(\xb,\yb) = \Phi(\xb)(1 - \langle F(\xb), F(\yb) \rangle) + 
-	\langle \nu(\xb), F(\yb) \rangle
-	\] 
-	a express\~ao em \eqref{eq:Prop4.7-1} torna-se
-	\begin{eqnarray*}
-		\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) &=&
-		2 \Phi(\xb) \langle F(\xb), F(\yb) \rangle - 2 \langle \nu(\xb), F(\yb) 
-		\rangle \\
-		&=&
-		2 \Phi(\xb),
-	\end{eqnarray*}
-	como quer\'iamos.
+Derivando a equa\c c\~ao \eqref{diff_Z_y} em rela\c c\~ao a $y_i$,
+e somando, obtemos:
+\begin{eqnarray} \label{eq:Prop4.7-1}
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) = - \Phi(\xb) \left\langle F(\xb), \sum_{i=1}^2 \frac{\partial^2 F}{\partial y_i^2}(\yb) \right\rangle + \left\langle \nu(\xb), \sum_{i=1}^2 \frac{\partial^2 F}{\partial y_i^2}(\yb) \right\rangle.
+\end{eqnarray}	
+Como
+\[
+\sum_{i=1}^2 \frac{\partial^2 F}{\partial y_i}(\yb) = -2 F(\yb)
+\]
+e
+\[
+0 = Z(\xb,\yb) = \Phi(\xb)(1 - \langle F(\xb), F(\yb) \rangle) + 
+\langle \nu(\xb), F(\yb) \rangle
+\] 
+a express\~ao em \eqref{eq:Prop4.7-1} torna-se
+\begin{eqnarray*}
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) &=&
+2 \Phi(\xb) \langle F(\xb), F(\yb) \rangle - 2 \langle \nu(\xb), F(\yb) 
+\rangle \\
+&=&
+2 \Phi(\xb),
+\end{eqnarray*}
+como quer\'iamos.
 \end{demonstracao}
 
 
-\begin{proposicao}
-	Vale a seguinte igualdade:
-	\begin{eqnarray} \label{suma_2das_derivadas}
-	\begin{aligned}
-	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) + & 
-	2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) \\
-	&= 
-	- \frac{2 \Phi(\xb)^2- |A(\xb)|^2}{2 \Phi(\xb)
-		(1 - \langle F(\xb),F(\yb) \rangle)} \sum_{i=1}^2
-	\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \\
-	&+
-	\left( \Delta_{\Sigma} \Phi(\xb) - \frac{| \nabla \Phi(\xb) |^2}
-	{\Phi(\xb)} + ( | A(\xb) |^2 - 2 ) \Phi(\xb) \right)
-	\left(1 - \langle F(\xb,\yb) \rangle\right)
-	\end{aligned}
-	\end{eqnarray}
+\begin{proposicao} \label{prop:somaDerSeg}
+Vale a seguinte igualdade:
+\begin{eqnarray} \label{suma_2das_derivadas}
+\begin{aligned}
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) + & 
+2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) \\
+&= 
+- \frac{2 \Phi(\xb)^2- |A(\xb)|^2}{2 \Phi(\xb)
+(1 - \langle F(\xb),F(\yb) \rangle)} \sum_{i=1}^2
+\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle^2 \\
+&+
+\left( \Delta_{\Sigma} \Phi(\xb) - \frac{| \nabla \Phi(\xb) |^2}
+{\Phi(\xb)} + ( | A(\xb) |^2 - 2 ) \Phi(\xb) \right)
+\left(1 - \langle F(\xb),F(\yb) \rangle\right).
+\end{aligned}
+\end{eqnarray}
 \end{proposicao}
 \begin{demonstracao}
-	A equa\c c\~ao \eqref{suma_2das_derivadas} segue por somando-se
-	as equa\c c\~oes \eqref{2_diff_Z_x}, \eqref{diff_Z_x_y} e \eqref{2_diff_Z_y}.
+A equa\c c\~ao \eqref{suma_2das_derivadas} segue das equa\c c\~oes \eqref{2_diff_Z_x}, \eqref{diff_Z_x_y} e \eqref{2_diff_Z_y}.
 \end{demonstracao}
 
-\begin{teorema}\label{Simon's_identity}
-	Seja $\Sigma$ uma superfície mínima imersa em $S^3$. Então
-	\begin{equation*}
-		\Delta_{\Sigma} A = 2 A - |A|^2 A
-	\end{equation*} 
-\end{teorema}
 
-\begin{demonstracao}
-	Olhar \cite{Simons1968} Teorema 5.3.1.
-\end{demonstracao}
 
-\begin{teorema}\label{nao_existem_pontos_umbilicos}
-	Uma superfície minima imersa em $S^3$ de gênero 1 não tem pontos umbílicos, então, a segunda forma fundamental não é zero em nenhum ponto da superfície.
-\end{teorema}
+\section{Prova do Teorema \ref{teo:Lawson}}
 
-\begin{demonstracao}
-	Olhar \cite{Brendle2013} Proposição 3.3.
-\end{demonstracao}
+Usando os resultados preliminares apresentados nas se\c c\~oes
+anteriores, apresentaremos nesta se\c c\~ao a prova do teorema
+principal dessa disserta\c c\~ao. 
 
-\begin{definicao}
-	A função $\Psi: M \rightarrow \realnumbers$ está definida por
-	\begin{equation*}
-	\Psi(x) = \frac{1}{\sqrt{2}} |A(x)|.
-	\end{equation*}
-	onde $A$ é a segunda forma fundamental.
-\end{definicao}
+\vspace{.2cm}
+
+Inicialmente, iremos determinar uma identidade tipo-Simons para
+a fun\c c\~ao
+\begin{eqnarray}\label{eq:PsiA(x)}
+\Psi(x)=\frac{1}{\sqrt2}|A(x)|,
+\end{eqnarray}
+onde $A$ denota o operador de forma da superf\'icie $F:\Sigma\to\Sp^3$.
 
 \begin{proposicao}\label{edp_principal}
-	Supor que $F: \Sigma \rightarrow S^3$ é um toro mínimo mergulhado em $S^3$. Então a função $\Psi = \frac{|A|}{\sqrt{2}}$ é estritamente positiva e satisfaz a E.D.P
-	\begin{equation*}
-		\Delta_\Sigma \Psi - \frac{|\nabla \Psi|^2}{\Psi} + (|A|^2 - 2) \Psi = 0
-	\end{equation*}
+Seja $F:\Sigma\to\Sp^3$ um toro m\'inimo e mergulhado em $\Sp^3$.
+Então, a função $\Psi$ dada em \eqref{eq:PsiA(x)} \'e estritamente 
+positiva e satisfaz a EDP
+\[
+\Delta_\Sigma \Psi - \frac{|\nabla \Psi|^2}{\Psi} + (|A|^2 - 2) \Psi = 0.
+\]
 \end{proposicao}
-
 \begin{demonstracao}
-	A função $|A|$ é estritamente positiva pelo teorema \ref{nao_existem_pontos_umbilicos} . Usando o  teorema \ref{Simon's_identity} sabendo que $A = [h_{ik}]$, a equação pode se escrever
-	\begin{equation*}
-		\Delta_{\Sigma} h_{ik} + (|A|^2 - 2)h_{ik} = 0
-	\end{equation*}	
-	Multiplicando por $2 h_{ik}$
-	\begin{equation*}
-		2 \Delta_{\Sigma} h_{ik} h_{ik} + 2 (|A|^2 - 2)h_{ik}^2 = 0
-	\end{equation*}	
-	Somando e restando $ 2 \sum_{j=1}^2 \left( \frac{\partial h_{ik}}{\partial x_j} \right)^2 $
-	\begin{equation*}
-		2 \sum_{j=1}^2 \frac{\partial^2 h_{ik}}{\partial x_j^2} h_{ik} + 2 \sum_{j=1}^2 \left( \frac{\partial h_{ik}}{\partial x_j} \right)^2 - 2 \sum_{j=1}^2 \left( \frac{\partial h_{ik}}{\partial x_j} \right)^2 + 2 (|A|^2 - 2)h_{ik}^2 = 0
-	\end{equation*}	
-	Como $ 2 \sum_{j=1}^2 \frac{\partial^2 h_{ik}}{\partial x_j^2} h_{ik} + 2 \sum_{j=1}^2 \left( \frac{\partial h_{ik}}{\partial x_j} \right)^2 = 2 \sum_{j=1}^2 \frac{\partial }{\partial x_j} \left( \frac{\partial h_{ik}}{\partial x_j} h_{ik} \right) = \sum_{j=1}^2 \frac{\partial^2 h_{ik}^2}{\partial x_j^2} $, então
-	\begin{equation*}
-		\sum_{j=1}^2 \frac{\partial^2 h_{ik}^2}{\partial x_j^2} - 2 \sum_{j=1}^2 \left( \frac{\partial h_{ik}}{\partial x_j} \right)^2 + 2 (|A|^2 - 2)h_{ik}^2 = 0
-	\end{equation*}	
-	Somando com respeito aos índices $i$ e $k$
-	\begin{equation*}
-	\Delta_{\Sigma} (|A|^2) - 2 | \nabla A |^2 + 2 (|A|^2 - 2) |A|^2 = 0
-	\end{equation*}	
-	Olhar que $ \Delta_{\Sigma} (|A|^2) = \sum_{j=1}^2 \frac{\partial^2 |A|^2}{\partial x_j^2} = \sum_{j=1}^2 \frac{\partial}{\partial x_j} \left( \frac{\partial |A|^2}{\partial x_j} \right) = 2 \sum_{j=1}^2 \frac{\partial^2 |A|}{\partial x_j} + 2 \sum_{j=1}^2 \left( \frac{\partial |A|}{\partial x_j} \right)^2 $. Portanto
-	\begin{equation}\label{edp_sff}
-		\Delta_{\Sigma} (|A|) + \frac{|\nabla |A||^2}{|A|} - \frac{|\nabla A|^2}{|A|} + (|A|^2 - 2) |A| = 0
-	\end{equation}	
-	Temos que $ | \nabla A |^2 = \sum_{j=1}^2 \left( \frac{\partial h_{ik}}{\partial x_j} \right)^2 $ onde se está somando sobre os índices $i$ e $k$. Pela equação \eqref{codazzi_eq} temos
-	\begin{align*}
-		\frac{\partial h_{11}}{\partial x_1} + \frac{\partial h_{21}}{\partial x_2} &= 0\\
-		\frac{\partial h_{12}}{\partial x_1} + \frac{\partial h_{22}}{\partial x_2} &= 0
-	\end{align*}	
-	Elevando ao quadrado temos
-	\begin{align*}
-		\left( \frac{\partial h_{11}}{\partial x_1} \right)^2 + \left( \frac{\partial h_{21}}{\partial x_2} \right)^2  &= - 2 \frac{\partial h_{11}}{\partial x_1} \frac{\partial h_{21}}{\partial x_2}  \\
-		\left( \frac{\partial h_{12}}{\partial x_1} \right)^2 + \left( \frac{\partial h_{22}}{\partial x_2} \right)^2 &= - 2 \frac{\partial h_{12}}{\partial x_1} \frac{\partial h_{22}}{\partial x_2}
-	\end{align*}	
-	Usando a equação \eqref{codazzi_eq} outra vez temos
-	\begin{align*}
-		\left( \frac{\partial h_{11}}{\partial x_1} \right)^2 + \left( \frac{\partial h_{21}}{\partial x_2} \right)^2  &=  2  \left( \frac{\partial h_{21}}{\partial x_2} \right)^2  \\
-		\left( \frac{\partial h_{12}}{\partial x_1} \right)^2 + \left( \frac{\partial h_{22}}{\partial x_2} \right)^2 &=  2 \left( \frac{\partial h_{12}}{\partial x_1} \right)^2\\
-		\left( \frac{\partial h_{11}}{\partial x_2} \right)^2 + \left( \frac{\partial h_{21}}{\partial x_1} \right)^2  &= 2 \left( \frac{\partial h_{21}}{\partial x_1} \right)^2\\
-		\left( \frac{\partial h_{12}}{\partial x_2} \right)^2 + \left( \frac{\partial h_{22}}{\partial x_1} \right)^2 &=  2 \left( \frac{\partial h_{12}}{\partial x_2} \right)^2  
-	\end{align*}	
-	Somando e lembrando que $h_{12} = h_{21}$ temos
-	\begin{equation*}
-		| \nabla A |^2 = 4 \left( \frac{\partial h_{12}}{\partial x_1} \right) + 4 \left( \frac{\partial h_{12}}{\partial x_2} \right)
-	\end{equation*}	
-	Observar que $ |A| = \sqrt{2 h_{11}^2 + 2 h_{12}^2} $ e que $ | \nabla |A| |^2 = \left( \frac{\partial |A|}{\partial x_1} \right)^2 + \left( \frac{\partial |A|}{\partial x_2} \right)^2 $. Derivando $ |A| $ com respeito a $x_1$ temos
-	\begin{equation*}
-		\frac{\partial |A|}{\partial x_1} = \frac{2 h_{11} \frac{\partial h_{11}}{\partial x_1} + 2 h_{12} \frac{\partial h_{12}}{\partial x_1}}{|A|}
-	\end{equation*}	
-	De forma similar, derivando $ |A| $ com respeito a $ x_2 $ temos
-	\begin{equation*}
-		\frac{\partial |A|}{\partial x_2} = \frac{2 h_{11} \frac{\partial h_{11}}{\partial x_2} + 2 h_{12} \frac{\partial h_{12}}{\partial x_2}}{|A|}
-	\end{equation*}	
-	Obtendo o quadrado de ambas expressões se tem
-	\begin{align*}
-		\left( \frac{\partial |A|}{\partial x_1} \right)^2 &= \frac{4 h_{11}^2 \left( \frac{\partial h_{11}}{\partial x_1} \right)^2 + 4 h_{12}^2 \left( \frac{\partial h_{12}}{\partial x_1} \right)^2 + 8 h_{11} h_{12} \frac{\partial h_{11}}{\partial x_1} \frac{\partial h_{12}}{\partial x_1}}{|A|^2}\\
-		\left( \frac{\partial |A|}{\partial x_2} \right)^2 &= \frac{4 h_{11}^2 \left( \frac{\partial h_{11}}{\partial x_2} \right)^2 + 4 h_{12}^2 \left( \frac{\partial h_{12}}{\partial x_2} \right)^2 + 8 h_{11} h_{12} \frac{\partial h_{11}}{\partial x_2} \frac{\partial h_{12}}{\partial x_2}}{|A|^2}
-	\end{align*}	
-	Usando \eqref{codazzi_eq} e somando os termos correspondentes se tem
-	\begin{equation*}
-		| \nabla |A| |^2 = 2 \left( \frac{\partial h_{12}}{\partial x_1} \right)^2 + 2 \left( \frac{\partial h_{12}}{\partial x_2} \right)
-	\end{equation*}	
-	Portanto, $ | \nabla A |^2 = 2 | \nabla |A| |^2 $. Usando o resultado em \ref{edp_sff} se tem
-	\begin{equation*}
-		\Delta_\Sigma \Psi - \frac{|\nabla \Psi|^2}{\Psi} + (|A|^2 - 2) \Psi = 0
-	\end{equation*}
+Segue do trabalho de Lawson que um toro m\'inimo na esfera $\Sp^3$
+n\~ao tem pontos umb\'ilicos (cf. \cite[Proposition 1.5]{Lawson1970}).
+Disso decorre que a função $|A|$ \'e estritamente positiva. Usando a
+identidade de Simons \cite[Theorem 5.3.1]{Simons1968}, obtemos
+\begin{eqnarray} \label{eq:prop43-1}
+\Delta_{\Sigma} h_{ik} + (|A|^2 - 2)h_{ik} = 0,
+\end{eqnarray}	
+visto que $(h_{ik})$ \'e a matriz que representa $A$. Multiplicando a
+equa\c c\~ao \eqref{eq:prop43-1} por $2 h_{ik}$, tem-se
+\begin{eqnarray} \label{eq:prop43-2}
+2 \Delta_{\Sigma} h_{ik} h_{ik} + 2 (|A|^2 - 2)h_{ik}^2 = 0.
+\end{eqnarray}	
+Somando e subtraindo a quantidade
+\[
+2 \sum_{j=1}^2 \left( \frac{\partial h_{ik}}{\partial x_j} \right)^2
+\]
+na equa\c c\~ao \eqref{eq:prop43-2}, obtemos
+\begin{eqnarray} \label{eq:prop43-3}
+2 \sum_{j=1}^2 \frac{\partial^2 h_{ik}}{\partial x_j^2} h_{ik} + 2 \sum_{j=1}^2 \left( \frac{\partial h_{ik}}{\partial x_j} \right)^2 - 2 \sum_{j=1}^2 \left( \frac{\partial h_{ik}}{\partial x_j} \right)^2 + 2 (|A|^2 - 2)h_{ik}^2 = 0.
+\end{eqnarray}	
+Como 
+\[
+2 \sum_{j=1}^2 \frac{\partial^2 h_{ik}}{\partial x_j^2} h_{ik} + 2 \sum_{j=1}^2 \left( \frac{\partial h_{ik}}{\partial x_j} \right)^2 = 2 \sum_{j=1}^2 \frac{\partial }{\partial x_j} \left( \frac{\partial h_{ik}}{\partial x_j} h_{ik} \right) = \sum_{j=1}^2 \frac{\partial^2 h_{ik}^2}{\partial x_j^2},
+\]
+podemos reescrever a equa\c c\~ao \eqref{eq:prop43-3} como sendo
+\begin{eqnarray} \label{eq:prop43-4}
+\sum_{j=1}^2 \frac{\partial^2 h_{ik}^2}{\partial x_j^2} - 2 \sum_{j=1}^2 \left( \frac{\partial h_{ik}}{\partial x_j} \right)^2 + 2 (|A|^2 - 2)h_{ik}^2 = 0.
+\end{eqnarray}
+Na equa\c c\~ao \eqref{eq:prop43-4}, somando em rela\c c\~ao a $i$
+e $k$, obtemos:
+\begin{equation} \label{eq:prop43-5}
+\Delta_{\Sigma} (|A|^2) - 2 | \nabla A |^2 + 2 (|A|^2 - 2) |A|^2 = 0.
+\end{equation}
+Note agora que
+\begin{eqnarray}\label{eq:prop43-6}
+\begin{aligned}
+\Delta_{\Sigma} (|A|^2) &= \sum_{j=1}^2 \frac{\partial^2 |A|^2}{\partial x_j^2}
+= \sum_{j=1}^2 \frac{\partial}{\partial x_j} 
+\left( \frac{\partial |A|^2}{\partial x_j} \right) =
+2\sum_{j=1}^2\frac{\partial}{\partial x_j}\left(|A|
+\frac{\partial|A|}{\partial x_j}\right) \\
+&= 
+2\sum_{j=1}^2\left(\frac{\partial|A|}{\partial x_j}\frac{\partial|A|}{\partial x_j}
++|A|\frac{\partial^2 |A|}{\partial x_j^2} \right) =
+2|\nabla|A||^2+2|A|\sum_{j=1}^2\frac{\partial^2 |A|}{\partial x_j^2} \\
+&= 2|\nabla|A||^2+2|A|\Delta_\Sigma|A|.
+\end{aligned}
+\end{eqnarray}	
+Assim, substituindo \eqref{eq:prop43-6} em \eqref{eq:prop43-5},
+obtemos
+\begin{equation}\label{edp_sff}
+\Delta_{\Sigma} (|A|) + \frac{|\nabla |A||^2}{|A|} - \frac{|\nabla A|^2}{|A|} + 
+(|A|^2 - 2) |A| = 0.
+\end{equation}	
+Provemos agora que
+\begin{eqnarray} \label{eq:prop43-14}
+|\nabla A|^2 = 2|\nabla|A||^2.
+\end{eqnarray}
+De fato, elevando ao quadrado a equa\c c\~ao \eqref{eq:Prop4.5-3}, 
+obtemos:
+\begin{eqnarray} \label{eq:prop43-7}
+\begin{aligned}
+\left( \frac{\partial h_{11}}{\partial x_1} \right)^2 + \left( \frac{\partial h_{21}}{\partial x_2} \right)^2  &= - 2 \frac{\partial h_{11}}{\partial x_1} \frac{\partial h_{21}}{\partial x_2},  \\
+\left( \frac{\partial h_{12}}{\partial x_1} \right)^2 + \left( \frac{\partial h_{22}}{\partial x_2} \right)^2 &= - 2 \frac{\partial h_{12}}{\partial x_1} \frac{\partial h_{22}}{\partial x_2}.
+\end{aligned}
+\end{eqnarray}	
+Cada uma das equa\c c\~oes em \eqref{eq:prop43-7} corresponde
+a $k=1$ e $k=2$, respectivamente. Disso decorre que
+\begin{eqnarray} \label{eq:prop43-8}
+\begin{aligned}
+\left( \frac{\partial h_{11}}{\partial x_1} \right)^2 + \left( \frac{\partial h_{21}}{\partial x_2} \right)^2  &=  2  \left( \frac{\partial h_{21}}{\partial x_2} \right)^2,  \\
+\left( \frac{\partial h_{12}}{\partial x_1} \right)^2 + \left( \frac{\partial h_{22}}{\partial x_2} \right)^2 &=  2 \left( \frac{\partial h_{12}}{\partial x_1} \right)^2, \\
+\left( \frac{\partial h_{11}}{\partial x_2} \right)^2 + \left( \frac{\partial h_{21}}{\partial x_1} \right)^2  &= 2 \left( \frac{\partial h_{21}}{\partial x_1} \right)^2, \\
+\left( \frac{\partial h_{12}}{\partial x_2} \right)^2 + \left( \frac{\partial h_{22}}{\partial x_1} \right)^2 &=  2 \left( \frac{\partial h_{12}}{\partial x_2} \right)^2  .
+\end{aligned}
+\end{eqnarray}	
+Somando as equa\c c\~eos em \eqref{eq:prop43-8}, e lembrando que
+$h_{12} = h_{21}$, obtemos:
+\begin{equation} \label{eq:prop43-13}
+| \nabla A |^2 = 4 \left( \frac{\partial h_{12}}{\partial x_1} \right)^2 + 4\left( \frac{\partial h_{12}}{\partial x_2} \right)^2.
+\end{equation}	
+Note que 
+\begin{eqnarray} \label{eq:prop43-15}
+|A| = \sqrt{2 h_{11}^2 + 2 h_{12}^2}
+\end{eqnarray}
+e
+\begin{eqnarray} \label{eq:prop43-11}
+| \nabla |A| |^2 = \left( \frac{\partial |A|}{\partial x_1} \right)^2 +
+\left( \frac{\partial |A|}{\partial x_2} \right)^2.
+\end{eqnarray}
+Derivando $|A|$, dada em \eqref{eq:prop43-15}, em rela\c c\~ao a 
+$x_1$ e $x_2$ obtemos, respectivamente, que
+\begin{eqnarray} \label{eq:prop43-9}
+\frac{\partial |A|}{\partial x_1} = \frac{2 h_{11} \frac{\partial h_{11}}{\partial x_1} + 2 h_{12} \frac{\partial h_{12}}{\partial x_1}}{|A|}
+\quad\mbox{e}\quad
+\frac{\partial |A|}{\partial x_2} = \frac{2 h_{11} \frac{\partial h_{11}}{\partial x_2} + 2 h_{12} \frac{\partial h_{12}}{\partial x_2}}{|A|}.
+\end{eqnarray}	
+Elevando ao quadrado as duas equa\c c\~oes em \eqref{eq:prop43-9},
+obtemos
+\begin{eqnarray} \label{eq:prop43-10}
+\begin{aligned}
+\left( \frac{\partial |A|}{\partial x_1} \right)^2 &= \frac{4 h_{11}^2 \left( \frac{\partial h_{11}}{\partial x_1} \right)^2 + 4 h_{12}^2 \left( \frac{\partial h_{12}}{\partial x_1} \right)^2 + 8 h_{11} h_{12} \frac{\partial h_{11}}{\partial x_1} \frac{\partial h_{12}}{\partial x_1}}{|A|^2} \\
+\left( \frac{\partial |A|}{\partial x_2} \right)^2 &= \frac{4 h_{11}^2 \left( \frac{\partial h_{11}}{\partial x_2} \right)^2 + 4 h_{12}^2 \left( \frac{\partial h_{12}}{\partial x_2} \right)^2 + 8 h_{11} h_{12} \frac{\partial h_{11}}{\partial x_2} \frac{\partial h_{12}}{\partial x_2}}{|A|^2}
+\end{aligned}
+\end{eqnarray}	
+Somando as duas equa\c c\~oes em \eqref{eq:prop43-10}, e usando
+\eqref{eq:prop43-11} e \eqref{eq:prop43-9}, obtemos
+\begin{eqnarray} \label{eq:prop43-12}
+| \nabla |A| |^2 = 2 \left( \frac{\partial h_{12}}{\partial x_1} \right)^2 + 2 \left( \frac{\partial h_{12}}{\partial x_2} \right)^2.
+\end{eqnarray}	
+Das equa\c c\~oes \eqref{eq:prop43-13} e \eqref{eq:prop43-12}
+obtem-se \eqref{eq:prop43-14}. Finalmente, substituindo a
+equa\c c\~ao \eqref{eq:prop43-14} em \eqref{edp_sff}, obtemos
+\begin{equation*}
+\Delta_\Sigma \Psi - \frac{|\nabla \Psi|^2}{\Psi} + (|A|^2 - 2) \Psi = 0,
+\end{equation*}
+finalizando a demonstra\c c\~ao.
 \end{demonstracao}
 
 
-\begin{teorema}[Lawson]\label{teo_lawson}
-	Se $\Sigma$ é uma superfície mínima em $S^3$ de curvatura intrínseca constante $K$, então ou $K=1$ e $\Sigma$ é totalmente geodésica, ou $K=0$ e $\Sigma$ é um pedaço aberto de toro do Clifford.
-\end{teorema}
-
+\begin{proposicao} \label{prop:torus1}
+Seja $F:\Sigma\to\Sp^3$ um toro m\'inimo e mergulhado na esfera
+$\Sp^3$. Se 
+\begin{equation} \label{eq:Prop432-1}
+\sup_{\substack{x,y \in \Sigma\\ x \neq y}} \frac{| \langle  \nu(x), F(y) \rangle |}
+{\Psi(x) (1 - \langle F(x), F(y) \rangle)} \leq 1,
+\end{equation}
+ent\~ao $F$ \'e congruente ao toro de Clifford.
+\end{proposicao}
 \begin{demonstracao}
-	\cite{Lawson1969}, Corolário 3.
-\end{demonstracao}
-
-\begin{teorema}[Brendle]
-	Seja $F: M \rightarrow S^3$ uma superfície mínima mergulhada em $S^3$ de gênero 1. Então $F$ é congruente a o toro de Clifford.
-\end{teorema}
-
-
-Definamos
+Segue da hip\'otese \eqref{eq:Prop432-1} que
+\begin{equation} \label{eq:Prop432-2}
+\Psi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle \geq 0,
+\end{equation}
+para quaisquer $x,y\in\Sigma $. Por uma quest\~ao de simplicidade,
+identificaremos a superf\'icie $\Sigma$ com sua imagem atrav\'es 
+do mergulho $F$, i.e., $F(x) = x$, para todo $x \in \Sigma$. 
+Fixado um ponto arbitr\'ario $\xb\in\Sigma$, podemos encontrar uma
+base ortonormal $\{e_1,e_2 \}$ de $T_{\xb}\Sigma$ tal que
 \begin{equation*}
-	\aleph = \sup_{\substack{x,y \in \Sigma\\ x \neq y}} \frac{| \langle  \nu(x), F(y) \rangle |}{\Psi(x) (1 - \langle F(x), F(y) \rangle)}
+h(e_1,e_1) = \Psi(\xb), \quad h(e_1,e_2)=0 \quad \text{e} \quad 
+h(e_2,e_2) = -\Psi(\xb),
 \end{equation*}
-Supor que $\aleph \leq 1$. Então
+onde $h$ denota a segunda forma fundamental de $F$ no ponto $\xb$.
+Dado uma geod\'esica $\gamma$ na superf\'icie $\Sigma$, com 
+$\gamma(0)=p$ e $\gamma'(0)=e_1$, definimos uma função $f:\R\to\R$
+pondo
 \begin{equation*}
-	\Psi(x) (1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle \geq 0
+f(t) = Z(\xb,\gamma(t)) = 
+\Psi(\xb) (1 - \langle \xb, \gamma(t) \rangle) + \langle \nu(\xb), 
+\gamma(t) \rangle.
 \end{equation*}
-para todo $ x,y \in \Sigma $. Identifiquemos ao ponto $F(x)$ com o ponto $x$, i.e., $F(x) = x$, para todo $x \in \Sigma$. Seja $p \in \Sigma$ arbitrário e $\{ e_1, e_2 \}$ a base de autovetores ortonormais de $A$ que gera $T_{p} \Sigma$ tais que
+Note que, em virtude de \eqref{eq:Prop432-2}, tem-se $f(t)\geq0$,
+para todo $t\in\R$.
+Calculando a derivada de primeira ordem de $f$, obtemos:
+\[
+f'(t) = -\langle \Psi(\xb) \xb - \nu(\xb), \gamma'(t) \rangle + 
+\langle \nu(\xb), \gamma'(t) \rangle
+\]
+Como $\gamma$ \'e geodésica, $\gamma'(t)$ \'e o transporte paralelo
+de $\gamma'(0)$, logo
+\[
+\langle\nu(\xb),\gamma'(t)\rangle = \langle\nu(\xb),
+\gamma'(0)\rangle = 0.
+\]
+Assim, $f'(t)$ pode ser escrito como
 \begin{equation*}
-	h(e_1,e_1) = \Psi(\xb), \quad h(e_1,e_2)=0 \quad \text{and} \quad h(e_2,e_2) = -\Psi(\xb)
+f'(t) = -\langle \Psi(\xb) \xb - \nu(\xb), \gamma'(t) \rangle.
 \end{equation*}
-Observar que $\Psi(\xb) = |\lambda|$, onde os autovalores de $A$ são $\lambda$ e $-\lambda$.
-Seja $\gamma(t)$ uma geodésica em $\Sigma$ tal que $\gamma(0)=p$ e $\gamma'(0)=e_1$. Definamos a função $f: \mathbb{R} \rightarrow \mathbb{R}$ por
+Calculando a derivada segunda de $f$, obtemos:
 \begin{equation*}
-	f(t) = \Psi(\xb) (1 - \langle p, \gamma(t) \rangle) + \langle \nu(\xb), \gamma(t) \rangle \geq 0
+f''(t) = -\langle \Psi(\xb) \xb - \nu(\xb), \gamma''(t) \rangle.
 \end{equation*}
-Calculando a derivada de primeiro ordem temos
+Derivando a igualdade
+\[
+\langle \nu(\gamma(t)), \gamma'(t) \rangle = 0,
+\]
+tem-se
+\[
+\langle D \nu(\gamma(t)) \gamma'(t), \gamma'(t) \rangle + 
+\langle \nu(\gamma(t)), \gamma''(t) \rangle = 0,
+\]
+onde $D$ denota a derivada usual em $\Sp^3$. Como $\gamma''(t)$ 
+não tem componentes em $T_{\gamma(t)} \Sigma$, tem-se
 \begin{equation*}
-	f'(t) = -\langle \Psi(\xb) \xb - \nu(\xb), \gamma'(t) \rangle + \langle \nu(\xb), \gamma'(t) \rangle
+-\gamma''(t) = \gamma(t) + h(\gamma'(t), \gamma'(t)) \nu(\xb).
 \end{equation*}
-Observar que $ \gamma $ é uma geodésica, então $ \gamma'(t) $ é  o transporte paralelo de $ \gamma'(0) $. Logo se tem que $ \langle \nu(\xb), \gamma'(t) \rangle = \langle \nu(\xb), \gamma'(0) \rangle = 0 $
+Assim, $f''(t)$ se expressa como
 \begin{equation*}
-	f'(t) = -\langle \Psi(\xb) \xb - \nu(\xb), \gamma'(t) \rangle
+f''(t) = \langle \Psi(\xb) \xb - \nu(\xb), \gamma(t) + h(\gamma'(t), 
+\gamma'(t)) \nu(\xb) \rangle.
 \end{equation*}
-Calculando a segunda derivada temos
+Calculando a derivada de ordem $3$ de $f$, obtemos:
+\begin{eqnarray}\label{3ra_der_f}
+\begin{aligned}
+f'''(t) =& \langle \Psi(\xb)\xb - \nu(\xb), \gamma'(t) \rangle + h(\gamma'(t), 
+\gamma'(t)) \langle \Psi(\xb)\xb - \nu(\xb), D_{\gamma'(t)} \nu(\gamma(t)) 
+\rangle \\
+&+ \left( D_{\gamma'(t)}^{\Sigma} h \right) (\gamma'(t), \gamma'(t)) 
+\langle \Psi(\xb)\xb - \nu(\xb), \nu(\gamma(t)) \rangle.
+\end{aligned}
+\end{eqnarray}
+Observe que $f(0)=0$. Temos também $f'(0)=0$, pois 
+$\Psi(\xb)\xb-\nu(\xb)$ \'e perpendicular a $T_{\xb}\Sigma$. 
+Al\'em disso, temos $f''(0)=0$ pois
+\[
+f''(0) = \Psi(\xb) - h(e_1,e_1)=0.
+\]
+Provemos agora que $f'''(0)=0$. Usando a expansão de Taylor em $f$,
+tem-se:
 \begin{equation*}
-	f''(t) = -\langle \Psi(\xb) \xb - \nu(\xb), \gamma''(t) \rangle
-\end{equation*}
-Observar que $ \langle \nu(\gamma(t)), \gamma'(t) \rangle = 0 $. Derivando se tem
-\begin{equation*}	\langle D \nu(\gamma(t)) \gamma'(t), \gamma'(t) \rangle + \langle \nu(\gamma(t)), \gamma''(t) \rangle = 0
-\end{equation*}
-Como $\gamma''(t)$ não tem componentes em $T_{\gamma(t)} \Sigma$ porque é geodésica, então
-\begin{equation*}
-	-\gamma''(t) = \gamma(t) + h(\gamma'(t), \gamma'(t)) \nu(\xb)
-\end{equation*}
-Portanto
-\begin{equation*}
-	f''(t) = \langle \Psi(\xb) \xb - \nu(\xb), \gamma(t) + h(\gamma'(t), \gamma'(t)) \nu(\xb) \rangle
-\end{equation*}
-Derivando outra vez se tem
-\begin{multline}\label{3ra_der_f}
-	f'''(t) = \langle \Psi(\xb)p - \nu(\xb), \gamma'(t) \rangle + h(\gamma'(t), \gamma'(t)) \langle \Psi(\xb)p - \nu(\xb), D_{\gamma'(t)} \nu(\gamma(t)) \rangle\\
-	+ \left( D_{\gamma'(t)}^{\Sigma} h \right) (\gamma'(t), \gamma'(t)) \langle \Psi(\xb)p - \nu(\xb), \nu(\gamma(t)) \rangle
-\end{multline}
-Observar que $f(0)=0$. Também $f'(0)=0$ porque $\Psi(\xb)p - \nu(\xb)$ é perpendicular a $T_p \Sigma$. E finalmente, $f''(0)=0$ porque $f''(0) = \Psi(\xb) - h(e_1,e_1)=0$.
-Vamos demonstrar que $f'''(0)=0$. Usando a expansão de Taylor em $f$ se tem
-\begin{equation*}
-	f(t) = f(0) + f'(0)t + f''(0)t^2 + f'''(0)t^3 + r_3(t)
+f(t) = f(0) + f'(0)t + f''(0)t^2 + f'''(0)t^3 + r_3(t),
 \end{equation*}  
-onde $\lim_{t \rightarrow 0} \frac{r_3(t)}{t_3}=0$. Como $f(t) \geq 0$ e $f(0)=f'(0)=f''(0)=0$ se tem
-\begin{equation*}
-	0 \leq f'''(0) t^3 + r_3(t)
-\end{equation*}
-Dividendo por $t^3$ e fazendo o limite quando $t \rightarrow 0$ temos que $0 \leq f'''(0)$. Por outro lado, usando a mesma ideia usando $-t$ em lugar de  $t$ temos que $f'''(0) \leq 0$. Portanto, $f'''(0)=0$.
-Voltando  a \eqref{3ra_der_f}, avaliando em $t=0$, se tem que $(D_{e_1}^{\Sigma} h) (e_1,e_1) = 0$ porque $e_1, D_{e_1} \nu(\xb) \in T_p \Sigma$ e $\Psi(\xb)p - \nu(\xb)$ e $\nu(\xb)$ são paralelos.
-Para continuar a demonstração deste primeiro caso, podemos considerar a base $\{ e_2, e_1, -\nu \}$ em lugar de $\{ e_1, e_2, \nu \}$ para mudar a orientação definida da superfície e, fazendo o mesmo procedimento, se tem que $(D_{e_2}^{\Sigma} h) (e_2,e_2)=0$.
-Pela equação de Codazzi se tem
-\begin{align*}
-	(D_{e_2}^{\Sigma} h) (e_1,e_1) &= (D_{e_1}^{\Sigma} h) (e_2,e_1) = 0\\
-	(D_{e_1}^{\Sigma} h) (e_2,e_2) &= (D_{e_2}^{\Sigma} h) (e_1,e_2) = 0
-\end{align*}
-Portanto $\nabla h = 0$ e com isso se tem que $h$ é constante. Seja $K$ a curvatura intrínseca de $\Sigma$. Como $h$ é constante, então $K$ também é constante. Logo, pelo teorema de Lawson (\ref{teo_lawson}) ou $K=0$, ou $K=1$. Mas $\Sigma$ não tem ponto umbílicos por \ref{nao_existem_pontos_umbilicos}, portanto $K=0$ e $\Sigma$ é um pedaço aberto do toro de Clifford. Mas $\Sigma$ é compacto, portanto $\Sigma$ é todo o toro de Clifford.
-
-Supor agora que $\aleph > 1$. Escolhendo adequadamente entre $\nu$ e $-\nu$ temos
-\begin{equation*}
-	\aleph = \sup_{\substack{x,y \in \Sigma\\ x \neq y}} \frac{- \langle \nu(x), F(y) \rangle}{\Psi(x)(1 - \langle F(x), F(y) \rangle)}.
-\end{equation*}
-Seja $\Phi(x) = \aleph \Psi(x)$ em a definição de $Z(x,y)$, então
-\begin{equation*}
-	Z(x,y) = \aleph \Psi(x)(1 - \langle F(x), F(y) \rangle) + \langle \nu(x), F(y) \rangle.
-\end{equation*}
-Pela equação anterior observa-se que $Z(x,y) \geq 0$.
-Definamos o conjunto
-\begin{equation*}
-	\Omega = \{ \xb \in \Sigma: \exists \yb \in \Sigma \setminus \{\xb\} \text{ tal que } Z(\xb,\yb) = 0 \}
-\end{equation*}
-%O conjunto $\Omega$ é não vazio.
-
-\begin{proposicao}
-	$\Omega$ não vazio.
-\end{proposicao}
-
-\begin{demonstracao}
-	Supor que $\Omega$ é vazio. 
-	Isto quer dizer que para $x,y \in \Sigma$ quaisquer tal que $x \neq y$ tem-se que $Z(x,y)>0$.
-	Pela definição de $\aleph$, para $\aleph/2 > 0$ existem $x_0, y_0 \in \Sigma$ onde $x_0 \neq y_0$, tais que
-	\begin{equation*}
-		-\frac{\innerproduct{\nu(x_0)}{F(y_0)}}{\Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)})} > \frac{\aleph}{2}.
-	\end{equation*}
-	Então,
-	\begin{equation*}
-		0 > \aleph \Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)}) + \innerproduct{\nu(x_0)}{F(y_0)} = Z(x_0,y_0).
-	\end{equation*}
-	Mas isto é uma contradição porque $Z(x,y) > 0$ para quaisquer $x,y \in \Sigma$ tal que $x \neq y$.
-	Portanto $\Omega$ é não vazio.
+onde
+\[
+\lim_{t \rightarrow 0} \frac{r_3(t)}{t_3}=0.
+\]
+Como $f(t) \geq 0$ e $f(0)=f'(0)=f''(0)=0$ tem-se
+\begin{equation} \label{eq:taylor1}
+0 \leq f'''(0) t^3 + r_3(t).
+\end{equation}
+Dividindo por $t^3$ em \eqref{eq:taylor1}, e fazendo $t\to0$, obtemos
+\[
+0 \leq f'''(0).
+\]
+Por outro lado, usando $-t$ ao inv\'es de $t$ e aplicando a mesma ideia,
+obtemos
+\[
+f'''(0) \leq 0,
+\]
+logo $f'''(0)=0$. Fazendo agora $t=0$ na equa\c c\~ao \eqref{3ra_der_f},
+tem-se 
+\begin{equation} \label{eq:taylor2}
+(D_{e_1}^{\Sigma} h) (e_1,e_1) = 0,
+\end{equation}
+pois $e_1, D_{e_1} \nu(\xb) \in T_p \Sigma$ e $\Psi(\xb)p - \nu(\xb)$ e 
+$\nu(\xb)$ são paralelos. Trocando o referencial $\{ e_1, e_2, \nu \}$
+por $\{ e_2, e_1, -\nu \}$, e argumentando de maneira an\'aloga, obtemos
+\begin{equation} \label{eq:taylor3}
+(D_{e_2}^{\Sigma} h) (e_2,e_2)=0.
+\end{equation}
+Como $h_{11}+h_{22}=0$, segue de \eqref{eq:taylor2} e \eqref{eq:taylor3}
+que
+\[
+(D_{e_2}^{\Sigma} h) (e_1,e_1) = (D_{e_1}^{\Sigma} h) (e_2,e_1) = 0
+\]
+e
+\[
+(D_{e_1}^{\Sigma} h) (e_2,e_2) = (D_{e_2}^{\Sigma} h) (e_1,e_2) = 0,
+\]
+implicando que 
+\[
+(D_{e_1}^{\Sigma} h) (e_2,e_2) = 0
+\]
+e
+\[
+(D_{e_2}^{\Sigma} h) (e_1,e_1) = 0.
+\]
+Aplicando as equa\c c\~oes de Codazzi nas identidades acima, 
+obtemos que $\nabla h = 0$. Disso decorre, em particular, que a
+curvatura intrínseca $K$ de $\Sigma$ é constante e, assim, a 
+m\'etrica induzida em $\Sigma$ por $F$ \'e flat. Logo, pelo trabalho
+de Lawson (cf. \cite[Corollary 3]{Lawson1969}), tem-se que $K\equiv0$ 
+ou $K\equiv1$. Como $\Sigma$ não tem pontos umbílicos, segue que
+$K\equiv0$ e, portanto, $\Sigma$ é um subconjunto aberto do toro de 
+Clifford. A compacidade de $\Sigma$ implica que $F$ é congruente
+ao toro de Clifford.
 \end{demonstracao}
 
-Usando a proposição \eqref{edp_principal}, e a definição de $\Phi(\xb)$, a equação \eqref{suma_2das_derivadas} fica
-\begin{multline}\label{suma_2da_der_aleph}
-\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) + 2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) =\\
-- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle
-\end{multline}
-para qualquer par de pontos $\xb \neq \yb$. Como no ponto $(\xb,\yb)$ atinge-se um mínimo, então
+Iremos a partir de agora finalizar a prova do Teorema 
+\ref{teo:Lawson}. Dado um toro m\'inimo e mergulhado 
+$F:\Sigma\to\Sp^3$, considere
+a express\~ao
+\begin{equation} \label{eq:aleph-1}
+\aleph = \sup_{\substack{\xb,\yb\in\Sigma\\ \xb\neq\yb}} 
+\frac{|\langle\nu(\xb),F(\yb)\rangle|}{\Psi(\xb)(1-\langle F(\xb),F(\yb)\rangle)},
+\end{equation}
+onde $\Psi$ \'e dada em \eqref{eq:PsiA(x)}. Se $\aleph\leq1$, segue
+da Proposi\c c\~ao \ref{prop:torus1} que $F$ \'e congruente ao toro de
+Clifford. Assim, resta considerar o caso em que $\aleph > 1$. Trocando
+a dire\c c\~ao normal $\nu$ por $-\nu$, caso necess\'ario, podemos
+escrever
+\begin{equation} \label{eq:aleph-2}
+\aleph = \sup_{\substack{\xb,\yb\in\Sigma\\ \xb\neq\yb}} 
+\frac{-\langle\nu(\xb),F(\yb)\rangle}{\Psi(\xb)(1-\langle F(\xb),F(\yb)\rangle)}.
+\end{equation}
+Assim, em virtude de \eqref{eq:aleph-2}, a fun\c c\~ao $Z$, dada por
 \begin{equation*}
-	0 = Z(\xb,\yb) = \frac{\partial Z}{\partial x_i}(\xb,\yb) = \frac{\partial Z}{\partial y_i}(\xb,\yb)
+Z(\xb,\yb) = \aleph\Psi(\xb)(1-\langle F(\xb),F(\yb)\rangle)+
+\langle\nu(\xb),F(\yb) \rangle,
 \end{equation*}
+satisfaz
+\begin{equation} \label{eq:aleph-3}
+Z(\xb,\yb)\geq0,
+\end{equation}
+para quaisquer $\xb,\yb\in\Sigma$. Considere agora o conjunto
+\begin{equation} \label{eq:ConjOmega}
+\Omega = \{\xb\in\Sigma:\mbox{existe} \ \yb\in\Sigma\setminus\{\xb\}
+\text{ tal que } Z(\xb,\yb) = 0 \}
+\end{equation}
 
-\begin{proposicao}\label{gradiente_nulo}
-	Tem-se que $\nabla \Psi(\xb) = 0$ para todo $\xb \in \Omega.$
-\end{proposicao}
 
-\begin{demonstracao}
-	Seja $\xb \in \Omega$, então existe $\yb \in \Omega \setminus \{x\}$ tal que $Z(\xb,\yb) = 0$. Tem-se que em $(\xb,\yb)$ atinge-se um mínimo local, portanto o Hessiano é definido não negativo. O Hessiano está definido por
-	\begin{equation*}
-		H(\xb,\yb) = \left[ \begin{matrix}
-		\frac{\partial^2 Z}{\partial x_1^2}(\xb,\yb) & \frac{\partial^2 Z}{\partial x_2 \partial x_1}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_1 \partial x_1}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_2 \partial x_1}(\xb,\yb)\\ 
-		\frac{\partial^2 Z}{\partial x_1 \partial x_2}(\xb,\yb) & \frac{\partial^2 Z}{\partial x_2^2}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_1 \partial x_2}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_2 \partial x_2}(\xb,\yb)\\
-		 \frac{\partial^2 Z}{\partial x_1 \partial y_1}(\xb,\yb) & \frac{\partial^2 Z}{\partial x_2 \partial y_1}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_1^2}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_2 \partial y_1}(\xb,\yb)\\
-		  \frac{\partial^2 Z}{\partial x_1 \partial y_2}(\xb,\yb) & \frac{\partial^2 Z}{\partial x_2 \partial y_2}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_1 \partial y_2}(\xb,\yb) & \frac{\partial^2 Z}{\partial y_2^2}(\xb,\yb)
-		\end{matrix} \right]
-	\end{equation*}	
-	Como o Hessiano é definido não negativo. então para todo $v \in \realnumbers^4$ tem-se
-	\begin{equation*}
-		v^t H(\xb,\yb) v \geq 0
-	\end{equation*}	
-	Em particular, para $v_1 = [1,0,1,0]^t$ e para $v_2 = [0,1,0,1]^t$ tem-se
-	\begin{equation*}
-		0 \leq v_1^t H(\xb,\yb) v_1 + v_2^t H(\xb,\yb) v_ 2 = \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) + 2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb)
-	\end{equation*}	
-	Por outro lado, como $\aleph > 1$, então
-	\begin{equation*}
-		- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \leq 0
-	\end{equation*}	
-	Pela equação \eqref{suma_2da_der_aleph} tem-se
-	\begin{equation*}
-		\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle = 0
-	\end{equation*}	
-	A equação \eqref{diff_Z_x} utilizando coordenadas geodésicas pode-se expressar como
-	\begin{multline*}
-		0 = \frac{\partial Z}{\partial x_i}(\xb,\yb) = \aleph \frac{\partial \Psi}{\partial x_i}(\xb)(1 - \langle F(\xb),F(\yb) \rangle)  - \aleph \Psi(\xb) \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle\\
-		+ \sum_{i=1}^2 \lambda_i \left\langle \frac{\partial F}{\partial x_i}(\xb),F(\yb) \right\rangle
-	\end{multline*}	
-	Como $\left\langle \frac{\partial F}{\partial x_i}(\xb),F(\yb) \right\rangle = 0$, então a equação anterior expressa-se
-	\begin{equation*}
-		0 = \frac{\partial Z}{\partial x_i}(\xb,\yb) = \aleph \frac{\partial \Psi}{\partial x_i}(\xb)(1 - \langle F(\xb),F(\yb) \rangle)
-	\end{equation*}	
-	Portanto, $\nabla \Psi(\xb) = 0$ para todo $\xb \in \Omega$.
-\end{demonstracao}
-
-\begin{lema}[Principio do máximo estrito de Bony]\label{bony}
-	Seja $U$ um subconjunto aberto de uma variedade Riemanniana $M$, e seja $X_1, \ldots, X_m$ campos vetoriais diferenciáveis em $U$. Assumir que $\varphi: U \rightarrow \realnumbers$ é uma função não negativa diferenciável tal que
-	\begin{equation*}
-		\sum_{j=1}^{m} (D^2 \varphi)(X_j,X_j) \leq -L \inf_{|\xi| \leq 1} (D^2 \varphi)(\xi,\xi) + L |d \varphi| + L \varphi,
-	\end{equation*}
-	onde $L$ é uma constante positiva. Seja $\Omega = \{ x \in U: \varphi(x) = 0 \}$ o conjunto de zeros da função $\varphi$. Alem disso, supor que $\gamma: [0,1] \rightarrow U$ é um caminho diferenciável tal que $\gamma(0) \in \Omega$ e $\gamma'(s) = \sum_{j=1}^{m} f_j(s) X_j(\gamma(s))$ para funções diferenciáveis $f_1, \ldots, f_m: [0,1] \rightarrow \realnumbers$ adequadas. Então $\gamma(s) \in \Omega$ para todo $s \in [0,1]$.
+\begin{lema}
+O conjunto $\Omega$, dado em \eqref{eq:ConjOmega}, \'e n\~ao-vazio.
 \end{lema}
-
 \begin{demonstracao}
-	\cite{Brendle2010}, Corolário 9.7.
+
 \end{demonstracao}
 
-\begin{proposicao}
-	$\Omega$ é aberto.
-\end{proposicao}
+O pr\'oximo passo agora \'e provar que o conjunto $\Omega$,
+dado em \eqref{eq:ConjOmega}, \'e aberto. Para isso, faremos
+uso de dois resultados. O primeiro deles \'e o {\em princ\'ipio
+do m\'aximo estrito de Bony} para equa\c c\~oes el\'ipticas 
+n\~ao-degeneradas (cf. \cite[Corollary 9.7]{Brendle2010}).
 
-\begin{demonstracao}
-	Nas proposições \eqref{2_diff_Z_x}, \eqref{diff_Z_x_y} e \eqref{2_diff_Z_y} estamos assumindo que $Z(\xb,\yb) = 0$. Vamos agora repetir o cálculos sem considerar essa hipóteses. Ao final tem-se
-	\begin{multline*}
-	\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) + 2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) + \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb) =\\
-	- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle + \overline{\Lambda}(\xb,\yb) \left( Z(\xb,\yb) + \sum_{i=1}^2 \left| \frac{\partial Z}{\partial x_i}(\xb,\yb) \right| + \sum_{i=1}^2 \left| \frac{\partial Z}{\partial y_i}(\xb,\yb) \right| \right)
-	\end{multline*}
-	onde $\overline{\Lambda}(\xb,\yb)$ é uma função continua no conjunto $\{ (x,y) \in \Sigma \times \Sigma: x \neq y \}$, a qual pode ser não limitada perto da diagonal.	
-	Pelo principio do máximo estrito de Bony \ref{bony} tem-se que $\Omega$ é aberto.
-\end{demonstracao}
-
-Voltando à proposição \ref{gradiente_nulo} e usando o fato que $\Omega$ é aberto, então $\Psi(\xb)= |\lambda_i|$ é constante. Pelo teorema de Lawson \ref{teo_lawson}, da fórmula da curvatura de Gauss
+\begin{teorema} \label{teo:bony}
+Dados um aberto $U\subset\R^n$ e campos vetoriais 
+$X_1,\ldots,X_m\in\mathfrak{X}(U)$, considere uma fun\c c\~ao
+diferenci\'avel n\~ao-negativa $\varphi:U\to\R$ satisfazendo
 \begin{equation*}
-	K = 1 + \lambda_1 \lambda_2
+\sum_{j=1}^{m} (D^2 \varphi)(X_j,X_j) \leq -L \inf_{|\xi| \leq 1} 
+(D^2 \varphi)(\xi,\xi) + L |d \varphi| + L \varphi,
 \end{equation*}
-tem-se $\lambda_1 = \lambda_2 = 0$ ou, $\lambda_1 = 1$ e $\lambda_2=-1$. Mas a superfície não tem ponto umbílicos, então cumpre-se o segundo caso. Portanto, $\Psi(\xb)=1$ para todo $\xb \in \Omega$.	
-Pelo Teorema de continuação única estândar de equações diferencias parciais \cite{Aronszajn1957} tem-se que $\Psi(\xb) = 1$ para todo $\xb \in \Sigma$. Portanto a curvatura Gaussiana de $\Sigma$ anula-se. Então $\Sigma$ é congruente com o toro de Clifford.
+onde $L$ é uma constante positiva. Seja $F=\{x\in U:\varphi(x)=0\}$
+o conjunto dos zeros de $\varphi$ e suponha que $\gamma:[0,1]\to U$
+seja uma curva diferenciável tal que $\gamma(0)\in F$ e 
+$\gamma'(s) = \displaystyle\sum_{j=1}^{m} f_j(s) X_j(\gamma(s))$, para certas
+funções diferenciáveis $f_1,\ldots,f_m:[0,1]\to\R$. Então 
+$\gamma(s)\in F$, para todo $s\in[0,1]$.
+\end{teorema}
+
+O segundo resultado \'e uma estimativa obtida fazendo-se uma
+adapta\c c\~ao na demonstra\c c\~ao da Proposi\c c\~ao
+\ref{prop:somaDerSeg}.
+
+\begin{lema}
+Dados dois pontos $\xb,\yb\in\Sigma$, com $\xb\neq\yb$, tem-se:
+\begin{equation} \label{eq:lema2Omegaopen}
+\begin{aligned}
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) \ + \ & 
+2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) \ + \ 
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb)  \\
+& \leq
+- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \\
+& + 
+\tilde{\Lambda}(\xb,\yb) \left( Z(\xb,\yb) + \sum_{i=1}^2 \left| \frac{\partial Z}{\partial x_i}(\xb,\yb) \right| + \sum_{i=1}^2 \left| \frac{\partial Z}{\partial y_i}(\xb,\yb) \right| \right)
+\end{aligned}
+\end{equation}
+onde $\tilde{\Lambda}(\xb,\yb)$ \'e uma função cont\'inua no conjunto
+$\{(\xb,\yb)\in\Sigma\times\Sigma:\xb\neq\yb \}$, a qual pode ser não
+limitada numa vizinhan\c ca da diagonal de $\Sigma\times\Sigma$.
+\end{lema}
+\begin{demonstracao}
+Em virtude das Proposi\c c\~oes \ref{prop:somaDerSeg} e 
+\ref{edp_principal}, podemos escrever
+\begin{equation*}
+\begin{aligned}
+&\sum_{i=1}^2\frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) \ + \ 
+2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) \ + \ 
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb)  \\
+& =
+- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle^2 
++ 4\aleph\Psi(\xb) - (|A(\xb)|^2+2)Z(\xb,\yb) \\ 
+& 
++2\sum_{i=1}^2(\lambda_i-\aleph\Psi(\xb))\left\langle w_i,
+\frac{\partial F}{\partial y_i}(\yb)\right\rangle - 
+\frac{2}{1 - \langle F(\xb), F(\yb) \rangle}\sum_{i=1}^2
+\frac{\partial Z}{\partial x_i}(\xb,\yb)\left\langle F(\xb),
+\frac{\partial F}{\partial y_i}(\yb)\right\rangle \\
+& +
+\frac{1}{\aleph\Psi(\xb)(1 - \langle F(\xb), F(\yb) \rangle)}\sum_{i=1}^2
+\left[\left(\frac{\partial Z}{\partial x_i}(\xb,\yb)\right)^2
+-2\lambda_i\left\langle\frac{\partial F}{\partial x_i}(\xb),F(\yb)\right\rangle
+\frac{\partial Z}{\partial x_i}(\xb,\yb)\right].
+\end{aligned}
+\end{equation*}
+Como 
+\[
+X(\xb,\yb)\geq0 \quad\mbox{e}\quad
+|F(\xb)| = \left|\frac{\partial F}{\partial y_i}\right|=1,
+\]
+podemos escrever
+\begin{equation*}
+\begin{aligned}
+&\sum_{i=1}^2\frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) \ + \ 
+2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) \ + \ 
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb)  \\
+& =
+- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle^2
++ 4\aleph\Psi(\xb) \\ 
+& 
++2\sum_{i=1}^2(\lambda_i-\aleph\Psi(\xb))\left\langle w_i,
+\frac{\partial F}{\partial y_i}(\yb)\right\rangle +
+\frac{2}{1 - \langle F(\xb), F(\yb) \rangle}\sum_{i=1}^2
+\left|\frac{\partial Z}{\partial x_i}(\xb,\yb)\right| \\
+& +
+\frac{1}{\aleph\Psi(\xb)(1 - \langle F(\xb), F(\yb) \rangle)}\sum_{i=1}^2
+\left[\left(\frac{\partial Z}{\partial x_i}(\xb,\yb)\right)^2
+-2\lambda_i\left\langle\frac{\partial F}{\partial x_i}(\xb),F(\yb)\right\rangle
+\frac{\partial Z}{\partial x_i}(\xb,\yb)\right].
+\end{aligned}
+\end{equation*}
+Estimemos, inicialmente, o termo
+\[
+\frac{\partial Z}{\partial x_i}(\xb,\yb)\left[
+\frac{\partial Z}{\partial x_i}(\xb,\yb)
+-2\lambda_i\left\langle\frac{\partial F}{\partial x_i}(\xb),F(\yb)\right\rangle
+\right].
+\]
+Como
+\[
+\frac{\partial Z}{\partial x_i}(\xb,\yb) = \aleph\frac{\partial\Psi}{\partial x_i}(\xb)
+(1 - \langle F(\xb), F(\yb) \rangle) +
+(\lambda_i-\aleph\Psi(\xb))\left\langle\frac{\partial F}{\partial x_i}(\xb),F(\yb)
+\right\rangle,
+\]
+temos
+\begin{equation*}
+\begin{aligned}
+&
+\frac{\partial Z}{\partial x_i}(\xb,\yb)\left[
+\frac{\partial Z}{\partial x_i}(\xb,\yb)
+-2\lambda_i\left\langle\frac{\partial F}{\partial x_i}(\xb),F(\yb)\right\rangle
+\right] \\
+&= 
+\frac{\partial Z}{\partial x_i}(\xb,\yb)\left[
+\aleph\frac{\partial\Psi}{\partial x_i}(\xb)
+(1 - \langle F(\xb), F(\yb) \rangle) +
+(\lambda_i-\aleph\Psi(\xb))\left\langle\frac{\partial F}{\partial x_i}(\xb),F(\yb)
+\right\rangle\right] \\
+&\leq
+\left|\frac{\partial Z}{\partial x_i}(\xb,\yb)\right|\aleph M
+(1 - \langle F(\xb), F(\yb) \rangle) +
+\left|\frac{\partial Z}{\partial x_i}(\xb,\yb)\right| 2\aleph\Psi(\xb),
+\end{aligned}
+\end{equation*}
+onde
+\[
+M = \sup_{\substack{\xb\in\Sigma\\ i=1,2}}
+\left|\frac{\partial\Psi}{\partial x_i}(\xb)\right|
+\]
+e notando que $\lambda_i\leq\aleph\Psi(\xb)$, com $i=1,2$. Assim,
+\begin{equation*}
+\begin{aligned}
+&\sum_{i=1}^2\frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) \ + \ 
+2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) \ + \ 
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb)  \\
+& \leq
+- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle^2
++ 4\aleph\Psi(\xb) \\ 
+& +
+2\sum_{i=1}^2(\lambda_i-\aleph\Psi(\xb))\left\langle w_i,
+\frac{\partial F}{\partial y_i}(\yb)\right\rangle +
+\left(\frac{4}{1 - \langle F(\xb), F(\yb) \rangle} + \frac{M}{\Psi(\xb)}\right)
+\sum_{i=1}^2\left|\frac{\partial Z}{\partial x_i}(\xb,\yb)\right|.
+\end{aligned}
+\end{equation*}
+Estimemos agora o termo
+\[
+2\sum_{i=1}^2(\lambda_i-\aleph\Psi(\xb))\left\langle w_i,
+\frac{\partial F}{\partial y_i}(\yb)\right\rangle.
+\]
+Desenvolvendo, obtemos:
+\begin{equation*}
+\begin{aligned}
+\left| w_i-\frac{\partial F}{\partial y_i}(\yb)\right|^2 &=
+|w_i|^2 + \left|\frac{\partial F}{\partial y_i}(\yb)\right|^2 -
+2\left\langle w_i,\frac{\partial F}{\partial y_i}(\yb)\right\rangle \\
+&=
+2 - 2\left\langle w_i,\frac{\partial F}{\partial y_i}(\yb)\right\rangle.
+\end{aligned}
+\end{equation*}
+Assim,
+\begin{equation*}
+\begin{aligned}
+2&\sum_{i=1}^2(\lambda_i-\aleph\Psi(\xb))\left\langle w_i,
+\frac{\partial F}{\partial y_i}(\yb)\right\rangle \\
+&=
+\sum_{i=1}^2\lambda_i\left(2-\left| w_i-\frac{\partial F}{\partial y_i}(\yb)
+\right|^2\right) +
+\aleph\Psi(\xb)\sum_{i=1}^2\left(
+\left| w_i-\frac{\partial F}{\partial y_i}(\yb)\right|^2-2\right) \\
+&\leq 
+\Psi(\xb)\sum_{i=1}^2\left| w_i-\frac{\partial F}{\partial y_i}(\yb)\right|^2 +
+\aleph\Psi(\xb)\sum_{i=1}^2
+\left| w_i-\frac{\partial F}{\partial y_i}(\yb)\right|^2 
+-4\aleph\Psi(\xb) \\
+&\leq
+2\Psi(\xb)(\aleph+1)\sum_{i=1}^2
+\left| w_i-\frac{\partial F}{\partial y_i}(\yb)\right| -4\aleph\Psi(\xb) \\
+& \leq
+2\Psi(\xb)(\aleph+1)\Lambda(\xb,\yb)\left(Z(\xb,\yb)
++\sum_{i=1}^2\left|\frac{\partial Z}{\partial x_i}(\xb,\yb)\right|\right)
+-4\aleph\Psi(\xb).
+\end{aligned}
+\end{equation*}
+Portanto,
+\begin{equation*}
+\begin{aligned}
+&\sum_{i=1}^2\frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) \ + \ 
+2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) \ + \ 
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb)  \\
+& \leq
+- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle^2 \\
+&+
+2\Psi(\xb)(\aleph+1)\Lambda(\xb,\yb)\left(Z(\xb,\yb)
++\sum_{i=1}^2\left|\frac{\partial Z}{\partial x_i}(\xb,\yb)\right|\right) \\
+&+\left(\frac{4}{1 - \langle F(\xb), F(\yb) \rangle} + \frac{M}{\Psi(\xb)}\right)
+\sum_{i=1}^2\left|\frac{\partial Z}{\partial x_i}(\xb,\yb)\right|,
+\end{aligned}
+\end{equation*}
+e, assim, conclu\'imos que
+\begin{equation*}
+\begin{aligned}
+&\sum_{i=1}^2\frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) \ + \ 
+2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) \ + \ 
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb)  \\
+& \leq
+- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle^2 \\
+&+
+\left(2\Psi(\xb)(\aleph+1)\Lambda(\xb,\yb) +
+\frac{4}{1 - \langle F(\xb), F(\yb) \rangle} + \frac{M}{\Psi(\xb)}\right) \\
+&\cdot\left( Z(\xb,\yb) + \sum_{i=1}^2 \left| \frac{\partial Z}{\partial x_i}(\xb,\yb) \right| + \sum_{i=1}^2 \left| \frac{\partial Z}{\partial y_i}(\xb,\yb) \right| \right).
+\end{aligned}
+\end{equation*}
+Basta considerar ent\~ao
+\[
+\tilde\Lambda(\xb,\yb) =
+\left(2\Psi(\xb)(\aleph+1)\Lambda(\xb,\yb) +
+\frac{4}{1 - \langle F(\xb), F(\yb) \rangle} + \frac{M}{\Psi(\xb)}\right),
+\]
+o que prova \eqref{eq:lema2Omegaopen}.
+\end{demonstracao}
+
+
+\begin{lema}
+O conjunto $\Omega$, dado em \eqref{eq:ConjOmega}, \'e aberto.
+\end{lema}
+\begin{demonstracao}
+Considere dois pontos $\xb,\yb\in\Sigma$, com $\xb\neq\yb$. Seja
+$(x_1,x_2)$ um sistema de coordenadas normais geod\'esicas em
+torno de $\xb$ tal que
+\[
+h_{11}(\xb)=\lambda_1, \quad \lambda_{12}(\xb)=0
+\quad\mbox{e}\quad h_{22}(\xb)=\lambda_2. 
+\]
+Al\'em disso, seja $(y_1,y_2)$ um sistema de coordenadas normais 
+geod\'esicas em torno de $\yb$ tal que
+\begin{equation*}
+\left\langle w_1, \frac{\partial F}{\partial y_1}(\yb) \right\rangle \geq 0, 
+\quad 
+\left\langle w_1, \frac{\partial F}{\partial y_2}(\yb) \right\rangle = 0 
+\quad \text{e} \quad 
+\left\langle w_2, \frac{\partial F}{\partial y_2}(\yb) \right\rangle \geq 0,
+\end{equation*}
+onde $w_1$ e $w_2$ s\~ao dados em \eqref{eq:reflexao}. Adaptando
+a demonstra\c c\~ao do Lema \ref{lem:w_1 w_2}, podemos concluir
+que
+\[
+\sum_{i=1}^2\left| w_i-\frac{\partial F}{\partial y_i}(\yb)\right| \leq
+\Lambda(\xb,\yb)\left(Z(\xb,\yb)+\sum_{i=1}^2
+\left|\frac{\partial Z}{\partial y_i}(\xb,\yb)\right|\right),
+\]
+onde $\Lambda$ \'e uma fun\c c\~ao cont\'inua sobre o conjunto
+\[
+\{(\xb,\yb)\in\Sigma\times\Sigma:\xb\neq\yb\}
+\]
+que, eventualmente, deixa de ser limitada numa vizinhan\c ca
+da diagonal de $\Sigma\times\Sigma$. Usando agora a desigualdade
+\eqref{eq:lema2Omegaopen} e escolhendo no Teorema \ref{teo:bony}
+a fun\c c\~ao $\varphi$ igual a $Z$ e o aberto $U$ como sendo
+$\Sigma\times\Sigma\setminus diag$, conclu\'imos que $\Omega$
+\'e aberto.
+\end{demonstracao}
+
+
+Considere agora dois pontos $\xb,\yb\in\Sigma$, com $\xb\neq\yb$,
+tais que
+\[
+Z(\xb,\yb) = \frac{\partial Z}{\partial x_i}(\xb,\yb) 
+= \frac{\partial Z}{\partial y_i}(\xb,\yb) = 0.
+\]
+Usando a Proposi\c c\~ao \ref{edp_principal}, e equação
+\eqref{suma_2das_derivadas} pode ser escrita como
+\begin{equation} \label{suma_2da_der_aleph}
+\begin{aligned}
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) + & 
+2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) + 
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb)  \\
+& = - 
+\frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), 
+F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}
+{\partial x_i}(\xb), F(\yb) \right\rangle^2.
+\end{aligned}
+\end{equation}
+
+
+
+\begin{proposicao} \label{gradiente_nulo}
+Para todo ponto $\xb\in\Omega$, tem-se
+\[
+\nabla \Psi(\xb)=0.
+\] 
+\end{proposicao}
+\begin{demonstracao}
+Fixemos um ponto arbitr\'ario $\xb\in\Omega$. Pela defini\c c\~ao
+de $\Omega$, existe um ponto $\yb\in\Sigma\setminus\{x\}$ tal que 
+$Z(\xb,\yb)=0$. Como a fun\c c\~ao $Z$ atinge seu m\'inimo
+global no ponto $(\xb,\yb)$, a igualdade em 
+\eqref{suma_2da_der_aleph} torna-se
+\begin{equation*} 
+\begin{aligned}
+0 & \leq
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i^2}(\xb,\yb) + 
+2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) + 
+\sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb)  \\
+& = - 
+\frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), 
+F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}
+{\partial x_i}(\xb), F(\yb) \right\rangle^2 \leq 0.
+\end{aligned}
+\end{equation*}
+Como estamos supondo $\aleph>1$, conclu\'imos que
+\[
+\left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle = 0,
+\]
+para cada $i=1,2$. Usando agora a equação \eqref{diff_Z_x},
+conclu\'imos que 
+\[
+0 = \frac{\partial Z}{\partial x_i}(\xb,\yb) = 
+\aleph \frac{\partial \Psi}{\partial x_i}(\xb)
+(1 - \langle F(\xb),F(\yb) \rangle),
+\]
+provando que $\nabla\Psi(\xb)=0$, para todo $\xb\in\Omega$, como
+quer\'iamos.
+\end{demonstracao}
+
+Finalizemos agora a prova do Teorema \ref{teo:Lawson}. Como
+$\Omega$ \'e aberto, segue da Proposi\c c\~ao \ref{gradiente_nulo}
+que
+\[
+\Delta_\Sigma\Psi(\xb)=0,
+\]
+para todo ponto $\xb\in\Omega$. Assim, a Proposi\c c\~ao 
+\ref{edp_principal} implica que $\Psi(\xb)=1$, para todo
+$\xb\in\Omega$. Usando o teorema de extens\~ao \'unica
+para solu\c c\~oes de equa\c c\~oes diferencias parciais
+el\'ipticas (cf., por exemplo, \cite{Aronszajn1957}), conclu\'imos
+que $\Psi(\xb)=1$, para todo ponto $\xb\in\Sigma$. Como
+consequ\^encia, a curvatura Gaussiana de $\Sigma$ \'e
+identicamente nula. Como anteriormente, segue do trabalho
+de Lawson \cite{Lawson1969} que $F$ \'e congruente ao
+toro de Clifford, e isso finaliza a demonstra\c c\~ao do
+Teorema \ref{teo:Lawson}.
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
