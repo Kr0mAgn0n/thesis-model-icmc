@@ -924,8 +924,92 @@ para quaisquer $\xb,\yb\in\Sigma$. Considere agora o conjunto
 \begin{lema}
 O conjunto $\Omega$, dado em \eqref{eq:ConjOmega}, \'e n\~ao-vazio.
 \end{lema}
-\begin{demonstracao}
 
+\begin{demonstracao}
+	%	Supor que $\Omega$ é vazio.
+	%	Então $Z(x,y) > 0$ para quaisquer $x,y \in \Sigma$ onde $x \neq y$.
+	%	Como $\aleph > 1$ tem-se
+	%	\begin{equation*}
+	%		\lim_{n \rightarrow +\infty} \aleph^n = +\infty.
+	%	\end{equation*}
+	%	Então, existe $N \in \N$ tal que para qualquer $n \in \N$ onde $n \geq N$ tem-se
+	%	\begin{equation*}
+	%		\aleph^n \geq \aleph^N > 2.
+	%	\end{equation*}
+	%	Pela definição de $\aleph$ tem-se que para $\aleph - \frac{\aleph^{N+1}}{2} > 0$ existem $x_0,y_0 \in \Sigma$ com $x_0 \neq y_0$ tal que
+	%	\begin{equation*}
+	%		-\frac{\innerproduct{\nu(x_0)}{F(y_0)}}{\Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)})} > \frac{\aleph^{N+1}}{2}
+	%	\end{equation*}
+	%	Reordenando a desigualdade e multiplicando por 2 em ambos lados obtê-se
+	%	\begin{equation*}
+	%		0 > \aleph^{N+1} \Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)}) + 2 \innerproduct{\nu(x_0)}{F(y_0)}.
+	%	\end{equation*}
+	%	Se $\innerproduct{\nu(x_0)}{F(y_0)} \geq 0$
+	%	\begin{align*}
+	%		0 &> \aleph^{N+1} \Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)}) + 2 \innerproduct{\nu(x_0)}{F(y_0)}\\
+	%		&> \aleph \Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)}) + \innerproduct{\nu(x_0)}{F(y_0)}\\
+	%		&= Z(x_0, y_0).
+	%	\end{align*}
+	%	Se $\innerproduct{\nu(x_0)}{F(y_0)} < 0$
+	%	\begin{align*}
+	%		0 &> \aleph^{N+1} \Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)}) + 2 \innerproduct{\nu(x_0)}{F(y_0)}\\
+	%		&> \aleph^{N+1} \Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)}) + \aleph^N \innerproduct{\nu(x_0)}{F(y_0)}.
+	%	\end{align*}
+	%	Dividendo por $\aleph^N$ chega-se a que
+	%	\begin{align*}
+	%		0 &> \aleph \Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)}) + \innerproduct{\nu(x_0)}{F(y_0)}\\
+	%		&= Z(x_0,y_0).
+	%	\end{align*}
+	%	Então $Z(x_0,y_0) > 0$ para $x_0,y_0 \in \Sigma$ onde $x_0 \neq y_0$.
+	%	Isto é uma contradição.
+	%	Portanto, $\Omega$ é não vazio.
+	Identificando $x \sim F(x)$ e $y \sim F(y)$, sejam $x,y \in \Sigma$. Pela continuidade de
+	$\Psi(x) (1 - \innerproduct{F(x)}{F(y)})$ e 
+	a compacidade de $\Sigma$,
+	existe $M > 0$ tal que
+	\begin{equation*}
+	\Psi(x) (1 - \innerproduct{F(x)}{F(y)}) \leq M.
+	\end{equation*}
+	Pela definição de $\aleph$, tem-se
+	que para qualquer $n \in \N$ existem $x_n,y_n \in \Sigma$, onde $x_n \neq y_n$, tal que
+	\begin{equation*}
+	\frac{- \innerproduct{\nu(x_n)}{F(y_n)}}{\Psi(x_n) (1 - \innerproduct{F(x_n)}{F(y_n)})} > \aleph - \frac{1}{nM}.
+	\end{equation*}
+	Desenvolvendo a desigualdade anterior, pode-se escrever como
+	\begin{equation}\label{eq:omega-nao-e-vazio-eq-a}
+	\frac{1}{n} \geq \frac{\Psi(x_n) (1 - \innerproduct{F(x_n)}{F(y_n)})}{nM} > Z(x_n,y_n) \geq 0.
+	\end{equation}
+	Como $(x_n)$ e $(y_n)$ são sequencias limitadas, então existem subsequencias convergentes $(x_{n_k})$ e $(y_{n_k})$ tal que
+	$x_{n_k} \rightarrow \xb$ e
+	$y_{n_k} \rightarrow \yb$
+	onde $\xb, \yb \in \Sigma$.
+	Usando as subsequencias já mencionadas em \eqref{eq:omega-nao-e-vazio-eq-a} e tomando limite, tem-se que
+	\begin{equation*}
+	Z(\xb,\yb) = 0.
+	\end{equation*}
+	Supor que $\xb = \yb$, então
+	\begin{equation*}
+	Z(\xb,\yb) = Z(\xb, \xb) = \innerproduct{\nu(\xb)}{F(\xb)} = 0.
+	\end{equation*}
+	Esto implica que 
+	$F(\xb) \in T_{\xb} \Sigma$,
+	então $F(\xb)$ pode-se expressar como combinação linear de os $\frac{\partial F}{\partial x_i}(\xb)$. Logo
+	\begin{equation}\label{eq:omega-nao-e-vazio-eq-b}
+	F(\xb) = a^i \frac{\partial F}{\partial x_i}(\xb)
+	\end{equation}
+	Lembrando que
+	$\innerproduct{F(\xb)}{\frac{\partial F}{\partial x_j}(\xb)} = 0$
+	e fazendo produto interno em \eqref{eq:omega-nao-e-vazio-eq-b}, obtê-se
+	\begin{equation*}
+	0 = \innerproduct{F(\xb)}{\frac{\partial F}{\partial x_j}(\xb)} = a^i \delta_{ij}
+	\end{equation*}
+	Então
+	$a^i = 0$
+	o que implica que
+	$F(\xb) = 0$.
+	Portanto
+	$\xb \neq \yb$ e
+	$\xb \in \Omega$.
 \end{demonstracao}
 
 O pr\'oximo passo agora \'e provar que o conjunto $\Omega$,
