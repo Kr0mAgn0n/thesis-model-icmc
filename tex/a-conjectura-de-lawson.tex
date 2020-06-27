@@ -926,47 +926,9 @@ O conjunto $\Omega$, dado em \eqref{eq:ConjOmega}, \'e n\~ao-vazio.
 \end{lema}
 
 \begin{demonstracao}
-	%	Supor que $\Omega$ é vazio.
-	%	Então $Z(x,y) > 0$ para quaisquer $x,y \in \Sigma$ onde $x \neq y$.
-	%	Como $\aleph > 1$ tem-se
-	%	\begin{equation*}
-	%		\lim_{n \rightarrow +\infty} \aleph^n = +\infty.
-	%	\end{equation*}
-	%	Então, existe $N \in \N$ tal que para qualquer $n \in \N$ onde $n \geq N$ tem-se
-	%	\begin{equation*}
-	%		\aleph^n \geq \aleph^N > 2.
-	%	\end{equation*}
-	%	Pela definição de $\aleph$ tem-se que para $\aleph - \frac{\aleph^{N+1}}{2} > 0$ existem $x_0,y_0 \in \Sigma$ com $x_0 \neq y_0$ tal que
-	%	\begin{equation*}
-	%		-\frac{\innerproduct{\nu(x_0)}{F(y_0)}}{\Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)})} > \frac{\aleph^{N+1}}{2}
-	%	\end{equation*}
-	%	Reordenando a desigualdade e multiplicando por 2 em ambos lados obtê-se
-	%	\begin{equation*}
-	%		0 > \aleph^{N+1} \Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)}) + 2 \innerproduct{\nu(x_0)}{F(y_0)}.
-	%	\end{equation*}
-	%	Se $\innerproduct{\nu(x_0)}{F(y_0)} \geq 0$
-	%	\begin{align*}
-	%		0 &> \aleph^{N+1} \Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)}) + 2 \innerproduct{\nu(x_0)}{F(y_0)}\\
-	%		&> \aleph \Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)}) + \innerproduct{\nu(x_0)}{F(y_0)}\\
-	%		&= Z(x_0, y_0).
-	%	\end{align*}
-	%	Se $\innerproduct{\nu(x_0)}{F(y_0)} < 0$
-	%	\begin{align*}
-	%		0 &> \aleph^{N+1} \Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)}) + 2 \innerproduct{\nu(x_0)}{F(y_0)}\\
-	%		&> \aleph^{N+1} \Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)}) + \aleph^N \innerproduct{\nu(x_0)}{F(y_0)}.
-	%	\end{align*}
-	%	Dividendo por $\aleph^N$ chega-se a que
-	%	\begin{align*}
-	%		0 &> \aleph \Psi(x_0) (1 - \innerproduct{F(x_0)}{F(y_0)}) + \innerproduct{\nu(x_0)}{F(y_0)}\\
-	%		&= Z(x_0,y_0).
-	%	\end{align*}
-	%	Então $Z(x_0,y_0) > 0$ para $x_0,y_0 \in \Sigma$ onde $x_0 \neq y_0$.
-	%	Isto é uma contradição.
-	%	Portanto, $\Omega$ é não vazio.
-	Identificando $x \sim F(x)$ e $y \sim F(y)$, sejam $x,y \in \Sigma$. Pela continuidade de
-	$\Psi(x) (1 - \innerproduct{F(x)}{F(y)})$ e 
-	a compacidade de $\Sigma$,
-	existe $M > 0$ tal que
+	Sejam $x,y \in \Sigma$. Como
+	$\Psi(x) (1 - \innerproduct{F(x)}{F(y)})$ é contínua e
+	$\Sigma$ é compacto então existe $M > 0$ tal que
 	\begin{equation*}
 	\Psi(x) (1 - \innerproduct{F(x)}{F(y)}) \leq M.
 	\end{equation*}
