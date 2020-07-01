@@ -783,20 +783,20 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, 1 \leq j \leq 3
 	Como a equação da curvatura media em $S^3$ está dada pela soma das curvaturas principais, então, pela proposição anterior, a curvatura media é nula. Portanto é uma superfície mínima.
 \end{demonstracao}
 
-\begin{definicao}
-	O \emph{toro de Clifford} é o subconjunto de $S^3$ definido por:
-	\begin{equation*}
-	M = \left\{ x \in S^3: x_1^2 + x_2^2 = x_3^2 + x_4^2 = \frac{1}{2} \right\}.
-	\end{equation*}
-\end{definicao}
-
-\begin{proposicao}
-	As curvaturas principais do toro de Clifford são 1 e -1.
-\end{proposicao}
-
-\begin{proposicao}
-	O toro de Clifford é uma superfície mínima plana.
-\end{proposicao}
+%\begin{definicao}
+%	O \emph{toro de Clifford} é o subconjunto de $S^3$ definido por:
+%	\begin{equation*}
+%	M = \left\{ x \in S^3: x_1^2 + x_2^2 = x_3^2 + x_4^2 = \frac{1}{2} \right\}.
+%	\end{equation*}
+%\end{definicao}
+%
+%\begin{proposicao}
+%	As curvaturas principais do toro de Clifford são 1 e -1.
+%\end{proposicao}
+%
+%\begin{proposicao}
+%	O toro de Clifford é uma superfície mínima plana.
+%\end{proposicao}
 
 \subsection{Quantas superfícies mínimas mergulhadas em $S^3$ existem?}
 
@@ -821,80 +821,112 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, 1 \leq j \leq 3
 
 \section{O toro de Clifford}
 
-Seja
-$x: \R^2 \rightarrow S^3$
-definido por
-\begin{equation*}
+Nesta seção vamos definir o toro de Clifford e ver as suas propriedades como superfície em $S^3$. Serão calculadas são as curvaturas principais e logo, se mostrará que o toro de Clifford é uma superfície flat mínima.
+
+\begin{definicao}\label{toro-de-clifford-definicion}
+	Seja
+	$x: \R^2 \rightarrow S^3$
+	definido por
+	\begin{equation*}
 	x(u,v) = \frac{1}{\sqrt{2}} \left(\cos(\sqrt{2} u), \sin(\sqrt{2} u), \cos(\sqrt{2} v), \sin(\sqrt{2} v)\right).
-\end{equation*}
-e $\Sigma$ a imagem de $x$. Calculando a diferencial de $x$ tem-se
-\begin{equation*}
+	\end{equation*}
+	e seja $\Sigma$ a imagem de $x$. A superfície $\Sigma$ é chamada de \emph{toro de Clifford}.
+\end{definicao}
+
+\begin{proposicao}
+	A função $x: \R^2 \rightarrow S^3$ na definição \ref{toro-de-clifford-definicion} é uma imersão.
+\end{proposicao}
+
+\begin{demonstracao}
+	Calculando a diferencial de $x$ tem-se
+	\begin{equation*}
 	dx_{u,v} = \left(-\sin(\sqrt{2} u) du, \cos(\sqrt{2} u) du, -\sin(\sqrt{2} v) dv, \cos(\sqrt{2} v) dv\right).
-\end{equation*}
-Observa-se que $dx_{u,v}$ é injetiva porque
-\begin{align*}
-	dx_{u,v} \frac{\partial}{\partial u} &= \left(-\sin(\sqrt{2} u), \cos(\sqrt{2} u), 0, 0\right)\\
+	\end{equation*}
+	Observa-se que $dx_{u,v}$ é injetiva porque
+	\begin{align*}
+	dx_{u,v} \frac{\partial}{\partial u} &= \left(-\sin(\sqrt{2} u), \cos(\sqrt{2} u), 0, 0\right) \text{ e }\\
 	dx_{u,v} \frac{\partial}{\partial v} &= \left(0, 0, -\sin(\sqrt{2} v), \cos(\sqrt{2} v)\right)
-\end{align*}
-são linearmente independentes. Ver que
+	\end{align*}
+	são linearmente independentes.
+\end{demonstracao}
+Pode-se ver que
 $T_{x(u,v)} \Sigma = \text{span} \left\{dx_{u,v} \frac{\partial}{\partial u}, dx_{u,v} \frac{\partial}{\partial v}\right\}$
-e é subespaço vetorial de
+e também que é subespaço vetorial de
 $T_{x(u,v)} S^3$.
-Como $x(u,v)$ é ortogonal a $T_{x(u,v)} \Sigma$ poderia-se considerar
+Como $x(u,v)$ é ortogonal a $T_{x(u,v)} \Sigma$ poderia-se considerar que
 \begin{equation*}
 	T_{x(u,v)} S^3 = \text{span} \left\{dx_{u,v} \frac{\partial}{\partial u}, dx_{u,v} \frac{\partial}{\partial v}, x(u,v)\right\}
 \end{equation*}
-mas vamos mostrar que isso não é possível.
-Seja 
-$p \in S^3$,
-$ v \in T_p S^3 $
-e
-$\lambda: (-\epsilon, \epsilon) \rightarrow S^3$
-um caminho tal que
-$\lambda(0) = p$
-e
-$\lambda'(0) = v$.
-Então
-\begin{equation*}
+mas vamos mostrar na seguinte proposição que isso não é possível.
+
+\begin{proposicao}
+	Seja $x:\R^2 \rightarrow S^3$ na definição \ref{toro-de-clifford-definicion}. Então
+	\begin{equation*}
+		T_{x(u,v)} S^3 = \text{span} \left\{dx_{u,v} \frac{\partial}{\partial u}, dx_{u,v} \frac{\partial}{\partial v}, \eta\right\}
+	\end{equation*}
+	onde $\eta$ está definido por
+	\begin{equation*}
+		\eta(u,v) = \frac{1}{\sqrt{2}} \left(-\cos(\sqrt{2} u), -\sin(\sqrt{2} u), \cos(\sqrt{2} v), \sin(\sqrt{2} v)\right)
+	\end{equation*}
+\end{proposicao}
+
+\begin{demonstracao}
+	Primeiro vamos mostrar que $T_{x(u,v)} S^3$ é o complemento ortogonal de $\text{span} \left\{x(u,v)\right\}$. Seja 
+	$p \in S^3$,
+	$ v \in T_p S^3 $
+	e
+	$\lambda: (-\epsilon, \epsilon) \rightarrow S^3$
+	um caminho tal que
+	$\lambda(0) = p$
+	e
+	$\lambda'(0) = v$.
+	Então
+	\begin{equation*}
 	\innerproduct{\lambda(t)}{\lambda(t)} = 1.
-\end{equation*}
-Derivando com respeito a $t$ tem-se
-\begin{equation*}
+	\end{equation*}
+	Derivando com respeito a $t$ tem-se que
+	\begin{equation*}
 	\innerproduct{\lambda'(t)}{\lambda(t)} = 0.
-\end{equation*}
-Logo, avaliando em $ t=0 $, obtém-se
-$ \innerproduct{v}{p} = 0 $.
-Portanto
-$ v \in \text{span} \{p\}^\perp $.
-Se $x(u,v) \in T_{x(u,v)} S^3$ teríamos que $x(u,v) \in \text{span} \left\{x(u,v)\right\}^\perp$ o que é um absurdo.
-Para obter uma base para $T_{x(u,v)} S^3$ definamos
-\begin{equation*}
-	\eta(u,v) = \frac{1}{\sqrt{2}} \left(-\cos(\sqrt{2} u), -\sin(\sqrt{2} u), \cos(\sqrt{2} v), \sin(\sqrt{2} v)\right)
-\end{equation*}
-onde pode-se ver que
-$\eta \in \text{span} \{x(u,v)\}^\perp$ e
-$\eta$ é ortogonal a $T_{x(u,v)} \Sigma$.
-Portanto tem-se que
-$T_{x(u,v)} S^3 = \text{span} \left\{dx_{u,v} \frac{\partial}{\partial u}, dx_{u,v} \frac{\partial}{\partial v}, \eta\right\}$.
-Calculando a diferencial de $\eta$ obtemos
-\begin{equation*}
+	\end{equation*}
+	Logo, avaliando em $ t=0 $, obtém-se
+	$ \innerproduct{v}{p} = 0 $.
+	Portanto
+	$ v \in \text{span} \{p\}^\perp $.
+	Se $x(u,v) \in T_{x(u,v)} S^3$ teríamos que $x(u,v) \in \text{span} \left\{x(u,v)\right\}^\perp$ o que é um absurdo.
+	Ver que
+	$\eta \in \text{span} \{x(u,v)\}^\perp$ e
+	$\eta$ é ortogonal a $T_{x(u,v)} \Sigma$.
+	Portanto tem-se que
+	$T_{x(u,v)} S^3 = \text{span} \left\{dx_{u,v} \frac{\partial}{\partial u}, dx_{u,v} \frac{\partial}{\partial v}, \eta\right\}$.	
+\end{demonstracao}
+
+%\begin{proposicao}
+%	O toro de Clifford definido em \ref{toro-de-clifford-definicion} tem curvatura média $H=0$, curvatura extrínseca $K_{\text{ext}} = -1$ e curvatura intrínseca $K_{\text{int}} = 0$.
+%\end{proposicao}
+
+\begin{proposicao}
+	As curvaturas principais do toro de Clifford são 1 e -1.
+\end{proposicao}
+
+\begin{demonstracao}
+	Calculando a diferencial de $\eta$ obtemos
+	\begin{equation*}
 	d\eta_{u,v} = \left(\sin(\sqrt{2} u) du, -\cos(\sqrt{2} u) du, -\sin(\sqrt{2} v) dv, \cos(\sqrt{2} v) dv\right).
-\end{equation*}
-Calculando as entradas da matriz da segunda forma fundamental
-\begin{align*}
+	\end{equation*}
+	Calculando as entradas da matriz da segunda forma fundamental
+	\begin{align*}
 	h_{11} = \innerproduct{d\eta_{u,v} \frac{\partial}{\partial u}}{dx_{u,v} \frac{\partial}{\partial u}} &= -1,\\
 	h_{22} = \innerproduct{d\eta_{u,v} \frac{\partial}{\partial v}}{dx_{u,v} \frac{\partial}{\partial v}} &= 1,\\
 	h_{12} = \innerproduct{d\eta_{u,v} \frac{\partial}{\partial u}}{dx_{u,v} \frac{\partial}{\partial v}} &= 0,
-\end{align*}
-construímos a matriz
-\begin{equation*}
-	A^{\eta} = \left[\begin{matrix}
-	-1 & 0\\
-	0 & 1
-	\end{matrix}\right].
-\end{equation*}
-Observando a matriz é claro que a curvatura média 
-$H = 0$,
-a curvatura extrínseca 
-$K_{\text{ext}} = -1$ e, pela equação de Gauss,
-$K_{\text{int}} = 0$.
+	\end{align*}
+	obtemos que as curvaturas principais são 1 e -1.
+\end{demonstracao}
+
+\begin{proposicao}
+	O toro de Clifford é uma superfície flat mínima.
+\end{proposicao}
+
+\begin{demonstracao}
+	Sabendo que as curvaturas principais são 1 e -1 pode-se ver que a curvatura média é nula e a curvatura intrínseca também é nula. Isto implica que é uma superfície flat mínima.
+\end{demonstracao}
+
