@@ -327,7 +327,7 @@ H &= \frac{eG - 2fF + gE}{2(EG - F^2)}\\
 	\end{equation*}
 \end{exemplo}
 
-\subsection{A representação de Weierstrass}
+\section{A representação de Weierstrass}
 
 Considere o plano complexo $\complexnumbers$ identificado com $\realnumbers^2$
 \begin{equation*}
@@ -730,7 +730,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, 1 \leq j \leq 3
 
 \section{Superfícies mínimas em $S^3$}
 
-\cite{Brendle2013}
+Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em $S^3$ focando-se no casso em que a superfície é compacta. Para mais informação pode-se consultar \cite{Brendle2013}.
 
 \begin{definicao}
 	A esfera unitária em $\realnumbers^4$, $S^3$, é o conjunto definido por:
@@ -772,7 +772,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, 1 \leq j \leq 3
 \end{proposicao}
 
 \begin{demonstracao}
-	É claro que o campo de vetores normais unitário é dado por $(0,0,0,1)$. Portanto a diferencial do campo é nulo e as curvaturas são nulas.
+	É claro que o campo de vetores normais unitários é constante e é dado pelo vetor $(0,0,0,1)$. Portanto a diferencial do campo é nulo e as curvaturas são nulas.
 \end{demonstracao}
 
 \begin{corolario}
@@ -783,41 +783,38 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, 1 \leq j \leq 3
 	Como a equação da curvatura media em $S^3$ está dada pela soma das curvaturas principais, então, pela proposição anterior, a curvatura media é nula. Portanto é uma superfície mínima.
 \end{demonstracao}
 
-%\begin{definicao}
-%	O \emph{toro de Clifford} é o subconjunto de $S^3$ definido por:
-%	\begin{equation*}
-%	M = \left\{ x \in S^3: x_1^2 + x_2^2 = x_3^2 + x_4^2 = \frac{1}{2} \right\}.
-%	\end{equation*}
-%\end{definicao}
-%
-%\begin{proposicao}
-%	As curvaturas principais do toro de Clifford são 1 e -1.
-%\end{proposicao}
-%
-%\begin{proposicao}
-%	O toro de Clifford é uma superfície mínima plana.
-%\end{proposicao}
+\subsection{Quantas superfícies mínimas compactas mergulhadas em $S^3$ existem?}
 
-\subsection{Quantas superfícies mínimas mergulhadas em $S^3$ existem?}
-
-\begin{observacao}
-	Por muito tempo o equador e o toro de Clifford foram os únicos exemplos de superfícies mínimas mergulhadas em $S^3$.
-\end{observacao}
+Por muito tempo o equador e o toro de Clifford foram os únicos exemplos de superfícies mínimas mergulhadas em $S^3$. Mas houve resultados publicados que apresentaram uma quantidade grande de superfícies minímas compactas imersas em $S^3$ que não eram mergulhadas. Como exemplo tem-se \cite{Lawson1969}. Logo, Lawson publicou o resultado seguinte:
 
 \begin{teorema}[Lawson]
-	Existem ao menos uma superfície mínima mergulhada em $S^3$ de gênero $g$, onde $g$ é um numero natural.
+	Existem ao menos uma superfície mínima mergulhada em $S^3$ de gênero $g$, onde $g$ é um inteiro não negativo. Se $g$ não for primo, o mergulho não é único.
 \end{teorema}
 
+\begin{demonstracao}
+	Ver \cite[Theorem 2]{Lawson1970}
+\end{demonstracao}
 
-\subsection{Unicidade das superfícies de gênero 0 e 1}
+
+\subsection{Unicidade das superfícies compactas de gênero 0 e 1 em $S^3$}
+
+F. Algrem Jr. provou em \cite{Almgren1966} que a imagem de uma imersão real analítica de $S^2$ em $S^3$ é o equador. De esse resultado deriva o seguinte:
 
 \begin{teorema}[Almgren]
-	O equador é a única superfície mínima imersa de gênero 0 em $S^3$, salvo movimentos rígidos
+	O equador é a única superfície mínima compacta de gênero 0 imersa em $S^3$.
 \end{teorema}
 
-\begin{observacao}[Conjetura de Lawson]
-	O toro de Clifford é uma única superfície mínima mergulhada de gênero 1 em $S^3$, salvo movimentos rígidos
-\end{observacao}
+\begin{demonstracao}
+	Ver \cite[Lemma 1]{Almgren1966}.
+\end{demonstracao}
+
+\begin{teorema}[Conjectura de Lawson]
+	O toro de Clifford é uma única superfície mínima compacta de gênero 1 mergulhada  em $S^3$.
+\end{teorema}
+
+\begin{demonstracao}
+	Ver o capítulo \ref{chapter:a-conjectura-de-lawson}.
+\end{demonstracao}
 
 \section{O toro de Clifford}
 
