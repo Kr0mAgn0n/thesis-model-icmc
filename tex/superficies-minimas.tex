@@ -743,6 +743,14 @@ Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em
 	Uma superfície em $S^3$ chama-se de \emph{superfície mínima} se a curvatura media é identicamente nula.
 \end{definicao}
 
+\begin{teorema}\label{thm:takahashi}
+	Se uma imersão isométrica $x: M \rightarrow \R^{m+k}$ de uma $m$-variedade riemanniana em o $(m+k)$-espaço euclideano satisfaz $ \Delta x = \lambda x $ para alguma constante $\neq 0$, então $\lambda$ é necessariamente positiva e $x$ é uma imersão mínima em a esfera $S^{m+k-1}$ de radio $\sqrt{m/\lambda}$ em $\R^{m+k}$. De igual forma, se $x$ é uma imersão mínima em uma esfera de radio $a$ em $\R^{m+k}$, então $x$ satisfaz $\Delta x = \lambda x$ salvo um deslocamento paralelo em $\R^{m+k}$ e $\lambda = m/a^2$.
+\end{teorema}
+
+\begin{demonstracao}
+	Ver \cite[Theorem 3]{TAKAHASHI1966}.
+\end{demonstracao}
+
 \begin{teorema}\label{propriedades_sup_min_S3}
 	Seja $\Sigma$ uma superfície em $S^3$. As seguentes afirmações são equivalentes:
 	\begin{enumerate}
@@ -756,9 +764,9 @@ Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em
 	\end{enumerate}
 \end{teorema}
 
-%\begin{observacao}
-%	No existem superfície mínimas compactas em $\realnumbers^3$.
-%\end{observacao}
+\begin{demonstracao}
+	Pelo teorema \ref{thm:takahashi} tem-se a equivalência entre $(1)$ e $(3)$.
+\end{demonstracao}
 
 \begin{definicao}
 	O \emph{equador} é um subconjunto de $S^3$ definido por:
