@@ -735,7 +735,17 @@ Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em
 \begin{definicao}
 	A esfera unitária em $\realnumbers^4$, $S^3$, é o conjunto definido por:
 	\begin{equation*}
-	S^3 = \left\{ x \in \realnumbers^4: \| x \| = 1 \right\}
+	S^3 = \left\{ x \in \realnumbers^4: | x | = 1 \right\}
+	\end{equation*}
+\end{definicao}
+
+\begin{definicao}
+	Seja $M$ uma superfície imersa em $S^3$,
+	$E_1, E_2$ um referencial de $M$ e
+	$\alpha$ a segunda forma fundamental de $M$.
+	A \emph{curvatura média} $H \in \vectorfieldsspace{M}^\perp$ está definida por
+	\begin{equation*}
+		H = \sum_{i=1}^2 \alpha(E_i, E_i)
 	\end{equation*}
 \end{definicao}
 
@@ -751,12 +761,26 @@ Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em
 	Ver \cite[Theorem 3]{TAKAHASHI1966}.
 \end{demonstracao}
 
+\begin{definicao}
+	Seja $M$ uma variedade $p$-dimensional, $\tilde{M}$ uma variedade $n$-dimensional, e $f: M \rightarrow \tilde{M}$ uma imersão de $M$ en $\tilde{M}$.
+	Seja $\{ f_t \}$ uma família de imersões uniparamétricas de $M \rightarrow \tilde{M}$ com a propriedade que $f_0 = f$, e seja a função $F: M \times [0,1] \rightarrow \tilde{M}$, definida por $F(m,t) = f_t(m)$, $C^{\infty}$. Então $\{ f_t \}$ é chamado de \emph{a variação de f}.
+\end{definicao}
+
+\begin{teorema}\label{thm:minimo-e-compacto-implica-ser-ponto-minimo-do-funcional-de-area}
+	Seja $M$ uma variedade $p$-dimensional, $\tilde{M}$ uma variedade $n$-dimensional, e $f: M \rightarrow \tilde{M}$ uma imersão de $M$ en $\tilde{M}$ como variedade mínima.
+	Seja $\{ f_t \}$ uma variação de $f$. Supor que para todo $t$, $ f_t(\partial M) = f(\partial M) $. Então se $M$ é compacto e $\mathcal{A}(t) =$ área de $M$ baixo $f_t$, $\mathcal{A}'(0)=0$.
+\end{teorema}
+
+\begin{demonstracao}
+	Ver \cite[Theorem 3.2.1]{Simons1968}.
+\end{demonstracao}
+
 \begin{teorema}\label{propriedades_sup_min_S3}
-	Seja $\Sigma$ uma superfície em $S^3$. As seguentes afirmações são equivalentes:
+	Seja $M$ uma superfície em $S^3$. As seguentes afirmações são equivalentes:
 	\begin{enumerate}
-		\item $\Sigma$ é uma superfície mínima
-		\item $\Sigma$ é um ponto critico do funcional de área
-		\item Se $\Sigma$ for descrito pelas funções coordenadas $x_i: \realnumbers \rightarrow \realnumbers$ onde $i=1,2,3,4$, então tem-se:
+		\item[a)] $M$ é uma superfície mínima
+		\item[b)] $M$ é um ponto critico do funcional de área
+		\item[c)] Se $M$ for descrito pelas funções coordenadas $x_i: \realnumbers \rightarrow \realnumbers$ onde $i=1,2,3,4$, então tem-se:
 		\begin{equation*}
 		\Delta_{\Sigma} x_i + 2 x_i = 0
 		\end{equation*}
@@ -765,7 +789,7 @@ Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em
 \end{teorema}
 
 \begin{demonstracao}
-	Pelo teorema \ref{thm:takahashi} tem-se a equivalência entre $(1)$ e $(3)$.
+	Pelo teorema \ref{thm:takahashi} tem-se a equivalência entre $a)$ e $c)$. Pelo teorema \ref{thm:minimo-e-compacto-implica-ser-ponto-minimo-do-funcional-de-area} tem-se que $a)$ implica $b)$. Para ver a prova de que $b)$ implica $a)$ ir a \cite[\S 2.4]{Simons1968}.
 \end{demonstracao}
 
 \begin{definicao}
