@@ -604,7 +604,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 
 \section{Propriedades do tensor de curvatura}
 
-\begin{proposicao}
+\begin{proposicao}\label{simetrias-del-tensor-de-curvatura}
 	O tensor de curvatura tem as seguentes simetrias para qualquer campo vetorial $X,Y,Z,W$:
 	\begin{enumerate}
 		\item $R_m(W,X,Y,Z) = -R_m(X,W,Y,Z)$.
@@ -634,7 +634,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	\end{enumerate}
 \end{lema}
 
-\begin{teorema}[A Formula de Gauss]
+\begin{teorema}[A Fórmula de Gauss]
 	Se $X,Y \in \vectorfieldsspace{M}$ são estendidos arbitrariamente a campos vetoriais de $\tilde{M}$, a seguente formula cumpre-se em $M$:
 	\begin{equation*}
 		\tilde{\nabla}_X Y = \nabla_X Y + \alpha(X,Y).
@@ -673,17 +673,17 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{proposicao}
 
 \begin{lema}
-	Supor que $\mathfrak{R}_1$ e $\mathfrak{R}_2$ são 4-tensores covariantes em um espaço vetorial $V$ com um produto interno, e ambos tem as simetrias do tensor de curvatura (ref). Se para cada par de vetores linearmente independentes $x,y \in V$,
+	Supor que $R$ e $R'$ são 4-tensores covariantes em um espaço vetorial $V$ com um produto interno, e ambos tem as simetrias do tensor de curvatura (Teorema \ref{simetrias-del-tensor-de-curvatura}). Se para cada par de vetores linearmente independentes $x,y \in V$,
 	\begin{equation*}
-		\frac{\mathfrak{R}_1(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2} = \frac{\mathfrak{R}_2(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2},
+		\frac{R(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2} = \frac{R'(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2},
 	\end{equation*}
-	então $\mathfrak{R}_1 = \mathfrak{R}_2$.
+	então $R = R'$.
 \end{lema}
 
 \begin{lema}
 	Supor que $(M,g)$ é $n$-variedade Riemanniana com curvatura seccional constante $C$. O endomorfismo de curvatura e o tensor de curvatura estão dados pelas formulas
 	\begin{align*}
 		R(X,Y)Z &= C(\innerproduct{Y}{Z}X - \innerproduct{X}{Z}Y),\\
-		R_m(X,Y,Z,W) &= C(\innerproduct{X}{W} \innerproduct{X}{Z} - \innerproduct{X}{Z} \innerproduct{Y}{W}).
+		R_m(X,Y,Z,W) &= C(\innerproduct{X}{W} \innerproduct{Y}{Z} - \innerproduct{X}{Z} \innerproduct{Y}{W}).
 	\end{align*}
 \end{lema}
