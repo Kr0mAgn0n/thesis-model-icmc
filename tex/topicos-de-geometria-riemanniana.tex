@@ -648,12 +648,21 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	\end{equation*}
 \end{lema}
 
-\begin{teorema}[A Equação de Gauss]
+\begin{teorema}[A Equação de Gauss]\label{equacao-de-gauss}
 	Para qualquer $X,Y,Z,W \in \vectorfieldsspace{M}$, cumpre-se o seguente:
 	\begin{equation*}
 		\tilde{R}_m(X,Y,Z,W) = R_m(X,Y,Z,W) - \innerproduct{\alpha(X,W)}{\alpha(Y,Z)} + \innerproduct{\alpha(X,Z)}{\alpha(Y,W)}.
 	\end{equation*}
 \end{teorema}
+
+\begin{proposicao}\label{relacion-tensor-de-curvatura-con-la-curvatura-gaussiana}
+	Seja $M$ uma 2-variedade riemanniana e
+	$X,Y,Z,W \in \vectorfieldsspace{M}$.
+	A curvatura Gaussiana $K$ de $M$ está relacionada com o tensor de curvatura pela seguinte fórmula
+	\begin{equation*}
+		R_m(X,Y,Z,W) = K (\innerproduct{X}{W} \innerproduct{Y}{Z} - \innerproduct{X}{Z} \innerproduct{Y}{W})
+	\end{equation*}
+\end{proposicao}
 
 \section{Curvaturas seccionais}
 
@@ -666,19 +675,73 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{definicao}
 
 \begin{proposicao}
-	Se $\{ x,y \}$ é uma base para $\Pi \subset T_p M$, então
+	Seja $M$ uma $n$-variedade riemanniana e
+	$R_m$ o tensor de curvatura de $M$.
+	Se $\{ x,y \}$ é uma base para o subespaço vetorial $\Pi \subset T_p M$ de dimensão 2, então
 	\begin{equation*}
 		K(x,y) = \frac{R_m(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2}.
 	\end{equation*}
 \end{proposicao}
 
-\begin{lema}
-	Supor que $R$ e $R'$ são 4-tensores covariantes em um espaço vetorial $V$ com um produto interno, e ambos tem as simetrias do tensor de curvatura (Teorema \ref{simetrias-del-tensor-de-curvatura}). Se para cada par de vetores linearmente independentes $x,y \in V$,
+\begin{demonstracao}
+	Seja $v \in \Pi$,
+	$\lambda_v: [0,1] \rightarrow M$ geodésica com vetor inicial $v$,
+	$D_t$ e $\tilde{D}_t$ as derivadas covariantes de caminhos em $M$ e $S_{\Pi}$ respectivamente, e
+	$R_m$ e $\tilde{R}_m$ os tensores de curvatura para $M$ e $S_{\Pi}$ respectivamente.
+	Pelo fato que $\lambda_v$ é uma geodésica tem-se $0 = D_t \dot{\lambda}_v$. Logo, usando a fórmula de Gauss, tem-se
 	\begin{equation*}
-		\frac{R(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2} = \frac{R'(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2},
+		0 = D_t \dot{\lambda}_v = \tilde{D}_t \dot{\lambda}_v + \alpha(\dot{\lambda}_v, v)
 	\end{equation*}
-	então $R = R'$.
+	Como $\tilde{D}_t \dot{\lambda}_v$ e $\alpha(\dot{\lambda}_v,v)$ são ambos ortogonais, então ambos são zero. Para $t=0$ tem-se $\alpha(v,v) = 0$ para $v \in \Pi$ arbitrário. Portanto $\alpha \equiv 0$.
+	Sejam $\{x,y\}$ uma base $\Pi$, então pela equação de Gauss (Teorema \ref{equacao-de-gauss}) tem-se
+	\begin{equation*}
+		R_m(x,y,y,x) = \tilde{R}_m(x,y,y,x)
+	\end{equation*}
+	e dai
+	\begin{equation*}
+		\frac{R_m(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2} = \frac{\tilde{R}_m(x,y,y,x)}{|x^2| |y|^2 - \innerproduct{x}{y}^2}.
+	\end{equation*}
+	Pela proposição \ref{relacion-tensor-de-curvatura-con-la-curvatura-gaussiana} tem-se
+	\begin{equation*}
+		K(x,y) = \frac{\tilde{R}_m(x,y,y,x)}{|x^2| |y|^2 - \innerproduct{x}{y}^2}.
+	\end{equation*}
+	Portanto
+	\begin{equation*}
+		K(x,y) = \frac{R_m(x,y,y,x)}{|x^2| |y|^2 - \innerproduct{x}{y}^2}.
+	\end{equation*}
+\end{demonstracao}
+
+\begin{lema}\label{igualdade-de-4-tensores-covariantes}
+	Supor $R_1,R_2: V^4 \rightarrow \R$ são aplicações multilineares em um espaço vetorial $V$ de dimensão maior que 2 com um produto interno, e que ambos tem as simetrias descritas na proposição \ref{simetrias-del-tensor-de-curvatura}. Se para cada par de vetores linearmente independentes $x,y \in V$,
+	\begin{equation*}
+		\frac{R_1(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2} = \frac{R_2(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2},
+	\end{equation*}
+	então $R_1 = R_2$.
 \end{lema}
+
+\begin{demonstracao}
+	Seja $R = R_1 - R_2$.
+	Para qualquer base $\{x,y\}$ de $V$ tem-se $R(x,y,y,x)=0$.
+	Seja $\{x,y,z\} \in V$ um conjunto de vetores linearmente independentes. Então,
+	\begin{align*}
+		0 &= R(x+y,z,z,x+y)\\
+		&= R(x,z,z,x) + R(x,z,z,y) + R(x,z,z,y) + R(y,z,z,y)\\
+		&= 2R(x,z,z,y)
+	\end{align*}
+	Como $z$ é arbitrário, pudemos substituir-lo por $z+w$. Logo, a igualdade anterior pode-se escrever como
+	\begin{align*}
+		0 &= R(x,z+w,z+w,y)\\
+		&= R(x,z,z,y) + R(x,z,w,y) + R(x,w,z,y) + R(x,w,w,y)\\
+		&= R(x,z,w,y) + R(x,w,z,y).
+	\end{align*}
+	Pela propriedades da proposição \ref{simetrias-del-tensor-de-curvatura} tem-se
+	\begin{align*}
+		0 &= R(x,y,z,w) + R(y,z,x,w) + R(z,x,y,w)\\
+		&= R(x,y,z,w) - R(y,x,z,w) - R(x,z,y,w)\\
+		&= 3R(x,y,z,w).
+	\end{align*}
+	Portanto $R_1 = R_2$.
+\end{demonstracao}
 
 \begin{lema}
 	Supor que $(M,g)$ é $n$-variedade Riemanniana com curvatura seccional constante $C$. O endomorfismo de curvatura e o tensor de curvatura estão dados pelas formulas
@@ -687,3 +750,30 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 		R_m(X,Y,Z,W) &= C(\innerproduct{X}{W} \innerproduct{Y}{Z} - \innerproduct{X}{Z} \innerproduct{Y}{W}).
 	\end{align*}
 \end{lema}
+
+\begin{demonstracao}
+	Seja $\Pi$ um subespaço vetorial de $T_p M$ de dimensão 2 para algum $p \in M$, $\{x,y\}$ uma base de $\Pi$ e $X,Y,Z,W \in \vectorfieldsspace{M}$. Como a variedade tem curvatura seccional constante $C$, então
+	\begin{equation*}
+		\frac{R_m(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2} = C.
+	\end{equation*}
+	Seja $R$ um 4-tensor covariante definido por
+	\begin{equation*}
+		R(x,y,z,w) = C (\innerproduct{x}{w} \innerproduct{y}{z} - \innerproduct{x}{z} \innerproduct{y}{w}).
+	\end{equation*}
+	Pode-se ver que $R$ cumpre as propriedades descritas na proposição \ref{simetrias-del-tensor-de-curvatura} e que
+	\begin{equation*}
+		\frac{R_m(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2} = \frac{R(x,y,y,x)}{|x|^2 |y|^2 - \innerproduct{x}{y}^2}.
+	\end{equation*}
+	Então, pelo lema \ref{igualdade-de-4-tensores-covariantes} tem-se que $R_m = R$. Portanto cumpre-se que
+	\begin{equation*}
+		R_m(X,Y,Z,W) = C(\innerproduct{X}{W} \innerproduct{Y}{Z} - \innerproduct{X}{Z} \innerproduct{Y}{W}).
+	\end{equation*}
+	A igualdade anterior pode-se escrever como
+	\begin{equation*}
+		\innerproduct{R(X,Y)Z}{W} =  \innerproduct{C(\innerproduct{Y}{Z}X - \innerproduct{X}{Z}Y)}{W}
+	\end{equation*}
+	com $W \in \vectorfieldsspace{M}$ arbitrário. Portanto
+	\begin{equation*}
+		R(X,Y)Z =  C(\innerproduct{Y}{Z}X - \innerproduct{X}{Z}Y).
+	\end{equation*}
+\end{demonstracao}
