@@ -1,8 +1,7 @@
 
 \cite{Lee2012}
 \cite{Lee1997}
-\cite{Lee1997a}
-\cite{Lee1997b}
+\cite{Carmo1988}
 
 
 
@@ -571,6 +570,30 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	onde $X,Y \in \mathfrak{X}(M)$ descreve uma conexão em $M$ chamada de \emph{conexão pullback} que é simétrica e compatível com $g$. Portanto, pela unicidade da conexão Levi-Civita, $F^* \tilde{\nabla} = \nabla$.
 \end{observacao}
 
+\begin{proposicao}\label{derivada-covariante-de-um-caminho}
+	Seja $\nabla$ uma conexão linear em $M$. Cada caminho $\lambda: I \rightarrow M$, $\nabla$ determina um operador único
+	\begin{equation*}
+		D_t: \vectorfieldsspace{\lambda} \rightarrow \vectorfieldsspace{\lambda}
+	\end{equation*}
+	que satisfaz as seguintes propriedades:
+	\begin{enumerate}
+		\item Seja $X,Y \in \vectorfieldsspace{\lambda}$ e $a,b \in \R$. Então
+		\begin{equation*}
+			D_t(aX + bY) = a D_t X + b D_t Y
+		\end{equation*}
+		\item Seja $X \in \vectorfieldsspace{\lambda}$ e $f \in C^{\infty}(I)$. Então
+		\begin{equation*}
+			D_t(fX) = f' X + f D_t X
+		\end{equation*}
+		\item Se $X \in \vectorfieldsspace{\lambda}$ é extensível, então para toda extensão $\tilde{X}$ de $X$,
+		\begin{equation*}
+			D_t X(t) = \nabla_{\lambda'(t)} \tilde{X}
+		\end{equation*}
+	\end{enumerate}
+\end{proposicao}
+
+
+
 \section{Quê é curvatura?}
 
 \begin{definicao}
@@ -634,7 +657,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	\end{enumerate}
 \end{lema}
 
-\begin{teorema}[A Fórmula de Gauss]
+\begin{teorema}[A Fórmula de Gauss]\label{formula-de-gauss}
 	Se $X,Y \in \vectorfieldsspace{M}$ são estendidos arbitrariamente a campos vetoriais de $\tilde{M}$, a seguente formula cumpre-se em $M$:
 	\begin{equation*}
 		\tilde{\nabla}_X Y = \nabla_X Y + \alpha(X,Y).
@@ -658,11 +681,100 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \begin{proposicao}\label{relacion-tensor-de-curvatura-con-la-curvatura-gaussiana}
 	Seja $M$ uma 2-variedade riemanniana e
 	$X,Y,Z,W \in \vectorfieldsspace{M}$.
-	A curvatura Gaussiana $K$ de $M$ está relacionada com o tensor de curvatura pela seguinte fórmula
+	A curvatura Gaussiana $K$ de $M$ está relacionada com o tensor de curvatura pela fórmula
 	\begin{equation*}
 		R_m(X,Y,Z,W) = K (\innerproduct{X}{W} \innerproduct{Y}{Z} - \innerproduct{X}{Z} \innerproduct{Y}{W})
 	\end{equation*}
 \end{proposicao}
+
+\begin{proposicao}[A fórmula de Gauss para caminhos]\label{formula-de-gauss-para-caminhos}
+	Seja $M$ uma subvariedade riemanniana de $\tilde{M}$, e $\gamma$ um caminho em $M$. Para $X \in \vectorfieldsspace{\gamma}$,
+	\begin{equation*}
+	\tilde{D}_t X = D_t X + \alpha(\gamma', X).
+	\end{equation*}
+\end{proposicao}
+
+\begin{demonstracao}
+	Seja $\{\partial_1, \ldots, \partial_n \}$ um referencial ortonormal de $M$. Então, $X$ escreve-se
+	\begin{equation*}
+		X(t) = X^i(t) \partial_i.
+	\end{equation*}
+	Pela construção em a demonstração da proposição \ref{derivada-covariante-de-um-caminho}, tem-se
+	\begin{equation*}
+		\tilde{D}_t X = (X^i)' \partial_i + X^i \tilde{\nabla}_{\gamma'} \partial_i.
+	\end{equation*}
+	Usando a fórmula de Gauss (teorema \ref{formula-de-gauss}),
+	\begin{equation*}
+		\tilde{D}_t X = (X^i)' \partial_i + X^i \nabla_{\gamma'} \partial_i + X^i \alpha(\gamma', \partial_i).
+	\end{equation*}
+	Usando a linearidade da conexão $\nabla$ em $\nabla_{\gamma'} \partial_i$,
+	\begin{align*}
+		\tilde{D}_t X &= (X^i)' \partial_i + X^i (\gamma^j)' \nabla_{\partial_j} \partial_i + \alpha(\gamma', X^i \partial_i),\\
+		\tilde{D}_t X &= (X^k)' \partial_k + X^i (\gamma^j)' \Gamma_{ji}^k \partial_k + \alpha(\gamma', X),\\
+		\tilde{D}_t X &=  \left((X^k)' + X^i (\gamma^j)' \Gamma_{ji}^k\right) \partial_k + \alpha(\gamma', X).
+	\end{align*}
+	Como $D_t X = \left((X^k)' + X^i (\gamma^j)' \Gamma_{ji}^k\right) \partial_k$ então
+	\begin{equation*}
+		\tilde{D}_t X = D_t X + \alpha(\gamma',X).
+	\end{equation*}
+\end{demonstracao}
+
+\begin{definicao}\label{def:curvatura-media}
+	Seja $M$ uma variedade imersa em $\tilde{M}$,
+	$E_1, E_2$ um referencial de $M$ e
+	$\alpha$ a segunda forma fundamental de $M$.
+	A \emph{curvatura média} $H \in \vectorfieldsspace{M}^\perp$ está definida por
+	\begin{equation*}
+	H = \sum_{i=1}^2 \alpha(E_i, E_i)
+	\end{equation*}
+\end{definicao}
+
+\section{Geodésicas}
+
+\begin{definicao}
+	Seja $M$ uma variedade com uma conexão linear $\nabla$ e
+	$\lambda$ um caminho em $M$.
+	O caminho $\lambda$ é chamado de \emph{geodésica} se $D_t \lambda' \equiv 0$.
+\end{definicao}
+
+\begin{teorema}
+	Seja $M$ uma variedade com uma conexão linear,
+	$p \in M$,
+	$v \in T_p M$ e
+	$t_0 \in \R$.
+	Existe uma intervalo aberto $I \subset \R$ e uma única geodésica $\lambda: I \rightarrow M$ tal que $t_0 \in I$,
+	$\lambda(0) = p$ e
+	$\lambda'(0) = v$.
+\end{teorema}
+
+\begin{demonstracao}
+	Ver \cite[Theorem 4.10]{Lee1997}.
+\end{demonstracao}
+
+\begin{observacao}
+	Seja $M$ uma variedade com uma conexão linear,
+	$p \in M$,
+	$v \in T_p M$ e
+	$\lambda$ uma geodésica em $M$.
+	Para remarcar que a geodésica $\lambda$ é gerada por $p$ e $v$ vai-se escrever $\lambda_v$.
+\end{observacao}
+
+\begin{definicao}
+	Seja $M$ uma variedade riemanniana,
+	$p \in M$,
+	$V \subset T_p M$ uma vizinhança estrelada de 0,
+	$v \in V$, e
+	$\lambda_v: [0,1] \rightarrow M$ a geodésica definida por $v$ e $p$.
+	A aplicação $\exp_p: V \rightarrow M$ definida
+	\begin{equation*}
+		\exp_p(v) = \lambda_v(1)
+	\end{equation*}
+	é chamada de \emph{aplicação exponencial}.
+\end{definicao}
+
+\begin{observacao}
+	A aplicação exponencial é diferenciável.
+\end{observacao}
 
 \section{Curvaturas seccionais}
 
@@ -688,11 +800,11 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	$\lambda_v: [0,1] \rightarrow M$ geodésica com vetor inicial $v$,
 	$D_t$ e $\tilde{D}_t$ as derivadas covariantes de caminhos em $M$ e $S_{\Pi}$ respectivamente, e
 	$R_m$ e $\tilde{R}_m$ os tensores de curvatura para $M$ e $S_{\Pi}$ respectivamente.
-	Pelo fato que $\lambda_v$ é uma geodésica tem-se $0 = D_t \dot{\lambda}_v$. Logo, usando a fórmula de Gauss, tem-se
+	Pelo fato que $\lambda_v$ é uma geodésica tem-se $0 = D_t \lambda_v'$. Logo, usando a fórmula de Gauss para caminhos (proposição \ref{formula-de-gauss-para-caminhos}),
 	\begin{equation*}
-		0 = D_t \dot{\lambda}_v = \tilde{D}_t \dot{\lambda}_v + \alpha(\dot{\lambda}_v, v)
+		0 = D_t \lambda_v' = \tilde{D}_t \lambda_v' + \alpha(\lambda_v', v)
 	\end{equation*}
-	Como $\tilde{D}_t \dot{\lambda}_v$ e $\alpha(\dot{\lambda}_v,v)$ são ambos ortogonais, então ambos são zero. Para $t=0$ tem-se $\alpha(v,v) = 0$ para $v \in \Pi$ arbitrário. Portanto $\alpha \equiv 0$.
+	Como $\tilde{D}_t \lambda_v'$ e $\alpha(\lambda_v',v)$ são ambos ortogonais, então ambos são zero. Para $t=0$ tem-se $\alpha(v,v) = 0$ para $v \in \Pi$ arbitrário. Como $\alpha$ é simétrico, então $\alpha \equiv 0$.
 	Sejam $\{x,y\}$ uma base $\Pi$, então pela equação de Gauss (Teorema \ref{equacao-de-gauss}) tem-se
 	\begin{equation*}
 		R_m(x,y,y,x) = \tilde{R}_m(x,y,y,x)
@@ -743,13 +855,13 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	Portanto $R_1 = R_2$.
 \end{demonstracao}
 
-\begin{lema}
+\begin{proposicao}
 	Supor que $(M,g)$ é $n$-variedade Riemanniana com curvatura seccional constante $C$. O endomorfismo de curvatura e o tensor de curvatura estão dados pelas formulas
 	\begin{align*}
 		R(X,Y)Z &= C(\innerproduct{Y}{Z}X - \innerproduct{X}{Z}Y),\\
 		R_m(X,Y,Z,W) &= C(\innerproduct{X}{W} \innerproduct{Y}{Z} - \innerproduct{X}{Z} \innerproduct{Y}{W}).
 	\end{align*}
-\end{lema}
+\end{proposicao}
 
 \begin{demonstracao}
 	Seja $\Pi$ um subespaço vetorial de $T_p M$ de dimensão 2 para algum $p \in M$, $\{x,y\}$ uma base de $\Pi$ e $X,Y,Z,W \in \vectorfieldsspace{M}$. Como a variedade tem curvatura seccional constante $C$, então

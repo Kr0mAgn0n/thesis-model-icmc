@@ -739,15 +739,49 @@ Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em
 	\end{equation*}
 \end{definicao}
 
-\begin{definicao}
+\begin{proposicao}
 	Seja $M$ uma superfície imersa em $S^3$,
-	$E_1, E_2$ um referencial de $M$ e
-	$\alpha$ a segunda forma fundamental de $M$.
-	A \emph{curvatura média} $H \in \vectorfieldsspace{M}^\perp$ está definida por
+	$p \in M$ e
+	$\lambda_1, \lambda_2$ as curvaturas principais de $M$ em $p$.
+	A curvatura Gaussiana $K(p)$ de $M$ em $p$ é
 	\begin{equation*}
-		H = \sum_{i=1}^2 \alpha(E_i, E_i)
+		K(p) = 1 + \lambda_1 \lambda_2
 	\end{equation*}
-\end{definicao}
+\end{proposicao}
+
+\begin{demonstracao}
+	Seja $\{x,y\} \in T_p M$ uma base ortonormal de autovetores associada às curvaturas principais $\lambda_1$ e $\lambda_2$.
+	Pela equação de Gauss (teorema \ref{equacao-de-gauss}),
+	\begin{equation*}
+		\tilde{R}_m(x,y,y,x) = R_m(x,y,y,x) - \innerproduct{\alpha(x,x)}{\alpha(y,y)} + \alpha(x,y)^2.
+	\end{equation*}
+	$\tilde{R}_m(x,y,y,x)$ é a curvatura seccional associada a $\{x,y\}$ de $S^3$. Como $S^3$ tem curvatura seccional constante, então $\tilde{R}_m(x,y,y,x) = 1$. 
+	$R_m(x,y,y,x)$ é a curvatura Gaussiana de $M$ em $p$. Portanto, a igualdade anterior escreve-se
+	\begin{equation*}
+		K(p) = 1 + \lambda_1 \lambda_2.
+	\end{equation*}
+\end{demonstracao}
+
+
+
+\begin{proposicao}
+	Seja $M$ uma superfície imersa em $S^3$,
+	$p \in M$ e
+	$\lambda_1, \lambda_2$ as curvaturas principais em $p$.
+	Então, a curvatura média é
+	\begin{equation*}
+		H(p) = \lambda_1 + \lambda_2
+	\end{equation*}
+\end{proposicao}
+
+\begin{demonstracao}
+	Seja $\{x,y\}$ uma base ortonormal de autovetores de $T_p M$ associada às curvaturas principais $\lambda_1$ e $\lambda_2$.
+	Usando $\{x,y\}$ com a definição \ref{def:curvatura-media} tem-se
+	\begin{equation*}
+		H(p) = \alpha(x,x) + \alpha(y,y).
+	\end{equation*}
+	Portanto, $H(p) = \lambda_1 + \lambda_2$.
+\end{demonstracao}
 
 \begin{definicao}
 	Uma superfície em $S^3$ chama-se de \emph{superfície mínima} se a curvatura media é identicamente nula.
@@ -815,7 +849,7 @@ Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em
 	Como a equação da curvatura media em $S^3$ está dada pela soma das curvaturas principais, então, pela proposição anterior, a curvatura media é nula. Portanto é uma superfície mínima.
 \end{demonstracao}
 
-\subsection{Quantas superfícies mínimas compactas mergulhadas em $S^3$ existem?}
+%\subsection{Quantas superfícies mínimas compactas mergulhadas em $S^3$ existem?}
 
 Por muito tempo o equador e o toro de Clifford foram os únicos exemplos de superfícies mínimas mergulhadas em $S^3$. Mas houve resultados publicados que apresentaram uma quantidade grande de superfícies minímas compactas imersas em $S^3$ que não eram mergulhadas. Como exemplo tem-se \cite{Lawson1969}. Logo, Lawson publicou o resultado seguinte:
 
@@ -828,7 +862,7 @@ Por muito tempo o equador e o toro de Clifford foram os únicos exemplos de supe
 \end{demonstracao}
 
 
-\subsection{Unicidade das superfícies compactas de gênero 0 e 1 em $S^3$}
+%\subsection{Unicidade das superfícies compactas de gênero 0 e 1 em $S^3$}
 
 F. Algrem Jr. provou em \cite{Almgren1966} que a imagem de uma imersão real analítica de $S^2$ em $S^3$ é o equador. De esse resultado deriva o seguinte:
 
