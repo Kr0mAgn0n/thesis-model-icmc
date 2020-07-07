@@ -741,7 +741,8 @@ Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em
 
 \begin{proposicao}
 	Seja $M$ uma superfície imersa em $S^3$,
-	$p \in M$ e
+	$p \in M$,
+	$h$ a segunda forma fundamental escalar de $M$ e
 	$\lambda_1, \lambda_2$ as curvaturas principais de $M$ em $p$.
 	A curvatura Gaussiana $K(p)$ de $M$ em $p$ é
 	\begin{equation*}
@@ -751,9 +752,9 @@ Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em
 
 \begin{demonstracao}
 	Seja $\{x,y\} \in T_p M$ uma base ortonormal de autovetores associada às curvaturas principais $\lambda_1$ e $\lambda_2$.
-	Pela equação de Gauss (teorema \ref{equacao-de-gauss}),
+	Pelo corolário da equação de Gauss (corolário \ref{equacao-de-gauss-hipersuperficies}),
 	\begin{equation*}
-		\tilde{R}_m(x,y,y,x) = R_m(x,y,y,x) - \innerproduct{\alpha(x,x)}{\alpha(y,y)} + \alpha(x,y)^2.
+		\tilde{R}_m(x,y,y,x) = R_m(x,y,y,x) - h(x,x) h(y,y) + h(x,y)^2.
 	\end{equation*}
 	$\tilde{R}_m(x,y,y,x)$ é a curvatura seccional associada a $\{x,y\}$ de $S^3$. Como $S^3$ tem curvatura seccional constante, então $\tilde{R}_m(x,y,y,x) = 1$. 
 	$R_m(x,y,y,x)$ é a curvatura Gaussiana de $M$ em $p$. Portanto, a igualdade anterior escreve-se
