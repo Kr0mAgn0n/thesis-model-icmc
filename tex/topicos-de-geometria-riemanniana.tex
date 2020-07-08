@@ -382,8 +382,8 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	onde $X,Y \in \mathfrak{X}(M)$ tal que podem ser estendidas como campos em $\mathbb{R}^n$, $\overline{\nabla}$ é a conexão Euclideana em $\mathbb{R}^n$, e para qualquer ponto $p \in M$, $\pi^\top: T_p \mathbb{R}^n \rightarrow T_p M$ é a projeção ortogonal, é chamada de \emph{conexão tangencial}.
 \end{definicao}
 
-\begin{lema}
-	O operador $\nabla^\top$ está bem definido, e é uma conexão linear em $TM$.
+\begin{lema}\label{boa-definicao-conexao-tangencial}
+	O operador $\nabla^\top$ está bem definido, e é uma conexão linear em $M$.
 \end{lema}
 
 \begin{demonstracao}
@@ -421,29 +421,39 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	Qualquer métrica Riemanniana em uma variedade pode-se considerar como a métrica induzida em algum espaço Euclideano.
 \end{teorema}
 
-\begin{definicao}
-	Seja $g$ uma métrica Riemanniana em uma variedade diferenciável $M$. Uma conexão linear $\nabla$ é chamada de \emph{compatível com} $g$ se satisfaz a regra:
+\begin{demonstracao}
+	Ver \cite[Theorem 3]{Nash1956}.
+\end{demonstracao}
+
+\begin{proposicao}
+	Seja $M$ uma variedade riemanniana e
+	$\nabla$ uma conexão linear de $M$.
+	$\nabla$ é chamada de \emph{compatível com a métrica de $M$} se satisfaz a regra:
 	\begin{equation*}
-		\nabla_X \langle Y,Z \rangle = \langle \nabla_X Y, Z \rangle + \langle Y, \nabla_X Z \rangle
+		X \langle Y,Z \rangle = \langle \nabla_X Y, Z \rangle + \langle Y, \nabla_X Z \rangle
 	\end{equation*}
 	onde $X,Y,Z \in \mathfrak{X}(M)$.
-\end{definicao}
+\end{proposicao}
+
+\begin{demonstracao}
+	Ver \cite[Cap. 2, corolário 3.3]{Carmo1988}.
+\end{demonstracao}
+
+%\begin{definicao}
+%	O \emph{tensor de torção da conexão} é uma aplicação $\tau: \mathfrak{X}(M) \times \mathfrak{X}(M) \rightarrow \mathfrak{X}(M)$ definida por
+%	\begin{equation*}
+%		\tau(X,Y) = \nabla_X Y - \nabla_Y X - [X,Y].
+%	\end{equation*}
+%\end{definicao}
 
 \begin{definicao}
-	O \emph{tensor de torção da conexão} é uma aplicação $\tau: \mathfrak{X}(M) \times \mathfrak{X}(M) \rightarrow \mathfrak{X}(M)$ definida por
-	\begin{equation*}
-		\tau(X,Y) = \nabla_X Y - \nabla_Y X - [X,Y].
-	\end{equation*}
-\end{definicao}
-
-\begin{definicao}
-	Uma conexão linear é chamada de \emph{simétrica} se a torção é identicamente nula, i.e.,
+	Uma conexão linear é chamada de \emph{simétrica} se
 	\begin{equation*}
 		\nabla_X Y - \nabla_Y X = [X,Y].
 	\end{equation*}
 \end{definicao}
 
-\begin{lema}
+\begin{lema}\label{conexao-tangencial-simetrica}
 	A conexão tangencial numa variedade mergulhada $M \subset \realnumbers^n$ é simétrica.
 \end{lema}
 
@@ -464,26 +474,28 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	Por tanto $ \tangentialconnection_X Y - \tangentialconnection_Y X \equiv [X,Y] $ e conclui-se que $\tangentialconnection$ é simétrica.
 \end{demonstracao}
 
-\begin{definicao}
-	\begin{equation*}
-	(\nabla g)(X,Y,Z) := (\nabla_Z g)(X,Y)
-	\end{equation*}
-\end{definicao}
+%\begin{definicao}
+%	\begin{equation*}
+%	(\nabla g)(X,Y,Z) := (\nabla_Z g)(X,Y)
+%	\end{equation*}
+%\end{definicao}
 
-\begin{lema}\label{compatibilidade-duma-conexao-riemanniana-com-uma-metrica-usando-a-derivada-covariante}
-	$\nabla$ é compatível com $g$, se e somente se, $\nabla g \equiv 0$.
-\end{lema}
+%\begin{lema}\label{compatibilidade-duma-conexao-riemanniana-com-uma-metrica-usando-a-derivada-covariante}
+%	$\nabla$ é compatível com $g$, se e somente se, $\nabla g \equiv 0$.
+%\end{lema}
 
-\begin{lema}\label{deriva-covariante-de-uma-metrica}
-	\begin{equation*}
-	(\nabla g)(X,Y,Z) = Z(g(X,Y)) - g(\nabla_Z X, Y) - g(X, \nabla_Z Y)
-	\end{equation*}
-\end{lema}
+%\begin{lema}\label{deriva-covariante-de-uma-metrica}
+%	\begin{equation*}
+%	(\nabla g)(X,Y,Z) = Z(g(X,Y)) - g(\nabla_Z X, Y) - g(X, \nabla_Z Y)
+%	\end{equation*}
+%\end{lema}
 
 \begin{teorema}\label{conexao-riemanniana}
 	Seja $(M,g)$ uma variedade Riemanniana. Existe uma única conexão linear $\nabla$ em $M$ que é compatível com $g$ e é simétrica.
 	Esta conexão é chamada de \emph{conexão Riemanniana} o de \emph{conexão de Levi-Civita} de $g$.
 \end{teorema}
+
+A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 
 \begin{lema}\label{conexao-riemanniana-lema-1}
 	Assumindo que existe conexão linear do Teorema \ref{conexao-riemanniana}, esta é única.
@@ -545,34 +557,42 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{demonstracao}
 
 \begin{lema}\label{conexao-riemanniana-lema-3}
-	A conexão linear do Teorema \ref{conexao-riemanniana} é compatível com $g$.
+	A conexão linear do Teorema \ref{conexao-riemanniana} é compatível com a métrica.
 \end{lema}
 
 \begin{demonstracao}
-	Pelo Lema \ref{compatibilidade-duma-conexao-riemanniana-com-uma-metrica-usando-a-derivada-covariante} basta com provar que $\nabla g \equiv 0$.
-	Sejam 
+%	Pelo Lema \ref{compatibilidade-duma-conexao-riemanniana-com-uma-metrica-usando-a-derivada-covariante} basta com provar que $\nabla g \equiv 0$.
+	Seja
 	$(U_{\alpha})$ uma cobertura de $M$ e 
-	$\{ \partial_m \}$ a estrutura coordenada local em $U_{\alpha}$ para algum $\alpha$.
-	Pelo Lema \ref{deriva-covariante-de-uma-metrica} tem-se
-	\begin{equation}\label{eq:conexao-riemanniana-lema-3-eq-a}
-		\begin{split}
-			(\nabla g) (\partial_i, \partial_j, \partial_k) &= \partial_k g(\partial_i, \partial_j) - g(\nabla_{\partial_k} \partial_i, \partial_j) - g(\partial_i, \nabla_{\partial_k} \partial_j)\\
-			&= \partial_k g_{ij} - \Gamma_{ki}^l g_{lj} - \Gamma_{kj}^l g_{il}.
-		\end{split}	
-	\end{equation}
-	Usando a equação \eqref{eq:conexao-riemanniana-lema-2-eq-a} na equação \eqref{eq:conexao-riemanniana-lema-3-eq-a} tem-se
+	$\{ \partial_m \}$ um referencial em $U_{\alpha}$ para algum $\alpha$.
+	Basta provar
+%	Pelo Lema \ref{deriva-covariante-de-uma-metrica} tem-se
+%	\begin{equation}\label{eq:conexao-riemanniana-lema-3-eq-a}
+%		\begin{split}
+%			(\nabla g) (\partial_i, \partial_j, \partial_k) &= \partial_k g(\partial_i, \partial_j) - g(\nabla_{\partial_k} \partial_i, \partial_j) - g(\partial_i, \nabla_{\partial_k} \partial_j)\\
+%			&= \partial_k g_{ij} - \Gamma_{ki}^l g_{lj} - \Gamma_{kj}^l g_{il}.
+%		\end{split}	
+%	\end{equation}
+	\begin{equation*}
+		\partial_k \innerproduct{\partial_i}{\partial_j} = \innerproduct{\nabla_{\partial_k} \partial_i}{\partial_j} + \innerproduct{\partial_i}{\nabla_{\partial_k} \partial_j},
+	\end{equation*}
+	e isto é equivalente a provar
+	\begin{equation*}
+		\partial_k g_{ij} = \Gamma_{ki}^l g_{lj} + \Gamma_{kj}^l g_{li}.
+	\end{equation*}
+	Usando a equação \eqref{eq:conexao-riemanniana-lema-2-eq-a} tem-se
 	\begin{align*}
 	\Gamma_{ki}^l g_{lj} + \Gamma_{kj}^l g_{li} &= \frac{1}{2} (\partial_k g_{ij} + \partial_i g_{jk} - \partial_j g_{ki}) + \frac{1}{2} (\partial_k g_{ji} + \partial_j g_{ik} - \partial_i g_{kj})\\
 	&= \partial_k g_{ij}.
 	\end{align*}
-	Então,
-	\begin{equation*}
-	(\nabla g) (\partial_i, \partial_j, \partial_k) = 0.
-	\end{equation*}
-	Portanto, a conexão linear é compatível com $g$.
+%	Então,
+%	\begin{equation*}
+%	(\nabla g) (\partial_i, \partial_j, \partial_k) = 0.
+%	\end{equation*}
+	Portanto, a conexão linear é compatível com a métrica.
 \end{demonstracao}
 
-\begin{demonstracao}[Teorema \ref{conexao-riemanniana}]
+\begin{demonstracao}[do teorema \ref{conexao-riemanniana}]
 	Usando \ref{conexao-riemanniana-lema-1}, \ref{conexao-riemanniana-lema-2} e \ref{conexao-riemanniana-lema-3}, chega-se à conclusão.
 \end{demonstracao}
 
@@ -628,26 +648,35 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	\end{equation*}
 \end{definicao}
 
-\begin{proposicao}
-	O endomorfismo de curvatura é um campo tensorial $\binom{3}{1}$.
-\end{proposicao}
+%\begin{proposicao}
+%	O endomorfismo de curvatura é um campo tensorial $\binom{3}{1}$.
+%\end{proposicao}
 
 \begin{definicao}
-	O \emph{tensor de curvatura} é a aplicação $R_m: \vectorfieldsspace{M}^4 \rightarrow \smoothfunctionsspace{M}$ definido por
+	O \emph{tensor de curvatura} é a aplicação $R_m: \vectorfieldsspace{M}^4 \rightarrow \smoothfunctionsspace{M}$ definida por
 	\begin{equation*}
 		R_m (X,Y,Z,W) = \langle R(X,Y)Z,W \rangle
 	\end{equation*}
 \end{definicao}
 
 \begin{lema}
-	O endomorfismo de curvatura e o tensor de curvatura são invariantes isométricos
+	O endomorfismo de curvatura e o tensor de curvatura são invariantes isométricos locais.
 \end{lema}
 
 \section{Quê mede o tensor de curvatura?}
 
+\begin{definicao}
+	Seja $M$ uma variedade riemanniana.
+	$M$ é chamada de \emph{flat} se é localmente isométrica a um espaço euclideano.
+\end{definicao}
+
 \begin{teorema}
-	Uma variedade Riemanniana é plana se e somente se seu tensor de curvatura é identicamente nulo.
+	Uma variedade Riemanniana é flat se e somente se o tensor de curvatura é identicamente nulo.
 \end{teorema}
+
+\begin{demonstracao}
+	Ver \cite[Theorem 7.3]{Lee1997}.
+\end{demonstracao}
 
 
 \section{Propriedades do tensor de curvatura}
@@ -661,6 +690,10 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 		\item $R_m(W,X,Y,Z) + R_m(X,Y,W,Z) + R_m(Y,W,X,Z) = 0$.
 	\end{enumerate}
 \end{proposicao}
+
+\begin{demonstracao}
+	Ver \cite[Proposition 7.4]{Lee1997}.
+\end{demonstracao}
 
 
 
@@ -687,36 +720,71 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	Portanto, $i^* g$ é a restrição de $g$ a um par de vetores tangentes a $S$. 
 \end{observacao}
 
+
+
 \begin{definicao}
 	Seja $(M,g)$ uma variedade Riemanniana e $S \subset M$ uma subvariedade imersa o mergulhada com a métrica induzida, é chamada de \emph{subvariedade Riemanniana} de $M$.
 \end{definicao}
 
-
+\begin{observacao}
+	Seja $M$ uma subvariedade riemanniana de $\tilde{M}$,
+	$\tilde{\nabla}$ a conexão riemanniana de $\tilde{M}$ e 
+	$X,Y \in \vectorfieldsspace{M}$ que são estendidos a $\vectorfieldsspace{\tilde{M}}$ para que $\tilde{\nabla}_X Y$ esteja bem definida.
+	Então, $\tilde{\nabla}_X Y$ pode-se escreve
+	\begin{equation*}
+	\tilde{\nabla}_X Y = \left(\tilde{\nabla}_X Y\right)^\top + \left(\tilde{\nabla}_X Y\right)^\perp,
+	\end{equation*}
+	onde $\left(\tilde{\nabla}_X Y\right)^\top$ é a projeção tangencial a $M$ e $\left(\tilde{\nabla}_X Y\right)^\perp$ é a projeção ortogonal a $M$.
+\end{observacao}
 %\section{A equação de Gauss}
 
 \begin{definicao}
-	A \emph{segunda forma fundamental} é a função $\alpha: \vectorfieldsspace{M} \times \vectorfieldsspace{M} \rightarrow \vectorfieldsspace{M}^\perp$ dada por
+	Seja $M$ uma subvariedade riemanniana de $\tilde{M}$,
+	$\tilde{\nabla}$ é a conexão riemanniana $\tilde{M}$ e
+	$X,Y \in \vectorfieldsspace{M}$ estendidos a $\vectorfieldsspace{\tilde{M}}$.
+	A aplicação $\alpha: \vectorfieldsspace{M} \times \vectorfieldsspace{M} \rightarrow \vectorfieldsspace{M}^\perp$ dada por
 	\begin{equation*}
 		\alpha(X,Y) = (\tilde{\nabla}_X Y)^\perp
 	\end{equation*} 
-	onde $X,Y$ são estendidos a $\tilde{M}$.
+	é chamada de \emph{segunda forma fundamental}.
 \end{definicao}
 
-\begin{lema}
+\begin{proposicao}
 	A segunda forma fundamental é
 	\begin{enumerate}
 		\item independente das extensões $X$ e $Y$;
 		\item bilinear sobre $\smoothfunctionsspace{M}$; e
 		\item simétrico em $X$ e $Y$.
 	\end{enumerate}
-\end{lema}
+\end{proposicao}
 
-\begin{teorema}[A Fórmula de Gauss]\label{formula-de-gauss}
-	Se $X,Y \in \vectorfieldsspace{M}$ são estendidos arbitrariamente a campos vetoriais de $\tilde{M}$, a seguente formula cumpre-se em $M$:
+\begin{demonstracao}
+	As propriedade são consequência direta das propriedades de $\tilde{\nabla}$ e a linearidade do operador linear $\perp$. 
+\end{demonstracao}
+
+\begin{teorema}[A Fórmula de Gauss]\label{formula-de-gauss},
+	Seja $M$ uma subvariedade riemanniana de $\tilde{M}$,
+	$\tilde{\nabla}, \nabla$ as conexões riemannianas de $\tilde{M}$ e $M$ respectivamente e
+	$X,Y \in \vectorfieldsspace{M}$ tal que são estendidos arbitrariamente a campos vetoriais de $\tilde{M}$.
+	Então, a seguente fórmula cumpre-se em $M$:
 	\begin{equation*}
 		\tilde{\nabla}_X Y = \nabla_X Y + \alpha(X,Y).
 	\end{equation*}
 \end{teorema}
+
+\begin{demonstracao}
+	Basta com provar que $\left(\tilde{\nabla}_X Y\right)^\top = \nabla_X Y$. 
+	Seja $\tangentialconnection: \vectorfieldsspace{M} \rightarrow \vectorfieldsspace{M}$ definido por
+	\begin{equation*}
+		\tangentialconnection_X Y = \left(\tilde{\nabla}_X Y\right)^\top	
+	\end{equation*}
+	Pode-se provar que $\tangentialconnection$, usando um procedimento similar na prova do lema \ref{boa-definicao-conexao-tangencial} e do lema \ref{conexao-tangencial-simetrica}, que é uma conexão linear simétrica de $M$. Para provar que $\tangentialconnection$ é compatível com a métrica basta ver que para $X,Y \in \vectorfieldsspace{M}$ estendidos a $\vectorfieldsspace{\tilde{M}}$ tem-se
+	\begin{align*}
+		Z \innerproduct{X}{Y} &= \innerproduct{\tilde{\nabla}_Z X}{Y} + \innerproduct{X}{\tilde{\nabla}_Z Y}\\
+		&= \innerproduct{\tangentialconnection_Z X}{Y} + \innerproduct{X}{\tangentialconnection_Z Y}.
+	\end{align*}
+	Portanto, $\tangentialconnection$ é a conexão riemanniana de $M$ e, pela unicidade da conexão riemanniana, $\tangentialconnection = \nabla$.
+\end{demonstracao}
 
 \begin{proposicao}[A fórmula de Gauss para caminhos]\label{formula-de-gauss-para-caminhos}
 	Seja $M$ uma subvariedade riemanniana de $\tilde{M}$, e $\gamma$ um caminho em $M$. Para $X \in \vectorfieldsspace{\gamma}$,
@@ -750,19 +818,76 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	\end{equation*}
 \end{demonstracao}
 
-\begin{lema}[A Equação de Weingraten]
+\begin{lema}[A Equação de Weingarten]\label{equacao-de-weingarten}
 	Supor que $X,Y \in \vectorfieldsspace{M}$ e $N \in \vectorfieldsspace{M}^\perp$. Quando $X,Y,N$ são estendidos a $\tilde{M}$, cumpre-se a seguente equação:
 	\begin{equation*}
 		\innerproduct{\tilde{\nabla}_X N}{Y} = -\innerproduct{N}{\alpha(X,Y)}.
 	\end{equation*}
 \end{lema}
 
+\begin{demonstracao}
+	Como $Y \perp N$,
+	\begin{equation*}
+		X \innerproduct{Y}{N} = 0.
+	\end{equation*}
+	Desenvolvendo a igualdade anterior,
+	\begin{equation*}
+		\innerproduct{\tilde{\nabla}_X Y}{N} + \innerproduct{Y}{\tilde{\nabla}_X N} = 0.
+	\end{equation*}
+	Então,
+	\begin{equation*}
+		\innerproduct{\tilde{\nabla}_X N}{Y} = -\innerproduct{N}{\tilde{\nabla}_X Y}.
+	\end{equation*}
+	Pela fórmula de Gauss (teorema \ref{formula-de-gauss}),
+	\begin{equation*}
+		\innerproduct{\tilde{\nabla}_X N}{Y} = - \innerproduct{N}{\nabla_X Y + \alpha(X,Y)}.
+	\end{equation*}
+	Portanto, pelo fato que $N \perp \nabla_X Y$, a igualdade anterior escreve-se
+	\begin{equation*}
+		\innerproduct{\tilde{\nabla}_X N}{Y} = - \innerproduct{N}{\alpha(X,Y)}
+	\end{equation*}
+\end{demonstracao}
+
 \begin{teorema}[A Equação de Gauss]\label{equacao-de-gauss}
-	Para qualquer $X,Y,Z,W \in \vectorfieldsspace{M}$, cumpre-se o seguente:
+	Seja $M$ uma subvariedade de $\tilde{M}$;
+	$X,Y,Z,W \in \vectorfieldsspace{M}$,
+	$\tilde{R}_m, R_m$ os tensores de curvatura de $M$ e $\tilde{M}$ respectivamente e
+	$\alpha$ a segunda forma fundamental de $M$.
+	Então, cumpre-se o seguente:
 	\begin{equation*}
 		\tilde{R}_m(X,Y,Z,W) = R_m(X,Y,Z,W) - \innerproduct{\alpha(X,W)}{\alpha(Y,Z)} + \innerproduct{\alpha(X,Z)}{\alpha(Y,W)}.
 	\end{equation*}
 \end{teorema}
+
+\begin{demonstracao}
+	Pelas definições do tensor de curvatura e do endomorfismo de curvatura,
+	\begin{align*}
+		\tilde{R}_m(X,Y,Z,W) &= \innerproduct{\tilde{R}(X,Y)Z}{W}\\
+		&= \innerproduct{\tilde{\nabla}_X \tilde{\nabla}_Y Z - \tilde{\nabla}_Y \tilde{\nabla}_X Z - \tilde{\nabla}_{[X,Y]} Z}{W}.
+	\end{align*}
+	Usando a fórmula de Gauss (teorema \ref{formula-de-gauss}),
+	\begin{align*}
+		\tilde{R}_m(X,Y,Z,W) &= \innerproduct{\tilde{\nabla}_X (\nabla_Y Z + \alpha(Y,Z)) - \tilde{\nabla}_Y (\nabla_X Z + \alpha(X,Z)) - \nabla_{[X,Y]} Z - \alpha([X,Y],Z)}{W}\\
+		&= \innerproduct{\tilde{\nabla}_X \nabla_Y Z + \tilde{\nabla}_X \alpha(Y,Z) - \tilde{\nabla}_Y \nabla_X Z - \tilde{\nabla}_Y \alpha(X,Z) - \nabla_{[X,Y]} Z - \alpha([X,Y],Z)}{W}.
+	\end{align*}
+	Como $\alpha([X,Y],Z) \perp W$,
+	\begin{align*}
+		\tilde{R}_m(X,Y,Z,W) &= \innerproduct{\tilde{\nabla}_X \nabla_Y Z + \tilde{\nabla}_X \alpha(Y,Z) - \tilde{\nabla}_Y \nabla_X Z - \tilde{\nabla}_Y \alpha(X,Z) - \nabla_{[X,Y]} Z}{W}\\
+		&= \left\langle \nabla_X \nabla_Y Z + \alpha(X, \nabla_Y Z) + \tilde{\nabla}_X \alpha(Y,Z) - \nabla_Y \nabla_X Z - \alpha(Y, \nabla_X Z) - \tilde{\nabla}_Y \alpha(X,Z)\right.\\
+		& \left. - \nabla_{[X,Y]} Z, W \right\rangle.
+	\end{align*}
+	Pelo fato que $\alpha(X, \nabla_Y Z)$ e $\alpha(Y, \nabla_X Z)$ são ortogonais a $W$,
+	\begin{align*}
+		\tilde{R}_m(X,Y,Z,W) &= \innerproduct{\nabla_X \nabla_Y Z + \tilde{\nabla}_X \alpha(Y,Z) - \nabla_Y \nabla_X Z - \tilde{\nabla}_Y \alpha(X,Z) - \nabla_{[X,Y]} Z}{W}\\
+		&=  \innerproduct{\nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X,Y]} Z}{W} +  \innerproduct{\tilde{\nabla}_X \alpha(Y,Z)}{W} -  \innerproduct{\tilde{\nabla}_Y \alpha(X,Z)}{W}\\
+		&=  \innerproduct{R(X,Y)Z}{W} +  \innerproduct{\tilde{\nabla}_X \alpha(Y,Z)}{W} -  \innerproduct{\tilde{\nabla}_Y \alpha(X,Z)}{W}\\
+		&= R_m(X,Y,Z,W) +  \innerproduct{\tilde{\nabla}_X \alpha(Y,Z)}{W} -  \innerproduct{\tilde{\nabla}_Y \alpha(X,Z)}{W}.
+	\end{align*}
+	Usando a equação de Weingarten (lema \ref{equacao-de-weingarten}),
+	\begin{equation*}
+		\tilde{R}_m(X,Y,Z,W) = R_m(X,Y,Z,W) - \innerproduct{\alpha(X,W)}{\alpha(Y,Z)} + \innerproduct{\alpha(X,Z)}{\alpha(Y,W)}.
+	\end{equation*}
+\end{demonstracao}
 
 \subsection{Hipersuperfícies em variedades riemannianas}
 
