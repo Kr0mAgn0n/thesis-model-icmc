@@ -5,7 +5,7 @@
 
 
 
-\section{Quê é uma variedade Riemanniana?}
+\section{Variedades riemannianas}
 
 \begin{definicao}
 	Seja $M$ uma variedade diferenciável. Uma \emph{métrica Riemanniana em $M$} é um campo 2-tensorial covariante, simétrico e diferenciável que é definido positivo em cada ponto.	
@@ -596,6 +596,19 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 	Usando \ref{conexao-riemanniana-lema-1}, \ref{conexao-riemanniana-lema-2} e \ref{conexao-riemanniana-lema-3}, chega-se à conclusão.
 \end{demonstracao}
 
+
+\begin{observacao}
+	Sejam $(M,g)$ e $(\tilde{M}, \tilde{g})$ variedades Riemannianas, $\nabla$ e $\tilde{\nabla}$ as conexões Levi-Civita de $M$ e $\tilde{M}$ respetivamente, e $F: (M,g) \rightarrow (\tilde{M},\tilde{g})$ uma função diferenciável. A função
+	\begin{equation*}
+	F^* \tilde{\nabla}: \mathfrak{X}(M) \times \mathfrak{X}(M) \rightarrow \mathfrak{X}(M)
+	\end{equation*}
+	definida por
+	\begin{equation*}
+	\left( F^* \tilde{\nabla} \right)_X Y = F^{-1}_* \left( \tilde{\nabla}_{F_* X} (F_* Y) \right)
+	\end{equation*}
+	onde $X,Y \in \mathfrak{X}(M)$ descreve uma conexão em $M$ chamada de \emph{conexão pullback} que é simétrica e compatível com $g$. Portanto, pela unicidade da conexão Levi-Civita, $F^* \tilde{\nabla} = \nabla$.
+\end{observacao}
+
 \begin{proposicao}
 	Supor que $F: (M,g) \rightarrow (\tilde{M}, \tilde{g})$ é uma isometria, então $F$ leva a conexão Riemanniana $\nabla$ de $g$ à conexão Riemanniana de $\tilde{\nabla}$ de $\tilde{g}$ com a regra:
 	\begin{equation*}
@@ -603,20 +616,19 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 	\end{equation*}
 \end{proposicao}
 
-\begin{observacao}
-	Sejam $(M,g)$ e $(\tilde{M}, \tilde{g})$ variedades Riemannianas, $\nabla$ e $\tilde{\nabla}$ as conexões Levi-Civita de $M$ e $\tilde{M}$ respetivamente, e $F: (M,g) \rightarrow (\tilde{M},\tilde{g})$ uma função diferenciável. A função
-	\begin{equation*}
-		F^* \tilde{\nabla}: \mathfrak{X}(M) \times \mathfrak{X}(M) \rightarrow \mathfrak{X}(M)
-	\end{equation*}
-	definida por
-	\begin{equation*}
-		\left( F^* \tilde{\nabla} \right)_X Y = F^{-1}_* \left( \tilde{\nabla}_{F_* X} (F_* Y) \right)
-	\end{equation*}
-	onde $X,Y \in \mathfrak{X}(M)$ descreve uma conexão em $M$ chamada de \emph{conexão pullback} que é simétrica e compatível com $g$. Portanto, pela unicidade da conexão Levi-Civita, $F^* \tilde{\nabla} = \nabla$.
-\end{observacao}
+
+
+\begin{definicao}
+	Seja $M$ uma variedade diferenciável e
+	$\lambda: I \rightarrow M$ um caminho.
+	Um \emph{campo vetorial ao longo do caminho} $\lambda$ é uma aplicação diferenciável $V: I \rightarrow TM$ tal que $V(t) \in T_{\lambda(t)} M$.
+	Um espaço de campos vetoriais ao longo do caminho $\lambda$ é denotado por $\vectorfieldsspace{\lambda}$.
+\end{definicao}
 
 \begin{proposicao}\label{derivada-covariante-de-um-caminho}
-	Seja $\nabla$ uma conexão linear em $M$. Cada caminho $\lambda: I \rightarrow M$, $\nabla$ determina um operador único
+	Seja $M$ uma variedade diferenciável e
+	$\nabla$ uma conexão linear de $M$.
+	Cada caminho $\lambda: I \rightarrow M$, $\nabla$ determina um operador único
 	\begin{equation*}
 		D_t: \vectorfieldsspace{\lambda} \rightarrow \vectorfieldsspace{\lambda}
 	\end{equation*}
@@ -637,7 +649,31 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 	\end{enumerate}
 \end{proposicao}
 
-
+\begin{demonstracao}
+	Supor que $D_t$ existe e tem as propriedades anteriormente mencionadas.
+	Então,
+	\begin{align*}
+		D_t V(t) &= D_t \left(V^i(t) \partial_i\right)\\
+		&= (V^i)'(t) \partial_i + V^i(t) D_t \partial_i\\
+		&= (V^i)'(t) \partial_i + V^i(t) \nabla_{\lambda'(t)} \partial_i\\
+		&= (V^i)'(t) \partial_i + V^i(t) \nabla_{(\lambda^j)'(t) \partial_j} \partial_i\\
+		&= (V^i)'(t) \partial_i + V^i(t) (\lambda^j)'(t)  \nabla_{\partial_j} \partial_i\\
+		&= (V^i)'(t) \partial_i + V^i(t) (\lambda^j)'(t) \Gamma_{ij}^k(\lambda(t)) \partial_k\\
+		&= (V^k)'(t) \partial_k + V^i(t) (\lambda^j)'(t) \Gamma_{ij}^k(\lambda(t)) \partial_k\\
+		&= \left((V^k)'(t)  + V^i(t) (\lambda^j)'(t) \Gamma_{ij}^k(\lambda(t))\right) \partial_k.
+	\end{align*}
+	Pelos termos da equação anterior, mostra-se a unicidade de $D_t$.
+	Para mostrar a existência
+	seja $(U_{\alpha}, \varphi_{\alpha})$ um atlas de $M$.
+	Para cada $U_{\alpha}$ define-se $D_t^{\alpha}$ de maneira similar à prova da unicidade e
+	seja $(\psi_{\alpha})$ uma partição da unidade da cobertura $(U_{\alpha})$.
+	Usando a partição da unidade define-se
+	\begin{equation*}
+		D_t = \sum_{\alpha} \psi_{\alpha} D_t^{\alpha}
+	\end{equation*}
+	Pode-se ver que a aplicação $D_t$, definida anteriormente, cumpre com as propriedades do enunciado.
+	Portanto, fica provada a sua existência. 
+\end{demonstracao}
 
 \section{Curvatura}
 
@@ -659,9 +695,36 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 	\end{equation*}
 \end{definicao}
 
-\begin{lema}
+\begin{teorema}
 	O endomorfismo de curvatura e o tensor de curvatura são invariantes isométricos locais.
-\end{lema}
+\end{teorema}
+
+\begin{demonstracao}
+	Sejam $M$ e $\tilde{M}$ $n$-variedades riemannianas,
+	$\nabla$ e $\tilde{\nabla}$ as conexões riemannianas de $M$ e $\tilde{M}$,
+	$R$ e $\tilde{R}$ os endomorfismos de curvatura de $M$ e $\tilde{M}$,
+	$R_m$ e $\tilde{R}_m$ as tensores de curvatura de $M$ e $\tilde{M}$ ,
+	$p \in M$,
+	$U$ aberto de $M$ tal que $p \in U$;
+	$X,Y,Z,W \in \vectorfieldsspace{U}$,
+	$f: M \rightarrow \tilde{M}$ uma isometria local e
+	$f_*$ o pushforward de $f$ em $\vectorfieldsspace{M}$.
+	Então, pode-ser ver que
+	\begin{align*}
+		\tilde{R}(f_*X, f_*Y)f_*Z &= \tilde{\nabla}_{f_*X} \tilde{\nabla} f_*Y f_*Z - \tilde{\nabla}_{f_*Y} \tilde{\nabla}_{f_*X} f_*Z - \tilde{\nabla}_{[f_*X, f_*Y]} f_*Z\\
+		&= f_* \left(\nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X,Y]}Z\right)\\
+		&= f_* R(X,Y)Z
+	\end{align*}
+	e
+	\begin{align*}
+		\tilde{R}_m(f_*X, f_*Y, f_*Z, f_*W)
+		&= \innerproduct{\tilde{R}(f_*X, f_*Y)f_*Z}{f_*W}\\
+		&= \innerproduct{f_* R(X,Y)Z}{f_*W}\\
+		&= \innerproduct{R(X,Y)Z}{W}\\
+		&= R_m(X,Y,Z,W).
+	\end{align*}
+	Portanto, o endomorfismo de curvatura e o tensor de curvatura são invariantes isométricos locais.
+\end{demonstracao}
 
 \section{Quê mede o tensor de curvatura?}
 
