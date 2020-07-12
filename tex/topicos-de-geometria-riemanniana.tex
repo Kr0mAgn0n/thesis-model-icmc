@@ -597,7 +597,7 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 \end{demonstracao}
 
 
-\begin{observacao}
+\begin{proposicao}\label{conexao-pullback}
 	Sejam $(M,g)$ e $(\tilde{M}, \tilde{g})$ variedades Riemannianas, $\nabla$ e $\tilde{\nabla}$ as conexões Levi-Civita de $M$ e $\tilde{M}$ respetivamente, e $F: (M,g) \rightarrow (\tilde{M},\tilde{g})$ uma função diferenciável. A função
 	\begin{equation*}
 	F^* \tilde{\nabla}: \mathfrak{X}(M) \times \mathfrak{X}(M) \rightarrow \mathfrak{X}(M)
@@ -607,7 +607,33 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 	\left( F^* \tilde{\nabla} \right)_X Y = F^{-1}_* \left( \tilde{\nabla}_{F_* X} (F_* Y) \right)
 	\end{equation*}
 	onde $X,Y \in \mathfrak{X}(M)$ descreve uma conexão em $M$ chamada de \emph{conexão pullback} que é simétrica e compatível com $g$. Portanto, pela unicidade da conexão Levi-Civita, $F^* \tilde{\nabla} = \nabla$.
-\end{observacao}
+\end{proposicao}
+
+\begin{demonstracao}
+	$(F^* \tilde{\nabla})$ é simétrica, porque
+	\begin{align*}
+		\left(F^* \tilde{\nabla}\right)_X Y - \left(F^* \tilde{\nabla}\right)_Y X &= F_*^{-1} \left(\tilde{\nabla}_{F_* X} F_*Y\right) - F_*^{-1} \left(\tilde{\nabla}_{F_* Y} F_* X\right)\\
+		&= F_* ^{-1} \left(\tilde{\nabla}_{F_* X} F_*Y - \tilde{\nabla}_{F_* Y} F_* X\right)\\
+		&= F_*^{-1} \left[F_*X, F_*Y\right].
+	\end{align*}
+	Usando \cite[Corollary 8.31]{Lee2012},
+	\begin{equation*}
+		\left(F^* \tilde{\nabla}\right)_X Y - \left(F^* \tilde{\nabla}\right)_Y X * = [X,Y].
+	\end{equation*}
+	Também tem-se que $(F^* \tilde{\nabla})$ é compatível com a métrica, porque, usando
+	\begin{equation*}
+		\innerproduct{Y}{Z} = \innerproduct{F_* Y}{F_* Z} \circ F		
+	\end{equation*}
+	consegue-se
+	\begin{align*}
+		X \innerproduct{Y}{Z} &= X \left(\innerproduct{F_* Y}{F_* Z} \circ F\right)\\
+		&= \left(F_* X \innerproduct{F_* Y}{F_* Z}\right) \circ F\\
+		&= \left(\innerproduct{\tilde{\nabla}_{F_* X} F_* Y}{F_* Z} + \innerproduct{F_* Y}{\tilde{\nabla}_{F_* X} F_* Z}\right) \circ F\\
+		&= \innerproduct{F_*^{-1} \tilde{\nabla}_{F_* X} F_* Y}{Z} + \innerproduct{Y}{F_*^{-1} \tilde{\nabla}_{F_* X} F_* Z}\\
+		&= \innerproduct{\left(F^* \tilde{\nabla}\right)_X Y}{Z} + \innerproduct{Y}{\left(F^* \tilde{\nabla}\right)_X Z}.
+	\end{align*}
+	Então, $(F^* \tilde{\nabla})$ é uma conexão linear simétrica compatível com a métrica. Portanto, pela unicidade da conexão riemanniana, $F^* \tilde{\nabla} = \nabla$.
+\end{demonstracao}
 
 \begin{proposicao}
 	Supor que $F: (M,g) \rightarrow (\tilde{M}, \tilde{g})$ é uma isometria, então $F$ leva a conexão Riemanniana $\nabla$ de $g$ à conexão Riemanniana de $\tilde{\nabla}$ de $\tilde{g}$ com a regra:
@@ -616,7 +642,16 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 	\end{equation*}
 \end{proposicao}
 
-
+\begin{demonstracao}
+	Pela proposição \ref{conexao-pullback}, 
+	\begin{equation*}
+		\nabla_X Y = F^{-1}_* \left( \tilde{\nabla}_{F_* X} (F_* Y) \right).
+	\end{equation*}
+	Portanto,
+	\begin{equation*}
+		F_* (\nabla_X Y) = \tilde{\nabla}_{F_* X} (F_* Y).
+	\end{equation*}
+\end{demonstracao}
 
 \begin{definicao}
 	Seja $M$ uma variedade diferenciável e
