@@ -120,23 +120,23 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 
 
 
-\section{Fibrado Normal}
-
-\begin{definicao}
-	Supor que $(M,g)$ é uma $n$-variedade Riemanniana, e $S \subset M$ é uma $k$-subvariedade Riemanniana. Para qualquer $p \in S$, dizemos que um vetor $v$ é \emph{normal a S}  se é ortogonal a todo vetor em $T_p S$ com respeito ao produto interno $\langle , \rangle_g$.
-\end{definicao}
-
-\begin{definicao}
-	O \emph{espaço normal a S em} $p$ é o subespaço $N_p S \subset T_p M$ que consiste de todos os vetores que são normais a $S$ em $p$.
-\end{definicao}
-
-\begin{definicao}
-	O \emph{fibrado normal de} $S$ é o subconjunto $NS \subset TM$ que consiste da união de todos os espaços normais aos ponto de $S$.
-\end{definicao}
-
-\begin{definicao}
-	A projeção $\pi_{NS}: NS \rightarrow S$ é a restrição a $NS$ da projeção $\pi: TM \rightarrow M$.
-\end{definicao}
+%\section{Fibrado Normal}
+%
+%\begin{definicao}
+%	Supor que $(M,g)$ é uma $n$-variedade Riemanniana, e $S \subset M$ é uma $k$-subvariedade Riemanniana. Para qualquer $p \in S$, dizemos que um vetor $v$ é \emph{normal a S}  se é ortogonal a todo vetor em $T_p S$ com respeito ao produto interno $\langle , \rangle_g$.
+%\end{definicao}
+%
+%\begin{definicao}
+%	O \emph{espaço normal a S em} $p$ é o subespaço $N_p S \subset T_p M$ que consiste de todos os vetores que são normais a $S$ em $p$.
+%\end{definicao}
+%
+%\begin{definicao}
+%	O \emph{fibrado normal de} $S$ é o subconjunto $NS \subset TM$ que consiste da união de todos os espaços normais aos ponto de $S$.
+%\end{definicao}
+%
+%\begin{definicao}
+%	A projeção $\pi_{NS}: NS \rightarrow S$ é a restrição a $NS$ da projeção $\pi: TM \rightarrow M$.
+%\end{definicao}
 
 \section{Conexões lineares}
 
@@ -171,9 +171,9 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	$\nabla_X Y$ é também chamado de \emph{derivada covariante de} $Y$ na direção de $X$.
 \end{observacao}
 
-\begin{lema}\label{boa_definicao_conexao_1}
+\begin{proposicao}\label{boa_definicao_conexao_1}
 	Se $\nabla$ é uma conexão linear de uma variedade diferenciável $M$, $X,Y \in \mathfrak{X}(M)$, e $p \in M$, então $\nabla_X Y_{|p}$ depende só dos valores de $X$ e $Y$ numa vizinhança pequena de $p$, i.e., se $X = \tilde{X}$ e $Y = \tilde{Y}$ numa vizinhança pequena de $p$, então $\nabla_X Y_{|p} = \nabla_{\tilde{X}} \tilde{Y}_{|p}$.
-\end{lema}
+\end{proposicao}
 
 \begin{demonstracao}
 	Seja $p \in M$ e $U$ um aberto de $M$ tal que $p \in U$. Tem-se que $X = \tilde{X}$ e $Y = \tilde{Y}$ em $U$. Definamos $Z = Y - \tilde{Y}$ e $\varphi: M \rightarrow \realnumbers$ tal que $\varphi(p)=1$ e $\supp \varphi \subset U$. Pode-se ver que $\varphi Z \equiv 0$ e
@@ -211,9 +211,9 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	Portanto $(\nabla_X Y)_p = (\nabla_{\tilde{X}} \tilde{Y})_p$.
 \end{demonstracao}
 
-\begin{lema}\label{boa_definicao_conexao_2}
+\begin{proposicao}\label{boa_definicao_conexao_2}
 	No lema \ref{boa_definicao_conexao_1}, se pode adicionar que $\nabla_X Y_{|p}$ depende só dos valores de $Y$ numa vizinhança pequena de $p$ e do valor de $X$ em $p$.
-\end{lema}
+\end{proposicao}
 
 \begin{demonstracao}
 	Seja $U$ aberto de $M$ e $X, \tilde{X} \in \vectorfieldsspace{U}$ tal que $X_p = \tilde{X}_p$ para $p \in U$. Definamos $W \in \vectorfieldsspace{U}$ tal que $W = X - \tilde{X}$. Pode-se ver que $W_p = 0$. Usando o sistema de coordenadas canônicas tem-se que $W = W^i \partial_i$. Logo
@@ -229,9 +229,9 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	Pelo lema \ref{boa_definicao_conexao_2}, podemos escrever $\nabla_{X_p} Y$ em lugar de $\nabla_X Y_{|p}$, i.e., podemos dizer que é a derivada direcional de $Y$ em $p$ com direção $X_p$.
 \end{observacao}
 
-\begin{lema}\label{conexao-linear-numa-curva}
-	Sejam $M$ uma variedade diferenciável e $p \in M$. Sejam também $X, Y, \tilde{Y} \in \vectorfieldsspace{M}$, $\nabla$ uma conexão linear em $TM$, $\gamma: (-\epsilon, \epsilon) \rightarrow M$ uma curva tal que $\gamma(0)=p$ e  $\gamma'(0) = X_p$ e supor que $Y \equiv \tilde{Y}$ na imagem de $\gamma$. Então $\nabla_{X_p} Y = \nabla_{X_p} \tilde{Y}$.
-\end{lema}
+%\begin{lema}\label{conexao-linear-numa-curva}
+%	Sejam $M$ uma variedade diferenciável e $p \in M$. Sejam também $X, Y, \tilde{Y} \in \vectorfieldsspace{M}$, $\nabla$ uma conexão linear em $TM$, $\gamma: (-\epsilon, \epsilon) \rightarrow M$ uma curva tal que $\gamma(0)=p$ e  $\gamma'(0) = X_p$ e supor que $Y \equiv \tilde{Y}$ na imagem de $\gamma$. Então $\nabla_{X_p} Y = \nabla_{X_p} \tilde{Y}$.
+%\end{lema}
 
 \begin{observacao}\label{obs_simbolos_christoffel}
 	Seja $M$ uma variedade diferenciável, e $(E_i)$ uma estrutura local de $TM$ num conjunto aberto $U \subset M$. Para qualquer escolha de índices $i$ e $j$, podemos expandir $\nabla_{E_i} E_j$ em termos da mesma estrutura
