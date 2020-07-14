@@ -117,15 +117,14 @@ Derivando $A(t)$ em $t=0$ tem-se
 	Pelo fato que a função $h$ é arbitraria, pudemos escolher $h: \overline{D} \rightarrow \R$ tal que $h(p) = H(p)$, $hH > 0$ em  $U$, e $h$ seja identicamente nula fora $U$. 
 	Com as condições anteriores, tem-se que $A'(0) < 0$.
 \end{demonstracao}
-
-\begin{observacao}
+%\begin{observacao}
 	Suponha que exista uma solução $M$ para o problema de Lagrange, e considere uma variação normal $M_t$ de $M$, com $t \in (-\epsilon,\epsilon)$, dada por uma função suave $f: M \rightarrow \realnumbers$ tal que $f_{|\partial M} = 0$. Como a área de $M$ é mínima temos, em particular, que
 	\begin{equation*}
 	A(t) \geq A(0)
 	\end{equation*}
 	para qualquer $t \in (-\epsilon,\epsilon)$. Portanto, $A'(0)=0$, para toda variação normal $M_t$ de $M$ com $f_{|\partial M}=0$.
-	Isso mostra, em virtude da proposição \ref{caracteristica_das_superficies_minimas}, que as superfícies de área minima são superfícies minimas no sentido da nossa definição. A reciproca é falsa!
-\end{observacao}
+	Isso mostra, em virtude da proposição \ref{caracteristica_das_superficies_minimas}, que as superfícies de área mínima são superfícies mínimas no sentido da nossa definição. A reciproca é falsa!
+%\end{observacao}
 
 \begin{proposicao}
 	Não existe superfície minima compacta em $\realnumbers^3$.
@@ -139,7 +138,6 @@ Derivando $A(t)$ em $t=0$ tem-se
 	Logo $k_1 = -k_2$ e se tem que $K = k_1 k_2 \leq 0$.
 	Se $M$ for compacta, existe $p \in M$ tal que $K(p) > 0$.
 \end{demonstracao}
-
 Dada suma superfície regular $M$ em $\realnumbers^3$, considere uma carta local isoterma $(U,\varphi)$ para $M$, i.e., 
 \begin{equation*}
 E = G = \lambda^2 \text{ e } F=0,
@@ -203,8 +201,8 @@ H &= \frac{eG - 2fF + gE}{2(EG - F^2)}\\
 	\end{equation}
 \end{demonstracao}
 
-\begin{corolario}
-	Uma superfície $M$ em $\realnumbers^3$ é minima se e somente se toda carta local isoterma é harmônica.
+\begin{corolario}\label{equiv_isoterma_harmonica}
+	Uma superfície $M$ em $\realnumbers^3$ é mínima se e somente se toda carta local isoterma é harmônica.
 \end{corolario}
 
 \begin{exemplo}
@@ -213,7 +211,6 @@ H &= \frac{eG - 2fF + gE}{2(EG - F^2)}\\
 	y = a \cosh \left( \frac{z}{a} \right)
 	\end{equation*}
 	em torno ao eixo $z$.
-	(Gráfico)
 	Assim, o catenoide pode ser parametrizado por
 	\begin{equation*}
 	\varphi(u,v) = \left( a \cosh v \cos u, a \cosh v \sin u, av \right)
@@ -226,6 +223,12 @@ H &= \frac{eG - 2fF + gE}{2(EG - F^2)}\\
 	\end{gather*}
 	Portanto o catenoide e uma superfície minima.
 \end{exemplo}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/catenoid}
+	\caption{Catenoide. Imagem obtida de \url{https://upload.wikimedia.org/wikipedia/commons/5/5d/Catenoid.svg} baixo licença Creative Commons.}
+\end{figure}
 
 \begin{exemplo}
 	Considere uma hélice dada por
@@ -246,6 +249,12 @@ H &= \frac{eG - 2fF + gE}{2(EG - F^2)}\\
 	\end{gather*}
 	Portanto o helicoide é superfície minima.
 \end{exemplo}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/helicoid}
+	\caption{Helicoide. Imagem obtida de \url{https://upload.wikimedia.org/wikipedia/commons/d/d2/Helicoid_JD.png} baixo licença Creative Commons.}
+\end{figure}
 
 \begin{teorema}
 	Alem do plano,
@@ -345,8 +354,14 @@ H &= \frac{eG - 2fF + gE}{2(EG - F^2)}\\
 	\end{equation*}
 \end{exemplo}
 
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/scherk}
+	\caption{Superfície de Scherk. Imagem obtida de \url{https://upload.wikimedia.org/wikipedia/commons/8/83/Superficie_di_scherk.jpg} baixo licença Creative Commons.}
+\end{figure}
+
 \section{A formula de representação de Weierstrass}
-Nesta seção apresentará-se a formula de representação de Weierstrass que serve para gerar superfícies mínimas em $\R^3$ que foi um problema importante ao inicio do estúdio das superfícies mínimas.
+Nesta seção apresentará-se a formula de representação de Weierstrass que serve para gerar superfícies mínimas em $\R^3$. Este foi um problema importante ao inicio do estúdio das superfícies mínimas.
 Esta formula faz uso da teoria de superfícies de Riemann e Analise Complexa.
 
 Considere o plano complexo $\complexnumbers$ identificado com $\realnumbers^2$
@@ -371,13 +386,13 @@ tal que $\Re(f)$ é parte real da função $f$ e $\Im(f)$ é a parte imaginaria 
 	\end{align*}
 \end{definicao}
 
-\begin{definicao}
-	Uma carta local $(U, \varphi)$ em $M$ é dita \emph{mínima} se $H(p) = 0, \forall p \in \varphi(U)$.
-\end{definicao}
+%\begin{definicao}
+%	Uma carta local $(U, \varphi)$ em $M$ é dita \emph{mínima} se $H(p) = 0, \forall p \in \varphi(U)$.
+%\end{definicao}
 
-\begin{corolario}\label{equiv_isoterma_harmonica}
-	Seja $(U, \varphi)$ uma carta local isoterma de uma superfície $M \subset \realnumbers^3$. Então $(U, \varphi)$ é mínima se e somente se $\varphi$ é harmônica, i.e., $\varphi_{uu} + \varphi_{vv} = 0$.
-\end{corolario}
+%\begin{corolario}
+%	Seja $(U, \varphi)$ uma carta local isoterma de uma superfície $M \subset \realnumbers^3$. Então $(U, \varphi)$ é mínima se e somente se $\varphi$ é harmônica, i.e., $\varphi_{uu} + \varphi_{vv} = 0$.
+%\end{corolario}
 
 Dadas uma superfície $M \subset \realnumbers^3$ e uma carta local $(U, \varphi)$ em $M$, com
 \begin{equation*}
@@ -551,8 +566,13 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, 1 \leq j \leq 3
 	&= \frac{1}{2} \Re \left( z - \frac{z^3}{3}, iz + \frac{iz^3}{3}, z^2 \right) \\
 	&= \frac{1}{2} \left( u - \frac{u^3}{3} + uv^2, -v + \frac{v^3}{3} - u^2v, u^2 - v^2 \right)
 	\end{align*}
-	(gráfico)
 \end{exemplo}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{images/enneper}
+	\caption{Superfície de Enneper. Imagem obtida de \url{https://upload.wikimedia.org/wikipedia/commons/d/dc/EnneperSurface.PNG} baixo licença GNU Free Documentation License.}
+\end{figure}
 
 \begin{exemplo}[Superfície de Scherk]
 	A superfície de Scherk, definida pela equação
@@ -692,21 +712,21 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, 1 \leq j \leq 3
 
 \section{Superfícies mínimas em $S^3$}
 
-Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em $S^3$ focando-se no casso em que a superfície é compacta. Para mais informação pode-se consultar \cite{Brendle2013}.
+Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em $S^3$ focando-se no casso em que a superfície é compacta. Esta seção está baseada principalmente em \cite{Brendle2013}.
 
-\begin{definicao}
-	A esfera unitária em $\realnumbers^4$, $S^3$, é o conjunto definido por:
-	\begin{equation*}
-	S^3 = \left\{ x \in \realnumbers^4: | x | = 1 \right\}
-	\end{equation*}
-\end{definicao}
+%\begin{definicao}
+%	A esfera unitária em $\realnumbers^4$, $S^3$, é o conjunto definido por:
+%	\begin{equation*}
+%	S^3 = \left\{ x \in \realnumbers^4: | x | = 1 \right\}
+%	\end{equation*}
+%\end{definicao}
 
 \begin{proposicao}
 	Seja $M$ uma superfície imersa em $S^3$,
 	$p \in M$,
 	$h$ a segunda forma fundamental escalar de $M$ e
 	$\lambda_1, \lambda_2$ as curvaturas principais de $M$ em $p$.
-	A curvatura Gaussiana $K(p)$ de $M$ em $p$ é
+	A curvatura seccional (intrínseca) $K$ de $M$ em $p$ é
 	\begin{equation*}
 		K(p) = 1 + \lambda_1 \lambda_2
 	\end{equation*}
@@ -718,8 +738,8 @@ Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em
 	\begin{equation*}
 		\tilde{R}_m(x,y,y,x) = R_m(x,y,y,x) - h(x,x) h(y,y) + h(x,y)^2.
 	\end{equation*}
-	$\tilde{R}_m(x,y,y,x)$ é a curvatura seccional associada a $\{x,y\}$ de $S^3$. Como $S^3$ tem curvatura seccional constante, então $\tilde{R}_m(x,y,y,x) = 1$. 
-	$R_m(x,y,y,x)$ é a curvatura Gaussiana de $M$ em $p$. Portanto, a igualdade anterior escreve-se
+	$\tilde{R}_m(x,y,y,x)$ é a curvatura seccional associada de $S^3$ que é constante e igual a 1. 
+	$R_m(x,y,y,x)$ é a curvatura intrínseca de $M$ em $p$. Portanto, a igualdade anterior escreve-se
 	\begin{equation*}
 		K(p) = 1 + \lambda_1 \lambda_2.
 	\end{equation*}
@@ -741,15 +761,27 @@ Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em
 	Seja $\{x,y\}$ uma base ortonormal de autovetores de $T_p M$ associada às curvaturas principais $\lambda_1$ e $\lambda_2$.
 	Usando $\{x,y\}$ com a definição \ref{def:curvatura-media} tem-se
 	\begin{equation*}
-		H(p) = \alpha(x,x) + \alpha(y,y).
+		H(p) = \lambda_1 + \lambda_2.
 	\end{equation*}
-	Portanto, $H(p) = \lambda_1 + \lambda_2$.
 \end{demonstracao}
 
 \begin{definicao}
 	Uma superfície em $S^3$ chama-se de \emph{superfície mínima} se a curvatura media é identicamente nula.
 \end{definicao}
 
+\begin{teorema}\label{propriedades_sup_min_S3}
+	Seja $M$ uma superfície em $S^3$. As seguentes afirmações são equivalentes:
+	\begin{enumerate}
+		\item[a)] $M$ é uma superfície mínima
+		\item[b)] $M$ é um ponto critico do funcional de área
+		\item[c)] Se $M$ for descrito pelas funções coordenadas $x_i: \realnumbers \rightarrow \realnumbers$ onde $i=1,2,3,4$, então tem-se:
+		\begin{equation*}
+		\Delta_{\Sigma} x_i + 2 x_i = 0
+		\end{equation*}
+		para $i=1,2,3,4$.
+	\end{enumerate}
+\end{teorema}
+A prova de este resultado depende de resultados importantes que serão mencionados a continuação.
 \begin{teorema}\label{thm:takahashi}
 	Se uma imersão isométrica $x: M \rightarrow \R^{m+k}$ de uma $m$-variedade riemanniana em o $(m+k)$-espaço euclideano satisfaz $ \Delta x = \lambda x $ para alguma constante $\neq 0$, então $\lambda$ é necessariamente positiva e $x$ é uma imersão mínima em a esfera $S^{m+k-1}$ de radio $\sqrt{m/\lambda}$ em $\R^{m+k}$. De igual forma, se $x$ é uma imersão mínima em uma esfera de radio $a$ em $\R^{m+k}$, então $x$ satisfaz $\Delta x = \lambda x$ salvo um deslocamento paralelo em $\R^{m+k}$ e $\lambda = m/a^2$.
 \end{teorema}
@@ -772,20 +804,9 @@ Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em
 	Ver \cite[Theorem 3.2.1]{Simons1968}.
 \end{demonstracao}
 
-\begin{teorema}\label{propriedades_sup_min_S3}
-	Seja $M$ uma superfície em $S^3$. As seguentes afirmações são equivalentes:
-	\begin{enumerate}
-		\item[a)] $M$ é uma superfície mínima
-		\item[b)] $M$ é um ponto critico do funcional de área
-		\item[c)] Se $M$ for descrito pelas funções coordenadas $x_i: \realnumbers \rightarrow \realnumbers$ onde $i=1,2,3,4$, então tem-se:
-		\begin{equation*}
-		\Delta_{\Sigma} x_i + 2 x_i = 0
-		\end{equation*}
-		para $i=1,2,3,4$.
-	\end{enumerate}
-\end{teorema}
 
-\begin{demonstracao}
+
+\begin{demonstracao}[Prova do teorema \ref{propriedades_sup_min_S3}]
 	Pelo teorema \ref{thm:takahashi} tem-se a equivalência entre $a)$ e $c)$. Pelo teorema \ref{thm:minimo-e-compacto-implica-ser-ponto-minimo-do-funcional-de-area} tem-se que $a)$ implica $b)$. Para ver a prova de que $b)$ implica $a)$ ir a \cite[\S 2.4]{Simons1968}.
 \end{demonstracao}
 
