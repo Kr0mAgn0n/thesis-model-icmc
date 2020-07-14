@@ -1,22 +1,19 @@
-
-\cite{Lee2012}
-\cite{Lee1997}
-\cite{Carmo1988}
-
-
+Neste capitulo apresentará-se um resumo da teoria de variedades riemannianas.
+Tomou-se como referencia principal os livros \cite{Lee2012}, \cite{Lee1997}, \cite{Carmo1988} e \cite{Gallot2004}.
+O conteúdo de este capitulo servirá como marco teórico para o desenvolvimento dos capítulos seguintes.
 
 \section{Variedades riemannianas}
 
 \begin{definicao}
-	Seja $M$ uma variedade diferenciável. Uma \emph{métrica Riemanniana em $M$} é um campo 2-tensorial covariante, simétrico e diferenciável que é definido positivo em cada ponto.	
+	Seja $M$ uma variedade diferenciável. Uma \emph{métrica riemanniana em $M$} é um campo 2-tensorial covariante, simétrico e diferenciável que é definido positivo em cada ponto.	
 \end{definicao}
 
 \begin{definicao}
-	Uma \emph{variedade Riemanniana} é um par $(M,g)$, onde $M$ é uma variedade diferenciável e $g$ é uma métrica Riemanniana em $M$.
+	Uma \emph{variedade riemanniana} é um par $(M,g)$, onde $M$ é uma variedade diferenciável e $g$ é uma métrica riemanniana em $M$.
 \end{definicao}
 
 \begin{observacao}
-	Para qualquer carta $(x_1, \ldots, x_n)$, uma métrica Riemanniana pode ser escrita como
+	Para qualquer carta $(x_1, \ldots, x_n)$, uma métrica riemanniana pode ser escrita como
 	\begin{equation*}
 		g = \sum_{i,j=1}^n g_{ij} dx_i \otimes dx_j
 	\end{equation*}
@@ -24,7 +21,7 @@
 \end{observacao}
 
 \begin{proposicao}
-Toda variedade diferenciável admite uma métrica Riemanniana.
+Toda variedade diferenciável admite uma métrica riemanniana.
 \end{proposicao}
 
 
@@ -52,11 +49,11 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	\begin{equation*}
 	g_p(v,v) = \sum_{i=1}^n \psi_{\alpha_i}(p) \varphi_{\alpha_i}^* \overline{g}(v,v).
 	\end{equation*}
-	Como $0 \leq \psi_{\alpha_i}(p) \leq 1$ e $\sum_{i=1}^n \psi_{\alpha_i}(p) = 1$ para qualquer $p \in M$ onde $i=1,\ldots,n$, então $g_p(v,v) > 0$. Logo, $g_p$ é positiva. Portanto, $g$ é uma métrica Riemanniana.
+	Como $0 \leq \psi_{\alpha_i}(p) \leq 1$ e $\sum_{i=1}^n \psi_{\alpha_i}(p) = 1$ para qualquer $p \in M$ onde $i=1,\ldots,n$, então $g_p(v,v) > 0$. Logo, $g_p$ é positiva. Portanto, $g$ é uma métrica riemanniana.
 \end{demonstracao}
 
 \begin{proposicao}
-	Supor que $(M,g)$ é uma variedade Riemanniana, e $(X_j)$ é uma estrutura local diferenciável para $M$ sobre um subconjunto aberto $U \subset M$. Então, existe uma estrutura ortonormal diferenciável $\{ (E_j)\}$ sobre $U$ tal que
+	Supor que $(M,g)$ é uma variedade riemanniana, e $(X_j)$ é um referencial local diferenciável para $M$ sobre um subconjunto aberto $U \subset M$. Então, existe um referencial ortonormal diferenciável $\{ (E_j)\}$ sobre $U$ tal que
 	\begin{equation*}
 		\text{span} \{ X_{1|p}, \ldots, X_{n|p} \} = \text{span} \{ E_{1|p}, \ldots, E_{n|p} \}
 	\end{equation*}
@@ -64,42 +61,42 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{proposicao}
 
 \begin{demonstracao}
-	Supor que $M$ é uma variedade Riemanniana de dimensão $n$ e seja $p \in U$, onde $U$ é um aberto de $M$. O conjunto $\{ X_{1|p},\ldots,X_{n|p} \}$ é uma base de $T_pM$. Pelo algoritmo de Gram-Schmidt pudemos obter uma base ortonormal $\{ E_{1|p},\ldots,E_{n|p} \}$ de $T_pM$ para todo $p \in U$. Portanto, $\{ E_1,\ldots,E_n \}$ é uma estrutura local diferenciável.
+	Supor que $M$ é uma variedade riemanniana de dimensão $n$ e seja $p \in U$, onde $U$ é um aberto de $M$. O conjunto $\{ X_{1|p},\ldots,X_{n|p} \}$ é uma base de $T_pM$. Pelo algoritmo de Gram-Schmidt pudemos obter uma base ortonormal $\{ E_{1|p},\ldots,E_{n|p} \}$ de $T_pM$ para todo $p \in U$. Portanto, $\{ E_1,\ldots,E_n \}$ é um referencial local diferenciável.
 \end{demonstracao}
 
 \begin{corolario}
-	Seja $(M,g)$ uma variedade Riemanniana. Para cada $p \in M$, existe uma estrutura ortonormal diferenciável em uma vizinhança de $p$.
+	Seja $(M,g)$ uma variedade riemanniana. Para cada $p \in M$, existe um referencial ortonormal diferenciável em uma vizinhança de $p$.
 \end{corolario}
 
 \begin{demonstracao}
-	Só definir qualquer estrutura local diferenciável para obter uma estrutura local diferenciável ortonormal.
+	Só definir qualquer referencial local diferenciável para obter um referencial local diferenciável ortonormal.
 \end{demonstracao}
 
 \section{Métrica pullback}
 
 \begin{definicao}\label{metrica_pullback}
-	Supor que $M,N$ são variedades diferenciáveis, $g$ é uma métrica Riemanniana em $N$, e $F: M \rightarrow N$ é diferenciável. O \emph{pullback} $F^* g$ é um campo 2-tensorial diferenciável em $M$. Se é definido positivo, é uma métrica Riemanniana em $M$, chamada de \emph{métrica pullback} determinada pelo $F$.
+	Supor que $M,N$ são variedades diferenciáveis, $g$ é uma métrica Riemanniana em $N$, e $F: M \rightarrow N$ é diferenciável. O \emph{pullback} $F^* g$ é um campo 2-tensorial diferenciável em $M$. Se é definido positivo, é uma métrica riemanniana em $M$, chamada de \emph{métrica pullback} determinada pelo $F$.
 \end{definicao}
 
 \begin{proposicao}
-	Supor que $F: M \rightarrow N$ é uma função diferenciável e $g$ é a métrica Riemanniana em $N$. Então, $F^* g$ é uma métrica Riemanniana em $M$ se e somente se $F$ é uma imersão diferenciável.
+	Supor que $F: M \rightarrow N$ é uma função diferenciável e $g$ é a métrica riemanniana em $N$. Então, $F^* g$ é uma métrica riemanniana em $M$ se e somente se $F$ é uma imersão diferenciável.
 \end{proposicao}
 
 \begin{demonstracao}
-	Supor que $F^*g$ é uma métrica Riemanniana. Seja $p \in M$ e $v \in T_pM$ não nulo, então
+	Supor que $F^*g$ é uma métrica riemanniana. Seja $p \in M$ e $v \in T_pM$ não nulo, então
 	\begin{equation*}
 		0 < F^*g(v,v) = g(dF_p v, dF_p v).
 	\end{equation*}
-	Como $g$ é métrica Riemanniana, tem-se que $dF_p v \neq 0$. Logo $dF_p$ é injetora concluindo que $F$ é uma imersão diferenciável.
-	Agora supor que $F$ é uma imersão diferenciável, $p \in M$ e $v \in T_pM$ não nulo. Como $dF_p$ injetora, tem-se que $dF_p v \neq 0$. Como $g$ é uma métrica Riemanniana, tem-se
+	Como $g$ é métrica riemanniana, tem-se que $dF_p v \neq 0$. Logo $dF_p$ é injetora concluindo que $F$ é uma imersão diferenciável.
+	Agora supor que $F$ é uma imersão diferenciável, $p \in M$ e $v \in T_pM$ não nulo. Como $dF_p$ injetora, tem-se que $dF_p v \neq 0$. Como $g$ é uma métrica riemanniana, tem-se
 	\begin{equation*}
 		0 < g(dF_p v, dF_p v) = F^*g(v,v).
 	\end{equation*}
-	Portanto, $F* g$ é uma métrica Riemanniana.
+	Portanto, $F* g$ é uma métrica riemanniana.
 \end{demonstracao}
 
 \begin{definicao}
-	Se $(M,g)$ e $(\tilde{M}, \tilde{g})$ são variedades Riemannianas, a função diferenciável $F: M \rightarrow \tilde{M}$ é chamada de \emph{isometria} se é um difeomorfismo que satisfaz $F^* \tilde{g} = g$.
+	Se $(M,g)$ e $(\tilde{M}, \tilde{g})$ são variedades riemannianas, a função diferenciável $F: M \rightarrow \tilde{M}$ é chamada de \emph{isometria} se é um difeomorfismo que satisfaz $F^* \tilde{g} = g$.
 \end{definicao}
 
 \begin{observacao}
@@ -107,15 +104,15 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{observacao}
 
 \begin{observacao}
-	Se existe uma isometria entre $(M,g)$ e $(\tilde{M}, \tilde{g})$, dizemos que ambos são variedades Riemannianas isométricas e se existe uma isometria local entre elas, então são chamadas de variedades Riemannianas localmente isométricas.
+	Se existe uma isometria entre $(M,g)$ e $(\tilde{M}, \tilde{g})$, dizemos que ambos são variedades riemannianas isométricas e se existe uma isometria local entre elas, então são chamadas de variedades riemannianas localmente isométricas.
 \end{observacao}
 
 \begin{definicao}
-	Uma $n$-variedade Riemanniana é chamada de \emph{variedade Riemanniana plana}, e $g$ é uma \emph{métrica plana}, se $(M,g)$ é localmente isométrica a $(\mathbb{R}^n,\overline{g})$.
+	Uma $n$-variedade riemanniana é chamada de \emph{variedade riemanniana flat}, e $g$ é uma \emph{métrica flat}, se $(M,g)$ é localmente isométrica a $(\mathbb{R}^n,\overline{g})$.
 \end{definicao}
 
 \begin{observacao}
-	Existem métricas Riemannianas que não são planas.
+	Existem métricas riemannianas que não são planas.
 \end{observacao}
 
 
@@ -229,12 +226,12 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 	Pelo lema \ref{boa_definicao_conexao_2}, podemos escrever $\nabla_{X_p} Y$ em lugar de $\nabla_X Y_{|p}$, i.e., podemos dizer que é a derivada direcional de $Y$ em $p$ com direção $X_p$.
 \end{observacao}
 
-%\begin{lema}\label{conexao-linear-numa-curva}
-%	Sejam $M$ uma variedade diferenciável e $p \in M$. Sejam também $X, Y, \tilde{Y} \in \vectorfieldsspace{M}$, $\nabla$ uma conexão linear em $TM$, $\gamma: (-\epsilon, \epsilon) \rightarrow M$ uma curva tal que $\gamma(0)=p$ e  $\gamma'(0) = X_p$ e supor que $Y \equiv \tilde{Y}$ na imagem de $\gamma$. Então $\nabla_{X_p} Y = \nabla_{X_p} \tilde{Y}$.
-%\end{lema}
+\begin{lema}\label{conexao-linear-numa-curva}
+	Sejam $M$ uma variedade diferenciável e $p \in M$. Sejam também $X, Y, \tilde{Y} \in \vectorfieldsspace{M}$, $\nabla$ uma conexão linear em $M$, $\gamma: (-\epsilon, \epsilon) \rightarrow M$ uma curva tal que $\gamma(0)=p$ e  $\gamma'(0) = X_p$ e supor que $Y \equiv \tilde{Y}$ na imagem de $\gamma$. Então $\nabla_{X_p} Y = \nabla_{X_p} \tilde{Y}$.
+\end{lema}
 
 \begin{observacao}\label{obs_simbolos_christoffel}
-	Seja $M$ uma variedade diferenciável, e $(E_i)$ uma estrutura local de $TM$ num conjunto aberto $U \subset M$. Para qualquer escolha de índices $i$ e $j$, podemos expandir $\nabla_{E_i} E_j$ em termos da mesma estrutura
+	Seja $M$ uma variedade diferenciável, e $(E_i)$ um referencial local de $TM$ num conjunto aberto $U \subset M$. Para qualquer escolha de índices $i$ e $j$, podemos expandir $\nabla_{E_i} E_j$ em termos do mesma referencial
 	\begin{equation*}
 		\nabla_{E_i} E_j = \Gamma^k_{ij} E_k
 	\end{equation*}
@@ -242,11 +239,11 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{observacao}
 
 \begin{definicao} 
-	As funções definidas na observação \ref{obs_simbolos_christoffel} , são chamadas de \emph{símbolos de Christoffel} de $\nabla$ com respeito à estrutura dada.
+	As funções definidas na observação \ref{obs_simbolos_christoffel} , são chamadas de \emph{símbolos de Christoffel} de $\nabla$ com respeito ao referencial dado.
 \end{definicao}
 
 \begin{lema}\label{conexiones lineales en función de símbolos de Chritoffel}
-	Seja $\nabla$ uma conexão afim, e seja $X,Y \in \mathfrak{X}(M)$ tal que tal que são expressados em termos uma estrutura local por $X = X^i E_i$ e $Y = Y^j E_j$. Então
+	Seja $\nabla$ uma conexão afim, e seja $X,Y \in \mathfrak{X}(M)$ tal que tal que são expressados em termos um referencial local por $X = X^i E_i$ e $Y = Y^j E_j$. Então
 	\begin{equation*}
 		\nabla_X Y = \left( X Y^k + X^i Y^j \Gamma^k_{ij} \right) E_k
 	\end{equation*}
@@ -285,7 +282,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{lema}
 
 \begin{demonstracao}
-	Sejam $X,Y \in \vectorfieldsspace{M}$ e $\{ \partial_i \}$ a estrutura canônica. Pelo lema \ref{conexiones lineales en función de símbolos de Chritoffel}, tem-se que a conexão linear $\nabla_X Y$ gera um conjunto $\{ \Gamma_{ij}^k \}$ de $n^3$ elementos que são os símbolos de Christoffel. Agora supor que escolhemos un conjunto $\{ \Gamma_{ij}^k \} $ de $n^3$ elementos e definimos o campo vetorial $\nabla_X Y$ como
+	Sejam $X,Y \in \vectorfieldsspace{M}$ e $\{ \partial_i \}$ o referencial local coordenado. Pelo lema \ref{conexiones lineales en función de símbolos de Chritoffel}, tem-se que a conexão linear $\nabla_X Y$ gera um conjunto $\{ \Gamma_{ij}^k \}$ de $n^3$ elementos que são os símbolos de Christoffel. Agora supor que escolhemos un conjunto $\{ \Gamma_{ij}^k \} $ de $n^3$ elementos e definimos o campo vetorial $\nabla_X Y$ como
 	\begin{equation*}
 		\nabla_X Y = (X Y^k + X^i Y^j \Gamma_{ij}^k) \partial_k.
 	\end{equation*}
@@ -368,7 +365,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{observacao}
 
 
-\section{A conexão Riemanniana}
+\section{A conexão riemanniana}
 
 \begin{definicao}
 	Seja $M \subset \mathbb{R}^n$ uma subvariedade diferenciável. Uma função
@@ -418,7 +415,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{demonstracao}
 
 \begin{teorema}[John Nash]
-	Qualquer métrica Riemanniana em uma variedade pode-se considerar como a métrica induzida em algum espaço Euclideano.
+	Qualquer métrica riemanniana em uma variedade pode-se considerar como a métrica induzida em algum espaço Euclideano.
 \end{teorema}
 
 \begin{demonstracao}
@@ -458,7 +455,7 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 \end{lema}
 
 \begin{demonstracao}
-	Sejam $X$ e $Y$ elementos de $\vectorfieldsspace{M}$, $\tilde{X}$ e $\tilde{Y}$ elementos de $\vectorfieldsspace{\realnumbers^n}$ tal que são extensões de $X$ e $Y$, e $\{ \partial_i \}$ a estrutura canônica em $\realnumbers^n$. Tem-se que $\tilde{X} = \tilde{X}^i \partial_i$ e $\tilde{Y} = \tilde{Y}^j \partial_j$, onde os $\tilde{X}^i$, $\tilde{Y}^j$ estão em $\smoothfunctionsspace{\realnumbers^n}$. Então,
+	Sejam $X$ e $Y$ elementos de $\vectorfieldsspace{M}$, $\tilde{X}$ e $\tilde{Y}$ elementos de $\vectorfieldsspace{\realnumbers^n}$ tal que são extensões de $X$ e $Y$, e $\{ \partial_i \}$ o referencial local coordenado em $\realnumbers^n$. Tem-se que $\tilde{X} = \tilde{X}^i \partial_i$ e $\tilde{Y} = \tilde{Y}^j \partial_j$, onde os $\tilde{X}^i$, $\tilde{Y}^j$ estão em $\smoothfunctionsspace{\realnumbers^n}$. Então,
 	\begin{align*}
 		\tangentialconnection_X Y &= \pi^\top (\euclideanconnection_{\tilde{X}} \tilde{Y})\\
 		&= \pi^\top (\euclideanconnection_{\tilde{X}^i \partial_i} (\tilde{Y}^j \partial_j))\\
@@ -491,8 +488,8 @@ Toda variedade diferenciável admite uma métrica Riemanniana.
 %\end{lema}
 
 \begin{teorema}\label{conexao-riemanniana}
-	Seja $(M,g)$ uma variedade Riemanniana. Existe uma única conexão linear $\nabla$ em $M$ que é compatível com $g$ e é simétrica.
-	Esta conexão é chamada de \emph{conexão Riemanniana} o de \emph{conexão de Levi-Civita} de $g$.
+	Seja $(M,g)$ uma variedade riemanniana. Existe uma única conexão linear $\nabla$ em $M$ que é compatível com $g$ e é simétrica.
+	Esta conexão é chamada de \emph{conexão riemanniana} o de \emph{conexão de Levi-Civita} de $g$.
 \end{teorema}
 
 A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
@@ -536,7 +533,7 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 \begin{demonstracao}
 	Sejam
 	$\{ (U_{\alpha}, \varphi_{\alpha}) \}$ um atlas de $M$ e
-	$\{ \partial_m \}$ a estrutura local coordenada em $U_{\alpha}$ para algum $\alpha$.
+	$\{ \partial_m \}$ o referencial local coordenado em $U_{\alpha}$ para algum $\alpha$.
 	Pela equação \eqref{eq:conexao-riemanniana-lema-1-eq-a} tem-se
 	\begin{equation}\label{eq:conexao-riemanniana-lema-2-eq-b}
 		\begin{split}
@@ -598,7 +595,7 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 
 
 \begin{proposicao}\label{conexao-pullback}
-	Sejam $(M,g)$ e $(\tilde{M}, \tilde{g})$ variedades Riemannianas, $\nabla$ e $\tilde{\nabla}$ as conexões Levi-Civita de $M$ e $\tilde{M}$ respetivamente, e $F: (M,g) \rightarrow (\tilde{M},\tilde{g})$ uma função diferenciável. A função
+	Sejam $(M,g)$ e $(\tilde{M}, \tilde{g})$ variedades riemannianas, $\nabla$ e $\tilde{\nabla}$ as conexões Levi-Civita de $M$ e $\tilde{M}$ respetivamente, e $F: (M,g) \rightarrow (\tilde{M},\tilde{g})$ uma função diferenciável. A função
 	\begin{equation*}
 	F^* \tilde{\nabla}: \mathfrak{X}(M) \times \mathfrak{X}(M) \rightarrow \mathfrak{X}(M)
 	\end{equation*}
@@ -636,7 +633,7 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 \end{demonstracao}
 
 \begin{proposicao}
-	Supor que $F: (M,g) \rightarrow (\tilde{M}, \tilde{g})$ é uma isometria, então $F$ leva a conexão Riemanniana $\nabla$ de $g$ à conexão Riemanniana de $\tilde{\nabla}$ de $\tilde{g}$ com a regra:
+	Supor que $F: (M,g) \rightarrow (\tilde{M}, \tilde{g})$ é uma isometria, então $F$ leva a conexão riemanniana $\nabla$ de $g$ à conexão riemanniana de $\tilde{\nabla}$ de $\tilde{g}$ com a regra:
 	\begin{equation*}
 		F_* (\nabla_X Y) = \tilde{\nabla}_{F_* X} (F_* Y)
 	\end{equation*}
@@ -713,7 +710,7 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 \section{Curvatura}
 
 \begin{definicao}
-	Se $M$ é uma variedade Riemanniana, o \emph{endomorfismo de curvatura} é a função $R: \vectorfieldsspace{M} \times \vectorfieldsspace{M} \times \vectorfieldsspace{M} \rightarrow \vectorfieldsspace{M} $ definido por
+	Se $M$ é uma variedade riemanniana, o \emph{endomorfismo de curvatura} é a função $R: \vectorfieldsspace{M} \times \vectorfieldsspace{M} \times \vectorfieldsspace{M} \rightarrow \vectorfieldsspace{M} $ definido por
 	\begin{equation*}
 		R(X,Y)Z = \nabla_X \nabla_Y Z - \nabla_Y \nabla_X Z - \nabla_{[X,Y]}Z.
 	\end{equation*}
@@ -769,7 +766,7 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 \end{definicao}
 
 \begin{teorema}
-	Uma variedade Riemanniana é flat se e somente se o tensor de curvatura é identicamente nulo.
+	Uma variedade riemanniana é flat se e somente se o tensor de curvatura é identicamente nulo.
 \end{teorema}
 
 \begin{demonstracao}
@@ -800,14 +797,14 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 
 
 
-\section{Subvariedades Riemannianas}
+\section{Subvariedades riemannianas}
 
 \begin{observacao}
-	Se $(M,g)$ é uma variedade Riemanniana, toda subvariedade $S \subset M$, imersa o mergulhada, automaticamente herda a métrica pullback $i^* g$, onde $i: S \rightarrow M$ é a função inclusão.
+	Se $(M,g)$ é uma variedade riemanniana, toda subvariedade $S \subset M$, imersa o mergulhada, automaticamente herda a métrica pullback $i^* g$, onde $i: S \rightarrow M$ é a função inclusão.
 \end{observacao}
 
 \begin{definicao}\label{metrica_induzida}
-	A métrica pullback sobre a subvariedade de uma variedade Riemanniana é chamada de \emph{métrica induzida}.
+	A métrica pullback sobre a subvariedade de uma variedade riemanniana é chamada de \emph{métrica induzida}.
 \end{definicao}
 
 \begin{observacao}
@@ -821,7 +818,7 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 
 
 \begin{definicao}
-	Seja $(M,g)$ uma variedade Riemanniana e $S \subset M$ uma subvariedade imersa o mergulhada com a métrica induzida, é chamada de \emph{subvariedade Riemanniana} de $M$.
+	Seja $(M,g)$ uma variedade riemanniana e $S \subset M$ uma subvariedade imersa o mergulhada com a métrica induzida, é chamada de \emph{subvariedade riemanniana} de $M$.
 \end{definicao}
 
 \begin{observacao}
@@ -987,135 +984,12 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 	\end{equation*}
 \end{demonstracao}
 
-\subsection{Hipersuperfícies em variedades riemannianas}
 
-\begin{definicao}
-	Seja $M$ uma subvariedade riemanniana de codimensão 1 de $\tilde{M}$. $M$ é chamada de \emph{hipersuperfície}.
-\end{definicao}
-
-\begin{definicao}
-	Seja $M$ uma hipersuperfície de $\tilde{M}$ e
-	$N \in \vectorfieldsspace{M}^\perp$ tal que $|N_p|=1$ para todo $p \in M$.
-	$N$ é chamado de \emph{campo vetorial normal unitário}.
-\end{definicao}
-	
-\begin{observacao}
-	Seja $M$ uma hipersuperfície de $\tilde{M}$ e 
-	$p \in M$.
-	$N_p$ gera $\left(T_p M\right)^\perp$ porque $\left(T_p M\right)^\perp$ tem dimensão 1.
-\end{observacao}
-
-\begin{definicao}
-	Seja $M$ uma hipersuperfície de $\tilde{M}$,
-	$N$ o campo de vetores normais unitário e
-	$X,Y \in \vectorfieldsspace{M}$.
-	A aplicação $h: \vectorfieldsspace{M}^2 \rightarrow \smoothfunctionsspace{M}$ definida por
-	\begin{equation*}
-		h(X,Y) = \innerproduct{\alpha(X,Y)}{N},
-	\end{equation*}
-	é chamada \emph{segunda forma fundamental escalar de $M$}.
-\end{definicao}
-
-\begin{observacao}
-	Seja $M$ uma hipersuperfície em $\tilde{M}$,
-	$X,Y \in \vectorfieldsspace{M}$,
-	$h$ a segunda forma fundamental escalar de $M$ e
-	$N$ o campo de vetores normais unitários.
-	Como $\alpha(X,Y)$ e $N$ são paralelos,
-	\begin{equation*}
-		\alpha(X,Y) = h(X,Y) N
-	\end{equation*}
-\end{observacao}
-
-\begin{observacao}
-	Seja $M$ uma hipersuperfície de $\tilde{M}$,
-	$p \in M$ e 
-	$x,y \in T_p M$.
-	Em $p$, $h$ é uma forma bilinear simétrica.
-	Então tem associada um operador linear $A: T_p M \rightarrow T_p M$ autoadjunto tal que
-	\begin{equation*}
-		h(x,y) = \innerproduct{Ax}{y} = \innerproduct{x}{Ay}
-	\end{equation*}
-\end{observacao}
-
-\begin{observacao}
-	Seja $M$ uma hipersuperfície em $\tilde{M}$ e
-	$p \in M$.
-	Como $A$ é um operador linear autoadjunto, então os seus autovalores são reais e os seus autovetores geram uma base ortonormal de $T_p M$.
-\end{observacao}
-
-\begin{definicao}
-	Seja $M$ uma hipersuperfície de $\tilde{M}$ e
-	$A$ o operador autoadjunto associado à segunda forma fundamental escalar de $M$.
-	Os autovalores de $A$ são chamados de \emph{curvaturas principais}.
-\end{definicao}
-
-
-\begin{corolario}\label{equacao-de-gauss-hipersuperficies}
-	Seja $M$ uma hipersuperfície em $\tilde{M}$;
-	$X,Y,Z,W \in \vectorfieldsspace{M}$,
-	$h$ a segunda forma fundamental escalar de $M$ e
-	$\tilde{R}_m, R_m$ os tensores de curvaturas de $\tilde{M}$ e $M$ respectivamente.
-	Então
-	\begin{equation*}
-		\tilde{R}_m(X,Y,Z,W) = R_m(X,Y,Z,W) - h(X,W) h(Y,Z) + h(X,Z) h(Y,W)
-	\end{equation*}
-\end{corolario}
-
-\begin{demonstracao}
-	Pela equação de Gauss (teorema \ref{equacao-de-gauss}) e como $\alpha(X,Y)= h(X,Y) N$ para $X,Y \in \vectorfieldsspace{M}$,
-	\begin{equation*}
-	\tilde{R}_m(X,Y,Z,W) = R_m(X,Y,Z,W) - \innerproduct{h(X,W) N}{h(Y,Z) N} + \innerproduct{h(X,Z)N}{h(Y,W)N}.
-	\end{equation*}
-	Pelo fato que $|N|=1$,
-	\begin{equation*}
-	\tilde{R}_m(X,Y,Z,W) = R_m(X,Y,Z,W) - h(X,W) h(Y,Z) + h(X,Z) h(Y,W).
-	\end{equation*}
-\end{demonstracao}
-
-%\begin{definicao}
-%	Seja $M$ uma hipersuperfície de $\tilde{M}$ e
-%	$A$ o operador linear autoadjunto associado à segunda forma fundamental escalar de $M$.
-%	A \emph{curvatura gaussiana} está definida por
-%	\begin{equation*}
-%		K(p) = \det A
-%	\end{equation*}
-%\end{definicao}
-
-%\begin{definicao}
-%	Seja $M$ uma hipersuperfície de $\tilde{M}$ e
-%	$A$ o operador associado à segunda forma fundamental escalar de $M$.
-%	A \emph{curvatura média} está definida por
-%	\begin{equation*}
-%		H(p) = \frac{1}{n} \text{tr} A 
-%	\end{equation*}
-%\end{definicao}
-
-%\begin{proposicao}\label{relacion-tensor-de-curvatura-con-la-curvatura-gaussiana}
-%	Seja $M$ uma 2-variedade riemanniana e
-%	$X,Y,Z,W \in \vectorfieldsspace{M}$.
-%	A curvatura Gaussiana $K$ de $M$ está relacionada com o tensor de curvatura pela fórmula
-%	\begin{equation*}
-%		R_m(X,Y,Z,W) = K (\innerproduct{X}{W} \innerproduct{Y}{Z} - \innerproduct{X}{Z} \innerproduct{Y}{W})
-%	\end{equation*}
-%\end{proposicao}
-
-
-
-%\begin{definicao}\label{def:curvatura-media}
-%	Seja $M$ uma variedade imersa em $\tilde{M}$,
-%	$E_1, E_2$ um referencial de $M$ e
-%	$\alpha$ a segunda forma fundamental de $M$.
-%	A \emph{curvatura média} $H \in \vectorfieldsspace{M}^\perp$ está definida por
-%	\begin{equation*}
-%		H = \sum_{i=1}^2 \alpha(E_i, E_i)
-%	\end{equation*}
-%\end{definicao}
 
 \section{Curvaturas seccionais}
 
 \begin{definicao}
-	Seja $M$ uma $n$-variedade Riemanniana e $p \in M$. Se $\Pi$ é um subespaço de $T_p M$ de dimensão 2, e $V \subset T_p M$ é uma vizinhança de zero  na qual $\exp_p$ é um difeomorfismo, então $S_{\Pi} = \exp_p(\Pi \cap V)$ é uma subvariedade de $M$ de dimensão 2 que contem a  $p$ chamada \emph{seção plana} determinada por $\Pi$.
+	Seja $M$ uma $n$-variedade riemanniana e $p \in M$. Se $\Pi$ é um subespaço de $T_p M$ de dimensão 2, e $V \subset T_p M$ é uma vizinhança de zero  na qual $\exp_p$ é um difeomorfismo, então $S_{\Pi} = \exp_p(\Pi \cap V)$ é uma subvariedade de $M$ de dimensão 2 que contem a  $p$ chamada \emph{seção plana} determinada por $\Pi$.
 \end{definicao}
 
 \begin{definicao}
@@ -1192,7 +1066,7 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 \end{demonstracao}
 
 \begin{proposicao}
-	Supor que $(M,g)$ é $n$-variedade Riemanniana com curvatura seccional constante $C$. O endomorfismo de curvatura e o tensor de curvatura estão dados pelas formulas
+	Supor que $(M,g)$ é $n$-variedade riemanniana com curvatura seccional constante $C$. O endomorfismo de curvatura e o tensor de curvatura estão dados pelas formulas
 	\begin{align*}
 	R(X,Y)Z &= C(\innerproduct{Y}{Z}X - \innerproduct{X}{Z}Y),\\
 	R_m(X,Y,Z,W) &= C(\innerproduct{X}{W} \innerproduct{Y}{Z} - \innerproduct{X}{Z} \innerproduct{Y}{W}).
@@ -1225,3 +1099,150 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 	R(X,Y)Z =  C(\innerproduct{Y}{Z}X - \innerproduct{X}{Z}Y).
 	\end{equation*}
 \end{demonstracao}
+
+\section{Hipersuperfícies em variedades riemannianas}
+
+Em esta seção apresentará-se as propriedades que tem as subvariedades riemannianas de codimensão 1.
+Tomou-se como referencias os livros \cite{Lee1997} e \cite{Gallot2004}.
+
+\begin{definicao}
+	Seja $M$ uma subvariedade riemanniana de codimensão 1 de $\tilde{M}$. $M$ é chamada de \emph{hipersuperfície}.
+\end{definicao}
+
+\begin{definicao}
+	Seja $M$ uma hipersuperfície de $\tilde{M}$ e
+	$N \in \vectorfieldsspace{M}^\perp$ tal que $|N_p|=1$ para todo $p \in M$.
+	$N$ é chamado de \emph{campo vetorial normal unitário}.
+\end{definicao}
+
+%\begin{observacao}
+%	Seja $M$ uma hipersuperfície de $\tilde{M}$ e 
+%	$p \in M$.
+Pode-se ver $N_p$ gera $\left(T_p M\right)^\perp$ porque $\left(T_p M\right)^\perp$ tem dimensão 1.
+%\end{observacao}
+
+\begin{definicao}
+	Seja $M$ uma hipersuperfície de $\tilde{M}$,
+	$N$ o campo de vetores normais unitário e
+	$X,Y \in \vectorfieldsspace{M}$.
+	A aplicação $h: \vectorfieldsspace{M}^2 \rightarrow \smoothfunctionsspace{M}$ definida por
+	\begin{equation*}
+	h(X,Y) = \innerproduct{\alpha(X,Y)}{N},
+	\end{equation*}
+	é chamada \emph{segunda forma fundamental escalar de $M$}.
+\end{definicao}
+%\begin{observacao}
+%	Seja $M$ uma hipersuperfície em $\tilde{M}$,
+%	$X,Y \in \vectorfieldsspace{M}$,
+%	$h$ a segunda forma fundamental escalar de $M$ e
+%	$N$ o campo de vetores normais unitários.
+	Como $\alpha(X,Y)$ e $N$ são paralelos, podemos escrever
+	\begin{equation*}
+	\alpha(X,Y) = h(X,Y) N.
+	\end{equation*}
+%\end{observacao}
+%\begin{observacao}
+%	Seja $M$ uma hipersuperfície de $\tilde{M}$,
+%	$p \in M$ e 
+%	$x,y \in T_p M$.
+%	Em $p$, $h$ é uma forma bilinear simétrica.
+$h$ em $p$ tem associada um operador linear $A: T_p M \rightarrow T_p M$ autoadjunto tal que
+	\begin{equation*}
+	h(x,y) = \innerproduct{Ax}{y} = \innerproduct{x}{Ay}.
+	\end{equation*}
+%\end{observacao}
+%\begin{observacao}
+%	Seja $M$ uma hipersuperfície em $\tilde{M}$ e
+%	$p \in M$.
+	Como $A$ é um operador linear autoadjunto, então os seus autovalores são reais e os seus autovetores geram uma base ortonormal de $T_p M$.
+%\end{observacao}
+
+\begin{definicao}
+	Seja $M$ uma hipersuperfície de $\tilde{M}$,
+	$p \in M$ e
+	$A$ o operador autoadjunto associado à segunda forma fundamental escalar de $M$ no ponto $p$.
+	Os autovalores de $A$ são chamados de \emph{curvaturas principais}.
+\end{definicao}
+
+%\begin{definicao}
+%	Seja $M$ uma hipersuperfície de $\tilde{M}$,
+%	$p \in M$,
+%	$\Pi \subset T_p M$ um subespaço de dimensão 2,
+%	$\{u,v\}$ uma base de $\Pi$ e
+%	$h$ a segunda forma fundamental escalar de $M$.
+%	A \emph{curvatura gaussiana} $\overline{K}$ de $\Pi$ está definida por
+%	\begin{equation*}
+%	\overline{K} = \frac{h(u,u) h(v,v) - h(u,v)^2}{\innerproduct{u}{u} \innerproduct{v}{v} - \innerproduct{u}{v}^2}
+%	\end{equation*}
+%\end{definicao}
+
+\begin{definicao}\label{def:curvatura-media}
+	Seja $M$ uma hipersuperfície de $\tilde{M}$,
+	$p \in M$ e
+	$A$ o operador autoadjunto associado à segunda forma fundamental escalar de $M$ em $p$.
+	A \emph{curvatura média} está definida por
+	\begin{equation*}
+	H(p) = \text{tr} A.
+	\end{equation*}
+\end{definicao}
+
+\begin{corolario}\label{equacao-de-gauss-hipersuperficies}
+	Seja $M$ uma hipersuperfície em $\tilde{M}$;
+	$X,Y,Z,W \in \vectorfieldsspace{M}$,
+	$h$ a segunda forma fundamental escalar de $M$ e
+	$\tilde{R}_m, R_m$ os tensores de curvaturas de $\tilde{M}$ e $M$ respectivamente.
+	Então
+	\begin{equation*}
+	\tilde{R}_m(X,Y,Z,W) = R_m(X,Y,Z,W) - h(X,W) h(Y,Z) + h(X,Z) h(Y,W)
+	\end{equation*}
+\end{corolario}
+
+\begin{demonstracao}
+	Pela equação de Gauss (teorema \ref{equacao-de-gauss}) e como $\alpha(X,Y)= h(X,Y) N$ para $X,Y \in \vectorfieldsspace{M}$,
+	\begin{equation*}
+	\tilde{R}_m(X,Y,Z,W) = R_m(X,Y,Z,W) - \innerproduct{h(X,W) N}{h(Y,Z) N} + \innerproduct{h(X,Z)N}{h(Y,W)N}.
+	\end{equation*}
+	Pelo fato que $|N|=1$,
+	\begin{equation*}
+	\tilde{R}_m(X,Y,Z,W) = R_m(X,Y,Z,W) - h(X,W) h(Y,Z) + h(X,Z) h(Y,W).
+	\end{equation*}
+\end{demonstracao}
+
+%\begin{definicao}
+%	Seja $M$ uma hipersuperfície de $\tilde{M}$ e
+%	$A$ o operador linear autoadjunto associado à segunda forma fundamental escalar de $M$.
+%	A \emph{curvatura gaussiana} está definida por
+%	\begin{equation*}
+%		K(p) = \det A
+%	\end{equation*}
+%\end{definicao}
+
+%\begin{definicao}
+%	Seja $M$ uma hipersuperfície de $\tilde{M}$ e
+%	$A$ o operador associado à segunda forma fundamental escalar de $M$.
+%	A \emph{curvatura média} está definida por
+%	\begin{equation*}
+%		H(p) = \frac{1}{n} \text{tr} A 
+%	\end{equation*}
+%\end{definicao}
+
+%\begin{proposicao}\label{relacion-tensor-de-curvatura-con-la-curvatura-gaussiana}
+%	Seja $M$ uma 2-variedade riemanniana e
+%	$X,Y,Z,W \in \vectorfieldsspace{M}$.
+%	A curvatura Gaussiana $K$ de $M$ está relacionada com o tensor de curvatura pela fórmula
+%	\begin{equation*}
+%		R_m(X,Y,Z,W) = K (\innerproduct{X}{W} \innerproduct{Y}{Z} - \innerproduct{X}{Z} \innerproduct{Y}{W})
+%	\end{equation*}
+%\end{proposicao}
+
+
+
+%\begin{definicao}\label{def:curvatura-media}
+%	Seja $M$ uma variedade imersa em $\tilde{M}$,
+%	$E_1, E_2$ um referencial de $M$ e
+%	$\alpha$ a segunda forma fundamental de $M$.
+%	A \emph{curvatura média} $H \in \vectorfieldsspace{M}^\perp$ está definida por
+%	\begin{equation*}
+%		H = \sum_{i=1}^2 \alpha(E_i, E_i)
+%	\end{equation*}
+%\end{definicao}
