@@ -1,6 +1,6 @@
-Neste capitulo apresentará-se um resumo da teoria de variedades riemannianas.
+Neste capítulo apresentará-se um resumo da teoria de variedades riemannianas.
 Tomou-se como referencia principal os livros \cite{Lee2012}, \cite{Lee1997}, \cite{Carmo1988} e \cite{Gallot2004}.
-O conteúdo de este capitulo servirá como marco teórico para o desenvolvimento dos capítulos seguintes.
+O conteúdo de este capítulo servirá como marco teórico para o desenvolvimento dos capítulos seguintes.
 
 \section{Variedades riemannianas}
 
@@ -72,7 +72,7 @@ Toda variedade diferenciável admite uma métrica riemanniana.
 	Só definir qualquer referencial local diferenciável para obter um referencial local diferenciável ortonormal.
 \end{demonstracao}
 
-\section{Métrica pullback}
+\section{Isometrias}
 
 \begin{definicao}\label{metrica_pullback}
 	Supor que $M,N$ são variedades diferenciáveis, $g$ é uma métrica Riemanniana em $N$, e $F: M \rightarrow N$ é diferenciável. O \emph{pullback} $F^* g$ é um campo 2-tensorial diferenciável em $M$. Se é definido positivo, é uma métrica riemanniana em $M$, chamada de \emph{métrica pullback} determinada pelo $F$.
@@ -107,9 +107,9 @@ Toda variedade diferenciável admite uma métrica riemanniana.
 	Se existe uma isometria entre $(M,g)$ e $(\tilde{M}, \tilde{g})$, dizemos que ambos são variedades riemannianas isométricas e se existe uma isometria local entre elas, então são chamadas de variedades riemannianas localmente isométricas.
 \end{observacao}
 
-\begin{definicao}
-	Uma $n$-variedade riemanniana é chamada de \emph{variedade riemanniana flat}, e $g$ é uma \emph{métrica flat}, se $(M,g)$ é localmente isométrica a $(\mathbb{R}^n,\overline{g})$.
-\end{definicao}
+%\begin{definicao}
+%	Uma $n$-variedade riemanniana é chamada de \emph{variedade riemanniana flat}, e $g$ é uma \emph{métrica flat}, se $(M,g)$ é localmente isométrica a $(\mathbb{R}^n,\overline{g})$.
+%\end{definicao}
 
 \begin{observacao}
 	Existem métricas riemannianas que não são planas.
@@ -226,9 +226,7 @@ Toda variedade diferenciável admite uma métrica riemanniana.
 	Pelo lema \ref{boa_definicao_conexao_2}, podemos escrever $\nabla_{X_p} Y$ em lugar de $\nabla_X Y_{|p}$, i.e., podemos dizer que é a derivada direcional de $Y$ em $p$ com direção $X_p$.
 \end{observacao}
 
-\begin{lema}\label{conexao-linear-numa-curva}
-	Sejam $M$ uma variedade diferenciável e $p \in M$. Sejam também $X, Y, \tilde{Y} \in \vectorfieldsspace{M}$, $\nabla$ uma conexão linear em $M$, $\gamma: (-\epsilon, \epsilon) \rightarrow M$ uma curva tal que $\gamma(0)=p$ e  $\gamma'(0) = X_p$ e supor que $Y \equiv \tilde{Y}$ na imagem de $\gamma$. Então $\nabla_{X_p} Y = \nabla_{X_p} \tilde{Y}$.
-\end{lema}
+
 
 \begin{observacao}\label{obs_simbolos_christoffel}
 	Seja $M$ uma variedade diferenciável, e $(E_i)$ um referencial local de $TM$ num conjunto aberto $U \subset M$. Para qualquer escolha de índices $i$ e $j$, podemos expandir $\nabla_{E_i} E_j$ em termos do mesma referencial
@@ -262,6 +260,74 @@ Toda variedade diferenciável admite uma métrica riemanniana.
 		\nabla_X Y &= X Y^k E^k + Y^j X^i \Gamma^k_{ij} E_k\\
 		&= (X Y^k + Y^j X^i \Gamma^k_{ij}) E_k.
 	\end{align*}
+\end{demonstracao}
+
+\begin{proposicao}\label{derivada-covariante-de-um-caminho}
+	Seja $M$ uma variedade diferenciável e
+	$\nabla$ uma conexão linear de $M$.
+	Cada caminho $\lambda: I \rightarrow M$, $\nabla$ determina um operador único
+	\begin{equation*}
+	D_t: \vectorfieldsspace{\lambda} \rightarrow \vectorfieldsspace{\lambda}
+	\end{equation*}
+	que satisfaz as seguintes propriedades:
+	\begin{enumerate}
+		\item Seja $X,Y \in \vectorfieldsspace{\lambda}$ e $a,b \in \R$. Então
+		\begin{equation*}
+		D_t(aX + bY) = a D_t X + b D_t Y
+		\end{equation*}
+		\item Seja $X \in \vectorfieldsspace{\lambda}$ e $f \in C^{\infty}(I)$. Então
+		\begin{equation*}
+		D_t(fX) = f' X + f D_t X
+		\end{equation*}
+		\item Se $X \in \vectorfieldsspace{\lambda}$ é extensível, então para toda extensão $\tilde{X}$ de $X$,
+		\begin{equation*}
+		D_t X(t) = \nabla_{\lambda'(t)} \tilde{X}
+		\end{equation*}
+	\end{enumerate}
+\end{proposicao}
+
+\begin{demonstracao}
+	Supor que $D_t$ existe e tem as propriedades anteriormente mencionadas.
+	Então,
+	\begin{align*}
+	D_t V(t) &= D_t \left(V^i(t) \partial_i\right)\\
+	&= (V^i)'(t) \partial_i + V^i(t) D_t \partial_i\\
+	&= (V^i)'(t) \partial_i + V^i(t) \nabla_{\lambda'(t)} \partial_i\\
+	&= (V^i)'(t) \partial_i + V^i(t) \nabla_{(\lambda^j)'(t) \partial_j} \partial_i\\
+	&= (V^i)'(t) \partial_i + V^i(t) (\lambda^j)'(t)  \nabla_{\partial_j} \partial_i\\
+	&= (V^i)'(t) \partial_i + V^i(t) (\lambda^j)'(t) \Gamma_{ij}^k(\lambda(t)) \partial_k\\
+	&= (V^k)'(t) \partial_k + V^i(t) (\lambda^j)'(t) \Gamma_{ij}^k(\lambda(t)) \partial_k\\
+	&= \left((V^k)'(t)  + V^i(t) (\lambda^j)'(t) \Gamma_{ij}^k(\lambda(t))\right) \partial_k.
+	\end{align*}
+	Pelos termos da equação anterior, mostra-se a unicidade de $D_t$.
+	Para mostrar a existência
+	seja $(U_{\alpha}, \varphi_{\alpha})$ um atlas de $M$.
+	Para cada $U_{\alpha}$ define-se $D_t^{\alpha}$ de maneira similar à prova da unicidade e
+	seja $(\psi_{\alpha})$ uma partição da unidade da cobertura $(U_{\alpha})$.
+	Usando a partição da unidade define-se
+	\begin{equation*}
+	D_t = \sum_{\alpha} \psi_{\alpha} D_t^{\alpha}
+	\end{equation*}
+	Pode-se ver que a aplicação $D_t$, definida anteriormente, cumpre com as propriedades do enunciado.
+	Portanto, fica provada a sua existência. 
+\end{demonstracao}
+
+\begin{lema}\label{conexao-linear-numa-curva}
+	Sejam $M$ uma variedade diferenciável e $p \in M$. Sejam também $X, Y, \tilde{Y} \in \vectorfieldsspace{M}$, $\nabla$ uma conexão linear em $M$, $\gamma: (-\epsilon, \epsilon) \rightarrow M$ uma curva tal que $\gamma(0)=p$ e  $\gamma'(0) = X_p$ e supor que $Y \equiv \tilde{Y}$ na imagem de $\gamma$. Então $\nabla_{X_p} Y = \nabla_{X_p} \tilde{Y}$.
+\end{lema}
+
+\begin{demonstracao}
+	Estendendo $Y$ e $\tilde{Y}$ a $\vectorfieldsspace{M}$ e usando a propriedade 3 de \ref{derivada-covariante-de-um-caminho} tem-se,
+	\begin{align*}
+		D_t Y &= \nabla_{\gamma'(t)} Y,\\
+		D_t \tilde{Y} &= \nabla_{\gamma'(t)} \tilde{Y}.
+	\end{align*}
+	Como $Y \equiv \tilde{Y}$ em $\gamma$, então $D_t Y = D_t \tilde{Y}$.
+	Portanto $\nabla_{\gamma'(t)} Y = \nabla_{\gamma'(t)} \tilde{Y}$.
+	Em particular, para $t=0$,
+	\begin{equation*}
+		\nabla_{X_p} Y = \nabla_{X_p} \tilde{Y}.
+	\end{equation*}
 \end{demonstracao}
 
 \section{Quantas conexões lineares existem?}
@@ -657,55 +723,46 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 	Um espaço de campos vetoriais ao longo do caminho $\lambda$ é denotado por $\vectorfieldsspace{\lambda}$.
 \end{definicao}
 
-\begin{proposicao}\label{derivada-covariante-de-um-caminho}
-	Seja $M$ uma variedade diferenciável e
-	$\nabla$ uma conexão linear de $M$.
-	Cada caminho $\lambda: I \rightarrow M$, $\nabla$ determina um operador único
-	\begin{equation*}
-		D_t: \vectorfieldsspace{\lambda} \rightarrow \vectorfieldsspace{\lambda}
-	\end{equation*}
-	que satisfaz as seguintes propriedades:
-	\begin{enumerate}
-		\item Seja $X,Y \in \vectorfieldsspace{\lambda}$ e $a,b \in \R$. Então
-		\begin{equation*}
-			D_t(aX + bY) = a D_t X + b D_t Y
-		\end{equation*}
-		\item Seja $X \in \vectorfieldsspace{\lambda}$ e $f \in C^{\infty}(I)$. Então
-		\begin{equation*}
-			D_t(fX) = f' X + f D_t X
-		\end{equation*}
-		\item Se $X \in \vectorfieldsspace{\lambda}$ é extensível, então para toda extensão $\tilde{X}$ de $X$,
-		\begin{equation*}
-			D_t X(t) = \nabla_{\lambda'(t)} \tilde{X}
-		\end{equation*}
-	\end{enumerate}
-\end{proposicao}
+
+
+\section{Coordenadas normais geodésicas}
+
+Em esta seção definirá-se conceitos que serão usados no desenvolvimento da prova da conjectura de Lawson no capítulo 4.
+
+\begin{lema}\label{lema:vizinhanca-normal}
+	Seja
+	$M$ uma variedade riemanniana,
+	$p \in M$.
+	Então, existe uma vizinhança $V$ do origem em $T_p M$ e uma vizinhança $U$ de $p$ em $M$ tal que $\exp_p: V \rightarrow U$ é um difeomorfismo.
+\end{lema}
 
 \begin{demonstracao}
-	Supor que $D_t$ existe e tem as propriedades anteriormente mencionadas.
-	Então,
-	\begin{align*}
-		D_t V(t) &= D_t \left(V^i(t) \partial_i\right)\\
-		&= (V^i)'(t) \partial_i + V^i(t) D_t \partial_i\\
-		&= (V^i)'(t) \partial_i + V^i(t) \nabla_{\lambda'(t)} \partial_i\\
-		&= (V^i)'(t) \partial_i + V^i(t) \nabla_{(\lambda^j)'(t) \partial_j} \partial_i\\
-		&= (V^i)'(t) \partial_i + V^i(t) (\lambda^j)'(t)  \nabla_{\partial_j} \partial_i\\
-		&= (V^i)'(t) \partial_i + V^i(t) (\lambda^j)'(t) \Gamma_{ij}^k(\lambda(t)) \partial_k\\
-		&= (V^k)'(t) \partial_k + V^i(t) (\lambda^j)'(t) \Gamma_{ij}^k(\lambda(t)) \partial_k\\
-		&= \left((V^k)'(t)  + V^i(t) (\lambda^j)'(t) \Gamma_{ij}^k(\lambda(t))\right) \partial_k.
-	\end{align*}
-	Pelos termos da equação anterior, mostra-se a unicidade de $D_t$.
-	Para mostrar a existência
-	seja $(U_{\alpha}, \varphi_{\alpha})$ um atlas de $M$.
-	Para cada $U_{\alpha}$ define-se $D_t^{\alpha}$ de maneira similar à prova da unicidade e
-	seja $(\psi_{\alpha})$ uma partição da unidade da cobertura $(U_{\alpha})$.
-	Usando a partição da unidade define-se
-	\begin{equation*}
-		D_t = \sum_{\alpha} \psi_{\alpha} D_t^{\alpha}
-	\end{equation*}
-	Pode-se ver que a aplicação $D_t$, definida anteriormente, cumpre com as propriedades do enunciado.
-	Portanto, fica provada a sua existência. 
+	Ver \cite[Lemma 5.10]{Lee1997}.
 \end{demonstracao}
+
+\begin{definicao}
+	A vizinhança $U$ no lema \ref{lema:vizinhanca-normal} é chamada de \emph{vizinhança normal de $p$}.
+	Seja
+	$\epsilon > 0$ e
+	$B_{\epsilon}(0) \subset T_p M$ tal que $\exp_p$ é um difeomorfismo em $B_{\epsilon}(0)$.
+	Então,
+	$\exp_p(B_{\epsilon}(0))$ é chamada de \emph{bola geodésica em $M$} e
+	$\exp_p(\overline{B}_{\epsilon}(0))$ é chamada de \emph{bola geodésica fechada em $M$}.
+\end{definicao}
+
+\begin{definicao}
+	Seja
+	$M$ uma variedade riemanniana,
+	$p \in M$,
+	$U$ uma vizinhança normal de $p$,
+	$\{v_i\}$ uma base ortonormal de $T_p M$ e
+	$E: \R^n \rightarrow T_p M$ um isomorfismo tal que $E(x^1,\ldots,x^n) = x^i v^i$.
+	Então,
+	\begin{equation*}
+		\varphi := E^{-1} \circ \exp_p^{-1}: U \rightarrow \R^n
+	\end{equation*}
+	é chamada de \emph{coordenadas normais geodésicas}.
+\end{definicao}
 
 \section{Curvatura}
 
@@ -798,6 +855,8 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 
 
 \section{Subvariedades riemannianas}
+
+
 
 \begin{observacao}
 	Se $(M,g)$ é uma variedade riemanniana, toda subvariedade $S \subset M$, imersa o mergulhada, automaticamente herda a métrica pullback $i^* g$, onde $i: S \rightarrow M$ é a função inclusão.
@@ -988,6 +1047,9 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 
 \section{Curvaturas seccionais}
 
+Os conceitos desenvolvidos em esta seção serão usados principalmente para o cálculo da curvatura intrínseca de uma superfície imersa em $S^3$.
+Mencionará-se também, o fato que $S^3$ tem curvatura seccional constante igual a 1.
+
 \begin{definicao}
 	Seja $M$ uma $n$-variedade riemanniana e $p \in M$. Se $\Pi$ é um subespaço de $T_p M$ de dimensão 2, e $V \subset T_p M$ é uma vizinhança de zero  na qual $\exp_p$ é um difeomorfismo, então $S_{\Pi} = \exp_p(\Pi \cap V)$ é uma subvariedade de $M$ de dimensão 2 que contem a  $p$ chamada \emph{seção plana} determinada por $\Pi$.
 \end{definicao}
@@ -1098,6 +1160,14 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 	\begin{equation*}
 	R(X,Y)Z =  C(\innerproduct{Y}{Z}X - \innerproduct{X}{Z}Y).
 	\end{equation*}
+\end{demonstracao}
+
+\begin{proposicao}
+	$S^3$ tem curvatura seccional constante igual a 1.
+\end{proposicao}
+
+\begin{demonstracao}
+	Ver \cite[Proposition 3.14, 3.47]{Gallot2004}.
 \end{demonstracao}
 
 \section{Hipersuperfícies em variedades riemannianas}
