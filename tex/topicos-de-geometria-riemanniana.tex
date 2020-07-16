@@ -4,6 +4,14 @@ O conteúdo de este capítulo servirá como marco teórico para o desenvolviment
 
 \section{Variedades riemannianas}
 
+As variedades riemannianas aparecem de uma variedade diferenciável adicionando uma métrica.
+Essa métrica é um produto interno em cada espaço tangente da variedade e permite medir comprimentos onde inicialmente não era possível.
+Em esta seção apresentará-se a definição de variedade riemanniana e as suas propriedades.
+Também mostrará-se o conceito de isometria entre duas variedades riemannianas.
+As isometrias definem uma equivalência entre duas variedades riemannianas.
+Essa equivalência pode ser local o global.
+A teoria de variedades riemannianas é a base de todo o mostrado em esta dissertação.
+
 \begin{definicao}
 	Seja $M$ uma variedade diferenciável. Uma \emph{métrica riemanniana em $M$} é um campo 2-tensorial covariante, simétrico e diferenciável que é definido positivo em cada ponto.	
 \end{definicao}
@@ -72,7 +80,11 @@ Toda variedade diferenciável admite uma métrica riemanniana.
 	Só definir qualquer referencial local diferenciável para obter um referencial local diferenciável ortonormal.
 \end{demonstracao}
 
-\section{Isometrias}
+%\section{Isometrias}
+
+
+
+
 
 \begin{definicao}\label{metrica_pullback}
 	Supor que $M,N$ são variedades diferenciáveis, $g$ é uma métrica Riemanniana em $N$, e $F: M \rightarrow N$ é diferenciável. O \emph{pullback} $F^* g$ é um campo 2-tensorial diferenciável em $M$. Se é definido positivo, é uma métrica riemanniana em $M$, chamada de \emph{métrica pullback} determinada pelo $F$.
@@ -107,13 +119,18 @@ Toda variedade diferenciável admite uma métrica riemanniana.
 	Se existe uma isometria entre $(M,g)$ e $(\tilde{M}, \tilde{g})$, dizemos que ambos são variedades riemannianas isométricas e se existe uma isometria local entre elas, então são chamadas de variedades riemannianas localmente isométricas.
 \end{observacao}
 
+%\begin{observacao}
+%	O conceito de isometria define uma equivalência entre duas variedades riemannianas.
+%	Esta equivalência pode ser local o global.
+%\end{observacao}
+
 %\begin{definicao}
 %	Uma $n$-variedade riemanniana é chamada de \emph{variedade riemanniana flat}, e $g$ é uma \emph{métrica flat}, se $(M,g)$ é localmente isométrica a $(\mathbb{R}^n,\overline{g})$.
 %\end{definicao}
 
-\begin{observacao}
-	Existem métricas riemannianas que não são planas.
-\end{observacao}
+%\begin{observacao}
+%	Existem métricas riemannianas que não são planas.
+%\end{observacao}
 
 
 
@@ -136,6 +153,10 @@ Toda variedade diferenciável admite uma métrica riemanniana.
 %\end{definicao}
 
 \section{Conexões lineares}
+
+As conexões lineares são definidas para satisfazer a necessidade de ter uma ``derivação'' de campos vetoriais em uma variedade diferenciável.
+Em esta seção apresentará-se resultados sobre a sua existência e as suas propriedades.
+Posteriormente, a conexão linear será usada para definir a conexão riemanniana, que é importante para o desenvolvimento do conceito de curvatura.
 
 \begin{definicao}
 	Uma \emph{conexão linear} numa variedade diferenciável $M$ é uma função
@@ -330,7 +351,7 @@ Toda variedade diferenciável admite uma métrica riemanniana.
 	\end{equation*}
 \end{demonstracao}
 
-\section{Quantas conexões lineares existem?}
+%\section{Quantas conexões lineares existem?}
 
 \begin{definicao}
 	Em $\mathbb{R}^n$, definamos a \emph{conexão Euclideana} $\overline{\nabla}$ como
@@ -385,6 +406,9 @@ Toda variedade diferenciável admite uma métrica riemanniana.
 
 \section{Geodésicas}
 
+As geodésicas são a generalização dos caminhos retos em um espaço euclideano.
+Também são a base da definição de coordenadas normais que serão usada no desenvolvimento da prova da conjectura de Lawson.
+
 \begin{definicao}
 	Seja $M$ uma variedade com uma conexão linear $\nabla$ e
 	$\lambda$ um caminho em $M$.
@@ -432,6 +456,9 @@ Toda variedade diferenciável admite uma métrica riemanniana.
 
 
 \section{A conexão riemanniana}
+
+Em esta seção definirá-se a conexão riemanniana, a conexão linear que é simétrica e compatível com a métrica.
+Esta conexão origina-se da conexão tangencial da variedade quando é imersa em um espaço euclideano e mostrará-se que esta conexão é única.
 
 \begin{definicao}
 	Seja $M \subset \mathbb{R}^n$ uma subvariedade diferenciável. Uma função
@@ -727,7 +754,7 @@ A demonstração de este teorema vai-se dividir em os 3 lemas seguintes.
 
 \section{Coordenadas normais geodésicas}
 
-Em esta seção definirá-se conceitos que serão usados no desenvolvimento da prova da conjectura de Lawson no capítulo 4.
+Em esta seção apresentarão-se os conceitos que serão usados no desenvolvimento da prova da conjectura de Lawson no capítulo principal.
 
 \begin{lema}\label{lema:vizinhanca-normal}
 	Seja
@@ -765,6 +792,10 @@ Em esta seção definirá-se conceitos que serão usados no desenvolvimento da p
 \end{definicao}
 
 \section{Curvatura}
+
+Nesta seção apresentará-se a generalização do conceito de curvatura às variedades riemannianas.
+Definirão-se o endomorfismo de curvatura e o tensor de curvatura que serão usados posteriormente e mostrará-se as suas propriedades.
+
 
 \begin{definicao}
 	Se $M$ é uma variedade riemanniana, o \emph{endomorfismo de curvatura} é a função $R: \vectorfieldsspace{M} \times \vectorfieldsspace{M} \times \vectorfieldsspace{M} \rightarrow \vectorfieldsspace{M} $ definido por
@@ -815,7 +846,9 @@ Em esta seção definirá-se conceitos que serão usados no desenvolvimento da p
 	Portanto, o endomorfismo de curvatura e o tensor de curvatura são invariantes isométricos locais.
 \end{demonstracao}
 
-\section{Quê mede o tensor de curvatura?}
+%\section{Quê mede o tensor de curvatura?}
+
+Em os seguintes resultados mostrará-se que o tensor de curvatura mede como uma variedade riemanniana afasta-se da propriedade de ser euclideano, i.e., ser ``plano''.
 
 \begin{definicao}
 	Seja $M$ uma variedade riemanniana.
@@ -831,7 +864,7 @@ Em esta seção definirá-se conceitos que serão usados no desenvolvimento da p
 \end{demonstracao}
 
 
-\section{Propriedades do tensor de curvatura}
+%\section{Propriedades do tensor de curvatura}
 
 \begin{proposicao}\label{simetrias-del-tensor-de-curvatura}
 	O tensor de curvatura tem as seguentes simetrias para qualquer campo vetorial $X,Y,Z,W$:
@@ -856,7 +889,8 @@ Em esta seção definirá-se conceitos que serão usados no desenvolvimento da p
 
 \section{Subvariedades riemannianas}
 
-
+Nesta seção apresentará-se os resultados da teoria de subvariedades riemannianas de forma geral.
+Posteriormente obterá-se resultados para o caso específico onde a subvariedade tem codimensão 1.
 
 \begin{observacao}
 	Se $(M,g)$ é uma variedade riemanniana, toda subvariedade $S \subset M$, imersa o mergulhada, automaticamente herda a métrica pullback $i^* g$, onde $i: S \rightarrow M$ é a função inclusão.
