@@ -1,11 +1,124 @@
-%Neste capítulo apresentará-se um resumo da teoria de superfícies mínimas em $\R^3$ e em $S^3$. 
-%Principalmente tomou-se como referencia as notas de aula do curso de Superfícies Mínimas ditado pelo professor Fernando Manfio no primeiro semestre do ano 2019 no Instituto de Ciências Matemáticas e de Computação da Universidade de São Paulo.
-%Adicionalmente, na primeira seção, tomou-se como referencia o livro de Manfredo do Carmo \cite{Carmo2010}.
-%As seções seguintes apresentam-se como resultados derivados da teoria de variedades riemannianas do capítulo 2 e vários artigos entre os quais o principal foi \cite{Brendle2013}.
+Neste capítulo apresentaremos fatos básicos da teoria de superfícies no espaço Euclideano $\R^3$ e na esfera $\Sp^3$. Teremos como base as referências \cite{Carmo1987}, \cite{Meeks2012}, \cite{Nitsche2011}, \cite{Brendle2013} e \cite{Dajczer2019}.
 
-\section{Superfícies mínimas}
+\section{Subvariedades em formas espaciais}
 
-Neste capítulo apresentaremos fatos básicos da teoria de superfícies no espaço Euclideano $\R^3$ e na esfera $S^3$. Teremos como base as referências \cite{Carmo1987}, \cite{Meeks2012}, \cite{Nitsche2011} e \cite{Brendle2013}.
+Nesta seção apresentaremos, sem demonstrações, as equações fundamentais de uma imersão isométrica entre duas variedades Riemannianas dando enfoque, em especial, quando o espaço ambiente é uma forma espacial. Admitiremos conhecidos todos os pré-requisitos de Geometria Riemanniana necessários à compreensão dessa seção.
+
+Dados duas variedades Riemannianas $M^m$ e $\tilde{M}^n$, uma \emph{imersão isométrica} entre $M$ e $\tilde{M}$ é uma aplicação diferenciável $f: M \rightarrow \tilde{M}$ que é uma imersão e, para todo $p \in M$. satisfaz
+\begin{equation}\label{def-imersao}
+\innerproduct{X}{Y} = \innerproduct{df(p) X}{df(p) Y},	
+\end{equation}
+para quaisquer $X,Y \in T_p M$. A diferença $n-m$ é chamada a \emph{codimensão} de $f$. Observe que se $f: M \rightarrow \tilde{M}$ é uma imersão e $\innerproduct{}{}$ é uma métrica em $\tilde{M}$, a condição \eqref{def-imersao} define uma métrica em $M$, a \emph{métrica induzida} por $f$, que torna $f$ uma imersão isométrica.
+
+\begin{definicao}
+	Dado uma imersão isométrica $f: M \rightarrow \tilde{M}$, seja $f^* T \tilde{M}$ o fibrado induzido sobre $M$, cuja fibra em $p \in M$ é $T_{f(p)} \tilde{M}$. O complemento ortogonal de $f_* T_p M$ em $T_{f(p)} \tilde{M}$, denotado por $T_p M^\perp$, chama-se o \emph{espaço normal} de $f$ em $p$. O \emph{fibrado normal} $TM^\perp$ de $f$ é o subfibrado vetorial de $f^* T \tilde{M}$, cuja fibra em $p \in M$ é $T_p M^\perp$.
+\end{definicao}
+
+A conexão de Levi-Civita $\tilde{\nabla}$ de $\tilde{M}$ induz uma única conexão $\hat{\nabla}$ em $f^* T \tilde{M}$ tal que
+\[ \hat{\nabla}_X (Z \circ f) = \tilde{\nabla}_{f_* X} Z, \]
+para quaisquer $X \in \vectorfieldsspace{M}$ e $Z \in \vectorfieldsspace{\tilde{M}}$. Identificaremos sempre $\hat{\nabla}$ com $\tilde{\nabla}$.
+
+Dados dois campos vetoriais $X,Y \in \vectorfieldsspace{M}$, decompomos
+\[ \tilde{\nabla}_X f_* Y = \parenthesis{\tilde{\nabla}_X f_* Y}^\top + \parenthesis{\tilde{\nabla}_X f_* Y}^\perp, \]
+em relação à decomposição ortogonal
+\[ f^* T \tilde{M} = f_* TM \oplus TM^\perp. \]
+A aplicação
+\[ \nabla_X Y = f_*^{-1} \parenthesis{\tilde{\nabla}_X f_* Y}^\top \]
+define uma conexão compatível e sem torção em $TM$, logo coincide com a conexão de Levi-Civita de $M$.
+
+\begin{definicao}
+	A aplicação $\alpha_f: \vectorfieldsspace{M} \times \vectorfieldsspace{M} \rightarrow \Gamma \parenthesis{TM^\perp}$ definida por
+	\[ \alpha_f (X,Y) = \parenthesis{\tilde{\nabla}_X f_* Y}^\perp \]
+	chama-se a \emph{segunda forma fundamental} da imersão isométrica $f$.
+\end{definicao}
+
+Obtemos, assim, a fórmula de Gauss
+\[ \tilde{\nabla}_X f_* Y = f_* \nabla_X Y + \alpha_f (X,Y), \]
+para quaisquer $X, Y \in \vectorfieldsspace{M}$.
+
+\begin{observacao}
+	Como
+	\[ \tilde{\nabla}_X f_* Y - \tilde{\nabla}_Y f_* X = f_* [X,Y], \]
+	para quaisquer $X.Y \in \vectorfieldsspace{M}$, segue que
+	\[ \alpha_f (X,Y) - \alpha_f(Y,X) = f_* [X,Y] - f_* [X,Y] = 0, \]
+	ou seja, $\alpha_f$ é simétrica. Além disso, $\alpha_f$ é $\smoothfunctionsspace{M}$-bilinear, logo o valor de $\alpha_f (X,Y)$ em $p \in M$ depende somente dos valores dos campos $X$ e $Y$ em $p$.
+\end{observacao}
+
+O \emph{operador de forma} $A_\xi$ de $f$ em relação a um campo vetorial $\xi \in \Gamma \parenthesis{TM^\perp}$ é definido por
+\[ \innerproduct{A_\xi X}{Y} = \innerproduct{\alpha_f (X,Y)}{\xi}, \]
+para quaisquer $X,Y \in \vectorfieldsspace{M}$. Dados $X,Y \in \vectorfieldsspace{M}$ e $\xi \in \Gamma \parenthesis{TM^\perp}$, temos:
+\begin{align*}
+	\innerproduct{\tilde{\nabla}_X \xi}{f_* Y} &= - \innerproduct{\xi}{\tilde{\nabla}_X f_* Y}\\
+	&= -\innerproduct{\xi}{\alpha_f (X,Y)}\\
+	&= -\innerproduct{A_\xi X}{Y}.
+\end{align*}
+Assim,
+\[ \parenthesis{\tilde{\nabla}_X \xi}^\top  = -f_* A_\xi X. \]
+Além disso, a componente normal
+\[ \nabla^\perp_X \xi = \parenthesis{\tilde{\nabla}_X \xi}^\perp \]
+define uma conexão compatível em $TM^\perp$, chamada a \emph{conexão normal} de $f$. Obtemos, assim, a \emph{fórmula de Weingarten}
+\[ \tilde{\nabla}_X \xi = - f_* A_\xi X + \nabla^\perp_X \xi. \]
+
+\begin{definicao}
+	O \emph{vetor curvatura média} de $f$ no ponto $p \in M$ é o vetor normal
+	\begin{equation}\label{def-curvatura-media}
+		H(p) = \frac{1}{m} \sum_{i=1}^{m} \alpha_f (X_i, X_i),
+	\end{equation}
+	onde $\{ X_1, \ldots, X_m \}$ é uma base ortonormal de $T_p M$. Segue de \eqref{def-curvatura-media} que
+	\begin{align*}
+		m \innerproduct{H}{\xi} &= \sum_{i=1}^{m} \innerproduct{\alpha_f (X_i, X_i)}{\xi} = \sum_{i=1}^{m} \innerproduct{A_\xi X_i}{X_i}\\
+		&= \tr A_\xi,
+	\end{align*}
+	logo o lado direito de \eqref{def-curvatura-media} não depende da escolha da base ortonormal.
+\end{definicao}
+
+\begin{definicao}
+	Uma imersão isométrica $f: M \rightarrow \tilde{M}$ é dita ser \emph{mínima num ponto} $p \in M$ se $H(p)=0$. Diremos que $f$ é \emph{mínima} se for mínima em todos os pontos $p \in M$.
+\end{definicao}
+
+Usando as fórmulas de Gauss e Weingarten, podemos obter as equações de compatibilidade para uma dada imersão isométrica $f: M^m \rightarrow \tilde{M}^n$. De forma mais precisa, as equações de Gauss, Codazzi e Ricci para a imersão isométrica $f$ são dadas, respectivamente, por
+\begin{gather}\label{eq-gauss}
+	\innerproduct{R(X,Y)Z}{W} = \innerproduct{\tilde{R}(X,Y)Z}{W} + \innerproduct{\alpha_f (X,W)}{\alpha_f(Y,Z)} - \innerproduct{\alpha_f (X,Z)}{\alpha_f (Y,W)},\\
+	\label{eq-codazzi}
+	\parenthesis{\tilde{R}(X,Y)Z}^\perp = \parenthesis{\nabla^\perp_X \alpha_f}(Y,Z) - \parenthesis{\nabla^\perp_Y \alpha_f}(X,Z)
+\end{gather}
+e
+\begin{equation}\label{eq-ricci}
+	\innerproduct{R^\perp (X,Y) \xi}{\eta} = \innerproduct{\tilde{R}(X,Y) \xi}{\eta} + \innerproduct{[A_\xi, A_\eta] X}{Y},
+\end{equation}
+para quaisquer $X,Y,Z,W \in \vectorfieldsspace{M}$ e $\xi, \eta \in \Gamma \parenthesis{TM^\perp}$.
+
+Quando $\tilde{M}^n = \mathbb{Q}^n_c$ denota uma forma espacial, i.e., uma variedade Riemanniana conexa, homogênea, simplesmente conexa, completa e de curvatura seccional constante igual a $c$, as equações \eqref{eq-gauss}, \eqref{eq-codazzi} e \eqref{eq-ricci} tornam-se, respectivamente
+\begin{gather}\label{eq-gauss-em-formas-espaciais}
+\innerproduct{R(X,Y)Z}{W} = c \innerproduct{\parenthesis{X \wedge Y} Z}{W} + \innerproduct{\alpha_f (X,W)}{\alpha_f(Y,Z)} - \innerproduct{\alpha_f (X,Z)}{\alpha_f (Y,W)},\\
+\label{eq-codazzi-em-formas-espaciais}
+\parenthesis{\nabla^\perp_X \alpha_f}(Y,Z) = \parenthesis{\nabla^\perp_Y \alpha_f}(X,Z)
+\end{gather}
+e
+\begin{equation}\label{eq-ricci-em-formas-espaciais}
+\innerproduct{R^\perp (X,Y) \xi}{\eta} = \innerproduct{[A_\xi, A_\eta] X}{Y}.
+\end{equation}
+
+Para os espaços ambientes $\mathbb{Q}^n_c$, as equações de compatibilidade \eqref{eq-gauss-em-formas-espaciais}, \eqref{eq-codazzi-em-formas-espaciais} e \eqref{eq-ricci-em-formas-espaciais} são equações intrínsecas relacionando o tensor de curvatura de $M^m$, a segunda forma fundamental de $f$ e o tensor de curvatura da conexão normal. Assim, é natural se perguntar se tais dados, satisfazendo as equações de compatibilidade de um fibrado vetorial sobre uma variedade Riemanniana $M^m$ podem ser realizados como os dados associados com uma imersão isométrica de $M^m$ em $\mathbb{Q}^n_c$.
+
+O \emph{teorema fundamental para subvariedades} (cf. \cite[Theorem 1.10]{Dajczer2019}) estabelece que isso é, localmente, sempre verdadeiro, e também globalmente quando $M^m$ é simplesmente conexa. Além disso, independente do fato de $M^m$ ser simplesmente conexa, a imersão isométrica é única a menos de isometrias do espaço ambiente.
+
+No caso particular de uma hipersuperfície $f: M^n \rightarrow \mathbb{Q}^{n+1}_c$, as equações fundamentais tornam-se somente duas. Mais precisamente, as equações de Gauss e Codazzi para $f$ podem ser expressadas como sendo
+\begin{equation}
+	R(X,Y)Z = c \parenthesis{X \wedge Y} Z + \parenthesis{AX \wedge AY} Z
+\end{equation}
+e
+\begin{equation}
+	\parenthesis{\nabla_Y A} X = \parenthesis{\nabla_X A} Y,
+\end{equation}
+respectivamente.
+
+No caso mais particular de uma superfície $f: M^2 \rightarrow \mathbb{Q}^3_c$, imersa numa forma espacial tridimensional, a curvatura seccional da superfície $M^2$ em $\mathbb{Q}^3_c$, munida da métrica induzida, coincide com sua curvatura Gaussiana, a menos da constante $c$. De forma mais precisa, a curvatura Gaussiana intrínseca $K_{\text{int}}$ de $M^2$ é dada por
+\begin{equation}\label{eq:gausshyp}
+	K_{\text{int}} = K_{\text{ext}} + c,
+\end{equation}
+onde $K_{\text{ext}}$ denota a curvatura extrínseca de $M^2$, que é dada pelo produto das curvaturas principais de $M^2$.
+
 
 \section{Superfícies mínimas em $\realnumbers^3$}
 
@@ -68,141 +181,6 @@ para todo $t \in (-\epsilon,\epsilon)$ e toda tal variação. Portanto, $A'(0)=0
 	\end{equation*}
 	Isso implica que $k_1=-k_2$ em todos os pontos de $M$, logo a curvatura Gaussiana $K$ satisfaz $K = k_1 k_2 \leq 0$. No entanto, toda superfície compacta em $\R^3$ admite um ponto $p$ tal que $K(p)>0$, e isso nos dá uma contradição.
 \end{demonstracao}
-
-%Nesta seção exporá-se uma introdução a teoria de superfícies mínimas em $\R^3$.
-%O estudo de superfícies minímas em $\R^3$ está representado pela procura de novas superfícies mínimas adicionais as já conhecidas: o catenoide e o helicoide.
-%O catenoide e o helicoide tem a particularidade que são as únicas superfícies mínimas rotacionais e regradas respectivamente.
-%O problema da procura de novas superfícies mínimas foi resolvido pelo desenvolvimento da formula de representação de Weierstrass que será mostrada na seguinte seção.
-%\begin{definicao}
-%	Uma superfície regular $M$ em $\realnumbers^3$ é chamada \emph{superfície mínimas} se $H(p)=0$ para qualquer $p \in M$.
-%\end{definicao}
-%\begin{observacao}
-%	Se $H \equiv 0$, então $K_1 + K_2 \equiv 0$. Logo $K_1 = -K_2$
-%\end{observacao}
-%\begin{exemplo}
-%	Um plano em $\realnumbers^3$ é trivialmente mínima, pois $K_1=K_2=0$.
-%\end{exemplo}
-%A motivação histórica do estudo das superfícies mínimas foi dada por Lagrange o ano 1760 como seguinte problema:
-%Dado uma curva fechada $\gamma$ em $\realnumbers^3$, sem autointerseções, determinar a superfície de área mínima, e que tem $\gamma$ como fronteira.
-%Seja $M$ uma superfície regular orientada em $\realnumbers^3$, e considere uma função $f \in \smoothfunctionsspace{M}$.
-%\begin{definicao}
-%	Uma \emph{variação normal} de $M$, relativa à função $f$, é uma família de superfícies $M_t$, com $t \in (-\epsilon,\epsilon)$, dadas por:
-%	\begin{equation*}
-%	p_t = p + t f(p) N(p),
-%	\end{equation*}
-%	onde $N$ é o campo unitário normal a $M$, na orientação de $M$.
-%\end{definicao}
-%Para $\epsilon > 0$ suficientemente pequeno, cada conjunto $M_t$ também e uma superfície regular chamada uma \emph{superfície de variação}.
-%Note que para $t=0$, $M_0=M$. Se $f \equiv 1$, $M_t$ é uma superfície \emph{paralela} a $M$ a uma distancia $t$.
-%**gráfico**
-%Dados uma variação normal $M_t$ de $M$ relativa a uma função suave $f: M \rightarrow \realnumbers$, com $t \in (-\epsilon,\epsilon)$, e $D \subset M$ um domínio limitado, considere
-%\begin{equation*}
-%D_t = \{ p_t \in M_t: p \in D \}
-%\end{equation*}
-%para cada $t \in (-\epsilon,\epsilon)$, $D_t$ é um domínio correspondente em $M_t$. Definimos em cada $t$
-%\begin{equation*}
-%A(t) = \text{Area}(D_t)
-%\end{equation*}
-%\begin{teorema}
-%	\begin{equation*}
-%	A'(0) = -2 \int_D Hf dA
-%	\end{equation*}
-%\end{teorema}
-%A expressão acima chama-se a \emph{formula da primeira variação da área}.
-%\begin{demonstracao}
-%	contenidos...
-%\end{demonstracao}
-
-%\begin{definicao}
-%	Uma superfície parametrizada regular é chamada de \emph{mínima} se a sua curvatura média é identicamente nula.
-%\end{definicao}
-%
-%\begin{definicao}
-%	Seja
-%	$x: U \subset \R^2 \rightarrow \R^3$ uma superfície parametrizada regular,
-%	$D \subset U$ um domínio aberto simplesmente conexo,
-%	$\overline{D}$ o fecho de $D$,
-%	$h: \overline{D} \rightarrow \R$ uma função diferenciável,
-%	$(u,v) \in \overline{D}$,
-%	$t \in (-\epsilon,\epsilon)$ e
-%	$N$ um campo de vetores normais unitário de $M$.
-%	A \emph{variação normal} de $x(\overline{D})$, determinada por $h$, é a aplicação $\varphi: \overline{D} \times (-\epsilon, \epsilon) \rightarrow \R^3$ dada por
-%	\begin{equation*}
-%		 \varphi(u,v,t) = x(u,v) + t h(u,v) N(u,v).
-%	\end{equation*}
-%\end{definicao}
-%Para $t \in (-\epsilon,\epsilon)$ fixado, a aplicação $x^t: \overline{D} \rightarrow \R^3$ dada por
-%\begin{equation}
-%	x^t(u,v) = \varphi(u,v,t)
-%\end{equation}
-%é uma superfície parametrizada.
-%
-%Sejam $E^t, F^t, G^t$ os coeficientes da primeira forma fundamental de $x^t$.
-%Então, a área de $x^t(\overline{D})$ está dada por
-%\begin{equation*}\label{eq:3.1b}
-%	A(t) = \int_{\overline{D}} \sqrt{E^t G^t - (F^t)^2} du dv.
-%\end{equation*}
-%Sabe-se que
-%\begin{align*}
-%	E^t &= \innerproduct{x_u^t}{x_u^t},\\
-%	F^t &= \innerproduct{x_u^t}{x_v^t},\\
-%	G^t &= \innerproduct{x_v^t}{x_v^t}.
-%\end{align*}
-%Como $x^t(u,v) = \varphi(u,v,t)$, então
-%\begin{equation*}\label{eq:3.1a}
-%	E^t G^t - (F^t)^2 = E G - F^2 - 2 t h (Eg - 2Ff + Ge) + R,
-%\end{equation*}
-%onde $R$ é un resto tal que $\lim_{t \rightarrow 0} R/t = 0$.
-%Dado que
-%\begin{equation*}
-%	H = \frac{1}{2} \left(\frac{Eg - 2Ff + Ge}{E G - F^2}\right)
-%\end{equation*}
-%então, \eqref{eq:3.1a} pode-se escrever
-%\begin{equation*}
-%	E^t G^t - (F^t)^2 = (EG - F^2)(1 - 4thH) + R
-%\end{equation*}
-%Finalmente a equação \eqref{eq:3.1b} escreve-se
-%\begin{equation*}
-%	A(t) = \int_{\overline{D}} \sqrt{1 - 4thH + \overline{R}} \sqrt{EG - F^2} du dv
-%\end{equation*}
-%onde $\overline{R} = R/\sqrt{EG - F^2}$.
-%Derivando $A(t)$ em $t=0$ tem-se
-%\begin{equation*}\label{eq:3.1c}
-%	A'(0) = -\int_{\overline{D}} 2hH \sqrt{EG - F^2} du dv
-%\end{equation*}
-
-%\begin{proposicao}\label{caracteristica_das_superficies_minimas}
-%	Uma superfície $M$ em $\realnumbers^3$ é mínima se e somente se $A'(0) = 0$.
-%\end{proposicao}
-%
-%\begin{demonstracao}
-%	Supondo que a superfície é mínima então, pela equação \eqref{eq:3.1c}, tem-se que $A'(0) = 0$.
-%	Agora supor que existe $p \in \overline{D}$ tal que $H(p) \neq 0$. 
-%	Seja $U \subset \overline{D}$ aberto tal que $p \in U$. 
-%	Pelo fato que a função $h$ é arbitraria, pudemos escolher $h: \overline{D} \rightarrow \R$ tal que $h(p) = H(p)$, $hH > 0$ em  $U$, e $h$ seja identicamente nula fora $U$. 
-%	Com as condições anteriores, tem-se que $A'(0) < 0$.
-%\end{demonstracao}
-%%\begin{observacao}
-%	Suponha que exista uma solução $M$ para o problema de Lagrange, e considere uma variação normal $M_t$ de $M$, com $t \in (-\epsilon,\epsilon)$, dada por uma função suave $f: M \rightarrow \realnumbers$ tal que $f_{|\partial M} = 0$. Como a área de $M$ é mínima temos, em particular, que
-%	\begin{equation*}
-%	A(t) \geq A(0)
-%	\end{equation*}
-%	para qualquer $t \in (-\epsilon,\epsilon)$. Portanto, $A'(0)=0$, para toda variação normal $M_t$ de $M$ com $f_{|\partial M}=0$.
-%	Isso mostra, em virtude da proposição \ref{caracteristica_das_superficies_minimas}, que as superfícies de área mínima são superfícies mínimas no sentido da nossa definição. A reciproca é falsa!
-%%\end{observacao}
-
-%\begin{proposicao}
-%	Não existe superfície minima compacta em $\realnumbers^3$.
-%\end{proposicao}
-%
-%\begin{demonstracao}
-%	Se $M$ é minima, então
-%	\begin{equation*}
-%	H = \frac{1}{2} (k_1 + k_2) = 0.
-%	\end{equation*}
-%	Logo $k_1 = -k_2$ e se tem que $K = k_1 k_2 \leq 0$.
-%	Se $M$ for compacta, existe $p \in M$ tal que $K(p) > 0$.
-%\end{demonstracao}
 
 Dado uma superfície regular $M$ em $\realnumbers^3$, considere uma carta local isoterma $(U,\varphi)$ para $M$, i.e., 
 \begin{equation*}
@@ -316,10 +294,10 @@ H = \frac{e + g}{2 \lambda^2}
 \end{figure}
 
 \begin{teorema}
-	Alem do plano,
+	Além do plano,
 	\begin{enumerate}
-		\item[a)] O catenoide é a única superfície rotacional minima.
-		\item[b)] O helicoide é a única superfície regrada minima.
+		\item[a)] O catenoide é a única superfície rotacional mínima.
+		\item[b)] O helicoide é a única superfície regrada mínima.
 	\end{enumerate}
 \end{teorema}
 
@@ -763,270 +741,286 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 	como queríamos.
 \end{demonstracao}
 
-\section{Superfícies mínimas em $S^3$}
+\section{Superfícies mínimas em $\Sp^3$}
 
-Em esta seção apresentará-se alguns resultados sobre superfícies mínimas em $S^3$ focando-se no casso em que a superfície é compacta. Esta seção está baseada principalmente em \cite{Brendle2013}.
+Em esta seção apresentaremos alguns resultados básicos sobre superfícies mínimas na esfera $\Sp^3$. Indicaremos as referências onde as demonstrações podem ser encontradas. Discutiremos também a minimalidade do toro de Clifford.
 
-%\begin{definicao}
-%	A esfera unitária em $\realnumbers^4$, $S^3$, é o conjunto definido por:
-%	\begin{equation*}
-%	S^3 = \left\{ x \in \realnumbers^4: | x | = 1 \right\}
-%	\end{equation*}
-%\end{definicao}
+A esfera unitária $\Sp^3$ é a hipersuperfície de $\R^4$ dada por
+\[ \Sp^3 = \{ x \in \R^4: x_1^2 + x_2^2 + x_3^2 + x_4^2 = 1. \} \]
+Dado uma superfície $M$ em $\Sp^3$, seja $\nu$ um campo vetorial unitário, normal ao longo de $M$. Isso significa que $\nu$ é tangente à esfera $\Sp^3$ e, para cada ponto $p \in M$, tem-se $\nu(p) \in T_p M^\perp$. Decorre da equação de Gauss \eqref{eq:gausshyp} para a superfície $M$ em $\Sp^3$ que a curvatura Gaussiana intrínseca $K$ de $M$ é dada por
+\[ K = \lambda_1 \lambda_2 + 1, \]
+onde $\lambda_1$ e $\lambda_2$ são as curvaturas principais do operador de forma de $M$ associado ao campo normal $\nu$.
 
-\begin{proposicao}
-	Seja $M$ uma superfície imersa em $S^3$,
-	$p \in M$,
-	$h$ a segunda forma fundamental escalar de $M$ e
-	$\lambda_1, \lambda_2$ as curvaturas principais de $M$ em $p$.
-	A curvatura seccional (intrínseca) $K$ de $M$ em $p$ é
-	\begin{equation*}
-		K(p) = 1 + \lambda_1 \lambda_2
-	\end{equation*}
-\end{proposicao}
+Assim como para superfícies em $\R^3$, a soma das curvaturas principais será denotada como a curvatura média de $M$
+\[ H = \lambda_1 + \lambda_2 = \sum_{i=1}^{2} \innerproduct{\tilde{\nabla}_{X_i} \nu}{X_i}, \]
+onde $\{X_1,X_2\}$ é um referencial local tangente a $M$ e $\tilde{\nabla}$ denota a conexão de Levi-Civita de $\Sp^3$. A curvatura média de $M$ pode ser interpretada, geometricamente, como um $L^2$-gradiente do funcional de área. De forma mais precisa, dado qualquer função $\varphi \in \smoothfunctionsspace{M}$, tem-se
+\[ \frac{d}{dt} \text{Área} (M_t)_{|t=0} = \int_M H \varphi, \]
+onde
+\[ M_t = \{ \cos(t \varphi(x))x + \sin(t \varphi(x) N(x)): x \in M \}. \]
 
-\begin{demonstracao}
-	Seja $\{x,y\} \in T_p M$ uma base ortonormal de autovetores associada às curvaturas principais $\lambda_1$ e $\lambda_2$.
-	Pelo corolário da equação de Gauss (corolário \ref{equacao-de-gauss-hipersuperficies}),
-	\begin{equation*}
-		\tilde{R}_m(x,y,y,x) = R_m(x,y,y,x) - h(x,x) h(y,y) + h(x,y)^2.
-	\end{equation*}
-	$\tilde{R}_m(x,y,y,x)$ é a curvatura seccional associada de $S^3$ que é constante e igual a 1. 
-	$R_m(x,y,y,x)$ é a curvatura intrínseca de $M$ em $p$. Portanto, a igualdade anterior escreve-se
-	\begin{equation*}
-		K(p) = 1 + \lambda_1 \lambda_2.
-	\end{equation*}
-\end{demonstracao}
-
-
-
-\begin{proposicao}
-	Seja $M$ uma superfície imersa em $S^3$,
-	$p \in M$ e
-	$\lambda_1, \lambda_2$ as curvaturas principais em $p$.
-	Então, a curvatura média é
-	\begin{equation*}
-		H(p) = \lambda_1 + \lambda_2
-	\end{equation*}
-\end{proposicao}
-
-\begin{demonstracao}
-	Seja $\{x,y\}$ uma base ortonormal de autovetores de $T_p M$ associada às curvaturas principais $\lambda_1$ e $\lambda_2$.
-	Usando $\{x,y\}$ com a definição \ref{def:curvatura-media} tem-se
-	\begin{equation*}
-		H(p) = \lambda_1 + \lambda_2.
-	\end{equation*}
-\end{demonstracao}
-
-\begin{definicao}
-	Uma superfície em $S^3$ chama-se de \emph{superfície mínima} se a curvatura media é identicamente nula.
-\end{definicao}
+Analogamente ao caso Euclideano, essa interpretação variacional motiva a definir uma superfície na esfera $\Sp^3$ como sendo \emph{mínima} se sua curvatura média $H$ for identicamente nula. O conceito de minimalidade em $\Sp^3$ pode ser formulado de várias formas equivalentes (cf. \cite[Theorem 3.2.1]{Simons1968} e \cite{Dajczer2019}).
 
 \begin{teorema}\label{propriedades_sup_min_S3}
-	Seja $M$ uma superfície em $S^3$. As seguentes afirmações são equivalentes:
+	Dado uma superfície $M$ em $\Sp^3$, as seguentes afirmações são equivalentes:
 	\begin{enumerate}
-		\item[a)] $M$ é uma superfície mínima
-		\item[b)] $M$ é um ponto critico do funcional de área
-		\item[c)] Se $M$ for descrito pelas funções coordenadas $x_i: \realnumbers \rightarrow \realnumbers$ onde $i=1,2,3,4$, então tem-se:
-		\begin{equation*}
-		\Delta_{\Sigma} x_i + 2 x_i = 0
-		\end{equation*}
-		para $i=1,2,3,4$.
+		\item[a)] $M$ é uma superfície mínima.
+		\item[b)] $M$ é um ponto critico do funcional de área.
+		\item[c)] As restrições das funções coordenadas em $\R^4$ são autofunções do operador Laplaciano $-\Delta_M$ com autovalor igual a 2, ou seja, $\Delta_M x_i = -2 x_i$, com $1 \leq i \leq 4$.
 	\end{enumerate}
 \end{teorema}
-A prova de este resultado depende de resultados importantes que serão mencionados a continuação.
-\begin{teorema}\label{thm:takahashi}
-	Se uma imersão isométrica $x: M \rightarrow \R^{m+k}$ de uma $m$-variedade riemanniana em o $(m+k)$-espaço euclideano satisfaz $ \Delta x = \lambda x $ para alguma constante $\neq 0$, então $\lambda$ é necessariamente positiva e $x$ é uma imersão mínima em a esfera $S^{m+k-1}$ de radio $\sqrt{m/\lambda}$ em $\R^{m+k}$. De igual forma, se $x$ é uma imersão mínima em uma esfera de radio $a$ em $\R^{m+k}$, então $x$ satisfaz $\Delta x = \lambda x$ salvo um deslocamento paralelo em $\R^{m+k}$ e $\lambda = m/a^2$.
-\end{teorema}
 
-\begin{demonstracao}
-	Ver \cite[Theorem 3]{TAKAHASHI1966}.
-\end{demonstracao}
+Ao contrário do que ocorre em $\R^3$, de que não existem superfícies mínimas fechadas, existem exemplos interessantes desse fenômeno em $\Sp^3$. Um exemplo simples de superfície mínima fechada em $\Sp^3$ é o equador, que é definido por
+\[ M = \{ x \in \Sp^3 \subset \R^4: x_4=0. \} \]
+Neste caso, as curvaturas principais são ambas iguais a zero, logo o equador é uma superfície mínima. Além disso, o equador tem curvatura Gaussiana constante igual a 1. Assim, munido da métrica induzida, $M$ é isométrico à esfera usual $\Sp^2$.
 
-\begin{definicao}
-	Seja $M$ uma variedade $p$-dimensional, $\tilde{M}$ uma variedade $n$-dimensional, e $f: M \rightarrow \tilde{M}$ uma imersão de $M$ en $\tilde{M}$.
-	Seja $\{ f_t \}$ uma família de imersões uniparamétricas de $M \rightarrow \tilde{M}$ com a propriedade que $f_0 = f$, e seja a função $F: M \times [0,1] \rightarrow \tilde{M}$, definida por $F(m,t) = f_t(m)$, $C^{\infty}$. Então $\{ f_t \}$ é chamado de \emph{a variação de f}.
-\end{definicao}
+Vejamos outro exemplo importante.
 
-\begin{teorema}\label{thm:minimo-e-compacto-implica-ser-ponto-minimo-do-funcional-de-area}
-	Seja $M$ uma variedade $p$-dimensional, $\tilde{M}$ uma variedade $n$-dimensional, e $f: M \rightarrow \tilde{M}$ uma imersão de $M$ en $\tilde{M}$ como variedade mínima.
-	Seja $\{ f_t \}$ uma variação de $f$. Supor que para todo $t$, $ f_t(\partial M) = f(\partial M) $. Então se $M$ é compacto e $\mathcal{A}(t) =$ área de $M$ baixo $f_t$, $\mathcal{A}'(0)=0$.
-\end{teorema}
-
-\begin{demonstracao}
-	Ver \cite[Theorem 3.2.1]{Simons1968}.
-\end{demonstracao}
-
-
-
-\begin{demonstracao}[Prova do teorema \ref{propriedades_sup_min_S3}]
-	Pelo teorema \ref{thm:takahashi} tem-se a equivalência entre $a)$ e $c)$. Pelo teorema \ref{thm:minimo-e-compacto-implica-ser-ponto-minimo-do-funcional-de-area} tem-se que $a)$ implica $b)$. Para ver a prova de que $b)$ implica $a)$ ir a \cite[\S 2.4]{Simons1968}.
-\end{demonstracao}
-
-\begin{definicao}
-	O \emph{equador} é um subconjunto de $S^3$ definido por:
-	\begin{equation}
-	M = \left\{ x \in S^3: x_4 = 0 \right\}
+\begin{exemplo}[toro de Clifford]
+	Considere a aplicação $x: \R^2 \rightarrow \R^4$ definida por
+	\begin{equation}\label{def:toro-de-clifford}
+		x(u,v) = \frac{1}{\sqrt{2}} \parenthesis{\cos u, \sin u, \cos v, \sin v}.
 	\end{equation}
-\end{definicao}
+	Claramente $x$ é uma aplicação diferenciável e tem-se
+	\[ \frac{\partial x}{\partial u} = \frac{1}{\sqrt{2}} \parenthesis{-\sin u, \cos u, 0, 0} \]
+	e
+	\[ \frac{\partial x}{\partial v} = \frac{1}{\sqrt{2}} \parenthesis{0,0, -\sin v, \cos v}. \]
+	Disso decorre, em particular, que $x$ é uma imersão. Além disso, como $x(u + 2k \pi, v + 2l \pi) = x(u,v)$, para quaisquer $(u,v) \in \R^2$ e $k,l \in \mathbb{Z}$, segue que a imagem $x(\R^2)$ é um toro $\Sp_{\sqrt{2}}^1 \times \Sp_{\sqrt{2}}^1 \subset \R^4$. A fim de entender a geometria deste toro, fixemos o seguinte referencial ortonormal
+	\begin{align*}
+		e_1 &= \parenthesis{-\sin u, \cos u, 0, 0},\\
+		e_2 &= \parenthesis{0, 0, -\sin v, \cos v},\\
+		e_3 &= \frac{1}{\sqrt{2}} \parenthesis{\cos u, \sin u, \cos v, \sin v},\\
+		e_4 &= \frac{1}{\sqrt{2}} \parenthesis{-\cos u, -\sin u, \cos v, \sin v}.
+	\end{align*}
+	Observe que o vetor posição $e_3 = x$ descreve uma esfera unitária, pois $\norm{x} = 1$. Assim, o toro $x(\R^2)$ está contido na esfera unitária $\Sp^3 \subset \R^4$. Além disso, o referencial $\{e_1,e_2,e_3,e_4\}$ é tangente a $\Sp^3$, com
+	$e_4$ normal ao toro $x(\R^2)$. Como imersão isométrica, $x: \Sp_{\sqrt{2}}^1 \times \Sp_{\sqrt{2}}^1 \rightarrow \Sp^3$ é conhecida como o \emph{toro de Clifford}. Denotemos por $(h_{ij})$ a matriz da segunda forma fundamental do toro em relação ao campo normal $e_4$. Cada entrada da matriz é dada por
+	\begin{align*}
+		h_{11} &= \innerproduct{A e_1}{e_1}\\
+		h_{12} &= \innerproduct{A e_1}{e_2}\\
+		h_{21} &= \innerproduct{A e_2}{e_1}\\
+		h_{22} &= \innerproduct{A e_2}{e_2}
+	\end{align*},
+	onde $AX$ é dado por
+	\[ AX = -\tilde{\nabla}_X e_4, \]
+	para qualquer vetor tangente $X$ ao toro $x(\R^2)$. Temos:
+	\begin{align*}
+		A e_1 &= -\tilde{\nabla}_{\frac{\partial}{\partial u}} e_4 = \frac{1}{\sqrt{2}} \parenthesis{-\sin u, \cos u, 0, 0}\\
+		A e_2 &= -\tilde{\nabla}_{\frac{\partial}{\partial v}} = \frac{1}{\sqrt{2}} \parenthesis{0,0, \sin v, -\cos v}.
+	\end{align*}
+	Substituindo, obtemos:
+	\[ h_{11} = \frac{1}{\sqrt{2}}, \qquad h_{12}=h_{21}=0 \qquad \text{e} \qquad h_{22} = -\frac{1}{\sqrt{2}}. \]
+	Disso decorre, em particular, que as curvaturas principais do toro $x(\R^2)$ são $\lambda_1 = \frac{1}{\sqrt{2}}$ e $\lambda_2 = -\frac{1}{\sqrt{2}}$, ou seja, o toro de Clifford é uma superfície mínima.
+\end{exemplo}
 
-\begin{proposicao}
-	As curvaturas principais do equador são nulas.
-\end{proposicao}
+\begin{observacao}
+	Reparametrizando a aplicação dada em \eqref{def:toro-de-clifford}, as curvaturas principais do toro de Clifford podem ser reobtidas como sendo $\lambda_1=1$ e $\lambda_2=-1$. Decorre então da equação de Gauss \eqref{eq:gausshyp} que a curvatura Gaussiana intrínseca do toro de Clifford é nula, ou seja, é uma superfície flat na esfera $\Sp^3$.
+\end{observacao}
 
-\begin{demonstracao}
-	É claro que o campo de vetores normais unitários é constante e é dado pelo vetor $(0,0,0,1)$. Portanto a diferencial do campo é nulo e as curvaturas são nulas.
-\end{demonstracao}
+%A prova de este resultado depende de resultados importantes que serão mencionados a continuação.
+%\begin{teorema}\label{thm:takahashi}
+%	Se uma imersão isométrica $x: M \rightarrow \R^{m+k}$ de uma $m$-variedade riemanniana em o $(m+k)$-espaço euclideano satisfaz $ \Delta x = \lambda x $ para alguma constante $\neq 0$, então $\lambda$ é necessariamente positiva e $x$ é uma imersão mínima em a esfera $S^{m+k-1}$ de radio $\sqrt{m/\lambda}$ em $\R^{m+k}$. De igual forma, se $x$ é uma imersão mínima em uma esfera de radio $a$ em $\R^{m+k}$, então $x$ satisfaz $\Delta x = \lambda x$ salvo um deslocamento paralelo em $\R^{m+k}$ e $\lambda = m/a^2$.
+%\end{teorema}
 
-\begin{corolario}
-	O equador é uma superfície mínima em $S^3$.
-\end{corolario}
+%\begin{demonstracao}
+%	Ver \cite[Theorem 3]{TAKAHASHI1966}.
+%\end{demonstracao}
 
-\begin{demonstracao}
-	Como a equação da curvatura media em $S^3$ está dada pela soma das curvaturas principais, então, pela proposição anterior, a curvatura media é nula. Portanto é uma superfície mínima.
-\end{demonstracao}
+%\begin{definicao}
+%	Seja $M$ uma variedade $p$-dimensional, $\tilde{M}$ uma variedade $n$-dimensional, e $f: M \rightarrow \tilde{M}$ uma imersão de $M$ en $\tilde{M}$.
+%	Seja $\{ f_t \}$ uma família de imersões uniparamétricas de $M \rightarrow \tilde{M}$ com a propriedade que $f_0 = f$, e seja a função $F: M \times [0,1] \rightarrow \tilde{M}$, definida por $F(m,t) = f_t(m)$, $C^{\infty}$. Então $\{ f_t \}$ é chamado de \emph{a variação de f}.
+%\end{definicao}
 
-%\subsection{Quantas superfícies mínimas compactas mergulhadas em $S^3$ existem?}
+%\begin{teorema}\label{thm:minimo-e-compacto-implica-ser-ponto-minimo-do-funcional-de-area}
+%	Seja $M$ uma variedade $p$-dimensional, $\tilde{M}$ uma variedade $n$-dimensional, e $f: M \rightarrow \tilde{M}$ uma imersão de $M$ en $\tilde{M}$ como variedade mínima.
+%	Seja $\{ f_t \}$ uma variação de $f$. Supor que para todo $t$, $ f_t(\partial M) = f(\partial M) $. Então se $M$ é compacto e $\mathcal{A}(t) =$ área de $M$ baixo $f_t$, $\mathcal{A}'(0)=0$.
+%\end{teorema}
 
-Por muito tempo o equador e o toro de Clifford foram os únicos exemplos de superfícies mínimas mergulhadas em $S^3$. Mas houve resultados publicados que apresentaram uma quantidade grande de superfícies minímas compactas imersas em $S^3$ que não eram mergulhadas. Como exemplo tem-se \cite{Lawson1969}. Logo, Lawson publicou o resultado seguinte:
+%\begin{demonstracao}
+%	Ver \cite[Theorem 3.2.1]{Simons1968}.
+%\end{demonstracao}
+
+
+
+%\begin{demonstracao}[Prova do teorema \ref{propriedades_sup_min_S3}]
+%	Pelo teorema \ref{thm:takahashi} tem-se a equivalência entre $a)$ e $c)$. Pelo teorema \ref{thm:minimo-e-compacto-implica-ser-ponto-minimo-do-funcional-de-area} tem-se que $a)$ implica $b)$. Para ver a prova de que $b)$ implica $a)$ ir a \cite[\S 2.4]{Simons1968}.
+%\end{demonstracao}
+
+%\begin{definicao}
+%	O \emph{equador} é um subconjunto de $\Sp^3$ definido por:
+%	\begin{equation}
+%	M = \left\{ x \in \Sp^3: x_4 = 0 \right\}
+%	\end{equation}
+%\end{definicao}
+
+%\begin{proposicao}
+%	As curvaturas principais do equador são nulas.
+%\end{proposicao}
+
+%\begin{demonstracao}
+%	É claro que o campo de vetores normais unitários é constante e é dado pelo vetor $(0,0,0,1)$. Portanto a diferencial do campo é nulo e as curvaturas são nulas.
+%\end{demonstracao}
+
+%\begin{corolario}
+%	O equador é uma superfície mínima em $\Sp^3$.
+%\end{corolario}
+
+%\begin{demonstracao}
+%	Como a equação da curvatura media em $\Sp^3$ está dada pela soma das curvaturas principais, então, pela proposição anterior, a curvatura media é nula. Portanto é uma superfície mínima.
+%\end{demonstracao}
+
+%\subsection{Quantas superfícies mínimas compactas mergulhadas em $\Sp^3$ existem?}
+
+%Por muito tempo o equador e o toro de Clifford eram os únicos exemplos de superfícies mínimas mergulhadas em $\Sp^3$. Mas houve resultados publicados que apresentaram uma quantidade grande de superfícies minímas compactas imersas em $\Sp^3$ que não eram mergulhadas. Como exemplo tem-se \cite{Lawson1969}. Logo, Lawson publicou o resultado seguinte:
+
+Por muito tempo o equador e o toro de Clifford eram os únicos exemplos conhecidos de superfícies mínimas mergulhadas em $\Sp^3$. No entanto, isso mudou fortemente no final dos anos 1960 quando Blaine Lawson descobriu uma família infinita de superfícies mínimas mergulhadas em $\Sp^3$ de genus arbitrário \cite{Lawson1970a}.
 
 \begin{teorema}[Lawson]
-	Existem ao menos uma superfície mínima mergulhada em $S^3$ de gênero $g$, onde $g$ é um inteiro não negativo. Se $g$ não for primo, o mergulho não é único.
+	Existem ao menos uma superfície mínima mergulhada em $\Sp^3$ de gênero $g$, onde $g$ é um inteiro não negativo. Se $g$ não for primo, o mergulho não é único.
 \end{teorema}
 
-\begin{demonstracao}
-	Ver \cite[Theorem 2]{Lawson1970}
-\end{demonstracao}
+%\begin{demonstracao}
+%	Ver \cite[Theorem 2]{Lawson1970}
+%\end{demonstracao}
 
 
-%\subsection{Unicidade das superfícies compactas de gênero 0 e 1 em $S^3$}
+%\subsection{Unicidade das superfícies compactas de gênero 0 e 1 em $\Sp^3$}
 
-F. Algrem Jr. provou em \cite{Almgren1966} que a imagem de uma imersão real analítica de $S^2$ em $S^3$ é o equador. De esse resultado deriva o seguinte:
+%F. Algrem Jr. provou em \cite{Almgren1966} que a imagem de uma imersão real analítica de $S^2$ em $\Sp^3$ é o equador. De esse resultado deriva o seguinte:
+
+A questão de unicidade para superfícies mínimas na esfera $\Sp^3$ com genus 0 foi provada por Algrem \cite{Almgren1966}.
 
 \begin{teorema}[Almgren]
-	O equador é a única superfície mínima compacta de gênero 0 imersa em $S^3$.
+	A menos de isometrias de $\Sp^3$, o equador é a única superfície mínima imersa em $\Sp^3$ de genus 0.
 \end{teorema}
 
-\begin{demonstracao}
-	Ver \cite[Lemma 1]{Almgren1966}.
-\end{demonstracao}
+%\begin{demonstracao}
+%	Ver \cite[Lemma 1]{Almgren1966}.
+%\end{demonstracao}
 
 %\begin{teorema}[Conjectura de Lawson]
-%	O toro de Clifford é uma única superfície mínima compacta de gênero 1 mergulhada  em $S^3$.
+%	O toro de Clifford é uma única superfície mínima compacta de gênero 1 mergulhada  em $\Sp^3$.
 %\end{teorema}
 %
 %\begin{demonstracao}
 %	Ver o capítulo \ref{chapter:a-conjectura-de-lawson}.
 %\end{demonstracao}
 
-\section{O toro de Clifford}
 
-Nesta seção vamos definir o toro de Clifford e ver as suas propriedades como superfície em $S^3$. Serão calculadas são as curvaturas principais e logo, se mostrará que o toro de Clifford é uma superfície flat mínima.
+Em 1970, Blainde Lawson conjecturou uma propriedade de unicidade similar para toros mínimos em $\Sp^3$. Mais precisamente, Lawson \cite{Lawson1970} conjecturou o seguinte
 
-\begin{definicao}\label{toro-de-clifford-definicion}
-	Seja
-	$x: \R^2 \rightarrow S^3$
-	definido por
-	\begin{equation*}
-	x(u,v) = \frac{1}{\sqrt{2}} \left(\cos(\sqrt{2} u), \sin(\sqrt{2} u), \cos(\sqrt{2} v), \sin(\sqrt{2} v)\right).
-	\end{equation*}
-	e seja $\Sigma$ a imagem de $x$. A superfície $\Sigma$ é chamada de \emph{toro de Clifford}.
-\end{definicao}
+\begin{conjectura}[Lawson]
+	A menos de isometrias de $\Sp^3$, o toro de Clifford é a única superfície mínima mergulhada em $\Sp^3$ de genus 1.
+\end{conjectura}
 
-\begin{proposicao}
-	A função $x: \R^2 \rightarrow S^3$ na definição \ref{toro-de-clifford-definicion} é uma imersão.
-\end{proposicao}
+Queremos apenas observar que a conjectura de Lawson é falsa se permitirmos que a superfície tenha auto-interseções. De fato, o próprio Blaine Lawson \cite{Lawson1969} provou que existe uma família infinita de toros mínimos em $\Sp^3$ que são ``Alexandrov imersos'' mas não são mergulhados. Veremos no capítulo seguinte a prova da conjectura de Lawson obtida por Simon Brendle.
 
-\begin{demonstracao}
-	Calculando a diferencial de $x$ tem-se
-	\begin{equation*}
-	dx_{u,v} = \left(-\sin(\sqrt{2} u) du, \cos(\sqrt{2} u) du, -\sin(\sqrt{2} v) dv, \cos(\sqrt{2} v) dv\right).
-	\end{equation*}
-	Observa-se que $dx_{u,v}$ é injetiva porque
-	\begin{align*}
-	dx_{u,v} \frac{\partial}{\partial u} &= \left(-\sin(\sqrt{2} u), \cos(\sqrt{2} u), 0, 0\right) \text{ e }\\
-	dx_{u,v} \frac{\partial}{\partial v} &= \left(0, 0, -\sin(\sqrt{2} v), \cos(\sqrt{2} v)\right)
-	\end{align*}
-	são linearmente independentes.
-\end{demonstracao}
-Pode-se ver que
-$T_{x(u,v)} \Sigma = \text{span} \left\{dx_{u,v} \frac{\partial}{\partial u}, dx_{u,v} \frac{\partial}{\partial v}\right\}$
-e também que é subespaço vetorial de
-$T_{x(u,v)} S^3$.
-Como $x(u,v)$ é ortogonal a $T_{x(u,v)} \Sigma$ poderia-se considerar que
-\begin{equation*}
-	T_{x(u,v)} S^3 = \text{span} \left\{dx_{u,v} \frac{\partial}{\partial u}, dx_{u,v} \frac{\partial}{\partial v}, x(u,v)\right\}
-\end{equation*}
-mas vamos mostrar na seguinte proposição que isso não é possível.
+%\section{O toro de Clifford}
+%
+%Nesta seção vamos definir o toro de Clifford e ver as suas propriedades como superfície em $\Sp^3$. Serão calculadas são as curvaturas principais e logo, se mostrará que o toro de Clifford é uma superfície flat mínima.
 
-\begin{proposicao}
-	Seja $x:\R^2 \rightarrow S^3$ na definição \ref{toro-de-clifford-definicion}. Então
-	\begin{equation*}
-		T_{x(u,v)} S^3 = \text{span} \left\{dx_{u,v} \frac{\partial}{\partial u}, dx_{u,v} \frac{\partial}{\partial v}, \eta\right\}
-	\end{equation*}
-	onde $\eta$ está definido por
-	\begin{equation*}
-		\eta(u,v) = \frac{1}{\sqrt{2}} \left(-\cos(\sqrt{2} u), -\sin(\sqrt{2} u), \cos(\sqrt{2} v), \sin(\sqrt{2} v)\right)
-	\end{equation*}
-\end{proposicao}
+%\begin{definicao}\label{toro-de-clifford-definicion}
+%	Seja
+%	$x: \R^2 \rightarrow \Sp^3$
+%	definido por
+%	\begin{equation*}
+%	x(u,v) = \frac{1}{\sqrt{2}} \left(\cos(\sqrt{2} u), \sin(\sqrt{2} u), \cos(\sqrt{2} v), \sin(\sqrt{2} v)\right).
+%	\end{equation*}
+%	e seja $\Sigma$ a imagem de $x$. A superfície $\Sigma$ é chamada de \emph{toro de Clifford}.
+%\end{definicao}
 
-\begin{demonstracao}
-	Primeiro vamos mostrar que $T_{x(u,v)} S^3$ é o complemento ortogonal de $\text{span} \left\{x(u,v)\right\}$. Seja 
-	$p \in S^3$,
-	$ v \in T_p S^3 $
-	e
-	$\lambda: (-\epsilon, \epsilon) \rightarrow S^3$
-	um caminho tal que
-	$\lambda(0) = p$
-	e
-	$\lambda'(0) = v$.
-	Então
-	\begin{equation*}
-	\innerproduct{\lambda(t)}{\lambda(t)} = 1.
-	\end{equation*}
-	Derivando com respeito a $t$ tem-se que
-	\begin{equation*}
-	\innerproduct{\lambda'(t)}{\lambda(t)} = 0.
-	\end{equation*}
-	Logo, avaliando em $ t=0 $, obtém-se
-	$ \innerproduct{v}{p} = 0 $.
-	Portanto
-	$ v \in \text{span} \{p\}^\perp $.
-	Se $x(u,v) \in T_{x(u,v)} S^3$ teríamos que $x(u,v) \in \text{span} \left\{x(u,v)\right\}^\perp$ o que é um absurdo.
-	Ver que
-	$\eta \in \text{span} \{x(u,v)\}^\perp$ e
-	$\eta$ é ortogonal a $T_{x(u,v)} \Sigma$.
-	Portanto tem-se que
-	$T_{x(u,v)} S^3 = \text{span} \left\{dx_{u,v} \frac{\partial}{\partial u}, dx_{u,v} \frac{\partial}{\partial v}, \eta\right\}$.	
-\end{demonstracao}
+%\begin{proposicao}
+%	A função $x: \R^2 \rightarrow \Sp^3$ na definição \ref{toro-de-clifford-definicion} é uma imersão.
+%\end{proposicao}
+
+%\begin{demonstracao}
+%	Calculando a diferencial de $x$ tem-se
+%	\begin{equation*}
+%	dx_{u,v} = \left(-\sin(\sqrt{2} u) du, \cos(\sqrt{2} u) du, -\sin(\sqrt{2} v) dv, \cos(\sqrt{2} v) dv\right).
+%	\end{equation*}
+%	Observa-se que $dx_{u,v}$ é injetiva porque
+%	\begin{align*}
+%	dx_{u,v} \frac{\partial}{\partial u} &= \left(-\sin(\sqrt{2} u), \cos(\sqrt{2} u), 0, 0\right) \text{ e }\\
+%	dx_{u,v} \frac{\partial}{\partial v} &= \left(0, 0, -\sin(\sqrt{2} v), \cos(\sqrt{2} v)\right)
+%	\end{align*}
+%	são linearmente independentes.
+%\end{demonstracao}
+%Pode-se ver que
+%$T_{x(u,v)} \Sigma = \text{span} \left\{dx_{u,v} \frac{\partial}{\partial u}, dx_{u,v} \frac{\partial}{\partial v}\right\}$
+%e também que é subespaço vetorial de
+%$T_{x(u,v)} \Sp^3$.
+%Como $x(u,v)$ é ortogonal a $T_{x(u,v)} \Sigma$ poderia-se considerar que
+%\begin{equation*}
+%	T_{x(u,v)} \Sp^3 = \text{span} \left\{dx_{u,v} \frac{\partial}{\partial u}, dx_{u,v} \frac{\partial}{\partial v}, x(u,v)\right\}
+%\end{equation*}
+%mas vamos mostrar na seguinte proposição que isso não é possível.
+
+%\begin{proposicao}
+%	Seja $x:\R^2 \rightarrow \Sp^3$ na definição \ref{toro-de-clifford-definicion}. Então
+%	\begin{equation*}
+%		T_{x(u,v)} \Sp^3 = \text{span} \left\{dx_{u,v} \frac{\partial}{\partial u}, dx_{u,v} \frac{\partial}{\partial v}, \eta\right\}
+%	\end{equation*}
+%	onde $\eta$ está definido por
+%	\begin{equation*}
+%		\eta(u,v) = \frac{1}{\sqrt{2}} \left(-\cos(\sqrt{2} u), -\sin(\sqrt{2} u), \cos(\sqrt{2} v), \sin(\sqrt{2} v)\right)
+%	\end{equation*}
+%\end{proposicao}
+
+%\begin{demonstracao}
+%	Primeiro vamos mostrar que $T_{x(u,v)} \Sp^3$ é o complemento ortogonal de $\text{span} \left\{x(u,v)\right\}$. Seja 
+%	$p \in \Sp^3$,
+%	$ v \in T_p \Sp^3 $
+%	e
+%	$\lambda: (-\epsilon, \epsilon) \rightarrow \Sp^3$
+%	um caminho tal que
+%	$\lambda(0) = p$
+%	e
+%	$\lambda'(0) = v$.
+%	Então
+%	\begin{equation*}
+%	\innerproduct{\lambda(t)}{\lambda(t)} = 1.
+%	\end{equation*}
+%	Derivando com respeito a $t$ tem-se que
+%	\begin{equation*}
+%	\innerproduct{\lambda'(t)}{\lambda(t)} = 0.
+%	\end{equation*}
+%	Logo, avaliando em $ t=0 $, obtém-se
+%	$ \innerproduct{v}{p} = 0 $.
+%	Portanto
+%	$ v \in \text{span} \{p\}^\perp $.
+%	Se $x(u,v) \in T_{x(u,v)} \Sp^3$ teríamos que $x(u,v) \in \text{span} \left\{x(u,v)\right\}^\perp$ o que é um absurdo.
+%	Ver que
+%	$\eta \in \text{span} \{x(u,v)\}^\perp$ e
+%	$\eta$ é ortogonal a $T_{x(u,v)} \Sigma$.
+%	Portanto tem-se que
+%	$T_{x(u,v)} \Sp^3 = \text{span} \left\{dx_{u,v} \frac{\partial}{\partial u}, dx_{u,v} \frac{\partial}{\partial v}, \eta\right\}$.	
+%\end{demonstracao}
 
 %\begin{proposicao}
 %	O toro de Clifford definido em \ref{toro-de-clifford-definicion} tem curvatura média $H=0$, curvatura extrínseca $K_{\text{ext}} = -1$ e curvatura intrínseca $K_{\text{int}} = 0$.
 %\end{proposicao}
 
-\begin{proposicao}
-	As curvaturas principais do toro de Clifford são 1 e -1.
-\end{proposicao}
-
-\begin{demonstracao}
-	Calculando a diferencial de $\eta$ obtemos
-	\begin{equation*}
-	d\eta_{u,v} = \left(\sin(\sqrt{2} u) du, -\cos(\sqrt{2} u) du, -\sin(\sqrt{2} v) dv, \cos(\sqrt{2} v) dv\right).
-	\end{equation*}
-	Calculando as entradas da matriz da segunda forma fundamental
-	\begin{align*}
-	h_{11} = \innerproduct{d\eta_{u,v} \frac{\partial}{\partial u}}{dx_{u,v} \frac{\partial}{\partial u}} &= -1,\\
-	h_{22} = \innerproduct{d\eta_{u,v} \frac{\partial}{\partial v}}{dx_{u,v} \frac{\partial}{\partial v}} &= 1,\\
-	h_{12} = \innerproduct{d\eta_{u,v} \frac{\partial}{\partial u}}{dx_{u,v} \frac{\partial}{\partial v}} &= 0,
-	\end{align*}
-	obtemos que as curvaturas principais são 1 e -1.
-\end{demonstracao}
-
-\begin{proposicao}
-	O toro de Clifford é uma superfície flat mínima.
-\end{proposicao}
-
-\begin{demonstracao}
-	Sabendo que as curvaturas principais são 1 e -1 pode-se ver que a curvatura média é nula e a curvatura intrínseca também é nula. Isto implica que é uma superfície flat mínima.
-\end{demonstracao}
+%\begin{proposicao}
+%	As curvaturas principais do toro de Clifford são 1 e -1.
+%\end{proposicao}
+%
+%\begin{demonstracao}
+%	Calculando a diferencial de $\eta$ obtemos
+%	\begin{equation*}
+%	d\eta_{u,v} = \left(\sin(\sqrt{2} u) du, -\cos(\sqrt{2} u) du, -\sin(\sqrt{2} v) dv, \cos(\sqrt{2} v) dv\right).
+%	\end{equation*}
+%	Calculando as entradas da matriz da segunda forma fundamental
+%	\begin{align*}
+%	h_{11} = \innerproduct{d\eta_{u,v} \frac{\partial}{\partial u}}{dx_{u,v} \frac{\partial}{\partial u}} &= -1,\\
+%	h_{22} = \innerproduct{d\eta_{u,v} \frac{\partial}{\partial v}}{dx_{u,v} \frac{\partial}{\partial v}} &= 1,\\
+%	h_{12} = \innerproduct{d\eta_{u,v} \frac{\partial}{\partial u}}{dx_{u,v} \frac{\partial}{\partial v}} &= 0,
+%	\end{align*}
+%	obtemos que as curvaturas principais são 1 e -1.
+%\end{demonstracao}
+%
+%\begin{proposicao}
+%	O toro de Clifford é uma superfície flat mínima.
+%\end{proposicao}
+%
+%\begin{demonstracao}
+%	Sabendo que as curvaturas principais são 1 e -1 pode-se ver que a curvatura média é nula e a curvatura intrínseca também é nula. Isto implica que é uma superfície flat mínima.
+%\end{demonstracao}
 
