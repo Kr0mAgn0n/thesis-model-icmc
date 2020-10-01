@@ -994,11 +994,43 @@ seja uma curva diferenciável tal que $\gamma(0)\in F$ e
 $\gamma'(s) = \displaystyle\sum_{j=1}^{m} f_j(s) X_j(\gamma(s))$, para certas
 funções diferenciáveis $f_1,\ldots,f_m:[0,1]\to\R$. Então 
 $\gamma(s)\in F$, para todo $s\in[0,1]$.
+Este teorema também é válido para uma variedade Riemanniana em vez de $\R^n$.
 \end{teorema}
 
-O segundo resultado \'e uma estimativa obtida fazendo-se uma
+O seguinte resultado \'e uma estimativa obtida fazendo-se uma
 adapta\c c\~ao na demonstra\c c\~ao da Proposi\c c\~ao
 \ref{prop:somaDerSeg}.
+
+Considere dois pontos $\xb,\yb\in\Sigma$, com $\xb\neq\yb$. Seja
+$(x_1,x_2)$ um sistema de coordenadas normais geod\'esicas em
+torno de $\xb$ tal que
+\[
+h_{11}(\xb)=\lambda_1, \quad \lambda_{12}(\xb)=0
+\quad\mbox{e}\quad h_{22}(\xb)=\lambda_2. 
+\]
+Al\'em disso, seja $(y_1,y_2)$ um sistema de coordenadas normais 
+geod\'esicas em torno de $\yb$ tal que
+\begin{equation*}
+\left\langle w_1, \frac{\partial F}{\partial y_1}(\yb) \right\rangle \geq 0, 
+\quad 
+\left\langle w_1, \frac{\partial F}{\partial y_2}(\yb) \right\rangle = 0 
+\quad \text{e} \quad 
+\left\langle w_2, \frac{\partial F}{\partial y_2}(\yb) \right\rangle \geq 0,
+\end{equation*}
+onde $w_1$ e $w_2$ s\~ao dados em \eqref{eq:reflexao}. Adaptando
+a demonstra\c c\~ao do Lema \ref{lem:w_1 w_2}, podemos concluir
+que
+\[
+\sum_{i=1}^2\left| w_i-\frac{\partial F}{\partial y_i}(\yb)\right| \leq
+\Lambda(\xb,\yb)\left(Z(\xb,\yb)+\sum_{i=1}^2
+\left|\frac{\partial Z}{\partial y_i}(\xb,\yb)\right|\right),
+\]
+onde $\Lambda$ \'e uma fun\c c\~ao cont\'inua sobre o conjunto
+\[
+\{(\xb,\yb)\in\Sigma\times\Sigma:\xb\neq\yb\}
+\]
+que, eventualmente, deixa de ser limitada numa vizinhan\c ca
+da diagonal de $\Sigma\times\Sigma$. 
 
 \begin{lema}
 Dados dois pontos $\xb,\yb\in\Sigma$, com $\xb\neq\yb$, tem-se:
@@ -1008,7 +1040,7 @@ Dados dois pontos $\xb,\yb\in\Sigma$, com $\xb\neq\yb$, tem-se:
 2 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial x_i \partial y_i}(\xb,\yb) \ + \ 
 \sum_{i=1}^2 \frac{\partial^2 Z}{\partial y_i^2}(\xb,\yb)  \\
 & \leq
-- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle \\
+- \frac{\aleph^2 - 1}{\aleph} \frac{\Psi(\xb)}{1 - \langle F(\xb), F(\yb) \rangle} \sum_{i=1}^2 \left\langle \frac{\partial F}{\partial x_i}(\xb), F(\yb) \right\rangle^2 \\
 & + 
 \tilde{\Lambda}(\xb,\yb) \left( Z(\xb,\yb) + \sum_{i=1}^2 \left| \frac{\partial Z}{\partial x_i}(\xb,\yb) \right| + \sum_{i=1}^2 \left| \frac{\partial Z}{\partial y_i}(\xb,\yb) \right| \right)
 \end{aligned}
@@ -1043,8 +1075,8 @@ Em virtude das Proposi\c c\~oes \ref{prop:somaDerSeg} e
 \end{equation*}
 Como 
 \[
-X(\xb,\yb)\geq0 \quad\mbox{e}\quad
-|F(\xb)| = \left|\frac{\partial F}{\partial y_i}\right|=1,
+Z(\xb,\yb)\geq0 \quad\mbox{e}\quad
+|F(\xb)| = \left|\frac{\partial F}{\partial y_i}(\yb) \right|=1,
 \]
 podemos escrever
 \begin{equation*}
@@ -1203,41 +1235,37 @@ o que prova \eqref{eq:lema2Omegaopen}.
 \begin{lema}
 O conjunto $\Omega$, dado em \eqref{eq:ConjOmega}, \'e aberto.
 \end{lema}
+
 \begin{demonstracao}
-Considere dois pontos $\xb,\yb\in\Sigma$, com $\xb\neq\yb$. Seja
-$(x_1,x_2)$ um sistema de coordenadas normais geod\'esicas em
-torno de $\xb$ tal que
-\[
-h_{11}(\xb)=\lambda_1, \quad \lambda_{12}(\xb)=0
-\quad\mbox{e}\quad h_{22}(\xb)=\lambda_2. 
-\]
-Al\'em disso, seja $(y_1,y_2)$ um sistema de coordenadas normais 
-geod\'esicas em torno de $\yb$ tal que
-\begin{equation*}
-\left\langle w_1, \frac{\partial F}{\partial y_1}(\yb) \right\rangle \geq 0, 
-\quad 
-\left\langle w_1, \frac{\partial F}{\partial y_2}(\yb) \right\rangle = 0 
-\quad \text{e} \quad 
-\left\langle w_2, \frac{\partial F}{\partial y_2}(\yb) \right\rangle \geq 0,
-\end{equation*}
-onde $w_1$ e $w_2$ s\~ao dados em \eqref{eq:reflexao}. Adaptando
-a demonstra\c c\~ao do Lema \ref{lem:w_1 w_2}, podemos concluir
-que
-\[
-\sum_{i=1}^2\left| w_i-\frac{\partial F}{\partial y_i}(\yb)\right| \leq
-\Lambda(\xb,\yb)\left(Z(\xb,\yb)+\sum_{i=1}^2
-\left|\frac{\partial Z}{\partial y_i}(\xb,\yb)\right|\right),
-\]
-onde $\Lambda$ \'e uma fun\c c\~ao cont\'inua sobre o conjunto
-\[
-\{(\xb,\yb)\in\Sigma\times\Sigma:\xb\neq\yb\}
-\]
-que, eventualmente, deixa de ser limitada numa vizinhan\c ca
-da diagonal de $\Sigma\times\Sigma$. Usando agora a desigualdade
-\eqref{eq:lema2Omegaopen} e escolhendo no Teorema \ref{teo:bony}
-a fun\c c\~ao $\varphi$ igual a $Z$ e o aberto $U$ como sendo
-$\Sigma\times\Sigma\setminus diag$, conclu\'imos que $\Omega$
-\'e aberto.
+Para $x \in \Omega$	definamos o conjunto
+\[ Y_x = \{ y \in \Sigma: Z(x,y)=0 \}. \]
+Usando a notação do Teorema \ref{teo:bony}, vamos identificar a função $\varphi$ com $Z$ e o conjunto $F$ estará definido por
+\[F = \bigcup_{x \in \Omega} \{x\} \times Y_x.  \]
+Para cada ponto $(x,y) \in F$ se atinge o mínimo da função $Z$. Logo, a segunda derivada naqueles pontos serão operadores bilineares definidos positivos. Pela continuidade da segunda derivada, para cada ponto $(x,y) \in F$ existe uma vizinhança $V_{(x,y)}$ dele tal que a segunda derivada avaliada nos pontos da vizinhança segue sendo um operador bilinear definido positivo. 
+Definamos o aberto $U$ do Teorema \ref{teo:bony} como:
+\[ U = \bigcup_{(x,y) \in F} V_{(x,y)}. \]
+En quanto a os campos vetoriais, estes serão definidos da seguinte maneira:
+\[ X_1 = \left[ \begin{matrix}
+1\\
+0\\
+1\\
+0
+\end{matrix} \right] \quad \text{e} \quad X_2 = \left[ \begin{matrix}
+0\\
+1\\
+0\\
+1
+\end{matrix} \right]. \]
+Fazendo os cálculos respectivos, temos que
+\[ \sum_{i=1}^{2} D^2 Z (X_i,X_i) = \sum_{i=1}^{2} \frac{\partial^2 Z}{\partial x_i^2} + 2 \sum_{i=1}^{2} \frac{\partial^2 Z}{\partial x_i \partial y_i} + \sum_{i=1}^{2} \frac{\partial^2 Z}{\partial y_i^2} \] 
+Em $U$, temos que a segunda derivada de $Z$ é definida positiva, i.e, $0 < D^2 Z(\xi,\xi)$ para qualquer campo vetorial $\xi$ em $U$. Logo obtemos que
+\[ 0 \leq \inf_{|\xi| \leq 1} D^2 Z(\xi,\xi) \leq D^2 Z (0,0) = 0. \]
+Portanto $\inf_{|\xi| \leq 1} D^2 Z(\xi,\xi) = 0$.
+Como estamos no caso onde $\aleph > 1$, então
+\[ - \frac{\aleph^2 -1}{\aleph} \frac{\Psi(x)}{1 - \innerproduct{F(x)}{F(y)}} \sum_{i=1}^{2} \innerproduct{\frac{\partial F}{\partial x_i}(x)}{F(y)}^2 \leq 0. \]
+Podemos construir $U$ de tal forma que esteja contido no complemento da vizinhança da diagonal onde a função $\overline{\Lambda}$ é ilimitada. Por tanto, $\overline{\Lambda}$ é limitada em $U$.
+Ao final, a proposição tem a forma do Teorema \ref{teo:bony} e, portanto, podemos chegar à conclusão que para uma geodésica $\gamma: [0,1] \rightarrow U$ tal que $\gamma(0) \in U$ e $\gamma'(s) = f_1(s) X_1(\gamma(s)) + f_2(s) X_2(\gamma(s))$ para quaisquer funções $f_1,f_2: [0,1] \rightarrow \R$ tem-se que $\gamma(s) \in F$.
+Aplicando a projeção sobre a primeira variável no conjunto $F$ obtemos o conjunto $\Omega$ que, pela escolha de $X_1$ e $X_2$, conclui-se que é aberto porque é uma bola geodésica. 
 \end{demonstracao}
 
 
