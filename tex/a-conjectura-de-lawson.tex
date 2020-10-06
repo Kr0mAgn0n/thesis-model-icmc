@@ -1020,11 +1020,11 @@ geod\'esicas em torno de $\yb$ tal que
 onde $w_1$ e $w_2$ s\~ao dados em \eqref{eq:reflexao}. Adaptando
 a demonstra\c c\~ao do Lema \ref{lem:w_1 w_2}, podemos concluir
 que
-\[
-\sum_{i=1}^2\left| w_i-\frac{\partial F}{\partial y_i}(\yb)\right| \leq
-\Lambda(\xb,\yb)\left(Z(\xb,\yb)+\sum_{i=1}^2
-\left|\frac{\partial Z}{\partial y_i}(\xb,\yb)\right|\right),
-\]
+\begin{equation}\label{eq:Gamma-ineq}
+	\sum_{i=1}^2\left| w_i-\frac{\partial F}{\partial y_i}(\yb)\right| \leq
+	\Lambda(\xb,\yb)\left(Z(\xb,\yb)+\sum_{i=1}^2
+	\left|\frac{\partial Z}{\partial y_i}(\xb,\yb)\right|\right),
+\end{equation}
 onde $\Lambda$ \'e uma fun\c c\~ao cont\'inua sobre o conjunto
 \[
 \{(\xb,\yb)\in\Sigma\times\Sigma:\xb\neq\yb\}
@@ -1169,7 +1169,7 @@ Desenvolvendo, obtemos:
 2 - 2\left\langle w_i,\frac{\partial F}{\partial y_i}(\yb)\right\rangle.
 \end{aligned}
 \end{equation*}
-Assim,
+Assim, usando a desigualdade \eqref{eq:Gamma-ineq}, obtemos:
 \begin{equation*}
 \begin{aligned}
 2&\sum_{i=1}^2(\lambda_i-\aleph\Psi(\xb))\left\langle w_i,
