@@ -1,10 +1,10 @@
-Neste capítulo apresentaremos fatos básicos da teoria de superfícies no espaço Euclideano $\R^3$ e na esfera $\Sp^3$. Teremos como base as referências \cite{Carmo1987}, \cite{Meeks2012}, \cite{Nitsche2011}, \cite{Brendle2013} e \cite{Dajczer2019}.
+Neste capítulo apresentaremos fatos básicos da teoria de superfícies no espaço Euclidiano $\R^3$ e na esfera $\Sp^3$. Teremos como base as referências \cite{Carmo1987}, \cite{Meeks2012}, \cite{Nitsche2011}, \cite{Brendle2013} e \cite{Dajczer2019}.
 
 \section{Subvariedades em formas espaciais}
 
 Nesta seção apresentaremos, sem demonstrações, as equações fundamentais de uma imersão isométrica entre duas variedades Riemannianas dando enfoque, em especial, quando o espaço ambiente é uma forma espacial. Admitiremos conhecidos todos os pré-requisitos de Geometria Riemanniana necessários à compreensão dessa seção.
 
-Dados duas variedades Riemannianas $M^m$ e $\tilde{M}^n$, uma \emph{imersão isométrica} entre $M$ e $\tilde{M}$ é uma aplicação diferenciável $f: M \rightarrow \tilde{M}$ que é uma imersão e, para todo $p \in M$. satisfaz
+Dados duas variedades Riemannianas $M^m$ e $\tilde{M}^n$, uma \emph{imersão isométrica} entre $M$ e $\tilde{M}$ é uma aplicação diferenciável $f: M \rightarrow \tilde{M}$ que é uma imersão e, para todo $p \in M$, satisfaz
 \begin{equation}\label{def-imersao}
 \innerproduct{X}{Y} = \innerproduct{df(p) X}{df(p) Y},	
 \end{equation}
@@ -41,7 +41,7 @@ para quaisquer $X, Y \in \vectorfieldsspace{M}$.
 	\[ \tilde{\nabla}_X f_* Y - \tilde{\nabla}_Y f_* X = f_* [X,Y], \]
 	para quaisquer $X.Y \in \vectorfieldsspace{M}$, segue que
 	\[ \alpha_f (X,Y) - \alpha_f(Y,X) = f_* [X,Y] - f_* [X,Y] = 0, \]
-	ou seja, $\alpha_f$ é simétrica. Além disso, $\alpha_f$ é $\smoothfunctionsspace{M}$-bilinear, logo o valor de $\alpha_f (X,Y)$ em $p \in M$ depende somente dos valores dos campos $X$ e $Y$ em $p$.
+	ou seja, $\alpha_f$ é simétrica. Além disso, $\alpha_f$ é $\smoothfunctionsspace{M}$-bilinear, o valor de $\alpha_f (X,Y)$ em $p \in M$ depende somente dos valores dos campos $X$ e $Y$ em $p$.
 \end{observacao}
 
 O \emph{operador de forma} $A_\xi$ de $f$ em relação a um campo vetorial $\xi \in \Gamma \parenthesis{TM^\perp}$ é definido por
@@ -88,7 +88,7 @@ e
 \end{equation}
 para quaisquer $X,Y,Z,W \in \vectorfieldsspace{M}$ e $\xi, \eta \in \Gamma \parenthesis{TM^\perp}$.
 
-Quando $\tilde{M}^n = \mathbb{Q}^n_c$ denota uma forma espacial, i.e., uma variedade Riemanniana conexa, homogênea, simplesmente conexa, completa e de curvatura seccional constante igual a $c$, as equações \eqref{eq-gauss}, \eqref{eq-codazzi} e \eqref{eq-ricci} tornam-se, respectivamente
+Quando $\tilde{M}^n$ denota uma variedade Riemanniana de curvatura seccional constante igual a $c$, as equações \eqref{eq-gauss}, \eqref{eq-codazzi} e \eqref{eq-ricci} tornam-se, respectivamente
 \begin{gather}\label{eq-gauss-em-formas-espaciais}
 \innerproduct{R(X,Y)Z}{W} = c \innerproduct{\parenthesis{X \wedge Y} Z}{W} + \innerproduct{\alpha_f (X,W)}{\alpha_f(Y,Z)} - \innerproduct{\alpha_f (X,Z)}{\alpha_f (Y,W)},\\
 \label{eq-codazzi-em-formas-espaciais}
@@ -103,7 +103,7 @@ Para os espaços ambientes $\mathbb{Q}^n_c$, as equações de compatibilidade \e
 
 O \emph{teorema fundamental para subvariedades} (cf. \cite[Theorem 1.10]{Dajczer2019}) estabelece que isso é, localmente, sempre verdadeiro, e também globalmente quando $M^m$ é simplesmente conexa. Além disso, independente do fato de $M^m$ ser simplesmente conexa, a imersão isométrica é única a menos de isometrias do espaço ambiente.
 
-No caso particular de uma hipersuperfície $f: M^n \rightarrow \mathbb{Q}^{n+1}_c$, as equações fundamentais tornam-se somente duas. Mais precisamente, as equações de Gauss e Codazzi para $f$ podem ser expressadas como sendo
+No caso particular de uma hipersuperfície $f: M^n \rightarrow \mathbb{Q}^{n+1}_c$, as equações fundamentais tornam-se somente duas. Mais precisamente, as equações de Gauss e Codazzi para $f$ podem ser expressas como sendo
 \begin{equation}
 	R(X,Y)Z = c \parenthesis{X \wedge Y} Z + \parenthesis{AX \wedge AY} Z
 \end{equation}
@@ -122,7 +122,7 @@ onde $K_{\text{ext}}$ denota a curvatura extrínseca de $M^2$, que é dada pelo 
 
 \section{Superfícies mínimas em $\realnumbers^3$}
 
-Uma superfície regular $M$ em $\R^3$ é dita ser uma \emph{superfície mínima} se sua curvatura média $H$ é nula em todos os pontos. O plano é, trivialmente, uma superfície mínima pois, suas curvaturas principais são identicamente nulas em todos os pontos.
+Uma superfície regular $M$ em $\R^3$ é dita ser uma \emph{superfície mínima} se sua curvatura média $H$ é nula em todos os pontos. O plano é, trivialmente, uma superfície mínima pois suas curvaturas principais são identicamente nulas em todos os pontos.
 
 Antes de estudarmos mais exemplos, faremos algumas considerações. Seja $M \subset \R^3$ uma superfície orientada e considere uma função diferenciável $f: M \rightarrow \R$. Uma \emph{variação normal} de $M$ dada por $f$ é uma família de superfícies $M_t$, com $t \in (-\epsilon,\epsilon)$, dadas por
 \begin{equation*}
@@ -155,20 +155,20 @@ A fórmula \eqref{primeira-variacao-da-area} é conhecida como \emph{primeira va
 \end{proposicao}
 
 \begin{demonstracao}
-	Se $M$ é uma superfície mínima, então $H \equiv 0$, logo segue de \eqref{primeira-variacao-da-area} que $A'(0)=0$. Reciprocamente, suponha $A'(0)=0$ para toda função diferenciável $f: M \rightarrow \R$. Suponha que existe um ponto $p \in M$ tal que $H(p)>0$. Podemos escolher $f$ tal que $f(p) = H(p)$, $f \geq 0$ e $f \equiv 0$ no complementar de um domínio $D$ de $M$, com $p \in D$ e $H_{|D}>0$. Para uma tal função $f$, temos
+	Se $M$ é uma superfície mínima, então $H \equiv 0$, logo segue de \eqref{primeira-variacao-da-area} que $A'(0)=0$. Reciprocamente, suponha $A'(0)=0$ para toda função diferenciável $f: M \rightarrow \R$. Suponha que existe um ponto $p \in M$ tal que $H(p)>0$. Podemos escolher $f$ tal que $f(p) = H(p)$, $f \geq 0$ e $f \equiv 0$ no complementar de um domínio $D$ de $M$, com $p \in D$ e $H \vert_D >0$. Para uma tal função $f$, temos
 	\begin{equation*}
 		A'(0) = -\int_M H f dA <0,
 	\end{equation*}
 	o que é uma contradição. Portanto, deve-se ter $H(p)=0$, para todo $p \in M$.
 \end{demonstracao}
 
-A palavra mínima, neste contexto, está relacionada com o seguinte problema proposto por Lagrange em 1760: dado uma curva fechada $\gamma$ em $\R^3$, sem auto-interseções, determinar a superfície de área mínima que tem $\gamma$ como fronteira..
+A palavra mínima, neste contexto, está relacionada com o seguinte problema proposto por Lagrange em 1760: dado uma curva fechada $\gamma$ em $\R^3$, sem auto-interseções, determinar a superfície de área mínima que tem $\gamma$ como fronteira.
 
-Suponha que exista uma solução $M$ para o problema de Lagrange, e considere uma variação normal $M_t$ de $M$, com $t \in (-\epsilon,\epsilon)$, dada por uma função diferenciável $f: M \rightarrow \R$, com $f_{| \partial M} \equiv 0$. Como a área de $M$ é mínima tem-se, em particular, que
+Suponha que exista uma solução $M$ para o problema de Lagrange, e considere uma variação normal $M_t$ de $M$, com $t \in (-\epsilon,\epsilon)$, dada por uma função diferenciável $f: M \rightarrow \R$, com $f \vert_{\partial M} \equiv 0$. Como a área de $M$ é mínima tem-se, em particular, que
 \begin{equation*}
 	A(t) \geq A(0),
 \end{equation*}
-para todo $t \in (-\epsilon,\epsilon)$ e toda tal variação. Portanto, $A'(0)=0$ qualquer que seja a função $f: M \rightarrow \R$, com $f_{| \partial M} \equiv 0$. Isso mostra, em virtude a Proposição \ref{superficie-minima-como-ponto-critico-do-funcional-da-area}, que as superfícies de área mínima são superfícies mínimas no sentido da definição usual. A recíproca, no entanto, é falsa.
+para todo $t \in (-\epsilon,\epsilon)$ e toda tal variação. Portanto, $A'(0)=0$ qualquer que seja a função $f: M \rightarrow \R$, com $f \vert_{\partial M} \equiv 0$. Isso mostra, em virtude da Proposição \ref{superficie-minima-como-ponto-critico-do-funcional-da-area}, que as superfícies de área mínima são superfícies mínimas no sentido da definição usual. A recíproca, no entanto, é falsa.
 
 \begin{proposicao}
 	Não existem superfícies mínimas e compactas em $\R^3$.
@@ -188,7 +188,7 @@ E = G = \lambda^2 \text{ e } F=0,
 \end{equation*}
 onde $\lambda: U \rightarrow \realnumbers$ é uma função diferenciável, com $\lambda > 0$. Note que, nas coordenadas isotermas $\varphi \sim (x,y)$, a curvatura média $H$ se expressa como
 \begin{equation*}
-H = \frac{e + g}{2 \lambda^2}
+H = \frac{e + g}{2 \lambda^2}.
 \end{equation*}
 
 \begin{definicao}
@@ -252,7 +252,7 @@ H = \frac{e + g}{2 \lambda^2}
 	\begin{equation*}
 	y = a \cosh \left( \frac{z}{a} \right)
 	\end{equation*}
-	em torno ao eixo $z$.
+	em torno do eixo-$z$.
 	Assim, o catenoide pode ser parametrizado por
 	\begin{equation*}
 	\varphi(u,v) = \left( a \cosh v \cos u, a \cosh v \sin u, av \right),
@@ -275,7 +275,7 @@ H = \frac{e + g}{2 \lambda^2}
 	\begin{equation*}
 	\alpha(u) = \left( \cos u, \sin u, au \right).
 	\end{equation*}
-	Por cada ponto da hélice, trace uma reta paralela ao plano $xy$ que intercepta o eixo-$z$.
+	Por cada ponto da hélice, trace uma reta paralela ao plano-$xy$ que intercepta o eixo-$z$ ortogonalmente.
 	A superfície gerada por tais retas é o \emph{helicoide} e pode ser parametrizada por
 	\begin{equation*}
 	\varphi(u,v) = \left( v \cos u, v \sin u, au \right),
@@ -284,7 +284,7 @@ H = \frac{e + g}{2 \lambda^2}
 	\begin{equation*}
 	E = G = a^2 \cosh^2 v, \quad F = 0 \quad \text{e} \quad \varphi_{uu} + \varphi_{vv} = 0.
 	\end{equation*}
-	Portanto o helicoide é superfície mínima.
+	Portanto o helicoide é uma superfície mínima.
 \end{exemplo}
 
 \begin{figure}
@@ -356,7 +356,7 @@ H = \frac{e + g}{2 \lambda^2}
 	(1 + f_y^2) f_{xx}  - 2 f_x f_y f_{xy} + (1+f_x^2) f_{yy} = 0,
 	\end{equation}
 	que é uma EDP de 2\textsuperscript{a} ordem.
-	Um exemplo simples da equação \eqref{edp_superficies_minimas} é a função linear
+	Uma solução simples da equação \eqref{edp_superficies_minimas} é a função linear
 	\begin{equation*}
 	f(x,y) = ax + by + c,
 	\end{equation*}
@@ -396,8 +396,8 @@ H = \frac{e + g}{2 \lambda^2}
 	\caption{Superfície de Scherk. Autor: Matthias Weber. Licencia: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported License (\url{http://creativecommons.org/licenses/by-nc-nd/3.0/}). Enlace: \url{https://minimal.sitehost.iu.edu/archive/Classical/Classical/SinglyScherk/web/index.html}}
 \end{figure}
 
-\section{A formula de representação de Weierstrass}
-Nesta seção apresentaremos a formula de representação de Weierstrass que tem como objetivo gerar superfícies mínimas em $\R^3$. Esta fórmula faz uso da teoria de superfícies de Riemann e Análise Complexa.
+\section{A fórmula de representação de Weierstrass}
+Nesta seção apresentaremos a fórmula de representação de Weierstrass que tem como objetivo gerar superfícies mínimas em $\R^3$. Esta fórmula faz uso da teoria de superfícies de Riemann e Análise Complexa.
 
 Considere o plano complexo $\complexnumbers$ identificado com $\realnumbers^2$ através do monomorfismo
 \begin{equation*}
@@ -424,7 +424,7 @@ tal que $\Re(f)$ é parte real da função $f$ e $\Im(f)$ é a parte imaginaria 
 
 \end{definicao}
 
-Dado uma superfície $M \subset \realnumbers^3$ e uma carta local $(U, \varphi)$ em $M$, com
+Dados uma superfície $M \subset \realnumbers^3$ e uma carta local $(U, \varphi)$ em $M$, com
 \begin{equation*}
 \varphi(u,v) = (x_1(u,v), x_2(u,v), x_3(u,v)),
 \end{equation*}
@@ -478,7 +478,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 \end{lema}
 
 \begin{demonstracao}
-	Seja $(U, \varphi)$ a carta local isoterma em $M$. Então,
+	Seja $(U, \varphi)$ uma carta local isoterma em $M$. Então,
 	\begin{align*}
 	f_1^2 + f_2^2 + f_3^2 &= \sum_{j=1}^{3} \left[ \left( \partialdifffrac{x_j}{u} \right)^2 - \left( \partialdifffrac{x_j}{v} \right)^2 - 2i \partialdifffrac{x_j}{u} \partialdifffrac{x_j}{v} \right]\\
 	&= E - G - 2iF = 0,
@@ -653,7 +653,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 	Isso significa que
 	\begin{equation*}
 	E = G = \lambda^2 \quad \text{e} \quad
-	F = 0
+	F = 0,
 	\end{equation*}
 	onde
 	\begin{align*}
@@ -675,7 +675,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 	\begin{equation*}
 	\pi: S^2 \setminus \{ (0,0,1) \} \rightarrow \complexnumbers
 	\end{equation*}
-	é a aplicação
+	é a aplicação dada por
 	\begin{equation*}
 	\pi(x_1, x_2, x_3) = \frac{x_1 + ix_2}{1 - x_3},
 	\end{equation*}
@@ -699,7 +699,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 \end{corolario}
 
 \begin{demonstracao}
-	Se $M$ não está contida num plano, podemos construir a função $g$ que é meromorfa no plano todo $\complexnumbers$. Pelo teorema de Picard, ela atinge todos seus valores com, pelo menos, duas excepções, ou $g$ é constante. A equação \eqref{eq:projecao-esterografica} mostra que o mesmo se aplica a $N$ e, no último caso, $M$ está contida em um plano.
+	Se $M$ não está contida num plano, podemos construir a função $g$ que é meromorfa no plano todo $\complexnumbers$. Pelo teorema de Picard, ela atinge todos seus valores com, pelo menos, duas exceções, ou $g$ é constante. A equação \eqref{eq:projecao-esterografica} mostra que o mesmo se aplica a $N$ e, no último caso, $M$ está contida num plano.
 \end{demonstracao}
 
 \begin{teorema}[Existência local de parâmetros isotermos]
@@ -708,7 +708,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 
 \begin{demonstracao}
 	Seja $U \subset M$ uma vizinhança coordenada de $p$ que é o gráfico de uma função diferenciável que, podemos assumir, ser da forma $z = h(x,y), (x,y) \in U$.
-	Lembrando que a equação para gráficos mínimos e
+	Lembrando que a equação para gráficos mínimos é dada por
 	\begin{equation*}
 	(1 + h_y^2) h_{xx} - 2 h_x h_y h_{xy} + (1 + h_x^2) h_{yy} = 0,
 	\end{equation*}
@@ -726,7 +726,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 	\overline{x} = x \quad \text{e} \quad
 	\overline{y} = \phi(x,y).
 	\end{equation*}
-	Um calculo simples mostra que
+	Um cálculo simples mostra que
 	\begin{align*}
 	\partialdifffrac{x}{\overline{x}} &= 1, \\
 	\partialdifffrac{x}{\overline{y}} &= 0, \\
@@ -736,14 +736,14 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 	e os coeficientes da segunda forma fundamental, em relação a $(\overline{x}, \overline{y})$, são
 	\begin{equation*}
 	E = G = \frac{W^2}{1 + h_y^2} \quad \text{e} \quad
-	F = 0
+	F = 0,
 	\end{equation*}
 	como queríamos.
 \end{demonstracao}
 
 \section{Superfícies mínimas em $\Sp^3$}
 
-Em esta seção apresentaremos alguns resultados básicos sobre superfícies mínimas na esfera $\Sp^3$. Indicaremos as referências onde as demonstrações podem ser encontradas. Discutiremos também a minimalidade do toro de Clifford.
+Nesta seção apresentaremos alguns resultados básicos sobre superfícies mínimas na esfera $\Sp^3$. Indicaremos as referências onde as demonstrações podem ser encontradas. Discutiremos também a minimalidade do toro de Clifford.
 
 A esfera unitária $\Sp^3$ é a hipersuperfície de $\R^4$ dada por
 \[ \Sp^3 = \{ x \in \R^4: x_1^2 + x_2^2 + x_3^2 + x_4^2 = 1. \} \]
@@ -754,17 +754,17 @@ onde $\lambda_1$ e $\lambda_2$ são as curvaturas principais do operador de form
 Assim como para superfícies em $\R^3$, a soma das curvaturas principais será denotada como a curvatura média de $M$
 \[ H = \lambda_1 + \lambda_2 = \sum_{i=1}^{2} \innerproduct{\tilde{\nabla}_{X_i} \nu}{X_i}, \]
 onde $\{X_1,X_2\}$ é um referencial local tangente a $M$ e $\tilde{\nabla}$ denota a conexão de Levi-Civita de $\Sp^3$. A curvatura média de $M$ pode ser interpretada, geometricamente, como um $L^2$-gradiente do funcional de área. De forma mais precisa, dado qualquer função $\varphi \in \smoothfunctionsspace{M}$, tem-se
-\[ \frac{d}{dt} \text{Área} (M_t)_{|t=0} = \int_M H \varphi, \]
+\[ \frac{d}{dt} \text{Área} (M_t) \vert_{t=0} = \int_M H \varphi, \]
 onde
 \[ M_t = \{ \cos(t \varphi(x))x + \sin(t \varphi(x) N(x)): x \in M \}. \]
 
 Analogamente ao caso Euclideano, essa interpretação variacional motiva a definir uma superfície na esfera $\Sp^3$ como sendo \emph{mínima} se sua curvatura média $H$ for identicamente nula. O conceito de minimalidade em $\Sp^3$ pode ser formulado de várias formas equivalentes (cf. \cite[Theorem 3.2.1]{Simons1968} e \cite{Dajczer2019}).
 
 \begin{teorema}\label{propriedades_sup_min_S3}
-	Dado uma superfície $M$ em $\Sp^3$, as seguentes afirmações são equivalentes:
+	Dado uma superfície $M$ em $\Sp^3$, as seguintes afirmações são equivalentes:
 	\begin{enumerate}
 		\item[a)] $M$ é uma superfície mínima.
-		\item[b)] $M$ é um ponto critico do funcional de área.
+		\item[b)] $M$ é um ponto crítico do funcional área.
 		\item[c)] As restrições das funções coordenadas em $\R^4$ são autofunções do operador Laplaciano $-\Delta_M$ com autovalor igual a 2, ou seja, $\Delta_M x_i = -2 x_i$, com $1 \leq i \leq 4$.
 	\end{enumerate}
 \end{teorema}
@@ -784,26 +784,30 @@ Vejamos outro exemplo importante.
 	\[ \frac{\partial x}{\partial u} = \frac{1}{\sqrt{2}} \parenthesis{-\sin u, \cos u, 0, 0} \]
 	e
 	\[ \frac{\partial x}{\partial v} = \frac{1}{\sqrt{2}} \parenthesis{0,0, -\sin v, \cos v}. \]
-	Disso decorre, em particular, que $x$ é uma imersão. Além disso, como $x(u + 2k \pi, v + 2l \pi) = x(u,v)$, para quaisquer $(u,v) \in \R^2$ e $k,l \in \mathbb{Z}$, segue que a imagem $x(\R^2)$ é um toro $\Sp_{\sqrt{2}}^1 \times \Sp_{\sqrt{2}}^1 \subset \R^4$. A fim de entender a geometria deste toro, fixemos o seguinte referencial ortonormal
+	Disso decorre, em particular, que $x$ é uma imersão. Além disso, como 
+	\[x(u + 2k \pi, v + 2l \pi) = x(u,v), \] 
+	para quaisquer $(u,v) \in \R^2$ e $k,l \in \mathbb{Z}$, segue que a imagem $x(\R^2)$ é um toro $\Sp_{\sqrt{2}}^1 \times \Sp_{\sqrt{2}}^1 \subset \R^4$. A fim de entender a geometria deste toro, fixemos o seguinte referencial ortonormal
 	\begin{align*}
 		e_1 &= \parenthesis{-\sin u, \cos u, 0, 0},\\
 		e_2 &= \parenthesis{0, 0, -\sin v, \cos v},\\
 		e_3 &= \frac{1}{\sqrt{2}} \parenthesis{\cos u, \sin u, \cos v, \sin v},\\
 		e_4 &= \frac{1}{\sqrt{2}} \parenthesis{-\cos u, -\sin u, \cos v, \sin v}.
 	\end{align*}
-	Observe que o vetor posição $e_3 = x$ descreve uma esfera unitária, pois $\norm{x} = 1$. Assim, o toro $x(\R^2)$ está contido na esfera unitária $\Sp^3 \subset \R^4$. Além disso, o referencial $\{e_1,e_2,e_3,e_4\}$ é tangente a $\Sp^3$, com
+	Observe que o vetor posição $e_3 = x$ descreve uma esfera unitária, pois $\norm{x} = 1$. Assim, o toro $x(\R^2)$ está contido na esfera unitária $\Sp^3 \subset \R^4$. Além disso, o referencial $\{e_1,e_2,e_4\}$ é tangente a $\Sp^3$, com
 	$e_4$ normal ao toro $x(\R^2)$. Como imersão isométrica, $x: \Sp_{\sqrt{2}}^1 \times \Sp_{\sqrt{2}}^1 \rightarrow \Sp^3$ é conhecida como o \emph{toro de Clifford}. Denotemos por $(h_{ij})$ a matriz da segunda forma fundamental do toro em relação ao campo normal $e_4$. Cada entrada da matriz é dada por
-	\begin{align*}
-		h_{11} &= \innerproduct{A e_1}{e_1}\\
-		h_{12} &= \innerproduct{A e_1}{e_2}\\
-		h_{21} &= \innerproduct{A e_2}{e_1}\\
-		h_{22} &= \innerproduct{A e_2}{e_2}
-	\end{align*},
+	\begin{equation*}
+		\begin{split}
+			h_{11} &= \innerproduct{A e_1}{e_1}\\
+			h_{12} &= \innerproduct{A e_1}{e_2}\\
+			h_{21} &= \innerproduct{A e_2}{e_1}\\
+			h_{22} &= \innerproduct{A e_2}{e_2}
+		\end{split},
+	\end{equation*}
 	onde $AX$ é dado por
 	\[ AX = -\tilde{\nabla}_X e_4, \]
 	para qualquer vetor tangente $X$ ao toro $x(\R^2)$. Temos:
 	\begin{align*}
-		A e_1 &= -\tilde{\nabla}_{\frac{\partial}{\partial u}} e_4 = \frac{1}{\sqrt{2}} \parenthesis{-\sin u, \cos u, 0, 0}\\
+		A e_1 &= -\tilde{\nabla}_{\frac{\partial}{\partial u}} e_4 = \frac{1}{\sqrt{2}} \parenthesis{-\sin u, \cos u, 0, 0},\\
 		A e_2 &= -\tilde{\nabla}_{\frac{\partial}{\partial v}} = \frac{1}{\sqrt{2}} \parenthesis{0,0, \sin v, -\cos v}.
 	\end{align*}
 	Substituindo, obtemos:
