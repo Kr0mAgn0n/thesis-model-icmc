@@ -4,14 +4,14 @@ Neste capítulo apresentaremos fatos básicos da teoria de superfícies no espa�
 
 Nesta seção apresentaremos, sem demonstrações, as equações fundamentais de uma imersão isométrica entre duas variedades Riemannianas dando enfoque, em especial, quando o espaço ambiente é uma forma espacial. Admitiremos conhecidos todos os pré-requisitos de Geometria Riemanniana necessários à compreensão dessa seção.
 
-Dados duas variedades Riemannianas $M^m$ e $\tilde{M}^n$, uma \emph{imersão isométrica} entre $M$ e $\tilde{M}$ é uma aplicação diferenciável $f: M \rightarrow \tilde{M}$ que é uma imersão e, para todo $p \in M$, satisfaz
+Dadas duas variedades Riemannianas $M^m$ e $\tilde{M}^n$, uma \emph{imersão isométrica} entre $M$ e $\tilde{M}$ é uma aplicação diferenciável $f: M \rightarrow \tilde{M}$ que é uma imersão e, para todo $p \in M$, satisfaz
 \begin{equation}\label{def-imersao}
 \innerproduct{X}{Y} = \innerproduct{df(p) X}{df(p) Y},	
 \end{equation}
 para quaisquer $X,Y \in T_p M$. A diferença $n-m$ é chamada a \emph{codimensão} de $f$. Observe que se $f: M \rightarrow \tilde{M}$ é uma imersão e $\innerproduct{}{}$ é uma métrica em $\tilde{M}$, a condição \eqref{def-imersao} define uma métrica em $M$, a \emph{métrica induzida} por $f$, que torna $f$ uma imersão isométrica.
 
 \begin{definicao}
-	Dado uma imersão isométrica $f: M \rightarrow \tilde{M}$, seja $f^* T \tilde{M}$ o fibrado induzido sobre $M$, cuja fibra em $p \in M$ é $T_{f(p)} \tilde{M}$. O complemento ortogonal de $f_* T_p M$ em $T_{f(p)} \tilde{M}$, denotado por $T_p M^\perp$, chama-se o \emph{espaço normal} de $f$ em $p$. O \emph{fibrado normal} $TM^\perp$ de $f$ é o subfibrado vetorial de $f^* T \tilde{M}$, cuja fibra em $p \in M$ é $T_p M^\perp$.
+	Dada uma imersão isométrica $f: M \rightarrow \tilde{M}$, seja $f^* T \tilde{M}$ o fibrado induzido sobre $M$, cuja fibra em $p \in M$ é $T_{f(p)} \tilde{M}$. O complemento ortogonal de $f_* T_p M$ em $T_{f(p)} \tilde{M}$, denotado por $T_p M^\perp$, chama-se o \emph{espaço normal} de $f$ em $p$. O \emph{fibrado normal} $TM^\perp$ de $f$ é o subfibrado vetorial de $f^* T \tilde{M}$, cuja fibra em $p \in M$ é $T_p M^\perp$.
 \end{definicao}
 
 A conexão de Levi-Civita $\tilde{\nabla}$ de $\tilde{M}$ induz uma única conexão $\hat{\nabla}$ em $f^* T \tilde{M}$ tal que
@@ -20,7 +20,7 @@ para quaisquer $X \in \vectorfieldsspace{M}$ e $Z \in \vectorfieldsspace{\tilde{
 
 Dados dois campos vetoriais $X,Y \in \vectorfieldsspace{M}$, decompomos
 \[ \tilde{\nabla}_X f_* Y = \parenthesis{\tilde{\nabla}_X f_* Y}^\top + \parenthesis{\tilde{\nabla}_X f_* Y}^\perp, \]
-em relação à decomposição ortogonal
+com relação à decomposição ortogonal
 \[ f^* T \tilde{M} = f_* TM \oplus TM^\perp. \]
 A aplicação
 \[ \nabla_X Y = f_*^{-1} \parenthesis{\tilde{\nabla}_X f_* Y}^\top \]
@@ -73,7 +73,7 @@ define uma conexão compatível em $TM^\perp$, chamada a \emph{conexão normal} 
 \end{definicao}
 
 \begin{definicao}
-	Uma imersão isométrica $f: M \rightarrow \tilde{M}$ é dita ser \emph{mínima num ponto} $p \in M$ se $H(p)=0$. Diremos que $f$ é \emph{mínima} se for mínima em todos os pontos $p \in M$.
+	Uma imersão isométrica $f: M \rightarrow \tilde{M}$ é dita \emph{mínima num ponto} $p \in M$ se $H(p)=0$. Diremos que $f$ é \emph{mínima} se for mínima em todos os pontos $p \in M$.
 \end{definicao}
 
 Usando as fórmulas de Gauss e Weingarten, podemos obter as equações de compatibilidade para uma dada imersão isométrica $f: M^m \rightarrow \tilde{M}^n$. De forma mais precisa, as equações de Gauss, Codazzi e Ricci para a imersão isométrica $f$ são dadas, respectivamente, por
@@ -99,7 +99,7 @@ e
 \innerproduct{R^\perp (X,Y) \xi}{\eta} = \innerproduct{[A_\xi, A_\eta] X}{Y}.
 \end{equation}
 
-Para os espaços ambientes $\mathbb{Q}^n_c$, as equações de compatibilidade \eqref{eq-gauss-em-formas-espaciais}, \eqref{eq-codazzi-em-formas-espaciais} e \eqref{eq-ricci-em-formas-espaciais} são equações intrínsecas relacionando o tensor de curvatura de $M^m$, a segunda forma fundamental de $f$ e o tensor de curvatura da conexão normal. Assim, é natural se perguntar se tais dados, satisfazendo as equações de compatibilidade de um fibrado vetorial sobre uma variedade Riemanniana $M^m$ podem ser realizados como os dados associados com uma imersão isométrica de $M^m$ em $\mathbb{Q}^n_c$.
+Seja $\mathbb{Q}^n_c$ uma forma espacial completa, simplesmente conexa e com curvatura seccional constante $c$. Para os espaços ambientes $\mathbb{Q}^n_c$, as equações de compatibilidade \eqref{eq-gauss-em-formas-espaciais}, \eqref{eq-codazzi-em-formas-espaciais} e \eqref{eq-ricci-em-formas-espaciais} são equações intrínsecas relacionando o tensor de curvatura de $M^m$, a segunda forma fundamental de $f$ e o tensor de curvatura da conexão normal. Assim, é natural se perguntar se tais dados, satisfazendo as equações de compatibilidade de um fibrado vetorial sobre uma variedade Riemanniana $M^m$ podem ser realizados como os dados associados com uma imersão isométrica de $M^m$ em $\mathbb{Q}^n_c$.
 
 O \emph{teorema fundamental para subvariedades} (cf. \cite[Theorem 1.10]{Dajczer2019}) estabelece que isso é, localmente, sempre verdadeiro, e também globalmente quando $M^m$ é simplesmente conexa. Além disso, independente do fato de $M^m$ ser simplesmente conexa, a imersão isométrica é única a menos de isometrias do espaço ambiente.
 
@@ -122,7 +122,7 @@ onde $K_{\text{ext}}$ denota a curvatura extrínseca de $M^2$, que é dada pelo 
 
 \section{Superfícies mínimas em $\realnumbers^3$}
 
-Uma superfície regular $M$ em $\R^3$ é dita ser uma \emph{superfície mínima} se sua curvatura média $H$ é nula em todos os pontos. O plano é, trivialmente, uma superfície mínima pois suas curvaturas principais são identicamente nulas em todos os pontos.
+Uma superfície regular $M$ em $\R^3$ é dita ser uma \emph{superfície mínima} se sua curvatura média $H$ é nula em todos os pontos. O plano é, trivialmente, uma superfície mínima, pois suas curvaturas principais são identicamente nulas em todos os pontos.
 
 Antes de estudarmos mais exemplos, faremos algumas considerações. Seja $M \subset \R^3$ uma superfície orientada e considere uma função diferenciável $f: M \rightarrow \R$. Uma \emph{variação normal} de $M$ dada por $f$ é uma família de superfícies $M_t$, com $t \in (-\epsilon,\epsilon)$, dadas por
 \begin{equation*}
@@ -182,11 +182,11 @@ para todo $t \in (-\epsilon,\epsilon)$ e toda tal variação. Portanto, $A'(0)=0
 	Isso implica que $k_1=-k_2$ em todos os pontos de $M$, logo a curvatura Gaussiana $K$ satisfaz $K = k_1 k_2 \leq 0$. No entanto, toda superfície compacta em $\R^3$ admite um ponto $p$ tal que $K(p)>0$, e isso nos dá uma contradição.
 \end{demonstracao}
 
-Dado uma superfície regular $M$ em $\realnumbers^3$, considere uma carta local isoterma $(U,\varphi)$ para $M$, i.e., 
+Dado uma superfície regular $M$ em $\realnumbers^3$, considere uma carta local isotérmica $(U,\varphi)$ para $M$, i.e., 
 \begin{equation*}
 E = G = \lambda^2 \text{ e } F=0,
 \end{equation*}
-onde $\lambda: U \rightarrow \realnumbers$ é uma função diferenciável, com $\lambda > 0$. Note que, nas coordenadas isotermas $\varphi \sim (x,y)$, a curvatura média $H$ se expressa como
+onde $\lambda: U \rightarrow \realnumbers$ é uma função diferenciável, com $\lambda > 0$. Note que, nas coordenadas isotérmicas $\varphi \sim (x,y)$, a curvatura média $H$ se expressa como
 \begin{equation*}
 H = \frac{e + g}{2 \lambda^2}.
 \end{equation*}
@@ -205,14 +205,14 @@ H = \frac{e + g}{2 \lambda^2}.
 \end{definicao}
 
 \begin{proposicao}
-	Se $(U, \varphi)$ é uma carta local isoterma em $M$, então 
+	Se $(U, \varphi)$ é uma carta local isotérmica em $M$, então 
 	\begin{equation*}
 	\Delta \varphi = 2 \lambda^2 H N.
 	\end{equation*}
 \end{proposicao}
 
 \begin{demonstracao}
-	Como $\varphi$ é isoterma, com $\varphi \sim (u, v)$, temos
+	Como $\varphi$ é isotérmica, com $\varphi \sim (u, v)$, temos
 	\begin{equation*}
 	\innerproduct{\varphi_u}{\varphi_v} = \lambda^2 = \innerproduct{\varphi_v}{\varphi_u} \quad \text{e} \quad \innerproduct{\varphi_u}{\varphi_v} = 0.
 	\end{equation*}
@@ -232,7 +232,7 @@ H = \frac{e + g}{2 \lambda^2}.
 	\begin{equation}
 	H = \frac{e+g}{2 \lambda^2},
 	\end{equation}
-	obtemos:
+	obtemos
 	\begin{equation*}
 		2 \lambda^2 H = e + g = \innerproduct{\varphi_{uu} + \varphi_{vv}}{N},
 	\end{equation*}
@@ -244,16 +244,16 @@ H = \frac{e + g}{2 \lambda^2}.
 \end{demonstracao}
 
 \begin{corolario}\label{equiv_isoterma_harmonica}
-	Uma superfície $M$ em $\realnumbers^3$ é mínima se, e somente se, toda carta local isoterma é harmônica.
+	Uma superfície $M$ em $\realnumbers^3$ é mínima se, e somente se, toda carta local isotérmica é harmônica.
 \end{corolario}
 
 \begin{exemplo}
-	O \emph{catenoide} é a superfície em $\realnumbers^3$ gerada pela rotação da catenária 
+	O \emph{catenóide} é a superfície em $\realnumbers^3$ gerada pela rotação da catenária 
 	\begin{equation*}
 	y = a \cosh \left( \frac{z}{a} \right)
 	\end{equation*}
 	em torno do eixo-$z$.
-	Assim, o catenoide pode ser parametrizado por
+	Assim, o catenóide pode ser parametrizado por
 	\begin{equation*}
 	\varphi(u,v) = \left( a \cosh v \cos u, a \cosh v \sin u, av \right),
 	\end{equation*}
@@ -261,13 +261,13 @@ H = \frac{e + g}{2 \lambda^2}.
 	\begin{equation*}
 	E = G = a^2 \cosh^2 v, \quad F = 0 \quad \text{e} \quad \varphi_{uu} + \varphi_{vv} = 0.
 	\end{equation*}
-	Portanto o catenoide e uma superfície mínima.
+	Portanto o catenóide é uma superfície mínima.
 \end{exemplo}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{images/catenoid}
-	\caption{Catenoide. Autor: Matthias Weber. Licencia: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported License (\url{http://creativecommons.org/licenses/by-nc-nd/3.0/}). Enlace: \url{https://minimal.sitehost.iu.edu/archive/Classical/Classical/Catenoid/web/index.html}}
+	\caption{Catenóide. Autor: Matthias Weber. Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported License (\url{http://creativecommons.org/licenses/by-nc-nd/3.0/}). Enlace: \url{https://minimal.sitehost.iu.edu/archive/Classical/Classical/Catenoid/web/index.html}}
 \end{figure}
 
 \begin{exemplo}
@@ -276,7 +276,7 @@ H = \frac{e + g}{2 \lambda^2}.
 	\alpha(u) = \left( \cos u, \sin u, au \right).
 	\end{equation*}
 	Por cada ponto da hélice, trace uma reta paralela ao plano-$xy$ que intercepta o eixo-$z$ ortogonalmente.
-	A superfície gerada por tais retas é o \emph{helicoide} e pode ser parametrizada por
+	A superfície gerada por tais retas é o \emph{helicóide} e pode ser parametrizada por
 	\begin{equation*}
 	\varphi(u,v) = \left( v \cos u, v \sin u, au \right),
 	\end{equation*}
@@ -284,20 +284,20 @@ H = \frac{e + g}{2 \lambda^2}.
 	\begin{equation*}
 	E = G = a^2 \cosh^2 v, \quad F = 0 \quad \text{e} \quad \varphi_{uu} + \varphi_{vv} = 0.
 	\end{equation*}
-	Portanto o helicoide é uma superfície mínima.
+	Portanto o helicóide é uma superfície mínima.
 \end{exemplo}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{images/helicoid}
-	\caption{Helicoide. Autor: Matthias Weber. Licencia: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported License (\url{http://creativecommons.org/licenses/by-nc-nd/3.0/}). Enlace: \url{https://minimal.sitehost.iu.edu/archive/Classical/Classical/Helicoid/web/index.html}}
+	\caption{Helicóide. Autor: Matthias Weber. Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported License (\url{http://creativecommons.org/licenses/by-nc-nd/3.0/}). Enlace: \url{https://minimal.sitehost.iu.edu/archive/Classical/Classical/Helicoid/web/index.html}}
 \end{figure}
 
 \begin{teorema}
 	Além do plano,
 	\begin{enumerate}
-		\item[a)] O catenoide é a única superfície rotacional mínima.
-		\item[b)] O helicoide é a única superfície regrada mínima.
+		\item[a)] O catenóide é a única superfície rotacional mínima.
+		\item[b)] O helicóide é a única superfície regrada mínima.
 	\end{enumerate}
 \end{teorema}
 
@@ -393,13 +393,13 @@ H = \frac{e + g}{2 \lambda^2}.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{images/scherk}
-	\caption{Superfície de Scherk. Autor: Matthias Weber. Licencia: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported License (\url{http://creativecommons.org/licenses/by-nc-nd/3.0/}). Enlace: \url{https://minimal.sitehost.iu.edu/archive/Classical/Classical/SinglyScherk/web/index.html}}
+	\caption{Superfície de Scherk. Autor: Matthias Weber. Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported License (\url{http://creativecommons.org/licenses/by-nc-nd/3.0/}). Enlace: \url{https://minimal.sitehost.iu.edu/archive/Classical/Classical/SinglyScherk/web/index.html}}
 \end{figure}
 
 \section{A fórmula de representação de Weierstrass}
 Nesta seção apresentaremos a fórmula de representação de Weierstrass que tem como objetivo gerar superfícies mínimas em $\R^3$. Esta fórmula faz uso da teoria de superfícies de Riemann e Análise Complexa.
 
-Considere o plano complexo $\complexnumbers$ identificado com $\realnumbers^2$ através do monomorfismo
+Considere o plano complexo $\complexnumbers$ identificado com $\realnumbers^2$ através da aplicação injetora 
 \begin{equation*}
 (x,y) \in \realnumbers^2 \mapsto x + iy \in \complexnumbers.
 \end{equation*}
@@ -434,7 +434,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 \end{equation}
 
 \begin{lema}
-	Seja $(U, \varphi)$ uma carta local isoterma em $M$. Então, $\varphi$ é mínima se, e somente se, cada $f_j$, definida em \eqref{carta_isoterma_cauchy-riemann}, é holomorfa.
+	Seja $(U, \varphi)$ uma carta local isotérmica em $M$. Então, $\varphi$ é mínima se, e somente se, cada $f_j$, definida em \eqref{carta_isoterma_cauchy-riemann}, é holomorfa.
 \end{lema}
 
 \begin{demonstracao}
@@ -469,16 +469,16 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 \end{demonstracao}
 
 \begin{lema}\label{lema_fj_2}
-	Sejam $M \subset \realnumbers^3$ uma superfície mínima e $(U, \varphi)$ uma carta local isoterma. Então, as funções holomorfas $f_j$, definidas em \eqref{carta_isoterma_cauchy-riemann}, satisfazem
+	Sejam $M \subset \realnumbers^3$ uma superfície mínima e $(U, \varphi)$ uma carta local isotérmica. Então, as funções holomorfas $f_j$, definidas em \eqref{carta_isoterma_cauchy-riemann}, satisfazem
 	\begin{gather}\label{sum_fj_2}
 	f_1^2 + f_2^2 + f_3^2 = 0\\ \label{sum_norm_fj_2}
 	|f_1|^2 + |f_2|^2 + |f_3|^2 \neq 0.
 	\end{gather}
-	Reciprocamente, sejam $f_1, f_2, f_3$ funções holomorfas, definidas num aberto simplesmente conexo $U \subset \complexnumbers$, satisfazendo \eqref{sum_fj_2} e \eqref{sum_norm_fj_2}. Então, tais funções dão origem a uma carta local isoterma mínima $(U, \varphi)$, cujas funções coordenadas satisfazem \eqref{carta_isoterma_cauchy-riemann}.
+	Reciprocamente, sejam $f_1, f_2, f_3$ funções holomorfas, definidas num aberto simplesmente conexo $U \subset \complexnumbers$, satisfazendo \eqref{sum_fj_2} e \eqref{sum_norm_fj_2}. Então, tais funções dão origem a uma carta local isotérmica mínima $(U, \varphi)$, cujas funções coordenadas satisfazem \eqref{carta_isoterma_cauchy-riemann}.
 \end{lema}
 
 \begin{demonstracao}
-	Seja $(U, \varphi)$ uma carta local isoterma em $M$. Então,
+	Seja $(U, \varphi)$ uma carta local isotérmica em $M$. Então,
 	\begin{align*}
 	f_1^2 + f_2^2 + f_3^2 &= \sum_{j=1}^{3} \left[ \left( \partialdifffrac{x_j}{u} \right)^2 - \left( \partialdifffrac{x_j}{v} \right)^2 - 2i \partialdifffrac{x_j}{u} \partialdifffrac{x_j}{v} \right]\\
 	&= E - G - 2iF = 0,
@@ -488,7 +488,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 	\begin{equation}\label{carta_isoterma_eq_integral}
 	x_j(u,v) = \int_{\xi_0}^{\xi} f_j(z) dz, \quad 1 \leq j \leq 3
 	\end{equation}
-	com $\xi = (u,v) \in U$, para algum $\xi_0 \in U$ fixado. Note que cada $x_j$ está bem definida, pois $U$ é simplesmente conexo e $f_j$ é holomorfa, o que nos dá uma função holomorfa definida em $U$, para o qual podemos aplicar as equações de Cauchy-Riemann, obtendo:
+	com $\xi = (u,v) \in U$, para algum $\xi_0 \in U$ fixado. Note que cada $x_j$ está bem definida, pois $U$ é simplesmente conexo e $f_j$ é holomorfa, o que nos dá uma função holomorfa definida em $U$, para qual podemos aplicar as equações de Cauchy-Riemann, obtendo:
 	\begin{align*}
 	\frac{d}{d \xi} \int_{\xi_0}^{\xi} f_j &= \frac{d}{d \xi} \left[ \Re \int_{\xi_0}^{\xi} f_j + i \Im \int_{\xi_0}^{\xi} f_j \right]\\
 	&= \pdiff{u} \Re \int_{\xi_0}^{\xi} f_j + i \pdiff{u} \Im \int_{\xi_0}^{\xi} f_j\\
@@ -498,7 +498,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 	\begin{equation*}
 	\varphi = (x_1,x_2,x_3)
 	\end{equation*}
-	são dadas como em \eqref{carta_isoterma_eq_integral}. De \eqref{sum_fj_2} e \eqref{sum_norm_fj_2} segue que $(U,\varphi)$ é uma carta local isoterma. Além disso, as funções $f_j$ serem holomorfas implicam que as funções coordenadas $x_j$ são harmônicas, logo, pelo Corolário \ref{equiv_isoterma_harmonica}, $\varphi$ é mínima.
+	são dadas como em \eqref{carta_isoterma_eq_integral}. De \eqref{sum_fj_2} e \eqref{sum_norm_fj_2} segue que $(U,\varphi)$ é uma carta local isotérmica. Além disso, as funções $f_j$ serem holomorfas implica que as funções coordenadas $x_j$ são harmônicas, logo, pelo Corolário \ref{equiv_isoterma_harmonica}, $\varphi$ é mínima.
 \end{demonstracao}
 
 \begin{observacao}
@@ -520,7 +520,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 	f_1^2 + f_2^2 + f_3^2 &= \frac{1}{4} f(z)^2 (1 - g(z)^2)^2 - \frac{1}{4} f(z)^2 (1 + g(z)^2)^2 + f(z)^2 g(z)^2\\
 	&= -f(z)^2 g(z)^2 + f(z)^2 g(z)^2 =0.
 	\end{align*}
-	Afirmamos que $\varphi(z) \neq 0, \forall z \in U$. De fato, a hipótese sobre os zeros de $f$ e os polos de $g$ implicam que $f(z) g(z)^2 \neq 0$. Assim, para qualquer $z$ fixado, a primeira e a segunda coordenada de $\varphi$ não podem ser ambas nulas.
+	Afirmamos que $\varphi(z) \neq 0, \forall z \in U$. De fato, a hipótese sobre os zeros de $f$ e os polos de $g$ implica que $f(z) g(z)^2 \neq 0$. Assim, para qualquer $z$ fixado, a primeira e a segunda coordenadas de $\varphi$ não podem ser ambas nulas.
 	Assim, podemos assumir que $\varphi$ é holomorfa satisfazendo
 	\begin{equation*}
 	\varphi_1^2 + \varphi_2^2 + \varphi_3^2 \not\equiv 0,
@@ -530,12 +530,12 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 	f(z) = \varphi_1(z) - i \varphi_2(z) \quad \text{e} \quad
 	g(z) = \frac{\varphi_3(z)}{\varphi_1(z) - i \varphi_2(z)}.
 	\end{equation*}
-	$f$ é uma função holomorfa e $g$ é o quociente de funções holomorfas. Se o denominador de $g$ é identicamente nulo, façamos
+	$f$ é uma função holomorfa e $g$ é o quociente de funções holomorfas. Se o denominador de $g$ é identicamente nulo, fazemos
 	\begin{equation*}
 	g(z) = \frac{\varphi_3(z)}{\varphi_1(z) + i \varphi_2(z)}
 	\end{equation*}
 	e procedemos de forma similar.
-	Assim, sendo o denominador de $g$ não nulo, tem-se que $g$ é meromorfa. Assim, a relação
+	Assim, sendo o denominador de $g$ não nulo, tem-se que $g$ é meromorfa. Logo, a relação
 	\begin{equation*}
 	\varphi_1^2 + \varphi_2^2 + \varphi_3^2 = 0
 	\end{equation*}
@@ -543,7 +543,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 	\begin{equation*}
 	(\varphi_1 + i \varphi_2)(\varphi_1 - i \varphi_2) = -\varphi_3^2
 	\end{equation*}
-	que, em termos de $f$ e $g$ torna-se
+	que, em termos de $f$ e $g$, torna-se
 	\begin{align*}
 	\varphi_1 + i \varphi_2 &= \frac{-\varphi_3^2}{\varphi_1 - i \varphi_2}\\
 	&= \frac{-\varphi_3^2}{(\varphi_1 - i \varphi_2)^2} (\varphi_1 - i \varphi_2)\\
@@ -567,8 +567,8 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 	é uma carta local mínima, chamada \emph{a representação de Weierstrass} da teoria local de superfícies mínimas.
 \end{definicao}
 
-\begin{exemplo}[Catenoide]
-	O catenoide pode ser representado pelas funções holomorfas $f, g: \complexnumbers \rightarrow \complexnumbers$ dadas por
+\begin{exemplo}[Catenóide]
+	O catenóide pode ser representado pelas funções holomorfas $f, g: \complexnumbers \rightarrow \complexnumbers$ dadas por
 	\begin{equation*}
 	f(z) = e^{-z} \quad \text{e} \quad
 	g(z) = e^z.
@@ -601,7 +601,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{images/enneper}
-	\caption{Superfície de Enneper. Autor: Matthias Weber. Licencia: Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported License (\url{http://creativecommons.org/licenses/by-nc-nd/3.0/}). Enlace: \url{https://minimal.sitehost.iu.edu/archive/Classical/Classical/Enneper/web/index.html}}
+	\caption{Superfície de Enneper. Autor: Matthias Weber. Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported License (\url{http://creativecommons.org/licenses/by-nc-nd/3.0/}). Enlace: \url{https://minimal.sitehost.iu.edu/archive/Classical/Classical/Enneper/web/index.html}}
 \end{figure}
 
 \begin{exemplo}[Superfície de Scherk]
@@ -649,7 +649,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 	\frac{\cos y}{\cos x} = \frac{z^2 + 1}{|z^2 - 1|} = e^z.
 	\end{equation*}
 	
-	Vejamos uma aplicação da representação de Weierstrass. Dado uma superfície mínima $M \subset \realnumbers^3$, seja $(U, \varphi)$ uma carta local isoterma.
+	Vejamos uma aplicação da representação de Weierstrass. Dado uma superfície mínima $M \subset \realnumbers^3$, seja $(U, \varphi)$ uma carta local isotérmica.
 	Isso significa que
 	\begin{equation*}
 	E = G = \lambda^2 \quad \text{e} \quad
@@ -691,7 +691,7 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 \end{exemplo}
 
 \begin{proposicao}
-	Sejam $M \subset \realnumbers^3$ uma superfície mínima e $(U, \varphi)$ uma carta local isoterma. Então, um dos campos unitários $N$, normal a $M$ é a inversa da projeção estereográfica da função $g$ dada pela representação de Weierstrass.
+	Sejam $M \subset \realnumbers^3$ uma superfície mínima e $(U, \varphi)$ uma carta local isotérmica. Então, um dos campos unitários $N$, normal a $M$ é a inversa da projeção estereográfica da função $g$ dada pela representação de Weierstrass.
 \end{proposicao}
 
 \begin{corolario}
@@ -702,13 +702,13 @@ f_j = \partialdifffrac{x_j}{u} - i \partialdifffrac{x_j}{v}, \quad 1 \leq j \leq
 	Se $M$ não está contida num plano, podemos construir a função $g$ que é meromorfa no plano todo $\complexnumbers$. Pelo teorema de Picard, ela atinge todos seus valores com, pelo menos, duas exceções, ou $g$ é constante. A equação \eqref{eq:projecao-esterografica} mostra que o mesmo se aplica a $N$ e, no último caso, $M$ está contida num plano.
 \end{demonstracao}
 
-\begin{teorema}[Existência local de parâmetros isotermos]
-	Seja $M \subset \realnumbers^3$ uma superfície mínima. Então, todo $p \in M$ pertence a uma vizinhança coordenada isoterma.
+\begin{teorema}[Existência local de parâmetros isotérmicos]
+	Seja $M \subset \realnumbers^3$ uma superfície mínima. Então, todo $p \in M$ pertence a uma vizinhança coordenada isotérmica.
 \end{teorema}
 
 \begin{demonstracao}
-	Seja $U \subset M$ uma vizinhança coordenada de $p$ que é o gráfico de uma função diferenciável que, podemos assumir, ser da forma $z = h(x,y), (x,y) \in U$.
-	Lembrando que a equação para gráficos mínimos é dada por
+	Seja $U \subset M$ uma vizinhança coordenada de $p$ que é o gráfico de uma função diferenciável que podemos assumir ser da forma $z = h(x,y), (x,y) \in U$.
+	Lembrando que a equação para gráficos mínimos \eqref{edp_superficies_minimas}  é dada por
 	\begin{equation*}
 	(1 + h_y^2) h_{xx} - 2 h_x h_y h_{xy} + (1 + h_x^2) h_{yy} = 0,
 	\end{equation*}
@@ -753,15 +753,15 @@ onde $\lambda_1$ e $\lambda_2$ são as curvaturas principais do operador de form
 
 Assim como para superfícies em $\R^3$, a soma das curvaturas principais será denotada como a curvatura média de $M$
 \[ H = \lambda_1 + \lambda_2 = \sum_{i=1}^{2} \innerproduct{\tilde{\nabla}_{X_i} \nu}{X_i}, \]
-onde $\{X_1,X_2\}$ é um referencial local tangente a $M$ e $\tilde{\nabla}$ denota a conexão de Levi-Civita de $\Sp^3$. A curvatura média de $M$ pode ser interpretada, geometricamente, como um $L^2$-gradiente do funcional de área. De forma mais precisa, dado qualquer função $\varphi \in \smoothfunctionsspace{M}$, tem-se
+onde $\{X_1,X_2\}$ é um referencial local tangente a $M$ e $\tilde{\nabla}$ denota a conexão de Levi-Civita de $\Sp^3$. A curvatura média de $M$ pode ser interpretada, geometricamente, como um $L^2$-gradiente do funcional de área. De forma mais precisa, dada qualquer função $\varphi \in \smoothfunctionsspace{M}$, tem-se
 \[ \frac{d}{dt} \text{Área} (M_t) \vert_{t=0} = \int_M H \varphi, \]
 onde
 \[ M_t = \{ \cos(t \varphi(x))x + \sin(t \varphi(x) N(x)): x \in M \}. \]
 
-Analogamente ao caso Euclideano, essa interpretação variacional motiva a definir uma superfície na esfera $\Sp^3$ como sendo \emph{mínima} se sua curvatura média $H$ for identicamente nula. O conceito de minimalidade em $\Sp^3$ pode ser formulado de várias formas equivalentes (cf. \cite[Theorem 3.2.1]{Simons1968} e \cite{Dajczer2019}).
+Analogamente ao caso Euclidiano, essa interpretação variacional motiva a definir uma superfície na esfera $\Sp^3$ como sendo \emph{mínima} se sua curvatura média $H$ for identicamente nula. O conceito de minimalidade em $\Sp^3$ pode ser formulado de várias formas equivalentes (cf. \cite[Theorem 3.2.1]{Simons1968} e \cite{Dajczer2019}).
 
 \begin{teorema}\label{propriedades_sup_min_S3}
-	Dado uma superfície $M$ em $\Sp^3$, as seguintes afirmações são equivalentes:
+	Dada uma superfície $M$ em $\Sp^3$, as seguintes afirmações são equivalentes:
 	\begin{enumerate}
 		\item[a)] $M$ é uma superfície mínima.
 		\item[b)] $M$ é um ponto crítico do funcional área.
@@ -770,7 +770,7 @@ Analogamente ao caso Euclideano, essa interpretação variacional motiva a defin
 \end{teorema}
 
 Ao contrário do que ocorre em $\R^3$, de que não existem superfícies mínimas fechadas, existem exemplos interessantes desse fenômeno em $\Sp^3$. Um exemplo simples de superfície mínima fechada em $\Sp^3$ é o equador, que é definido por
-\[ M = \{ x \in \Sp^3 \subset \R^4: x_4=0. \} \]
+\[ M = \{ x \in \Sp^3 \subset \R^4: x_4=0 \}. \]
 Neste caso, as curvaturas principais são ambas iguais a zero, logo o equador é uma superfície mínima. Além disso, o equador tem curvatura Gaussiana constante igual a 1. Assim, munido da métrica induzida, $M$ é isométrico à esfera usual $\Sp^2$.
 
 Vejamos outro exemplo importante.
@@ -878,7 +878,7 @@ Vejamos outro exemplo importante.
 Por muito tempo o equador e o toro de Clifford eram os únicos exemplos conhecidos de superfícies mínimas mergulhadas em $\Sp^3$. No entanto, isso mudou fortemente no final dos anos 1960 quando Blaine Lawson descobriu uma família infinita de superfícies mínimas mergulhadas em $\Sp^3$ de genus arbitrário \cite{Lawson1970a}.
 
 \begin{teorema}[Lawson]
-	Existem ao menos uma superfície mínima mergulhada em $\Sp^3$ de gênero $g$, onde $g$ é um inteiro não negativo. Se $g$ não for primo, o mergulho não é único.
+	Existe ao menos uma superfície mínima mergulhada em $\Sp^3$ de genus $g$, onde $g$ é um inteiro não negativo. Se $g$ não for primo, o mergulho não é único.
 \end{teorema}
 
 %\begin{demonstracao}
@@ -890,7 +890,7 @@ Por muito tempo o equador e o toro de Clifford eram os únicos exemplos conhecid
 
 %F. Algrem Jr. provou em \cite{Almgren1966} que a imagem de uma imersão real analítica de $S^2$ em $\Sp^3$ é o equador. De esse resultado deriva o seguinte:
 
-A questão de unicidade para superfícies mínimas na esfera $\Sp^3$ com genus 0 foi provada por Algrem \cite{Almgren1966}.
+A questão de unicidade para superfícies mínimas na esfera $\Sp^3$ com genus 0 foi provada por Frederick Algrem \cite{Almgren1966}.
 
 \begin{teorema}[Almgren]
 	A menos de isometrias de $\Sp^3$, o equador é a única superfície mínima imersa em $\Sp^3$ de genus 0.
@@ -915,7 +915,9 @@ Em 1970, Blainde Lawson conjecturou uma propriedade de unicidade similar para to
 	A menos de isometrias de $\Sp^3$, o toro de Clifford é a única superfície mínima mergulhada em $\Sp^3$ de genus 1.
 \end{conjectura}
 
-Queremos apenas observar que a conjectura de Lawson é falsa se permitirmos que a superfície tenha auto-interseções. De fato, o próprio Blaine Lawson \cite{Lawson1969} provou que existe uma família infinita de toros mínimos em $\Sp^3$ que são ``Alexandrov imersos'' mas não são mergulhados. Veremos no capítulo seguinte a prova da conjectura de Lawson obtida por Simon Brendle.
+Queremos apenas observar que a conjectura de Lawson é falsa se permitirmos que a superfície tenha auto-interseções. De fato, o próprio Blaine Lawson \cite{Lawson1969} provou que existe uma família infinita de toros mínimos em $\Sp^3$ que são ``Alexandrov imersos'' mas não são mergulhados. Uma aplicação $F: \Sigma \rightarrow \Sp^3$ é chamada de Alexandrov imersa se existe uma variedade compacta $N$ e uma imersão $\overline{F}: N \rightarrow \Sp^3$ tal que $\Sigma = \partial N$ e $\overline{F} \vert_{\Sigma}  = F$
+
+Veremos no capítulo seguinte a prova da conjectura de Lawson obtida por Simon Brendle.
 
 %\section{O toro de Clifford}
 %

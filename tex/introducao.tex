@@ -1,6 +1,6 @@
 Superf\'icies m\'inimas constituem hoje um dos objetos de estudo
 mais importantes em Geometria Diferencial. De particular interesse, 
-s\~ao as superf\'icies m\'inimas em variedades de curvatura constante, 
+s\~ao as superf\'icies m\'inimas em formas espaciais, isto é, variedades Riemannianas completas, simplesmente conexas e com curvatura seccional constante, 
 como o espa\c co Euclidiano $\R^3$, o espa\c co hiperb\'olico $\Hy^3$
 e a esfera $\Sp^3$. O caso de superf\'icies m\'inimas em $\R^3$ \'e um
 assunto cl\'assico que tem despertado a aten\c c\~ao de v\'arias 
@@ -31,8 +31,8 @@ Outro exemplo de superf\'icie m\'inima em $\Sp^3$ \'e o {\em toro de
 \[
 M=\left\{x\in\Sp^3:x_1^2+x_2^2=x_3^2+x_4^2=1/2\right\}.
 \]
-Neste caso, as curvaturas principais s\~ao iguais a $1$ e $-1$, 
-resultando em $H=0$. Al\'em disso, a curvatura Gaussiana \'e 
+Neste caso, as curvaturas principais para qualquer ponto $p \in M$ s\~ao iguais a $1$ e $-1$, 
+resultando em $H(p)=0$, onde $H(p)$ é a curvatura média no ponto $p \in M$. Al\'em disso, a curvatura Gaussiana \'e 
 identicamente nula e $M$, munido da m\'etrica induzida, \'e 
 isom\'etrica ao toro flat 
 $\Sp^1(\frac{1}{\sqrt2})\times\Sp^1(\frac{1}{\sqrt2})$.
@@ -50,7 +50,7 @@ mergulhadas em $\Sp^3$ de genus relativamente grande.
 	\cite{Lawson1970}. Dado um par de inteiros positivos $n$ e $k$, existe uma superf\'icie
 	m\'inima mergulhada em $\Sp^3$ de genus $nk$. Em particular, 
 	existe pelo menos uma superf\'icie m\'inima mergulhada em $\Sp^3$
-	de qualquer genus $g$.
+	de qualquer genus $g$. Se $g$ não for primo, o mergulho não é único.
 \end{teorema}
 
 Um problema natural, relacionado \`a exist\^encia de tais superf\'icies,
@@ -71,14 +71,13 @@ tenha auto-interse\c c\~oes (cf. \cite{Lawson1969}). Em 2012,
 Simon Brendle deu uma resposta positiva para esta conjectura. 
 A prova de Brendle, apresentada em \cite{Brendle2013a}, envolve
 uma aplica\c c\~ao do princ\'ipio do m\'aximo a uma fun\c c\~ao 
-que depende em um par de pontos. Essa t\'ecnica foi introduzida
+que depende de um par de pontos. Essa t\'ecnica foi introduzida
 por Huisken \cite{Huisken1998} em seu trabalho que aborda o 
 fluxo de curvas mergulhadas no plano.
 
-Nesta disserta\c c\~ao de mestrado apresentaremos a 
+Nesta disserta\c c\~ao  apresentamos a 
 demonstra\c c\~ao da conjectura de Lawson seguindo
-o trabalho original de Brendle \cite{Brendle2013a}, onde
-a prova \'e apresentada. O texto est\'a dividido em dois
+o trabalho original de Brendle \cite{Brendle2013a}. O texto est\'a dividido em dois
 cap\'itulos, que passaremos a descrever.
 
 No Cap\'itulo 2 apresentamos alguns fatos b\'asicos da
