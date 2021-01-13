@@ -688,13 +688,13 @@
 }
 
 \theoremstyle{definition}
-\newtheorem{teorema}{\theoremaname}
-\newtheorem{proposicao}{\proposicaoname}
-\newtheorem{lema}{\lemaname}
-\newtheorem{corolario}{\corolarioname}
-\newtheorem{exemplo}{\exemploname}
-\newtheorem{observacao}{\observacaoname}
-\newtheorem{definicao}{\definicaoname}
+\newtheorem{teorema}{\theoremaname}[chapter]
+\newtheorem{proposicao}[teorema]{\proposicaoname}
+\newtheorem{lema}[teorema]{\lemaname}
+\newtheorem{corolario}[teorema]{\corolarioname}
+\newtheorem{exemplo}[teorema]{\exemploname}
+\newtheorem{observacao}[teorema]{\observacaoname}
+\newtheorem{definicao}[teorema]{\definicaoname}
 \newenvironment{demonstracao}{\begin{proof}[\demonstracaoname]}{\end{proof}}
 
 

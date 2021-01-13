@@ -12,7 +12,8 @@
 %   Curso                 = doutorado/mestrado
 %   Situação do trabalho  = pre-defesa/pos-defesa (exceto para qualificação)
 %   Versão para impressão = impressao
-\documentclass[doutorado, pos-defesa]{packages/icmc}
+\documentclass[mestrado, pos-defesa]{packages/icmc}
+
 
 % ---------------------------------------------------------------------------
 % Pacotes Opcionais
@@ -21,23 +22,33 @@
 \usepackage[all,knot,arc,import,poly]{xy}   % Pacote para desenhos gráficos
 % Este pacote pode conflitar com outros pacotes gráficos como o ``pictex''
 % Então é necessário usar apenas um dos pacotes conflitantes
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
 \newcommand{\VerbL}{0.52\textwidth}
 \newcommand{\LatL}{0.42\textwidth}
 % ---------------------------------------------------------------------------
 
+%\DeclareUnicodeCharacter{0301}{\'{e}}
 
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
 % Tanto na capa quanto nas folhas de rosto apenas a primeira letra da primeira palavra (ou nomes próprios) devem estar em letra maiúscula, todas as demais devem ser em letra minúscula.
-\tituloPT{Modelo de teses e dissertações em LaTeX do ICMC}
-\tituloEN{Model of theses and dissertations in LaTeX of the ICMC}
-\autor[Antonelli, H. L.]{Humberto Lidio Antonelli}
+\tituloPT{Superfícies mínimas e a conjectura de Lawson}
+\tituloEN{Minimal surfaces and the Lawson conjecture}
+\autor[Lamas Espinoza, M. A.]{Mario Alexis Lamas Espinoza}
 \genero{M} % Gênero do autor (M = Masculino / F = Feminino)
-\orientador[Orientadora]{Profa. Dra.}{Renata Pontin de Mattos Fortes}
+\orientador[Orientador]{Prof. Dr.}{Fernando Manfio}
 %\coorientador{Prof. Dr.}{Fulano de Tal}
+<<<<<<< HEAD
 \curso{CCMC}
 \data{01}{12}{2020} % Data do depósito
+=======
+\curso{MAT}
+\data{22}{12}{2020} % Data do depósito
+>>>>>>> mestrado
 \idioma{PT} % Idioma principal do documento (PT = português / EN = inglês)
 % ---
 
@@ -50,16 +61,44 @@
 % conter no máximo 500 palavras
 % conter no mínimo 1 e no máximo 5 palavras-chave
 \textoresumo[brazil]{
+<<<<<<< HEAD
     Este trabalho é um breve modelo  para a escrita de monografias de qualificação, dissertações e teses utilizando o ambiente \LaTeX, de acordo com as normas exigidas pelo Instituto de Ciências Matemáticas e de Computação (ICMC), da Universidade de São Paulo (USP). Para a confecção deste modelo foi utilizado a última versão (1.9.7) do pacote de classes \textit{abnTeX2} que segue as normas da Associação Brasileira de Normas Técnicas. A elaboração de uma monografia, dissertação ou tese pode ser feita sobrescrevendo o conteúdo deste modelo. 
     }{Modelo, Monografia de qualificação, Dissertação, Tese, Latex}
+=======
+%	Este trabalho desenvolverá a prova da conjectura de Lawson por Simon Brendle em \cite{Brendle2013a}.
+%	A conjectura foi publicada por H. Lawson em \cite{Lawson1970a}.
+%	A prova usa o principio do máximo em funções de dois pontos desenvolvida por Huisken em \cite{Huisken1998}.
+%	Na prova, procurará-se desenvolver afirmações que são apresentadas pelo autor que não são justificadas no artigo e também construir um marco das teorias usadas na prova como capítulos prévios.
+%    }{Geometria riemanniana, Conjectura de Lawson, Toro de Clifford}
+	Em 1970, Blaine Lawson \cite{Lawson1970a} conjecturou que,
+	a menos de isometrias da esfera $\Sp^3$, o toro de Clifford \'e
+	a \'unica superf\'icie m\'inima, mergulhada e de genus $1$ em 
+	$\Sp^3$. Neste trabalho apresentaremos a demonstra\c c\~ao
+	da conjectura de Lawson obtida em 2013 por Simon Brende
+	\cite{Brendle2013a}.
+}{Superf\'icies m\'inimas, Conjectura de Lawson, Toro de Clifford}
+>>>>>>> mestrado
 
 
 % resumo em INGLÊS
 % conter no máximo 500 palavras
 % conter no mínimo 1 e no máximo 5 palavras-chave
 \textoresumo[english]{
+<<<<<<< HEAD
     This paper is a brief model for writing qualification monographs, dissertations and thesis using \LaTeX environment, in accordance with the standards required by the Institute of Mathematics and Computer Sciences (ICMC), University of São Paulo (USP). For making this model, the latest version (1.9.7) \textit{abnTeX2} classes package was used. This package follow the rules of the Brazilian Association of Technical Standards. A drafting a monograph, dissertation or thesis can be done by overwriting the contents of this model.
     }{Template, Qualification monograph, Dissertation, Thesis, Latex}
+=======
+%	This work will develop the proof of Lawson's conjecture by Simon Brendle in \cite{Brendle2013a}.
+%	The conjceture was published by H. Lawson in \cite{Lawson1970a}.
+%	The proof use the maximum principle for two-pointed functions developed by Huisken in \cite{Huisken1998}.
+%	In the proof, it will search to develop affirmations that are showed by the author without justification in the article and to build a framework of the theories used in the proof as previous chapters.´
+%    }{Riemannian Geometry, Lawson's conjecture, Clifford torus}
+	In 1970, Blaine Lawson conjectured that the Clifford torus is the only
+	embedded minimal surface in $\Sp^3$ of genus $1$, up to rigid 
+	motions in $\Sp^3$. In this work we present the proof of this
+	conjecture obtained in 2013 by Simon Brende \cite{Brendle2013a}.
+}{Minimal surfaces, Lawson conjecture, Clifford torus}
+>>>>>>> mestrado
 
 
 % ----------------------------------------------------------
@@ -78,22 +117,25 @@
 \incluilistadefiguras
 
 % Inclui a lista de tabelas
-\incluilistadetabelas
+%\incluilistadetabelas
 
 % Inclui a lista de quadros
-\incluilistadequadros
+%\incluilistadequadros
 
 % Inclui a lista de algoritmos
-\incluilistadealgoritmos
+%\incluilistadealgoritmos
 
 % Inclui a lista de códigos
-\incluilistadecodigos
+%\incluilistadecodigos
 
 % Inclui a lista de siglas e abreviaturas
-\incluilistadesiglas
+%\incluilistadesiglas
 
 % Inclui a lista de símbolos
 \incluilistadesimbolos
+
+\input{custom.tex}
+\input{tex/simbolos.tex}
 
 % ----
 % Início do documento
@@ -104,37 +146,50 @@
 % ----------------------------------------------------------
 \textual
 
+\newcommand{\comando}[1]{\textbf{$\backslash$#1}}
+
+
+
 \chapter{Introdução}
 \label{chapter:introducao}
 \input{tex/introducao}
 
-\chapter{Instalando o abnTeX2}
-\label{chapter:instalando-abntex}
-\input{tex/instalando-abntex}
+%\chapter{Tópicos de Geometria Riemanniana}
+%\label{chapter:topicos-de-geometria-riemanniana}
+%\input{tex/topicos-de-geometria-riemanniana}
 
-\chapter{Orientações gerais}
-\label{chapter:orientacoes-gerais}
-\input{tex/orientacoes-gerais}
+\chapter{Superfícies mínimas}
+\label{chapter:superficies-minimas}
+\input{tex/superficies-minimas}
 
-\chapter{Configuração dos elementos pré-textuais}
-\label{chapter:config-pre-textual}
-\input{tex/config-pre-textual}
+\chapter{A Conjectura de Lawson}
+\label{chapter:a-conjectura-de-lawson}
+\input{tex/a-conjectura-de-lawson}
 
-\chapter{Corpos flutuantes}
-\label{chapter:corpos-flutuantes}
-\input{tex/corpos-flutuantes}
-
-\chapter{Listas}
-\label{chapter:listas}
-\input{tex/listas}
-
-\chapter{Ferramentas úteis}
-\label{chapter:ferramentas-uteis}
-\input{tex/ferramentas-uteis}
-
-\chapter{Citações e referências}
-\label{chapter:citacoes}
-\input{tex/citacoes}
+%
+%\chapter{Orientações gerais}
+%\label{chapter:orientacoes-gerais}
+%\input{tex/orientacoes-gerais}
+%
+%\chapter{Configuração dos elementos pré-textuais}
+%\label{chapter:config-pre-textual}
+%\input{tex/config-pre-textual}
+%
+%\chapter{Corpos flutuantes}
+%\label{chapter:corpos-flutuantes}
+%\input{tex/corpos-flutuantes}
+%
+%\chapter{Listas}
+%\label{chapter:listas}
+%\input{tex/listas}
+%
+%\chapter{Ferramentas úteis}
+%\label{chapter:ferramentas-uteis}
+%\input{tex/ferramentas-uteis}
+%
+%\chapter{Citações e referências}
+%\label{chapter:citacoes}
+%\input{tex/citacoes}
 
 
 % ---
@@ -171,17 +226,17 @@
 % ---
 % Inicia os apêndices
 % ---
-\begin{apendicesenv}
-
-    \chapter{Documento básico usando a classe \textit{icmc}}
-    \label{chapter:documento-basico}
-    \input{tex/appendix/documento-basico}
-    
-    \chapter{Configuração do programa JabRef}
-    \label{chapter:configuracao-jabref}
-    \input{tex/appendix/configuracao-jabref}
-
-\end{apendicesenv}
+%\begin{apendicesenv}
+%
+%    \chapter{Documento básico usando a classe \textit{icmc}}
+%    \label{chapter:documento-basico}
+%    \input{tex/appendix/documento-basico}
+%    
+%    \chapter{Configuração do programa JabRef}
+%    \label{chapter:configuracao-jabref}
+%    \input{tex/appendix/configuracao-jabref}
+%
+%\end{apendicesenv}
 % ---
 
 
@@ -192,13 +247,13 @@
 % ---
 % Inicia os anexos
 % ---
-\begin{anexosenv}
-
-    \chapter{Páginas interessantes na Internet} 
-    \label{chapter:paginas-interessantes}
-    \input{tex/annex/paginas-interessantes}
-
-\end{anexosenv}
+%\begin{anexosenv}
+%
+%    \chapter{Páginas interessantes na Internet} 
+%    \label{chapter:paginas-interessantes}
+%    \input{tex/annex/paginas-interessantes}
+%
+%\end{anexosenv}
 % ---
 
 \end{document}

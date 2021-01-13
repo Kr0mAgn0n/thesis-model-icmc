@@ -67,7 +67,6 @@
 *.gls
 
 # hyperref
-*.brf
 
 # listings
 *.lol
@@ -110,3 +109,14 @@ sympy-plots-for-*.tex/
 
 # MAC files
 .DS_Store
+thesis.glsdefs
+thesis.loq
+thesis.los
+thesis.pdf
+/references.bib.bak
+/Geometria_Riemanniana.bibtex
+*.bib.sav
+tex/superficies-minimas-em-R3.pdf
+
+*_backup
+*.patch

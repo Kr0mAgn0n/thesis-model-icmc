@@ -1,25 +1,100 @@
-% Comando simples para exibir comandos Latex no texto
-\newcommand{\comando}[1]{\textbf{$\backslash$#1}}
+Superf\'icies m\'inimas constituem hoje um dos objetos de estudo
+mais importantes em Geometria Diferencial. De particular interesse, 
+s\~ao as superf\'icies m\'inimas em formas espaciais, isto é, variedades Riemannianas completas, simplesmente conexas e com curvatura seccional constante, 
+como o espa\c co Euclidiano $\R^3$, o espa\c co hiperb\'olico $\Hy^3$
+e a esfera $\Sp^3$. O caso de superf\'icies m\'inimas em $\R^3$ \'e um
+assunto cl\'assico que tem despertado a aten\c c\~ao de v\'arias 
+gera\c c\~oes de ge\^ometras, desde o problema inicial proposto por 
+Lagrange at\'e os dias atuais. Nesta disserta\c c\~ao daremos
+\^enfase ao estudo de superf\'icies m\'inimas na esfera $\Sp^3$, 
+identificando-a com a esfera unit\'aria em $\R^4$, i.e.,
+\[
+\Sp^3=\{x\in\R^4:x_1^2+x_2^2+x_3^2+x_4^2=1\}.
+\]
 
-Este documento explica brevemente como trabalhar com a classe \LaTeX~\textit{icmc} para confeccionar trabalhos acadêmicos seguindo as normas da \sigla{ABNT}{Associação Brasileira de Normas Técnicas} e as \aspas{\textit{Diretrizes para apresentação de dissertações e teses da USP: documento eletrônico e impresso. Parte I (ABNT)}}, publicado pelo \sigla{SIBi}{Sistema Integrado de Bibliotecas} USP. O presente manual também atende as exigências prevista no regimento do Programa de Pós-graduação em \sigla{CCMC}{Ciências da Computação e Matemática Computacional} do \sigla{ICMC}{Instituto de Ciências Matemáticas e de Computação} da \sigla{USP}{Universidade de São Paulo}.
 
 
-A classe \textit{icmc} foi construída com base na última versão da classe \textit{abntex2} e do pacote \textit{abntex2cite}. Portanto, este documento exemplifica a elaboração de trabalho
-acadêmico (tese, dissertação e outros do gênero) produzido conforme a ABNT NBR
-14724:2011 \textit{Informação e documentação - Trabalhos acadêmicos - Apresentação}.
+Ao contr\'ario do que ocorre em $\R^3$, de que n\~ao existem 
+superf\'icies m\'inimas fechadas, existem exemplos interessantes
+desse fen\^omeno na esfera $\Sp^3$. Um exemplo simples de 
+superf\'icie m\'inima fechada em $\Sp^3$ \'e o {\em equador}
+\[
+M=\{x\in\Sp^3\subset\R^4:x_4=0\}.
+\]
+Neste caso, as curvaturas principais s\~ao ambas iguais a zero. 
+Al\'em disso, o equador tem curvatura Gaussiana
+constante igual a $1$. Assim, munido da m\'etrica induzida, $M$ \'e
+isom\'etrica \`a esfera usual $\Sp^2$.
 
-Assim, é altamente recomendável que seja consultada a documentação do \textit{abntex2}\footnote{http://abntex.net.br}. A classe \textit{abntex2} foi desenvolvida para facilitar a escrita de documentos seguindo as normas da ABNT no ambiente \LaTeX\;\cite{frasson:2005:classe_abnt}.
+Outro exemplo de superf\'icie m\'inima em $\Sp^3$ \'e o {\em toro de
+	Clifford}, definido por
+\[
+M=\left\{x\in\Sp^3:x_1^2+x_2^2=x_3^2+x_4^2=1/2\right\}.
+\]
+Neste caso, as curvaturas principais para qualquer ponto $p \in M$ s\~ao iguais a $1$ e $-1$, 
+resultando em $H(p)=0$, onde $H(p)$ é a curvatura média no ponto $p \in M$. Al\'em disso, a curvatura Gaussiana \'e 
+identicamente nula e $M$, munido da m\'etrica induzida, \'e 
+isom\'etrica ao toro flat 
+$\Sp^1(\frac{1}{\sqrt2})\times\Sp^1(\frac{1}{\sqrt2})$.
 
-Todo o trabalho de pesquisa e ajustes da presente classe \LaTeX~\emph{icmc} foram feitos pelo aluno mestrado do Programa de Pós-graduação em Ciência da Computação e Matemática Computacional, Humberto Lidio Antonelli, durante a confecção da sua monografia de qualificação.
+Um problema cl\'assico nessa \'area \'e construir exemplos
+de superf\'icies m\'inimas mergulhadas, i.e., superf\'icies sem 
+auto-interse\c c\~oes. Durante um longo tempo, o equador e 
+o toro de Clifford foram os \'unicos exemplos conhecidos de 
+superf\'icies m\'inimas mergulhadas em $\Sp^3$. No entanto, 
+no final da d\'ecada de 1960, Lawson \cite{Lawson1970} 
+descobriu uma fam\'ilia infinita de superf\'icies m\'inimas 
+mergulhadas em $\Sp^3$ de ``genus'' relativamente grande.
+Uma superfície que é a soma conexa de $n$ toros ou $n$ planos projetivos diz-se que é de \emph{genus} $n$, enquanto uma esfera é de \emph{genus} $0$.
 
-O requisito básico para utilização da classe \textit{icmc} é criar um documento desta classe com o comando
-\comando{documentclass[@parameters]\{icmc\}} e ter, no diretório de trabalho, o arquivo \emph{icmc.cls} presente. Entretanto, recomenda-se fortemente manter a estrutura de diretório inicial fornecida por este modelo. Além disso, para que o documento esteja em conformidade com as normas exigidas pelo programa de Pós-Graduação, o \textbf{projeto deve ser compilado utilizando \textit{XeLaTeX} ou \textit{LuaLaTeX}}. Esse processo de compilação é necessário para que as fontes externas utilizadas para gerar a capa sejam incluídas.
+\begin{teorema}\label{teo:lawson}
+	\cite{Lawson1970}. Dado um par de inteiros positivos $n$ e $k$, existe uma superf\'icie
+	m\'inima mergulhada em $\Sp^3$ de genus $nk$. Em particular, 
+	existe pelo menos uma superf\'icie m\'inima mergulhada em $\Sp^3$
+	de qualquer genus $g$. Se $g$ não for primo, o mergulho não é único.
+\end{teorema}
 
-Os parâmetros possíveis utilizados pelo \comando{documentclass} são:
-\begin{description}
-\item[qualificacao] Exclusivamente para monografias de qualificação em geral;
-\item[mestrado / doutorado] Identifica o curso ao qual o aluno pertence, sendo utilizado apenas uma das duas opcões disponíveis. O valor padrão é \textbf{doutorado};
-\item[pre-defesa / pos-defesa] Identifica a situação do documento (exceto para qualificação), sedo necessário apenas uma das duas opções. O valor padrão é \textbf{pos-defesa};
-\item[impressao] Gera exclusivamente uma versão para impressão do documento;
-\item[french, spanish, english, brazil] Adiciona o idioma para correta hifenização correta no documento. Os idiomas bases para o modelo (português e inglês) não precisam ser declarados.
-\end{description}
+Um problema natural, relacionado \`a exist\^encia de tais superf\'icies,
+\'e a quest\~ao da unicidade. Em 1966, Almgren \cite{Almgren1966} 
+provou que, a menos de isometrias de $\Sp^3$, o equador \'e a \'unica
+superf\'icie m\'inima imersa em $\Sp^3$ de genus $0$.
+Em 1970, Blaine Lawson \cite{Lawson1970a} conjecturou uma 
+propriedade similar de unicidade para toros m\'inimos na esfera
+$\Sp^3$. Mais precisamente,
+
+\begin{conjectura}\label{teo:Lawson}
+	\cite{Lawson1970a}. A menos de isometrias de $\Sp^3$, o toro de Clifford \'e a \'unica 
+	superf\'icie m\'inima mergulhada em $\Sp^3$ de genus $1$.
+\end{conjectura}
+
+A conjectura de Lawson \'e falsa se permitirmos que a superf\'icie
+tenha auto-interse\c c\~oes (cf. \cite{Lawson1969}). Em 2012, 
+Simon Brendle deu uma resposta positiva para esta conjectura. 
+A prova de Brendle, apresentada em \cite{Brendle2013a}, envolve
+uma aplica\c c\~ao do princ\'ipio do m\'aximo a uma fun\c c\~ao 
+que depende de um par de pontos. Essa t\'ecnica foi introduzida
+por Huisken \cite{Huisken1998} em seu trabalho que aborda o 
+fluxo de curvas mergulhadas no plano.
+
+Nesta disserta\c c\~ao  apresentamos a 
+demonstra\c c\~ao da conjectura de Lawson seguindo
+o trabalho original de Brendle \cite{Brendle2013a}. O texto est\'a dividido em dois
+cap\'itulos, que passaremos a descrever.
+
+No Cap\'itulo 2 apresentamos alguns fatos b\'asicos da
+teoria de superf\'icies m\'inimas no espa\c co Euclidiano
+$\R^3$ e na esfera $\Sp^3$. Iniciamos o cap\'itulo 
+relembrando as equa\c c\~oes fundamentais de uma 
+imers\~ao isom\'etrica, dando destaque para a equa\c c\~ao
+de Gauss quando o espa\c co ambiente \'e uma forma 
+espacial tridimensional. Nas se\c c\~oes seguintes 
+apresentamos alguns resultados b\'asicos da teoria de
+superf\'icies m\'inimas em $\R^3$, dando \^enfase para
+a representa\c c\~ao de Weierstrass. Finalizamos o
+cap\'itulo com no\c c\~oes b\'asicas de superf\'icies 
+m\'inimas em $\Sp^3$, onde damos enfoque no toro de
+Clifford.
+
+O Cap\'itulo 3 ser\'a dedicado, integralmente, \`a exposi\c c\~ao
+da prova da conjectura de Lawson obtida por S. Brende
+\cite{Brendle2013a}.
